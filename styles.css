@@ -15,7 +15,18 @@ body {
     position: relative;
     height: 100vh;
     width: 100%;
-    background: linear-gradient(rgba(13, 26, 45, 0.5), rgba(13, 26, 45, 0.8)), url('/assets/images/client.png') no-repeat center center;
+    background: linear-gradient(rgba(13, 26, 45, 0.4)), url('/assets/images/client.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.account {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(13, 26, 45, 0.5), rgba(13, 26, 45, 10)), url('/assets/images/bitcoin.png') no-repeat center center;
     background-size: cover;
     display: flex;
     align-items: center;
