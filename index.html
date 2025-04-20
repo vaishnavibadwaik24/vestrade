@@ -9,6 +9,12 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
 <body class="bg-[#0f021f]">
@@ -522,6 +528,257 @@
             </div>
         </div>
         </div>
+    </section>
+
+    <!-- Progress Section -->
+    <section class="py-16 px-2 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <!-- Grid to hold Progress Bars and Benefits Side by Side -->
+            <div class="grid lg:grid-cols-2 gap-10">
+                <!-- Vertical Progress Bars Section -->
+                <div class="space-y-8">
+                    <!-- Heading -->
+                    <div class="mb-12">
+                        <p class="text-sm font-bold text-[#7267D7] uppercase mb-6">WHY CHOOSE US</p>
+                        <h3 class="text-4xl text-black font-semibold mb-6">
+                            Maximize your wealth with strategic investments
+                        </h3>
+                        <p class="max-w-3xl mx-auto text-gray-500">
+                            Aliquam laculis augue sed melus scelerisque parturient lobortis velit. Facilisis molestie
+                            ridiculus porta dictumst consectetur nascetur ut mus.
+                        </p>
+                    </div>
+
+                    <!-- Progress Bar 1 -->
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-base font-semibold text-gray-800">FLEXIBILITY</span>
+                            <span class="text-sm text-white">80%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-cyan-500 h-2.5 rounded-full animate-progress" style="--final-width: 85%">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar 2 -->
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-base font-semibold text-gray-800">EXPERT ADVISORS</span>
+                            <span class="text-sm text-white">90%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-cyan-500 h-2.5 rounded-full animate-progress" style="--final-width: 90%">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar 3 -->
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="text-base font-semibold text-gray-800">USER EXPERIENCE</span>
+                            <span class="text-sm text-white">95%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-cyan-500 h-2.5 rounded-full animate-progress" style="--final-width: 95%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefits Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-y-1">
+                    <!-- Card 1 -->
+                    <div class="bg-white p-4 flex items-start gap-1">
+                        <div class="w-20 h-20 flex items-center justify-center">
+                            <img src="assets/images/f1.png" alt="Icon 1" class="w-14 h-14" />
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Ease Of Transaction With DTRX Trading
+                                Tools</h3>
+                            <p class="text-gray-600">Proin ullamcorper pretium orci. Donec nec scelerisque leo.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white p-4 flex items-start gap-1">
+                        <div class="w-20 h-20 flex items-center justify-center">
+                            <img src="assets/images/f2.png" alt="Icon 2" class="w-15 h-14" />
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Additional Benefits Of Trading At
+                                Dirade Platform</h3>
+                            <p class="text-gray-600">Proin ullamcorper pretium orci. Donec nec scelerisque leo.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-white p-4 flex items-start gap-1">
+                        <div class="w-20 h-20 flex items-center justify-center">
+                            <img src="assets/images/f3.png" alt="Icon 3" class="w-14 h-14" />
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Friendly Platform For Beginner Traders
+                            </h3>
+                            <p class="text-gray-600">Proin ullamcorper pretium orci. Donec nec scelerisque leo.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="bg-white p-4 flex items-start gap-1">
+                        <div class="w-20 h-20 flex items-center justify-center">
+                            <img src="assets/images/f4.png" alt="Icon 4" class="w-14 h-14" />
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Strategy And Planning</h3>
+                            <p class="text-gray-600">Proin ullamcorper pretium orci. Donec nec scelerisque leo.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <style>
+        @keyframes progress {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: var(--final-width);
+            }
+        }
+
+        .animate-progress {
+            animation: progress 1.5s ease-out forwards;
+            width: var(--final-width);
+        }
+    </style>
+
+    <script>
+        // Animate progress bars when they come into view
+        document.addEventListener('DOMContentLoaded', function () {
+            const progressBars = document.querySelectorAll('.animate-progress');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const width = entry.style.getPropertyValue('--final-width');
+                        entry.style.width = width;
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            progressBars.forEach(bar => observer.observe(bar));
+        });
+    </script>
+
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+
+            <!-- Card 1 -->
+            <div class="bg-white rounded-2xl shadow-lg text-center p-10">
+                <div class="mx-auto mb-6 rounded-full w-20 h-20 flex items-center justify-center">
+                    <img src="assets/images/f5.png" alt="Icon 1" class="w-15 h-15" />
+                </div>
+                <h3 class="text-2xl text-black mb-4">Consulting is the secret to unlocking your vision.</h3>
+                <p class="text-gray-500 text-base">Aliquet mus maximus sociosqu pede magna libero</p>
+            </div>
+
+            <!-- Card 2 (Highlighted) -->
+            <div class="bg-gradient-to-b from-[#00f6ff] to-sky-700 text-white rounded-2xl shadow-lg text-center p-10">
+                <div class="mx-auto mb-6 rounded-full w-20 h-20 flex items-center justify-center">
+                    <img src="assets/images/f6.png" alt="Icon 2" class="w-15 h-15" />
+                </div>
+                <h3 class="text-2xl text-white mb-4">Conceptualize, design, and deliver exceptional
+                    execution.</h3>
+                <p class="text-base">Aliquet mus maximus sociosqu pede magna libero</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-2xl shadow-lg text-center p-10">
+                <div class="mx-auto mb-6 rounded-full w-20 h-20 flex items-center justify-center">
+                    <img src="assets/images/f7.png" alt="Icon 3" class="w-15 h-15" />
+                </div>
+                <h3 class="text-2xl text-black mb-4">Help our clients reach their full potential.</h3>
+                <p class="text-gray-600 text-base">Aliquet mus maximus sociosqu pede magna libero</p>
+            </div>
+
+        </div>
+
+        <div class="px-6 pt-10">
+            <div class="swiper logoSwiper">
+                <div class="swiper-wrapper">
+                    <!-- Repeat these swiper-slide elements for each logo -->
+                    <div class="swiper-slide flex justify-center">
+                        <img src="assets/images/logo-1.png" alt="Logo 1" class="h-24">
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="assets/images/logo-2.png" alt="Logo 2" class="h-24">
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="assets/images/logo-3.png" alt="Logo 3" class="h-24">
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="assets/images/logo-4.png" alt="Logo 4" class="h-24">
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="assets/images/logo-5.png" alt="Logo 5" class="h-24">
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="assets/images/logo-6.png" alt="Logo 6" class="h-24">
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="assets/images/logo-1.png" alt="Logo 1" class="h-24">
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="assets/images/logo-2.png" alt="Logo 2" class="h-24">
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="assets/images/logo-3.png" alt="Logo 3" class="h-24">
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="assets/images/logo-4.png" alt="Logo 4" class="h-24">
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="assets/images/logo-5.png" alt="Logo 5" class="h-24">
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="assets/images/logo-6.png" alt="Logo 6" class="h-24">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const swiper = new Swiper('.logoSwiper', {
+                slidesPerView: 6, // Show 6 logos by default
+                spaceBetween: 20, // Space between logos
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                    1024: {
+                        slidesPerView: 6, // Show 6 logos on large screens
+                        spaceBetween: 40,
+                    },
+                }
+            });
+        </script>
+
     </section>
 
 </body>
