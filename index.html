@@ -20,7 +20,7 @@
 <body class="bg-[#0f021f]">
 
     <!-- Navigation Bar -->
-    <nav class="text-white px-6 py-4 flex items-center justify-between">
+    <nav class="text-white px-32 py-6 flex items-center justify-between border-b border-gray-700">
         <!-- Logo -->
         <div class="flex items-center space-x-2">
             <img src="assets/images/logo.png" alt="Logo" class="w-40 h-10" />
@@ -84,7 +84,7 @@
     <!-- End Navigation Bar -->
 
     <!-- Hero Section -->
-    <section class="bg-[#0f021f] text-white py-20 px-6 md:px-16 overflow-hidden">
+    <section class="bg-[#0f021f] text-white py-20 px-6 md:px-16 overflow-hidden min-h-screen">
         <div class="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-10">
 
             <!-- Left Side: Text -->
@@ -124,45 +124,45 @@
     <!-- end Hero Section -->
 
     <!-- About Section -->
-    <section class="bg-white py-16 px-6 md:px-6">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-
-            <!-- Card 1 -->
-            <div class="bg-white rounded-xl shadow-md text-center p-6">
-                <div class="mx-auto mb-4  rounded-full w-20 h-20 flex items-center justify-center">
-                    <img src="assets/images/about-1.png" alt="Icon 1" class="w-20 h-20" />
+    <section class="bg-white py-16 px-32 md:px-28">
+        <div class="relative z-10 -mt-40">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-xl shadow-md text-center p-8">
+                    <div class="mx-auto mb-4 rounded-full w-20 h-20 flex items-center justify-center">
+                        <img src="assets/images/about-1.png" alt="Icon 1" class="w-20 h-20" />
+                    </div>
+                    <h3 class="text-xl font-semibold text-black mb-2">Wide Product Range</h3>
+                    <p class="text-gray-500 text-sm">Aliquet mus maximus sociosqu pede magna libero</p>
                 </div>
-                <h3 class="text-xl font-semibold text-black mb-2">Wide Product Range</h3>
-                <p class="text-gray-500 text-sm">Aliquet mus maximus sociosqu pede magna libero</p>
-            </div>
 
-            <!-- Card 2 (Highlighted) -->
-            <div class="bg-gradient-to-b from-[#00f6ff] to-sky-700 text-white rounded-xl shadow-md text-center p-6">
-                <div class="mx-auto mb-4 rounded-full w-20 h-20 flex items-center justify-center">
-                    <img src="assets/images/about-2.png" alt="Icon 2" class="w-20 h-20" />
+                <!-- Card 2 (Highlighted) -->
+                <div class="bg-gradient-to-b from-[#00f6ff] to-sky-700 text-white rounded-xl shadow-md text-center p-8">
+                    <div class="mx-auto mb-4 rounded-full w-20 h-20 flex items-center justify-center">
+                        <img src="assets/images/about-2.png" alt="Icon 2" class="w-20 h-20" />
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Transparent Pricing</h3>
+                    <p class="text-sm">Aliquet mus maximus sociosqu pede magna libero</p>
                 </div>
-                <h3 class="text-xl font-semibold mb-2">Transparent Pricing</h3>
-                <p class="text-sm">Aliquet mus maximus sociosqu pede magna libero</p>
-            </div>
 
-            <!-- Card 3 -->
-            <div class="bg-white rounded-xl shadow-md text-center p-6">
-                <div class="mx-auto mb-4 rounded-full w-20 h-20 flex items-center justify-center">
-                    <img src="assets/images/about-3.png" alt="Icon 3" class="w-20 h-20" />
+                <!-- Card 3 -->
+                <div class="bg-white rounded-xl shadow-md text-center p-8">
+                    <div class="mx-auto mb-4 rounded-full w-20 h-20 flex items-center justify-center">
+                        <img src="assets/images/about-3.png" alt="Icon 3" class="w-20 h-20" />
+                    </div>
+                    <h3 class="text-xl font-semibold text-black mb-2">Innovative Tools</h3>
+                    <p class="text-gray-500 text-sm">Aliquet mus maximus sociosqu pede magna libero</p>
                 </div>
-                <h3 class="text-xl font-semibold text-black mb-2">Innovative Tools</h3>
-                <p class="text-gray-500 text-sm">Aliquet mus maximus sociosqu pede magna libero</p>
-            </div>
 
-            <!-- Card 4 -->
-            <div class="bg-white rounded-xl shadow-md text-center p-6">
-                <div class="mx-auto mb-4 rounded-full w-20 h-20 flex items-center justify-center">
-                    <img src="assets/images/about-4.png" alt="Icon 4" class="w-20 h-20" />
+                <!-- Card 4 -->
+                <div class="bg-white rounded-xl shadow-md text-center p-8">
+                    <div class="mx-auto mb-4 rounded-full w-20 h-20 flex items-center justify-center">
+                        <img src="assets/images/about-4.png" alt="Icon 4" class="w-20 h-20" />
+                    </div>
+                    <h3 class="text-xl font-semibold text-black mb-2">Dedicated Support</h3>
+                    <p class="text-gray-500 text-sm">Aliquet mus maximus sociosqu pede magna libero</p>
                 </div>
-                <h3 class="text-xl font-semibold text-black mb-2">Dedicated Support</h3>
-                <p class="text-gray-500 text-sm">Aliquet mus maximus sociosqu pede magna libero</p>
             </div>
-
         </div>
 
         <div class="flex flex-col lg:flex-row items-center justify-between px-6 py-20 pt-48 bg-white">
@@ -324,7 +324,7 @@
 
     <!-- Client Section -->
     <section class="hero">
-        <div class="chart-lines"></div>
+        <!-- <div class="chart-lines"></div> -->
         <div class="promo-box">
             <h1 class="promo-heading">Get up to $600 plus 60 days of commission-free stocks & forex trades</h1>
             <p class="promo-text">Malesuada lacinia ipsum elit suscipit imperdiet tellus turpis commodo euismod dis
@@ -336,15 +336,15 @@
     </section>
 
     <section class="stats-container">
-        <div class="stat-box">
+        <div class="stat-box border-r border-white/30">
             <div class="stat-number">6M+</div>
-            <div class="stat-text">Happy Client</div>
+            <div class="stat-text">Happy Clients</div>
         </div>
-        <div class="stat-box">
+        <div class="stat-box border-r border-white/30">
             <div class="stat-number">24K+</div>
-            <div class="stat-text">Project Done</div>
+            <div class="stat-text">Projects Done</div>
         </div>
-        <div class="stat-box">
+        <div class="stat-box border-r border-white/30">
             <div class="stat-number">711+</div>
             <div class="stat-text">Expert Team</div>
         </div>
@@ -355,7 +355,7 @@
     </section>
 
     <!-- Our Services Section -->
-    <section class="bg-gray-100 flex flex-col lg:flex-row items-center justify-between px-6 py-32">
+    <section class="bg-gray-100 flex flex-col lg:flex-row items-center justify-between px-32 py-32">
         <!-- Left Column -->
         <div class="lg:w-1/2 mb-10 lg:mb-0">
             <p class="text-sm font-bold text-[#7267D7] uppercase mb-6">OUR SERVICES</p>
@@ -380,25 +380,25 @@
 
             <!-- Floating Card -->
             <div
-                style="position: absolute; top: 25%; right: -30px; transform: translateY(-50%); width: 320px; border-radius: 15px; overflow: hidden; background: linear-gradient(to right, rgba(68, 116, 171, 0.911), #03d5dc); color: white; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); z-index: 10;">
+                style="position: absolute; top: 20%; right: -10px; transform: translateY(-60%); width: 375px; border-radius: 15px; overflow: hidden; background: linear-gradient(to right, rgba(68, 116, 171, 0.911), #03d5dc); color: white; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); z-index: 10;">
 
-                <div style="display: flex; align-items: center; padding: 15px 25px;">
-                    <div style="font-size: 35px; font-weight: bold; margin-right: 15px; line-height: 1;">40%</div>
+                <div style="display: flex; align-items: center; padding: 15px 15px;">
+                    <div class="first-text" style="font-size: 48px; font-weight: bold; margin: 7px; line-height: 1;">40%</div>
                     <div style="flex: 1;">
-                        <div style="font-size: 20px; font-weight: bold; margin-bottom: 5px;">Interest Rate For Loan
+                        <div class="first-text">Interest Rate For Loan
                         </div>
-                        <div style="opacity: 0.9; font-size: 12px; line-height: 1.4;">Odio nisi id fames nascetur
+                        <div class="second-text">Odio nisi id fames nascetur
                             dictumst suspendisse ligula</div>
                     </div>
                 </div>
 
                 <div style="height: 1px; background-color: rgba(255, 255, 255, 0.3); margin: 0 25px;"></div>
 
-                <div style="display: flex; align-items: center; padding: 15px 25px;">
-                    <div style="font-size: 35px; font-weight: bold; margin-right: 15px; line-height: 1;">12%</div>
+                <div style="display: flex; align-items: center; padding: 15px 15px;">
+                    <div class="first-text" style="font-size: 48px; font-weight: bold; margin: 7px; line-height: 1;">12%</div>
                     <div style="flex: 1;">
-                        <div style="font-size: 20px; font-weight: bold; margin-bottom: 5px;">Margin & Profits</div>
-                        <div style="opacity: 0.9; font-size: 12px; line-height: 1.4;">Odio nisi id fames nascetur
+                        <div class="first-text">Margin & Profits</div>
+                        <div class="second-text">Odio nisi id fames nascetur
                             dictumst suspendisse ligula</div>
                     </div>
                 </div>
