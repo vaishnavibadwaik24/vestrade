@@ -26,16 +26,28 @@
 <body class="bg-[#0f021f]">
 
     <!-- Navigation Bar -->
-    <nav class="text-white px-32 py-6 flex items-center justify-between border-b border-gray-700">
+    <nav class="text-white px-6 md:px-16 lg:px-32 py-6 flex items-center justify-between border-b border-gray-700">
         <!-- Logo -->
         <div class="flex items-center space-x-2">
-            <img src="assets/images/logo.png" alt="Logo" class="w-40 h-10" />
+            <img src="assets/images/logo.png" alt="Logo" class="w-32 md:w-40 h-8 md:h-10" />
+        </div>
+
+        <!-- Hamburger Menu for Mobile -->
+        <div class="md:hidden">
+            <button id="menu-toggle" class="text-white focus:outline-none">
+                <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
         </div>
 
         <!-- Navigation Links + Button -->
-        <div class="flex items-center space-x-6">
+        <div id="menu" class="hidden md:flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6">
             <!-- Navigation Links -->
-            <ul class="flex space-x-8 items-center font-semibold">
+            <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 items-center font-semibold">
                 <li><a href="#" class="hover:text-cyan-400">Homepage</a></li>
                 <li><a href="#" class="hover:text-cyan-400">About Us</a></li>
 
@@ -87,6 +99,24 @@
             </div>
         </div>
     </nav>
+
+    <script>
+        // Toggle mobile menu and icons
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const menu = document.getElementById('menu');
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            menu.classList.toggle('hidden');
+            hamburgerIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+
+        // Redirect to the home page when the close icon is clicked
+        document.getElementById('close-icon').addEventListener('click', function () {
+            window.location.href = '/'; // Replace '/' with your home page URL if different
+        });
+    </script>
     <!-- End Navigation Bar -->
 
     <!-- Hero Section -->
