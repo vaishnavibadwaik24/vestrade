@@ -760,7 +760,7 @@
 
         </div>
 
-        <div class="px-6 pt-10">
+        <div class="px-4 sm:px-6 pt-10">
             <div class="swiper logoSwiper">
                 <div class="swiper-wrapper">
                     <!-- Repeat these swiper-slide elements for each logo -->
@@ -814,6 +814,10 @@
                     disableOnInteraction: false,
                 },
                 breakpoints: {
+                    320: {
+            slidesPerView: 2, // Show 2 logos on very small screens
+            spaceBetween: 10, // Smaller space between logos
+        },
                     640: {
                         slidesPerView: 2,
                         spaceBetween: 20,
