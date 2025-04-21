@@ -130,12 +130,29 @@ body {
 .first-text {
     font-family: 'Outfit', sans-serif;
     font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 5px;
 }
 
 .second-text {
     font-family: 'Inter', sans-serif;
     opacity: 0.9;
     font-size: 14px;
+}
+
+.family-oss {
+    font-family: 'Outfit', sans-serif;
+}
+
+.size-tfive {
+    font-size: 25px;
+}
+
+.progress-text {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Outfit', sans-serif;
+}
+
+.card-text-spacing {
+    line-height: 1.2;
+    letter-spacing: -1px;
 }
