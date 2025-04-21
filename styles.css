@@ -85,37 +85,6 @@ body {
     box-shadow: 0 10px 20px rgba(0, 210, 255, 0.3);
 }
 
-.stats-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: linear-gradient(to right, rgba(68, 116, 171, 0.911), #03d5dc); /* Gradient background */
-    padding: 20px 70px;
-}
-
-.stat-box {
-    text-align: center;
-    padding: 10px 20px;
-    flex: 1;
-}
-
-.stat-number {
-    font-size: 3rem;
-    font-weight: bold;
-    color: white;
-    margin-bottom: 5px;
-}
-
-.stat-text {
-    font-size: 1.2rem;
-    color: white;
-    font-weight: 300;
-}
-
-.border-r {
-    border-right: 1px solid rgba(255, 255, 255, 0.3); /* Light border between stats */
-}
-
 /* Chart background styling */
 .chart-lines {
     position: absolute;
@@ -161,12 +130,29 @@ body {
 .first-text {
     font-family: 'Outfit', sans-serif;
     font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 5px;
 }
 
 .second-text {
     font-family: 'Inter', sans-serif;
     opacity: 0.9;
     font-size: 14px;
+}
+
+.family-oss {
+    font-family: 'Outfit', sans-serif;
+}
+
+.size-tfive {
+    font-size: 25px;
+}
+
+.progress-text {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Outfit', sans-serif;
+}
+
+.card-text-spacing {
+    line-height: 1.2;
+    letter-spacing: -1px;
 }

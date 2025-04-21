@@ -15,21 +15,41 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 
 <body class="bg-[#0f021f]">
 
     <!-- Navigation Bar -->
-    <nav class="text-white px-32 py-6 flex items-center justify-between border-b border-gray-700">
+    <nav class="text-white px-6 md:px-16 lg:px-6 py-6 flex items-center justify-between border-b border-gray-700">
         <!-- Logo -->
         <div class="flex items-center space-x-2">
-            <img src="assets/images/logo.png" alt="Logo" class="w-40 h-10" />
+            <img src="assets/images/logo.png" alt="Logo" class="w-32 md:w-40 h-8 md:h-10" />
+        </div>
+
+        <!-- Hamburger Menu for Mobile -->
+        <div class="md:hidden">
+            <button id="menu-toggle" class="text-white focus:outline-none">
+                <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
         </div>
 
         <!-- Navigation Links + Button -->
-        <div class="flex items-center space-x-6">
+        <div id="menu" class="hidden md:flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6">
             <!-- Navigation Links -->
-            <ul class="flex space-x-8 items-center font-semibold">
+            <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 items-center font-semibold">
                 <li><a href="#" class="hover:text-cyan-400">Homepage</a></li>
                 <li><a href="#" class="hover:text-cyan-400">About Us</a></li>
 
@@ -81,11 +101,29 @@
             </div>
         </div>
     </nav>
+
+    <script>
+        // Toggle mobile menu and icons
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const menu = document.getElementById('menu');
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            menu.classList.toggle('hidden');
+            hamburgerIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+
+        // Redirect to the home page when the close icon is clicked
+        document.getElementById('close-icon').addEventListener('click', function () {
+            window.location.href = '/'; // Replace '/' with your home page URL if different
+        });
+    </script>
     <!-- End Navigation Bar -->
 
     <!-- Hero Section -->
-    <section class="bg-[#0f021f] text-white py-20 px-6 md:px-16 overflow-hidden min-h-screen">
-        <div class="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-10">
+    <section class="bg-[#0f021f] text-white py-20 px-6 md:px-8 overflow-hidden min-h-screen">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
 
             <!-- Left Side: Text -->
             <div class="lg:w-1/2">
@@ -96,20 +134,22 @@
                 </h1>
                 <p class="mt-6 text-base text-white max-w-xl">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
+                </p>
+                <p class="text-base text-white max-w-xl">
                     luctus nec ullamcorper mattis, pulvinar dapibus leo.
                 </p>
                 <div class="mt-8 flex flex-wrap gap-4">
                     <div class="group">
                         <button
                             class="px-8 py-2 rounded bg-gradient-to-r from-[#00f6ff] to-sky-500/75 text-white font-semibold duration-300 group-hover:bg-gradient-to-r group-hover:from-sky-500/75 group-hover:to-[#00f6ff]">
-
-                            CREATE ACCOUNT</button>
+                            CREATE ACCOUNT
+                        </button>
                     </div>
                     <div class="group">
                         <button
                             class="px-8 py-2 rounded bg-white text-cyan-400 font-semibold duration-300 group-hover:bg-cyan-400 group-hover:text-white">
-
-                            LEARN MORE</button>
+                            LEARN MORE
+                        </button>
                     </div>
                 </div>
             </div>
@@ -124,11 +164,11 @@
     <!-- end Hero Section -->
 
     <!-- About Section -->
-    <section class="bg-white py-16 px-32 md:px-28">
+    <section class="bg-white py-16 px-28 sm:px-4 md:px-8 lg:px-28">
         <div class="relative z-10 -mt-40">
-            <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 <!-- Card 1 -->
-                <div class="bg-white rounded-xl shadow-md text-center p-8">
+                <div class="bg-white rounded-xl shadow-md text-center p-8" data-aos="fade-up">
                     <div class="mx-auto mb-4 rounded-full w-20 h-20 flex items-center justify-center">
                         <img src="assets/images/about-1.png" alt="Icon 1" class="w-20 h-20" />
                     </div>
@@ -137,7 +177,8 @@
                 </div>
 
                 <!-- Card 2 (Highlighted) -->
-                <div class="bg-gradient-to-b from-[#00f6ff] to-sky-700 text-white rounded-xl shadow-md text-center p-8">
+                <div class="bg-gradient-to-b from-[#00f6ff] to-sky-700 text-white rounded-xl shadow-md text-center p-8"
+                    data-aos="fade-up">
                     <div class="mx-auto mb-4 rounded-full w-20 h-20 flex items-center justify-center">
                         <img src="assets/images/about-2.png" alt="Icon 2" class="w-20 h-20" />
                     </div>
@@ -146,7 +187,7 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-white rounded-xl shadow-md text-center p-8">
+                <div class="bg-white rounded-xl shadow-md text-center p-8" data-aos="fade-up">
                     <div class="mx-auto mb-4 rounded-full w-20 h-20 flex items-center justify-center">
                         <img src="assets/images/about-3.png" alt="Icon 3" class="w-20 h-20" />
                     </div>
@@ -155,7 +196,7 @@
                 </div>
 
                 <!-- Card 4 -->
-                <div class="bg-white rounded-xl shadow-md text-center p-8">
+                <div class="bg-white rounded-xl shadow-md text-center p-8" data-aos="fade-up">
                     <div class="mx-auto mb-4 rounded-full w-20 h-20 flex items-center justify-center">
                         <img src="assets/images/about-4.png" alt="Icon 4" class="w-20 h-20" />
                     </div>
@@ -167,7 +208,7 @@
 
         <div class="flex flex-col lg:flex-row items-center justify-between px-6 py-20 pt-48 bg-white">
             <!-- Left Column -->
-            <div class="lg:w-1/2 mb-10 lg:mb-0">
+            <div class="lg:w-1/2 mb-10 lg:mb-0 text-center lg:text-left" data-aos="fade-right">
                 <p class="text-sm font-bold text-[#7267D7] uppercase mb-6">Who we are</p>
                 <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 leading-tight">
                     We are the magic behind the company’s best days.
@@ -183,14 +224,14 @@
             </div>
 
             <!-- Right Column -->
-            <div class="relative lg:w-1/2">
+            <div class="relative lg:w-1/2" data-aos="fade-left">
                 <!-- Main Image -->
                 <img src="assets/images/bitcoin.png" alt="Bitcoin Cart"
                     class="rounded-lg shadow-xl w-full max-w-xl mx-auto lg:mx-0">
 
                 <!-- Floating Card -->
                 <div
-                    class="absolute top-0 right-12 w-72 translate-x-1/4 -translate-y-1/4 bg-white shadow-lg rounded-xl p-5 w-65">
+                    class="absolute sm:top-4 sm:right-4 lg:top-0 lg:right-12 w-72 sm:w-50 translate-x-1/4 -translate-y-1/4 bg-white shadow-lg rounded-xl p-5">
                     <div class="flex items-center justify-between mb-4">
                         <div class="flex items-center gap-2">
                             <div class="flex items-center justify-center rounded-full">
@@ -217,14 +258,13 @@
                 </div>
             </div>
         </div>
-
     </section>
 
     <!-- Crypto Details Section -->
-    <section class="bg-gray-100 py-32 px-4">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <section class="bg-gray-100 py-16 px-4 sm:px-6 md:px-8 lg:px-32">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
 
-            <div class="flex flex-col gap-6 max-w-md mx-auto">
+            <div class="flex flex-col gap-6 max-w-md mx-auto" data-aos="fade-right">
                 <!-- Bitcoin Info Card -->
                 <div class="bg-white p-8 rounded-xl shadow-xl">
                     <div class="flex items-center justify-between">
@@ -234,22 +274,20 @@
                         <div class="text-3xl font-semibold text-gray-900">$84,702.27</div>
                     </div>
                     <div>
-                        <h2 class="font-bold text-lg">Bitcoin</h2>
-                        <p class="text-sm text-gray-500 font-bold">BTC / USD</p>
+                        <h2 class="font-bold text-lg md:text-xl">Bitcoin</h2>
+                        <p class="text-sm md:text-base text-gray-500 font-bold">BTC / USD</p>
                     </div>
                     <div class="mt-4 border-gray-200 pt-2 space-y-2 text-lg text-gray-700">
                         <p class="flex justify-between">
                             <span>Rank:</span>
                             <span class="text-gray-900 font-medium">#1</span>
                         </p>
-                        <div class="mt-4 border-t border-gray-200 pt-2 space-y-2 text-sm text-gray-700"></div>
                         <p class="flex justify-between items-center">
                             <span>1H change:</span>
                             <span class="text-red-600 font-medium flex items-center">
                                 <span class="mr-1">↓</span>-0.09%
                             </span>
                         </p>
-                        <div class="mt-4 border-t border-gray-200 pt-2 space-y-2 text-sm text-gray-700"></div>
                         <p class="flex justify-between">
                             <span>Market Cap:</span>
                             <span class="text-gray-900 font-medium">$1,681.67 Billion</span>
@@ -259,7 +297,7 @@
 
                 <!-- Advisors -->
                 <div class="bg-white p-6 rounded-xl shadow-xl">
-                    <h2 class="text-2xl mb-2 text-gray-900">Advisors</h2>
+                    <h2 class="text-2xl md:text-3xl mb-2 text-gray-900">Advisors</h2>
                     <p class="text-gray-500 text-base mb-4">
                         Tristique nullam himenaeos rutrum sollicitudin molestie eleifend tellus finibus eget aenean
                         dictumst
@@ -276,43 +314,43 @@
             </div>
 
             <!-- Trading Card -->
-            <div class="relative pt-46 rounded-xl overflow-hidden shadow-xl col-span-1 bg-black">
+            <div class="relative pt-46 rounded-xl overflow-hidden shadow-xl col-span-1 bg-black" data-aos="fade-up">
                 <img src="assets/images/trading.png" alt="Trading" class="w-full h-full object-cover opacity-70">
                 <div class="absolute bottom-8 left-8 text-white">
-                    <h2 class="text-2xl pb-4">Safe & Secure Trading</h2>
-                    <p class="text-lg pb-4">MT-4 Software which protect data between traders</p>
+                    <h2 class="text-2xl md:text-3xl pb-4">Safe & Secure Trading</h2>
+                    <p class="text-lg md:text-xl pb-4">MT-4 Software which protect data between traders</p>
                     <button
                         class="flex items-center gap-2 px-8 py-2 rounded bg-gradient-to-r from-[#00f6ff] to-sky-600/75 text-white font-semibold duration-300 hover:from-sky-600/75 hover:to-[#00f6ff]">LEARN
                         MORE</button>
                 </div>
             </div>
 
-            <div class="flex flex-col gap-6 max-w-md mx-auto">
+            <div class="flex flex-col gap-6 max-w-md mx-auto" data-aos="fade-left">
                 <!-- Instant Exchange -->
                 <div class="bg-white p-6 rounded-xl shadow-xl">
-                    <h2 class="text-2xl mb-6 text-gray-900">Instant Exchange</h2>
+                    <h2 class="text-2xl md:text-3xl mb-6 text-gray-900">Instant Exchange</h2>
 
                     <div class="relative w-full h-40 mb-3">
                         <img src="assets/images/instant.png" alt="Exchange"
                             class="w-full h-full object-cover rounded-lg">
                         <!-- Play Button -->
                         <button class="absolute inset-0 flex items-center justify-center animate-pulse">
-                            <svg class="w-12 h-12 text-white bg-[#7267D7] bg-opacity-80 rounded-full p-2"
+                            <svg class="w-10 h-10 sm:w-12 sm:h-12 text-white bg-[#7267D7] bg-opacity-80 rounded-full p-2"
                                 fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M8 5v14l11-7z" />
                             </svg>
                         </button>
                     </div>
 
-                    <p class="text-gray-600 pt-5 text-lg">
+                    <p class="text-gray-600 pt-5 text-lg md:text-xl">
                         Fund your account and start trading on the world’s financial markets
                     </p>
                 </div>
 
                 <!-- User Experience -->
                 <div class="bg-white p-6 rounded-xl shadow-xl">
-                    <h2 class="text-2xl mb-4 text-gray-900">User Experience</h2>
-                    <p class="text-gray-600 text-lg">
+                    <h2 class="text-2xl md:text-3xl mb-4 text-gray-900">User Experience</h2>
+                    <p class="text-gray-600 text-lg md:text-xl">
                         Tristique nullam himenaeos rutrum sollicitudin molestie eleifend tellus finibus eget aenean
                         dictumst
                     </p>
@@ -335,45 +373,58 @@
         </div>
     </section>
 
-    <section class="stats-container">
-        <div class="stat-box border-r border-white/30">
-            <div class="stat-number">6M+</div>
-            <div class="stat-text">Happy Clients</div>
-        </div>
-        <div class="stat-box border-r border-white/30">
-            <div class="stat-number">24K+</div>
-            <div class="stat-text">Projects Done</div>
-        </div>
-        <div class="stat-box border-r border-white/30">
-            <div class="stat-number">711+</div>
-            <div class="stat-text">Expert Team</div>
-        </div>
-        <div class="stat-box">
-            <div class="stat-number">25+</div>
-            <div class="stat-text">Years of Experience</div>
+    <section class="container">
+        <div class="bg-gradient-to-r from-sky-600/75 to-[#00f6ff] py-6">
+            <div
+                class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-white text-center divide-x divide-white/30">
+                <!-- Stat 1 -->
+                <div class="px-6">
+                    <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold">6M+</h2>
+                    <p class="mt-2 text-lg sm:text-xl">Happy Clients</p>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="px-6">
+                    <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold">24K+</h2>
+                    <p class="mt-2 text-lg sm:text-xl">Projects Done</p>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="px-6">
+                    <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold">711+</h2>
+                    <p class="mt-2 text-lg sm:text-xl">Expert Team</p>
+                </div>
+
+                <!-- Stat 4 -->
+                <div class="px-6">
+                    <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold">25+</h2>
+                    <p class="mt-2 text-lg sm:text-xl">Years of Experience</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Our Services Section -->
     <section class="bg-gray-100 flex flex-col lg:flex-row items-center justify-between px-32 py-32">
         <!-- Left Column -->
-        <div class="lg:w-1/2 mb-10 lg:mb-0">
-            <p class="text-sm font-bold text-[#7267D7] uppercase mb-6">OUR SERVICES</p>
-            <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-8 leading-tight">
+        <div class="lg:w-1/2 mb-10 lg:mb-0 pr-[4rem] ps-2" data-aos="fade-right">
+            <p class="text-sm font-bold text-[#7267D7] uppercase mb-6 family-oss">OUR SERVICES</p>
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight family-oss" style="font-size: 39px;">
                 Our Platform provides all kind of investment methods
             </h1>
-            <p class="text-gray-500">Venenatis erat senectus aliquam at sagittis nisi vel hac accumsan.</p>
-            <p class="text-gray-500">Egestas class sociosqu natoque litora duis dignissim eleifend netus.</p>
-            <p class="text-gray-500 mb-8">Congue tortor felis integer condimentum cursus vestibulum vel rhoncus.</p>
+            <p class="text-gray-500 mb-6">Sollicitudin litora conubia euismod ante tellus leo diam. 
+                Aliquet felis laoreet nostra orci ultrices. Adipiscing etiam ex rhoncus eu fermentum nullam iaculis curabitur lorem.</p>
+            <!-- <p class="text-gray-500">Egestas class sociosqu natoque litora duis dignissim eleifend netus.</p>
+            <p class="text-gray-500 mb-8">Congue tortor felis integer condimentum cursus vestibulum vel rhoncus.</p> -->
 
             <button
-                class="px-8 py-2 rounded bg-gradient-to-r from-[#00f6ff] to-sky-600/75 text-white font-semibold duration-300 hover:bg-gradient-to-r hover:from-sky-600/75 hover:to-[#00f6ff]">
+                class="family-oss px-8 py-2 rounded bg-gradient-to-r from-[#00f6ff] to-sky-600/75 text-whiteduration-300 hover:bg-gradient-to-r hover:from-sky-600/75 hover:to-[#00f6ff]" style="font-size: 13px;">
                 DISCOVER MORE
             </button>
         </div>
 
         <!-- Right Column -->
-        <div class="relative lg:w-1/2">
+        <div class="relative lg:w-1/2" data-aos="fade-left">
             <!-- Main Image -->
             <img src="assets/images/services.png" alt="Service"
                 class="rounded-lg shadow-xl w-full max-w-xl mx-auto lg:mx-0">
@@ -383,7 +434,7 @@
                 style="position: absolute; top: 20%; right: -10px; transform: translateY(-60%); width: 375px; border-radius: 15px; overflow: hidden; background: linear-gradient(to right, rgba(68, 116, 171, 0.911), #03d5dc); color: white; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); z-index: 10;">
 
                 <div style="display: flex; align-items: center; padding: 15px 15px;">
-                    <div class="first-text" style="font-size: 48px; font-weight: bold; margin: 7px; line-height: 1;">40%</div>
+                    <div class="first-text mr-2" style="font-size: 48px; font-weight: bold; line-height: 1;">40%</div>
                     <div style="flex: 1;">
                         <div class="first-text">Interest Rate For Loan
                         </div>
@@ -395,7 +446,7 @@
                 <div style="height: 1px; background-color: rgba(255, 255, 255, 0.3); margin: 0 25px;"></div>
 
                 <div style="display: flex; align-items: center; padding: 15px 15px;">
-                    <div class="first-text" style="font-size: 48px; font-weight: bold; margin: 7px; line-height: 1;">12%</div>
+                    <div class="first-text mr-2" style="font-size: 48px; font-weight: bold; line-height: 1;">12%</div>
                     <div style="flex: 1;">
                         <div class="first-text">Margin & Profits</div>
                         <div class="second-text">Odio nisi id fames nascetur
@@ -411,13 +462,13 @@
     <section class="bg-gray-50 py-16">
         <div style="max-width: 1400px; margin: 0 auto; padding: 40px 20px;">
             <div style="text-align: center; margin-bottom: 60px;">
-                <h3
-                    style="color: #7957d5; font-size: 16px; font-weight: 600; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;">
+                <h3 class="family-oss"
+                    style="color: #7957d5; font-size: 14px; font-weight: 600; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;">
                     WHAT WE OFFER</h3>
-                <h2 style="font-size: 42px; font-weight: 700; color: #1a1a1a; margin-bottom: 20px; line-height: 1.2;">
+                <h2 class="family-oss" style="font-size: 39px; font-weight: 700; color: #1a1a1a; margin-bottom: 20px; line-height: 1.2;">
                     Unlock
                     financial freedom with <br>smart choices</h2>
-                <p style="color: #6c757d; max-width: 700px; margin: 0 auto;" class="text-lg">Lorem ipsum dolor sit
+                <p style="color: #6c757d; max-width: 700px; margin: 0 auto; font-size: 16px;" class="text-lg">Lorem ipsum dolor sit
                     amet,
                     consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
                 </p>
@@ -437,13 +488,13 @@
                                     d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zm-141.651-35.33c4.937-32.999-20.191-50.739-54.55-62.573l11.146-44.702-27.213-6.781-10.851 43.524c-7.154-1.783-14.502-3.464-21.803-5.13l10.929-43.81-27.198-6.781-11.153 44.686c-5.922-1.349-11.735-2.682-17.377-4.084l.031-.14-37.53-9.37-7.239 29.062s20.191 4.627 19.765 4.913c11.022 2.751 13.014 10.044 12.68 15.825l-12.696 50.925c.76.194 1.744.473 2.829.907-.907-.225-1.876-.473-2.876-.713l-17.796 71.338c-1.349 3.348-4.767 8.37-12.471 6.464.271.395-19.78-4.937-19.78-4.937l-13.51 31.147 35.414 8.827c6.588 1.651 13.045 3.379 19.4 5.006l-11.262 45.213 27.182 6.781 11.153-44.733a1038.209 1038.209 0 0 0 21.687 5.627l-11.115 44.523 27.213 6.781 11.262-45.128c46.404 8.781 81.299 5.239 95.986-36.727 11.836-33.79-.589-53.281-25.004-65.991 17.78-4.098 31.174-15.792 34.747-39.949zm-62.177 87.179c-8.41 33.79-65.308 15.523-83.755 10.943l14.944-59.899c18.446 4.603 77.6 13.717 68.811 48.956zm8.417-87.667c-7.673 30.736-55.031 15.12-70.393 11.292l13.548-54.327c15.363 3.828 64.836 10.973 56.845 43.035z" />
                             </svg>
                         </div>
-                        <h3 style="margin-bottom: 15px;" class="text-black text-3xl">Investment
+                        <h3 style="margin-bottom: 15px;" class="text-black size-tfive">Investment
                         </h3>
                         <p style="color: #6c757d; font-size: 14px; margin: 0;">Lorem ipsum dolor sit amet, consectetur
                             adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
                     </div>
-                    <button
-                        class="px-6 py-2 rounded bg-gradient-to-r from-[#00f6ff] to-sky-600/75 text-white font-semibold duration-300 hover:bg-gradient-to-r hover:from-sky-600/75 hover:to-[#00f6ff]">
+                    <button style="font-size: 13px;"
+                        class="family-oss px-6 py-3 rounded bg-gradient-to-r from-[#00f6ff] to-sky-600/75 text-white font-semibold duration-300 hover:bg-gradient-to-r hover:from-sky-600/75 hover:to-[#00f6ff]">
                         LEARN MORE
                     </button>
                     <div
@@ -464,12 +515,12 @@
                                     d="M272 278.5V112c0-8.8-7.2-16-16-16s-16 7.2-16 16v166.5c-19.6 7.9-32 27-32 48.5 0 28.7 23.3 52 52 52s52-23.3 52-52c0-21.5-12.4-40.6-32-48.5zM48 96h160v32H48c-8.8 0-16 7.2-16 16v288c0 8.8 7.2 16 16 16h384c8.8 0 16-7.2 16-16V144c0-8.8-7.2-16-16-16H272V96h160c26.5 0 48-21.5 48-48s-21.5-48-48-48H112C85.5 0 64 21.5 64 48s21.5 48 48 48zm336 272H96V192h288v176z" />
                             </svg>
                         </div>
-                        <h3 style="margin-bottom: 15px;" class="text-black text-3xl">Trading</h3>
+                        <h3 style="margin-bottom: 15px;" class="text-black size-tfive">Trading</h3>
                         <p style="color: #6c757d; font-size: 14px; margin: 0;">Lorem ipsum dolor sit amet, consectetur
                             adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
                     </div>
-                    <button
-                        class="px-6 py-2 rounded bg-gradient-to-r from-[#00f6ff] to-sky-600/75 text-white font-semibold duration-300 hover:bg-gradient-to-r hover:from-sky-600/75 hover:to-[#00f6ff]">
+                    <button style="font-size: 13px;"
+                        class="family-oss px-6 py-3 rounded bg-gradient-to-r from-[#00f6ff] to-sky-600/75 text-white font-semibold duration-300 hover:bg-gradient-to-r hover:from-sky-600/75 hover:to-[#00f6ff]">
                         LEARN MORE
                     </button>
                     <div
@@ -490,12 +541,12 @@
                                     d="M336 0H48C21.49 0 0 21.49 0 48v416c0 26.51 21.49 48 48 48h288c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zm0 464H48V48h288v416zM144 112h96c8.84 0 16-7.16 16-16s-7.16-16-16-16h-96c-8.84 0-16 7.16-16 16s7.17 16 16 16zm48 176c35.35 0 64-28.65 64-64s-28.65-64-64-64-64 28.65-64 64 28.65 64 64 64zm-89.6 128h179.2c12.4 0 22.4-8.6 22.4-19.2v-19.2c0-31.8-30.1-57.6-67.2-57.6h-70.4c-37.1 0-67.2 25.8-67.2 57.6v19.2c0 10.6 10 19.2 22.4 19.2z" />
                             </svg>
                         </div>
-                        <h3 style="margin-bottom: 15px;" class="text-black text-3xl">Mutual Fund</h3>
+                        <h3 style="margin-bottom: 15px;" class="text-black size-tfive">Mutual Fund</h3>
                         <p style="color: #6c757d; font-size: 14px; margin: 0;">Lorem ipsum dolor sit amet, consectetur
                             adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
                     </div>
-                    <button
-                        class="px-6 py-2 rounded bg-gradient-to-r from-[#00f6ff] to-sky-600/75 text-white font-semibold duration-300 hover:bg-gradient-to-r hover:from-sky-600/75 hover:to-[#00f6ff]">
+                    <button style="font-size: 13px;"
+                        class="family-oss px-6 py-3 rounded bg-gradient-to-r from-[#00f6ff] to-sky-600/75 text-white font-semibold duration-300 hover:bg-gradient-to-r hover:from-sky-600/75 hover:to-[#00f6ff]">
                         LEARN MORE
                     </button>
                     <div
@@ -514,12 +565,12 @@
             <p class="promo-text">Malesuada lacinia ipsum elit suscipit imperdiet tellus turpis commodo euismod dis
                 lectus natoque donec mollis feugiat risus egestas etiam viverra</p>
             <div class="flex gap-4 justify-center">
-                <button
-                    class="px-6 py-2 rounded bg-gradient-to-r from-[#00f6ff] to-sky-600/75 text-white font-semibold duration-300 hover:from-sky-600/75 hover:to-[#00f6ff]">
+                <button style="font-size: 13px;"
+                    class="family-oss px-6 py-3 rounded bg-gradient-to-r from-[#00f6ff] to-sky-600/75 text-white font-semibold duration-300 hover:from-sky-600/75 hover:to-[#00f6ff]">
                     CREATE ACCOUNT
                 </button>
-                <button
-                    class="flex items-center gap-2 px-6 py-2 rounded bg-gradient-to-r from-[#00f6ff] to-sky-600/75 text-white font-semibold duration-300 hover:from-sky-600/75 hover:to-[#00f6ff]">
+                <button style="font-size: 13px;"
+                    class="family-oss px-6 py-3 flex items-center gap-2 rounded bg-gradient-to-r from-[#00f6ff] to-sky-600/75 text-white font-semibold duration-300 hover:from-sky-600/75 hover:to-[#00f6ff]">
                     <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M8 5v14l11-7z" />
                     </svg>
@@ -536,11 +587,11 @@
             <!-- Grid to hold Progress Bars and Benefits Side by Side -->
             <div class="grid lg:grid-cols-2 gap-10">
                 <!-- Vertical Progress Bars Section -->
-                <div class="space-y-8">
+                <div class="space-y-4" data-aos="fade-right">
                     <!-- Heading -->
                     <div class="mb-12">
                         <p class="text-sm font-bold text-[#7267D7] uppercase mb-6">WHY CHOOSE US</p>
-                        <h3 class="text-4xl text-black font-semibold mb-6">
+                        <h3 class="family-oss text-4xl text-black font-semibold mb-6" style="font-size: 39px;">
                             Maximize your wealth with strategic investments
                         </h3>
                         <p class="max-w-3xl mx-auto text-gray-500">
@@ -551,8 +602,8 @@
 
                     <!-- Progress Bar 1 -->
                     <div>
-                        <div class="flex justify-between mb-2">
-                            <span class="text-base font-semibold text-gray-800">FLEXIBILITY</span>
+                        <div class="flex justify-between mb-0">
+                            <span class="progress-text text-gray-800">FLEXIBILITY</span>
                             <span class="text-sm text-white">80%</span>
                         </div>
                         <div class="w-full bg-gray-200 rounded-full h-2.5">
@@ -563,8 +614,8 @@
 
                     <!-- Progress Bar 2 -->
                     <div>
-                        <div class="flex justify-between mb-2">
-                            <span class="text-base font-semibold text-gray-800">EXPERT ADVISORS</span>
+                        <div class="flex justify-between mb-0">
+                            <span class="progress-text text-gray-800">EXPERT ADVISORS</span>
                             <span class="text-sm text-white">90%</span>
                         </div>
                         <div class="w-full bg-gray-200 rounded-full h-2.5">
@@ -575,8 +626,8 @@
 
                     <!-- Progress Bar 3 -->
                     <div>
-                        <div class="flex justify-between mb-2">
-                            <span class="text-base font-semibold text-gray-800">USER EXPERIENCE</span>
+                        <div class="flex justify-between mb-0">
+                            <span class="progress-text text-gray-800">USER EXPERIENCE</span>
                             <span class="text-sm text-white">95%</span>
                         </div>
                         <div class="w-full bg-gray-200 rounded-full h-2.5">
@@ -587,56 +638,55 @@
                 </div>
 
                 <!-- Benefits Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-y-1">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-y-1" data-aos="fade-left">
                     <!-- Card 1 -->
-                    <div class="bg-white p-4 flex items-start gap-1">
-                        <div class="w-20 h-20 flex items-center justify-center">
-                            <img src="assets/images/f1.png" alt="Icon 1" class="w-14 h-14" />
+                    <div class="bg-white flex items-start pb-2">
+                        <div class="w-[9rem] h-20 flex items-center justify-center mr-5">
+                            <img src="assets/images/f1.png" alt="Icon 1" class="w-[4rem] h-[4rem]" />
                         </div>
                         <div>
-                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Ease Of Transaction With DTRX Trading
-                                Tools</h3>
-                            <p class="text-gray-600">Proin ullamcorper pretium orci. Donec nec scelerisque leo.</p>
+                            <h3 style="font-size: 20px;" class="family-oss text-gray-800 mb-2">Ease Of Transaction With DTRX Trading Tools</h3>
+                            <p class="text-gray-600">Proin ullamcorper pretium orci. Donec nec scelerisque leo. 
+                                Nam massa dolor imperdiet nec consequata congue idsem.</p>
                         </div>
                     </div>
 
                     <!-- Card 2 -->
-                    <div class="bg-white p-4 flex items-start gap-1">
-                        <div class="w-20 h-20 flex items-center justify-center">
-                            <img src="assets/images/f2.png" alt="Icon 2" class="w-15 h-14" />
+                    <div class="bg-white flex items-start pb-2">
+                        <div class="w-[9rem] h-20 flex items-center justify-center mr-5">
+                            <img src="assets/images/f2.png" alt="Icon 2" class="w-[4rem] h-[4rem]" />
                         </div>
                         <div>
-                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Additional Benefits Of Trading At
-                                Dirade Platform</h3>
-                            <p class="text-gray-600">Proin ullamcorper pretium orci. Donec nec scelerisque leo.</p>
+                            <h3 style="font-size: 20px;" class="family-oss text-gray-800 mb-2">Additional Benefits Of Trading At Dirade Platform</h3>
+                            <p class="text-gray-600">Proin ullamcorper pretium orci. Donec nec scelerisque leo. 
+                                Nam massa dolor imperdiet nec consequata congue idsem.</p>
                         </div>
                     </div>
 
                     <!-- Card 3 -->
-                    <div class="bg-white p-4 flex items-start gap-1">
-                        <div class="w-20 h-20 flex items-center justify-center">
-                            <img src="assets/images/f3.png" alt="Icon 3" class="w-14 h-14" />
+                    <div class="bg-white flex items-start pb-2">
+                        <div class="w-[9rem] h-20 flex items-center justify-center mr-5">
+                            <img src="assets/images/f3.png" alt="Icon 3" class="w-[4rem] h-[4rem]" />
                         </div>
                         <div>
-                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Friendly Platform For Beginner Traders
-                            </h3>
-                            <p class="text-gray-600">Proin ullamcorper pretium orci. Donec nec scelerisque leo.</p>
+                            <h3 style="font-size: 20px;" class="family-oss text-gray-800 mb-2">Friendly Platform For Beginner Traders</h3>
+                            <p class="text-gray-600">Proin ullamcorper pretium orci. Donec nec scelerisque leo. 
+                                Nam massa dolor imperdiet nec consequata congue idsem.</p>
                         </div>
                     </div>
 
                     <!-- Card 4 -->
-                    <div class="bg-white p-4 flex items-start gap-1">
-                        <div class="w-20 h-20 flex items-center justify-center">
-                            <img src="assets/images/f4.png" alt="Icon 4" class="w-14 h-14" />
+                    <div class="bg-white flex items-start pb-2">
+                        <div class="w-[9rem] h-20 flex items-center justify-center mr-5">
+                            <img src="assets/images/f4.png" alt="Icon 4" class="w-[4rem] h-[4rem]" />
                         </div>
                         <div>
-                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Strategy And Planning</h3>
-                            <p class="text-gray-600">Proin ullamcorper pretium orci. Donec nec scelerisque leo.</p>
+                            <h3 style="font-size: 20px;" class="family-oss text-gray-800 mb-2">Strategy And Planning</h3>
+                            <p class="text-gray-600">Proin ullamcorper pretium orci. Donec nec scelerisque leo. 
+                                Nam massa dolor imperdiet nec consequata congue idsem.</p>
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </section>
@@ -684,8 +734,8 @@
                 <div class="mx-auto mb-6 rounded-full w-20 h-20 flex items-center justify-center">
                     <img src="assets/images/f5.png" alt="Icon 1" class="w-15 h-15" />
                 </div>
-                <h3 class="text-2xl text-black mb-4">Consulting is the secret to unlocking your vision.</h3>
-                <p class="text-gray-500 text-base">Aliquet mus maximus sociosqu pede magna libero</p>
+                <h3 class="family-oss size-tfive card-text-spacing text-black mb-4">Consulting is the secret to unlocking your vision.</h3>
+                <p class="text-gray-500 text-base">Augue urna iaculis auctor mauris platea a vitae nascetur inceptos sed elementum nullam quisque</p>
             </div>
 
             <!-- Card 2 (Highlighted) -->
@@ -693,9 +743,8 @@
                 <div class="mx-auto mb-6 rounded-full w-20 h-20 flex items-center justify-center">
                     <img src="assets/images/f6.png" alt="Icon 2" class="w-15 h-15" />
                 </div>
-                <h3 class="text-2xl text-white mb-4">Conceptualize, design, and deliver exceptional
-                    execution.</h3>
-                <p class="text-base">Aliquet mus maximus sociosqu pede magna libero</p>
+                <h3 class="family-oss size-tfive card-text-spacing text-white mb-4">Conceptualize, design, and deliver exceptional execution.</h3>
+                <p class="text-base">Augue urna iaculis auctor mauris platea a vitae nascetur inceptos sed elementum nullam quisque</p>
             </div>
 
             <!-- Card 3 -->
@@ -703,13 +752,13 @@
                 <div class="mx-auto mb-6 rounded-full w-20 h-20 flex items-center justify-center">
                     <img src="assets/images/f7.png" alt="Icon 3" class="w-15 h-15" />
                 </div>
-                <h3 class="text-2xl text-black mb-4">Help our clients reach their full potential.</h3>
-                <p class="text-gray-600 text-base">Aliquet mus maximus sociosqu pede magna libero</p>
+                <h3 class="family-oss size-tfive card-text-spacing text-black mb-4">Help our clients reach their full potential.</h3>
+                <p class="text-gray-600 text-base">Augue urna iaculis auctor mauris platea a vitae nascetur inceptos sed elementum nullam quisque</p>
             </div>
 
         </div>
 
-        <div class="px-6 pt-10">
+        <div class="px-4 sm:px-6 pt-10">
             <div class="swiper logoSwiper">
                 <div class="swiper-wrapper">
                     <!-- Repeat these swiper-slide elements for each logo -->
@@ -763,6 +812,10 @@
                     disableOnInteraction: false,
                 },
                 breakpoints: {
+                    320: {
+                        slidesPerView: 2, // Show 2 logos on very small screens
+                        spaceBetween: 10, // Smaller space between logos
+                    },
                     640: {
                         slidesPerView: 2,
                         spaceBetween: 20,
@@ -780,6 +833,156 @@
         </script>
 
     </section>
+
+    <!-- Device Section -->
+    <section class="relative bg-cover bg-center bg-no-repeat px-6 py-16"
+        style="background-image: url('/assets/images/device-bg.png');">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/60"></div>
+
+        <!-- Content -->
+        <div
+            class="relative z-10 max-w-7xl mx-auto px-6 py-20 text-white flex flex-col md:items-start items-center text-center md:text-left">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                Any Device with Experience
+            </h2>
+            <p class="text-base max-w-2xl">
+                Quam faucibus in vehicula sociosqu eleifend conubia sed. Duis suspendisse</p>
+            <p class="text-base max-w-2xl">nisl pulvinar sit molestie gravida suscipit cubilia. Placerat ut
+                dictum
+                eget ultrices
+            </p>
+            <p class="text-base mb-6 max-w-2xl">cubilia fusce.</p>
+
+            <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                <a href="#">
+                    <img src="/assets/images/google-play.png" alt="Google Play" class="h-14">
+                </a>
+                <a href="#">
+                    <img src="/assets/images/app-store.png" alt="App Store" class="h-14">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-[#032427] text-white relative bg-cover bg-center">
+        <!-- Newsletter Signup -->
+        <div class="border-b border-white/30 px-6" data-aos="fade-up">
+            <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <h2 class="text-xl font-semibold text-center md:text-left">
+                    Signup our newsletter to get update information,<br />
+                    news, insight or promotions.
+                </h2>
+                <form class="flex w-full md:w-auto">
+                    <input type="email" placeholder="Your Email"
+                        class="px-6 py-2 rounded-l-md w-full md:w-60 bg-white text-black focus:outline-none" />
+                    <button type="submit"
+                        class="bg-gradient-to-r from-[#00f6ff] to-sky-600/75 px-12 py-2 rounded-r-md text-white font-semibold duration-300 hover:from-sky-600/75 hover:to-[#00f6ff]">
+                        SIGN UP
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer Content -->
+        <div class="max-w-7xl mx-auto px-12 py-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10 text-sm">
+            <!-- Brand Info -->
+            <div data-aos="fade-right">
+                <img src="/assets/images/logo.png" alt="Vestrade" class="h-10 mb-4">
+                <p class="text-white/80 mb-8">
+                    Dictumst natoque curae nullam quisque pretium sem cursus augue pede tempor quis nisi at curabitur si
+                    condimentum metus parturient posuere dapibus id leo.
+                </p>
+                <div class="flex gap-4 text-white text-lg">
+                    <a href="#"><i class="fab fa-facebook-f text-cyan-400"></i></a>
+                    <a href="#"><i class="fab fa-twitter text-cyan-400"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in text-cyan-400"></i></a>
+                    <a href="#"><i class="fab fa-instagram text-cyan-400"></i></a>
+                </div>
+            </div>
+
+            <!-- Product Links -->
+            <div data-aos="fade-up" data-aos-delay="100">
+                <h4 class="font-semibold text-lg text-white mb-4">Product</h4>
+                <ul class="space-y-2 text-white/80">
+                    <li class="border-b border-white/30 pb-2">
+                        <a href="#" class="hover:text-cyan-400 block">Stocks</a>
+                    </li>
+                    <li class="border-b border-white/30 pb-2">
+                        <a href="#" class="hover:text-cyan-400 block">Futures & Options</a>
+                    </li>
+                    <li class="border-b border-white/30 pb-2">
+                        <a href="#" class="hover:text-cyan-400 block">IPO</a>
+                    </li>
+                    <li class="border-b border-white/30 pb-2">
+                        <a href="#" class="hover:text-cyan-400 block">Mutual Funds</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-cyan-400 block">Credits</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Support Links -->
+            <div data-aos="fade-up" data-aos-delay="200">
+                <h4 class="font-semibold text-lg text-white mb-4">Support</h4>
+                <ul class="space-y-2 text-white/80">
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Contact Us</a>
+                    </li>
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Help Centre</a>
+                    </li>
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">FAQ</a></li>
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">My Account</a>
+                    </li>
+                    <li><a href="#" class="hover:text-cyan-400">Community</a></li>
+                </ul>
+            </div>
+
+            <!-- Company Info -->
+            <div data-aos="fade-up" data-aos-delay="300">
+                <h4 class="font-semibold text-lg text-white mb-4">Company</h4>
+                <ul class="space-y-2 text-white/80">
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">About</a></li>
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Services</a></li>
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Vision &
+                            Mision</a></li>
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Leadership</a>
+                    </li>
+                    <li><a href="#" class="hover:text-cyan-400">News & Article</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div data-aos="fade-left" data-aos-delay="400">
+                <h4 class="font-semibold text-lg text-white mb-4">Get in Touch</h4>
+                <ul class="space-y-4 text-white/80">
+                    <li class="flex gap-2 items-start">
+                        <i class="fas fa-map-marker-alt text-teal-400 mt-1"></i>
+                        Jalan Cempaka Wangi No 22<br />Jakarta - Indonesia
+                    </li>
+                    <li class="flex gap-2 items-center">
+                        <i class="fas fa-envelope text-teal-400"></i>
+                        support@yourdomain.tld
+                    </li>
+                    <li class="flex gap-2 items-center">
+                        <i class="fas fa-phone-alt text-teal-400"></i>
+                        (888) 4000 613
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-white/30 py-4 text-center text-sm text-white/70">
+            Copyright© 2024 Vestrade, All rights reserved.
+        </div>
+    </footer>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 
