@@ -123,15 +123,15 @@
     <!-- End Navigation Bar -->
 
     <!-- Testimonial Section -->
-    <div class="bg-gray-100 py-16 px-6 md:px-16 lg:px-32">
+    <div class="bg-gray-100 py-12 px-6 md:px-16 lg:px-32">
         <!-- Section Title -->
         <div class="section-title text-black">
-            <h2 class="text-4xl text-[#7267D7] font-bold">Testimonial</h2>
-            <p class="text-2xl mt-4 pb-8">Client feedback & Reviews</p>
+            <h2 class="text-md text-[#6962AD] font-bold">Testimonial</h2>
+            <p style="font-size: 39px; font-weight: bold;" class="family-oss text-[#0A0118] mt-4 pb-2">Client feedback & Reviews</p>
         </div>
 
         <!-- Swiper Slider -->
-        <div class="swiper">
+        <div class="swiper pb-12">
             <div class="swiper-wrapper">
                 <!-- Slide 1 -->
                 <div class="swiper-slide">
@@ -239,6 +239,10 @@
             loop: true,
             slidesPerView: 3,
             spaceBetween: 30,
+            autoplay: {
+                delay: 3000, // Auto-scroll every 3 seconds
+                disableOnInteraction: false, // Continue autoplay after user interaction
+            },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
