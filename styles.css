@@ -217,10 +217,6 @@ body.modal-open {
     overflow: hidden;
 }
 
-html.modal-open {
-    overflow: hidden;
-}
-
 /* FAQ Section */
 .faq .content h3 {
   font-weight: 400;
@@ -239,6 +235,13 @@ html.modal-open {
   margin-bottom: 20px;
   box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+}
+
+.faq-container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .faq .faq-container .faq-item:last-child {
