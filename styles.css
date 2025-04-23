@@ -217,6 +217,10 @@ body.modal-open {
     overflow: hidden;
 }
 
+html.modal-open {
+    overflow: hidden;
+}
+
 /* FAQ Section */
 .faq .content h3 {
   font-weight: 400;

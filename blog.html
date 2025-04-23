@@ -351,11 +351,13 @@
         function openModal(modalId) {
             document.getElementById(modalId).style.display = "block";
             document.body.classList.add("modal-open");
+            document.documentElement.classList.add("modal-open"); // Prevent scrolling on html
         }
 
         function closeModal(modalId) {
             document.getElementById(modalId).style.display = "none";
             document.body.classList.remove("modal-open");
+            document.documentElement.classList.remove("modal-open"); // Re-enable scrolling on html
         }
 
         // Close modal when clicking outside of it
