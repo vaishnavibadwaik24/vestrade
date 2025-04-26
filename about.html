@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vestrade</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body class="bg-[#0f021f]">
+    <!-- Navigation Bar -->
+    <nav class="text-white px-6 md:px-16 lg:px-32 py-6 flex items-center justify-between border-b border-gray-700">
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+            <img src="assets/images/logo.png" alt="Logo" class="w-32 md:w-40 h-8 md:h-10" />
+        </div>
+
+        <!-- Hamburger Menu for Mobile -->
+        <div class="md:hidden">
+            <button id="menu-toggle" class="text-white focus:outline-none">
+                <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Navigation Links + Button -->
+        <div id="menu" class="hidden md:flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6">
+            <!-- Navigation Links -->
+            <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 items-center font-semibold">
+                <li><a href="#" class="hover:text-cyan-400">Home</a></li>
+                <li><a href="#" class="hover:text-cyan-400">About</a></li>
+                <!-- Service Dropdown -->
+                <li class="relative group">
+                    <button class="flex items-center gap-x-2 hover:text-cyan-400">
+                        Services
+                        <!-- <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor"
+                            stroke-width="3" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg> -->
+                    </button>
+                    <ul
+                        class="absolute left-0 mt-2 bg-white text-black shadow-lg rounded hidden group-hover:block min-w-[150px] z-10">
+                        <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Contact</a>
+                        </li>
+                        <!-- <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Pricing</a></li> -->
+                    </ul>
+                </li>
+
+                <!-- <li><a href="#" class="hover:text-cyan-400">Product</a></li> -->
+                <li><a href="#" class="hover:text-cyan-400">Contact</a></li>
+
+                <!-- Pages Dropdown -->
+                <!-- <li class="relative group">
+                    <button class="flex items-center gap-x-2 hover:text-cyan-400">
+                        Pages
+                        <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor"
+                            stroke-width="3" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <ul
+                        class="absolute left-0 mt-2 bg-white text-black shadow-lg rounded hidden group-hover:block min-w-[150px] z-10">
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Team</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">FAQ</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Blog</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Single Blog</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">404 Page</a></li>
+                    </ul>
+                </li> -->
+            </ul>
+
+            <!-- Get Started Button -->
+            <!-- <div class="group">
+                <button style="font-size: 13px; font-family: 'Outfit', sans-serif;"
+                    class="px-6 py-2 rounded bg-gradient-to-r from-[#00f6ff] to-sky-500/75 text-white transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-sky-500/75 group-hover:to-[#00f6ff]">
+                    GET STARTED
+                </button>
+            </div> -->
+        </div>
+    </nav>
+
+    <script>
+        // Toggle mobile menu and icons
+        document
+            .getElementById("menu-toggle")
+            .addEventListener("click", function () {
+                const menu = document.getElementById("menu");
+                const hamburgerIcon = document.getElementById("hamburger-icon");
+                const closeIcon = document.getElementById("close-icon");
+
+                menu.classList.toggle("hidden");
+                hamburgerIcon.classList.toggle("hidden");
+                closeIcon.classList.toggle("hidden");
+            });
+
+        // Redirect to the home page when the close icon is clicked
+        document
+            .getElementById("close-icon")
+            .addEventListener("click", function () {
+                window.location.href = "/"; // Replace '/' with your home page URL if different
+            });
+    </script>
+    <!-- End Navigation Bar -->
+
+    <!-- About Section -->
+    <section class="bg-white px-28 sm:px-4 md:px-8 lg:px-28">
+        <div class="row justify-center text-center pt-8">
+            <h2 class="text-sm font-bold text-[#7267D7] uppercase text-center mt-2">
+                Introduction
+            </h2>
+        </div>
+        <div class="flex flex-col lg:flex-row items-center justify-between px-6 py-20 pt-8 bg-white">
+            <!-- -- Left Column (Image) -- -->
+            <div class="relative lg:w-1/2 mb-10 lg:mb-0" data-aos="fade-left">
+                <!-- -- Main Image -- -->
+                <img src="assets/images/invest.jpg" alt="Bitcoin Cart"
+                    class="rounded-lg shadow-xl w-full max-w-xl mx-auto lg:mx-0" />
+            </div>
+
+            <!-- -- Right Column (Content) -- -->
+            <div class="lg:w-1/2 ml-0 lg:ml-10 text-center lg:text-left" data-aos="fade-right">
+                <p class="text-[#6B7280] px-5 text-justify">
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    Over the past several years, the Real Estate Industry has generated
+                    steady cash flow and great returns above other investment options.
+                    The most common practice in the Real Estate Investment Industry is
+                    purchasing properties such as homes, apartments, office spaces, or
+                    plots to earn income through rent or by selling them later at a
+                    higher price. While this is straightforward and accessible to most
+                    people, the true wealth-building potential of real estate lies in
+                    developing real estate projects—a domain widely regarded as the real
+                    gem of the industry. This is where the most substantial profits and
+                    transformative opportunities exist, making it the pinnacle of real
+                    estate investment.<br />
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    However, developing or investing in real estate projects is far more
+                    complex and challenging for individual investors. It requires
+                    substantial capital, legal verifications, government permissions,
+                    technical expertise, sales and marketing management, and significant
+                    time commitment. Due to these barriers, only a select group of
+                    individuals or institutions can afford to invest in or gain profit
+                    from real estate development.<br />
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    To bridge the gap and make these high-potential opportunities
+                    accessible to everyone, we are launching an innovative platform
+                    called TRENDS REIFs. It empowers investors—regardless of their
+                    technical expertise, time availability, or experience in real
+                    estate—to seamlessly access lucrative real estate investment
+                    opportunities without the usual complexities.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        @keyframes progress {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: var(--final-width);
+            }
+        }
+
+        .animate-progress {
+            animation: progress 1.5s ease-out forwards;
+            width: var(--final-width);
+        }
+    </style>
+
+    <script>
+        // Animate progress bars when they come into view
+        document.addEventListener("DOMContentLoaded", function () {
+            const progressBars = document.querySelectorAll(".animate-progress");
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            const width = entry.style.getPropertyValue("--final-width");
+                            entry.style.width = width;
+                        }
+                    });
+                },
+                { threshold: 0.5 }
+            );
+
+            progressBars.forEach((bar) => observer.observe(bar));
+        });
+    </script>
+
+    <!-- <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+
+            <div class="bg-white rounded-2xl shadow-lg text-center p-10">
+                <div class="mx-auto mb-6 rounded-full w-20 h-20 flex items-center justify-center">
+                    <img src="assets/images/f5.png" alt="Icon 1" class="w-15 h-15" />
+                </div>
+                <h3 class="family-oss size-tfive card-text-spacing text-black mb-4">Consulting is the secret to
+                    unlocking your vision.</h3>
+                <p class="text-gray-500 text-base">Augue urna iaculis auctor mauris platea a vitae nascetur inceptos sed
+                    elementum nullam quisque</p>
+            </div>
+
+            <div class="bg-gradient-to-b from-[#00f6ff] to-sky-700 text-white rounded-2xl shadow-lg text-center p-10">
+                <div class="mx-auto mb-6 rounded-full w-20 h-20 flex items-center justify-center">
+                    <img src="assets/images/f6.png" alt="Icon 2" class="w-15 h-15" />
+                </div>
+                <h3 class="family-oss size-tfive card-text-spacing text-white mb-4">Conceptualize, design, and deliver
+                    exceptional execution.</h3>
+                <p class="text-base">Augue urna iaculis auctor mauris platea a vitae nascetur inceptos sed elementum
+                    nullam quisque</p>
+            </div>
+
+
+            <div class="bg-white rounded-2xl shadow-lg text-center p-10">
+                <div class="mx-auto mb-6 rounded-full w-20 h-20 flex items-center justify-center">
+                    <img src="assets/images/f7.png" alt="Icon 3" class="w-15 h-15" />
+                </div>
+                <h3 class="family-oss size-tfive card-text-spacing text-black mb-4">Help our clients reach their full
+                    potential.</h3>
+                <p class="text-gray-600 text-base">Augue urna iaculis auctor mauris platea a vitae nascetur inceptos sed
+                    elementum nullam quisque</p>
+            </div>
+
+        </div>
+
+        <div class="px-4 sm:px-6 pt-10">
+            <div class="swiper logoSwiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide flex justify-center">
+                        <img src="assets/images/logo-1.png" alt="Logo 1" class="h-24">
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="assets/images/logo-2.png" alt="Logo 2" class="h-24">
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="assets/images/logo-3.png" alt="Logo 3" class="h-24">
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="assets/images/logo-4.png" alt="Logo 4" class="h-24">
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="assets/images/logo-5.png" alt="Logo 5" class="h-24">
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="assets/images/logo-6.png" alt="Logo 6" class="h-24">
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="assets/images/logo-1.png" alt="Logo 1" class="h-24">
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="assets/images/logo-2.png" alt="Logo 2" class="h-24">
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="assets/images/logo-3.png" alt="Logo 3" class="h-24">
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="assets/images/logo-4.png" alt="Logo 4" class="h-24">
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="assets/images/logo-5.png" alt="Logo 5" class="h-24">
+                    </div>
+                    <div class="swiper-slide flex justify-center">
+                        <img src="assets/images/logo-6.png" alt="Logo 6" class="h-24">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const swiper = new Swiper('.logoSwiper', {
+                slidesPerView: 6,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                    },
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                    1024: {
+                        slidesPerView: 6,
+                        spaceBetween: 40,
+                    },
+                }
+            });
+        </script>
+
+    </section> -->
+
+    <!-- Device Section -->
+    <!-- <section class="relative bg-cover bg-center bg-no-repeat px-6 py-16"
+        style="background-image: url('/assets/images/device-bg.png');">
+       
+        <div class="absolute inset-0 bg-black/60"></div>
+
+        
+        <div
+            class="relative z-10 max-w-7xl mx-auto px-6 py-20 text-white flex flex-col md:items-start items-center text-center md:text-left">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                Any Device with Experience
+            </h2>
+            <p class="text-base max-w-2xl">
+                Quam faucibus in vehicula sociosqu eleifend conubia sed. Duis suspendisse</p>
+            <p class="text-base max-w-2xl">nisl pulvinar sit molestie gravida suscipit cubilia. Placerat ut
+                dictum
+                eget ultrices
+            </p>
+            <p class="text-base mb-6 max-w-2xl">cubilia fusce.</p>
+
+            <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                <a href="#">
+                    <img src="/assets/images/google-play.png" alt="Google Play" class="h-14">
+                </a>
+                <a href="#">
+                    <img src="/assets/images/app-store.png" alt="App Store" class="h-14">
+                </a>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Footer Section -->
+    <footer class="bg-[#032427] text-white relative bg-cover bg-center">
+        <!-- Newsletter Signup -->
+        <div class="border-b border-white/30 px-6" data-aos="fade-up">
+            <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <h2 class="text-xl font-semibold text-center md:text-left">
+                    Signup our newsletter to get update information,<br />
+                    news, insight or promotions.
+                </h2>
+                <form class="flex w-full md:w-auto">
+                    <input type="email" placeholder="Your Email"
+                        class="px-6 py-2 rounded-l-md w-full md:w-60 bg-white text-black focus:outline-none" />
+                    <button type="submit"
+                        class="bg-gradient-to-r from-[#00f6ff] to-sky-600/75 px-12 py-2 rounded-r-md text-white font-semibold duration-300 hover:from-sky-600/75 hover:to-[#00f6ff]">
+                        SIGN UP
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer Content -->
+        <div class="max-w-7xl mx-auto px-12 py-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10 text-sm">
+            <!-- Brand Info -->
+            <div data-aos="fade-right">
+                <img src="/assets/images/logo.png" alt="Vestrade" class="h-10 mb-4" />
+                <p class="text-white/80 mb-8">
+                    Dictumst natoque curae nullam quisque pretium sem cursus augue pede
+                    tempor quis nisi at curabitur si condimentum metus parturient
+                    posuere dapibus id leo.
+                </p>
+                <div class="flex gap-4 text-white text-lg">
+                    <a href="#"><i class="fab fa-facebook-f text-cyan-400"></i></a>
+                    <a href="#"><i class="fab fa-twitter text-cyan-400"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in text-cyan-400"></i></a>
+                    <a href="#"><i class="fab fa-instagram text-cyan-400"></i></a>
+                </div>
+            </div>
+
+            <!-- Product Links -->
+            <div data-aos="fade-up" data-aos-delay="100">
+                <h4 class="font-semibold text-lg text-white mb-4">Product</h4>
+                <ul class="space-y-2 text-white/80">
+                    <li class="border-b border-white/30 pb-2">
+                        <a href="#" class="hover:text-cyan-400 block">Stocks</a>
+                    </li>
+                    <li class="border-b border-white/30 pb-2">
+                        <a href="#" class="hover:text-cyan-400 block">Futures & Options</a>
+                    </li>
+                    <li class="border-b border-white/30 pb-2">
+                        <a href="#" class="hover:text-cyan-400 block">IPO</a>
+                    </li>
+                    <li class="border-b border-white/30 pb-2">
+                        <a href="#" class="hover:text-cyan-400 block">Mutual Funds</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-cyan-400 block">Credits</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Support Links -->
+            <div data-aos="fade-up" data-aos-delay="200">
+                <h4 class="font-semibold text-lg text-white mb-4">Support</h4>
+                <ul class="space-y-2 text-white/80">
+                    <li class="pb-2 border-b border-white/30">
+                        <a href="#" class="hover:text-cyan-400">Contact Us</a>
+                    </li>
+                    <li class="pb-2 border-b border-white/30">
+                        <a href="#" class="hover:text-cyan-400">Help Centre</a>
+                    </li>
+                    <li class="pb-2 border-b border-white/30">
+                        <a href="#" class="hover:text-cyan-400">FAQ</a>
+                    </li>
+                    <li class="pb-2 border-b border-white/30">
+                        <a href="#" class="hover:text-cyan-400">My Account</a>
+                    </li>
+                    <li><a href="#" class="hover:text-cyan-400">Community</a></li>
+                </ul>
+            </div>
+
+            <!-- Company Info -->
+            <div data-aos="fade-up" data-aos-delay="300">
+                <h4 class="font-semibold text-lg text-white mb-4">Company</h4>
+                <ul class="space-y-2 text-white/80">
+                    <li class="pb-2 border-b border-white/30">
+                        <a href="#" class="hover:text-cyan-400">About</a>
+                    </li>
+                    <li class="pb-2 border-b border-white/30">
+                        <a href="#" class="hover:text-cyan-400">Services</a>
+                    </li>
+                    <li class="pb-2 border-b border-white/30">
+                        <a href="#" class="hover:text-cyan-400">Vision & Mision</a>
+                    </li>
+                    <li class="pb-2 border-b border-white/30">
+                        <a href="#" class="hover:text-cyan-400">Leadership</a>
+                    </li>
+                    <li><a href="#" class="hover:text-cyan-400">News & Article</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div data-aos="fade-left" data-aos-delay="400">
+                <h4 class="font-semibold text-lg text-white mb-4">Get in Touch</h4>
+                <ul class="space-y-4 text-white/80">
+                    <li class="flex gap-2 items-start">
+                        <i class="fas fa-map-marker-alt text-teal-400 mt-1"></i>
+                        Jalan Cempaka Wangi No 22<br />Jakarta - Indonesia
+                    </li>
+                    <li class="flex gap-2 items-center">
+                        <i class="fas fa-envelope text-teal-400"></i>
+                        support@yourdomain.tld
+                    </li>
+                    <li class="flex gap-2 items-center">
+                        <i class="fas fa-phone-alt text-teal-400"></i>
+                        (888) 4000 613
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-white/30 py-4 text-center text-sm text-white/70">
+            Copyright© 2024 Vestrade, All rights reserved.
+        </div>
+    </footer>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
