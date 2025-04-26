@@ -617,3 +617,90 @@ color: var(--accent-color);
       font-size: 16px;
   }
 }
+
+/* Terms & Conditions and Privacy Policy */
+:root {
+  --primary-color: #7267d7;
+  --text-color: #333333;
+  --light-bg: #f9f9ff;
+  --border-color: #e0e0e0;
+}
+
+.terms-main {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+}
+
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 15px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.term-section {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.term-section:last-child {
+  border-bottom: none;
+}
+
+.term-title {
+  font-weight: 400;
+  color: black;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.term-content {
+  margin-left: 5px;
+  color: #6B7280;
+}
+
+list-disc {
+  list-style-type: none;
+  padding-left: 0;
+}
+list-disc li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+list-disc li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #333;
+}
+
+.contact-info {
+  background-color: var(--light-bg);
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 30px;
+  color: #6B7280;
+}
+
+@media (max-width: 768px) {
+  .terms-container {
+      padding: 20px;
+  }
+}
+
+.advantage-card:hover {
+  border: 1px solid #1FF6E7;
+}
