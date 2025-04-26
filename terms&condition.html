@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vestrade - Terms & Conditions</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body class="bg-[#0f021f]">
+    <!-- Navigation Bar -->
+    <nav class="text-white px-6 md:px-16 lg:px-32 py-6 flex items-center justify-between border-b border-gray-700">
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+            <img src="assets/images/logo.png" alt="Logo" class="w-32 md:w-40 h-8 md:h-10" />
+        </div>
+
+        <!-- Hamburger Menu for Mobile -->
+        <div class="md:hidden">
+            <button id="menu-toggle" class="text-white focus:outline-none">
+                <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Navigation Links + Button -->
+        <div id="menu" class="hidden md:flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6">
+            <!-- Navigation Links -->
+            <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 items-center font-semibold">
+                <li><a href="#" class="hover:text-cyan-400">Home</a></li>
+                <li><a href="#" class="hover:text-cyan-400">About</a></li>
+                <!-- Service Dropdown -->
+                <li class="relative group">
+                    <button class="flex items-center gap-x-2 hover:text-cyan-400">
+                        Services
+                        <!-- <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor"
+                            stroke-width="3" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg> -->
+                    </button>
+                    <ul
+                        class="absolute left-0 mt-2 bg-white text-black shadow-lg rounded hidden group-hover:block min-w-[150px] z-10">
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Contact</a></li>
+                        <!-- <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Pricing</a></li> -->
+                    </ul>
+                </li>
+
+                <!-- <li><a href="#" class="hover:text-cyan-400">Product</a></li> -->
+                <li><a href="#" class="hover:text-cyan-400">Contact</a></li>
+
+                <!-- Pages Dropdown -->
+                <!-- <li class="relative group">
+                    <button class="flex items-center gap-x-2 hover:text-cyan-400">
+                        Pages
+                        <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor"
+                            stroke-width="3" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <ul
+                        class="absolute left-0 mt-2 bg-white text-black shadow-lg rounded hidden group-hover:block min-w-[150px] z-10">
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Team</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">FAQ</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Blog</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Single Blog</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">404 Page</a></li>
+                    </ul>
+                </li> -->
+            </ul>
+
+            <!-- Get Started Button -->
+            <!-- <div class="group">
+                <button style="font-size: 13px; font-family: 'Outfit', sans-serif;"
+                    class="px-6 py-2 rounded bg-gradient-to-r from-[#00f6ff] to-sky-500/75 text-white transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-sky-500/75 group-hover:to-[#00f6ff]">
+                    GET STARTED
+                </button>
+            </div> -->
+        </div>
+    </nav>
+
+    <script>
+        // Toggle mobile menu and icons
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const menu = document.getElementById('menu');
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            menu.classList.toggle('hidden');
+            hamburgerIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+
+        // Redirect to the home page when the close icon is clicked
+        document.getElementById('close-icon').addEventListener('click', function () {
+            window.location.href = '/'; // Replace '/' with your home page URL if different
+        });
+    </script>
+    <!-- End Navigation Bar -->
+
+    <!-- Terms & Condition Section -->
+    <div class="terms-main px-24">
+        <h1>Terms & Conditions</h1>
+
+        <p class="term-content py-5">
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Welcome
+            to the
+            Trends REIFs platform. By accessing or using this website, you agree
+            to
+            be
+            bound
+            by
+            the
+            following terms and conditions. Please read them carefully.
+        </p>
+
+        <div class="term-section">
+            <div class="term-title">1. Acceptance of Terms</div>
+            <div class="term-content">By accessing or using the Trends REIFs website, you agree to comply with and
+                be
+                legally bound by these Terms and Conditions. If you do not agree to these terms, you should not use
+                this
+                platform.</div>
+        </div>
+
+        <div class="term-section">
+            <div class="term-title">2. Changes to Terms</div>
+            <div class="term-content">Trends REIFs reserves the right to update, modify, or replace any part of
+                these
+                Terms and Conditions at any time without prior notice. Continued use of the platform after any
+                changes
+                constitutes acceptance of those changes.</div>
+        </div>
+
+        <div class="term-section">
+            <div class="term-title">3. Eligibility</div>
+            <div class="term-content">You must be at least 18 years old and capable of entering into legally binding
+                contracts to use this platform.</div>
+        </div>
+
+        <div class="term-section">
+            <div class="term-title">4. Investment Disclaimer</div>
+            <div class="term-content">Investments in real estate involve risks, including the risk of loss. Trends
+                REIFs
+                does not guarantee returns or profits. Past performance is not indicative of future results. You
+                should
+                consult your financial advisor before making any investment decisions.</div>
+        </div>
+
+        <div class="term-section">
+            <div class="term-title">5. Platform Usage</div>
+            <div class="term-content">You agree to use the Trends REIFs platform only for lawful purposes. You will
+                not
+                engage in any activity that interferes with or disrupts the platform or its services.</div>
+        </div>
+
+        <div class="term-section">
+            <div class="term-title">6. Account Security</div>
+            <div class="term-content">You are responsible for maintaining the confidentiality of your account and
+                password. You agree to notify us immediately of any unauthorized use of your account.</div>
+        </div>
+
+        <div class="term-section">
+            <div class="term-title">7. Intellectual Property</div>
+            <div class="term-content">All content on the Trends REIFs platform, including logos, texts, graphics,
+                and
+                software, is the property of Trends REIFs and is protected by intellectual property laws.
+                Unauthorized
+                use is strictly prohibited.</div>
+        </div>
+
+        <div class="term-section">
+            <div class="term-title">8. Third-Party Links</div>
+            <div class="term-content">The platform may contain links to third-party websites. Trends REIFs is not
+                responsible for the content or practices of any third-party sites.</div>
+        </div>
+
+        <div class="term-section">
+            <div class="term-title">9. Limitation of Liability</div>
+            <div class="term-content">Trends REIFs shall not be liable for any direct, indirect, incidental, or
+                consequential damages resulting from your use or inability to use the platform.</div>
+        </div>
+
+        <div class="term-section">
+            <div class="term-title">10. Indemnification</div>
+            <div class="term-content">You agree to indemnify and hold harmless Trends REIFs, its affiliates, and
+                employees from any claims, liabilities, damages, or expenses arising from your use of the platform.
+            </div>
+        </div>
+
+        <div class="term-section">
+            <div class="term-title">11. Refund and Cancellation Policy</div>
+            <div class="term-content">All investments made through the platform are final and non-refundable.
+                However,
+                project-specific terms may allow for exit options under defined conditions, which will be clearly
+                communicated.</div>
+        </div>
+
+        <div class="term-section">
+            <div class="term-title">12. Communication Consent</div>
+            <div class="term-content">By using this platform, you consent to receive communications from Trends
+                REIFs
+                via SMS, email, or phone regarding your investment, platform updates, and marketing content.</div>
+        </div>
+
+        <div class="term-section">
+            <div class="term-title">13. Termination</div>
+            <div class="term-content">Trends REIFs reserves the right to terminate or suspend your access to the
+                platform at any time, without notice, for conduct that we believe violates these Terms and
+                Conditions or
+                is harmful to other users.</div>
+        </div>
+
+        <div class="term-section">
+            <div class="term-title">14. Governing Law</div>
+            <div class="term-content">These Terms and Conditions shall be governed by and construed in accordance
+                with
+                the laws of India, and any disputes shall be subject to the exclusive jurisdiction of the courts in
+                Mumbai.</div>
+        </div>
+
+        <div class="term-section">
+            <div class="term-title">15. Contact Information</div>
+            <div class="term-content">If you have any questions regarding these Terms and Conditions, please contact
+                us
+                at <a href="mailto:support@trendsreifs.com" class="text-blue-700 underline">support@trendsreifs.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-[#032427] text-white relative bg-cover bg-center">
+        <!-- Newsletter Signup -->
+        <div class="border-b border-white/30 px-6" data-aos="fade-up">
+            <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <h2 class="text-xl font-semibold text-center md:text-left">
+                    Signup our newsletter to get update information,<br />
+                    news, insight or promotions.
+                </h2>
+                <form class="flex w-full md:w-auto">
+                    <input type="email" placeholder="Your Email"
+                        class="px-6 py-2 rounded-l-md w-full md:w-60 bg-white text-black focus:outline-none" />
+                    <button type="submit"
+                        class="bg-gradient-to-r from-[#00f6ff] to-sky-600/75 px-12 py-2 rounded-r-md text-white font-semibold duration-300 hover:from-sky-600/75 hover:to-[#00f6ff]">
+                        SIGN UP
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer Content -->
+        <div class="max-w-7xl mx-auto px-12 py-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10 text-sm">
+            <!-- Brand Info -->
+            <div data-aos="fade-right">
+                <img src="/assets/images/logo.png" alt="Vestrade" class="h-10 mb-4">
+                <p class="text-white/80 mb-8">
+                    Dictumst natoque curae nullam quisque pretium sem cursus augue pede tempor quis nisi at curabitur si
+                    condimentum metus parturient posuere dapibus id leo.
+                </p>
+                <div class="flex gap-4 text-white text-lg">
+                    <a href="#"><i class="fab fa-facebook-f text-cyan-400"></i></a>
+                    <a href="#"><i class="fab fa-twitter text-cyan-400"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in text-cyan-400"></i></a>
+                    <a href="#"><i class="fab fa-instagram text-cyan-400"></i></a>
+                </div>
+            </div>
+
+            <!-- Product Links -->
+            <div data-aos="fade-up" data-aos-delay="100">
+                <h4 class="font-semibold text-lg text-white mb-4">Product</h4>
+                <ul class="space-y-2 text-white/80">
+                    <li class="border-b border-white/30 pb-2">
+                        <a href="#" class="hover:text-cyan-400 block">Stocks</a>
+                    </li>
+                    <li class="border-b border-white/30 pb-2">
+                        <a href="#" class="hover:text-cyan-400 block">Futures & Options</a>
+                    </li>
+                    <li class="border-b border-white/30 pb-2">
+                        <a href="#" class="hover:text-cyan-400 block">IPO</a>
+                    </li>
+                    <li class="border-b border-white/30 pb-2">
+                        <a href="#" class="hover:text-cyan-400 block">Mutual Funds</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-cyan-400 block">Credits</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Support Links -->
+            <div data-aos="fade-up" data-aos-delay="200">
+                <h4 class="font-semibold text-lg text-white mb-4">Support</h4>
+                <ul class="space-y-2 text-white/80">
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Contact Us</a>
+                    </li>
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Help Centre</a>
+                    </li>
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">FAQ</a></li>
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">My Account</a>
+                    </li>
+                    <li><a href="#" class="hover:text-cyan-400">Community</a></li>
+                </ul>
+            </div>
+
+            <!-- Company Info -->
+            <div data-aos="fade-up" data-aos-delay="300">
+                <h4 class="font-semibold text-lg text-white mb-4">Company</h4>
+                <ul class="space-y-2 text-white/80">
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">About</a></li>
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Services</a></li>
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Vision &
+                            Mision</a></li>
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Leadership</a>
+                    </li>
+                    <li><a href="#" class="hover:text-cyan-400">News & Article</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div data-aos="fade-left" data-aos-delay="400">
+                <h4 class="font-semibold text-lg text-white mb-4">Get in Touch</h4>
+                <ul class="space-y-4 text-white/80">
+                    <li class="flex gap-2 items-start">
+                        <i class="fas fa-map-marker-alt text-teal-400 mt-1"></i>
+                        Jalan Cempaka Wangi No 22<br />Jakarta - Indonesia
+                    </li>
+                    <li class="flex gap-2 items-center">
+                        <i class="fas fa-envelope text-teal-400"></i>
+                        support@yourdomain.tld
+                    </li>
+                    <li class="flex gap-2 items-center">
+                        <i class="fas fa-phone-alt text-teal-400"></i>
+                        (888) 4000 613
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-white/30 py-4 text-center text-sm text-white/70">
+            Copyright© 2024 Vestrade, All rights reserved.
+        </div>
+    </footer>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
