@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vestrade</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body class="bg-[#0f021f]">
+
+    <!-- Navigation Bar -->
+    <nav class="text-white px-6 md:px-16 lg:px-32 py-6 flex items-center justify-between border-b border-gray-700">
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+            <img src="assets/images/logo.png" alt="Logo" class="w-32 md:w-40 h-8 md:h-10" />
+        </div>
+
+        <!-- Hamburger Menu for Mobile -->
+        <div class="md:hidden">
+            <button id="menu-toggle" class="text-white focus:outline-none">
+                <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Navigation Links + Button -->
+        <div id="menu" class="hidden md:flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6">
+            <!-- Navigation Links -->
+            <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 items-center font-semibold">
+                <li><a href="#" class="hover:text-cyan-400">Home</a></li>
+                <li><a href="#" class="hover:text-cyan-400">About</a></li>
+                <!-- Service Dropdown -->
+                <li class="relative group">
+                    <button class="flex items-center gap-x-2 hover:text-cyan-400">
+                        Services
+                        <!-- <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor"
+                            stroke-width="3" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg> -->
+                    </button>
+                    <ul
+                        class="absolute left-0 mt-2 bg-white text-black shadow-lg rounded hidden group-hover:block min-w-[150px] z-10">
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Contact</a></li>
+                        <!-- <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Pricing</a></li> -->
+                    </ul>
+                </li>
+
+                <!-- <li><a href="#" class="hover:text-cyan-400">Product</a></li> -->
+                <li><a href="#" class="hover:text-cyan-400">Contact</a></li>
+
+                <!-- Pages Dropdown -->
+                <!-- <li class="relative group">
+                    <button class="flex items-center gap-x-2 hover:text-cyan-400">
+                        Pages
+                        <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor"
+                            stroke-width="3" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <ul
+                        class="absolute left-0 mt-2 bg-white text-black shadow-lg rounded hidden group-hover:block min-w-[150px] z-10">
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Team</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">FAQ</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Blog</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Single Blog</a></li>
+                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">404 Page</a></li>
+                    </ul>
+                </li> -->
+            </ul>
+
+            <!-- Get Started Button -->
+            <!-- <div class="group">
+                <button style="font-size: 13px; font-family: 'Outfit', sans-serif;"
+                    class="px-6 py-2 rounded bg-gradient-to-r from-[#00f6ff] to-sky-500/75 text-white transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-sky-500/75 group-hover:to-[#00f6ff]">
+                    GET STARTED
+                </button>
+            </div> -->
+        </div>
+    </nav>
+
+    <script>
+        // Toggle mobile menu and icons
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const menu = document.getElementById('menu');
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            menu.classList.toggle('hidden');
+            hamburgerIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+
+        // Redirect to the home page when the close icon is clicked
+        document.getElementById('close-icon').addEventListener('click', function () {
+            window.location.href = '/'; // Replace '/' with your home page URL if different
+        });
+    </script>
+    <!-- End Navigation Bar -->
+
+    <!-- Advantages Section -->
+    <section class="real-estate-market px-28">
+        <div class="container-real-estate">
+            <div class="section-header challenges-header">
+                <p class="text-sm font-bold text-[#7267D7] uppercase">Challenges in Developing a Real Estate Project</p>
+            </div>
+
+            <div class="challenges-container">
+                <div class="challenge-card">
+                    <div class="challenge-number">1</div>
+                    <h3>Land Identification and Acquisition</h3>
+                    <p class="text-sm">Finding high growth potential land, evaluating its suitability for development,
+                        and
+                        negotiating
+                        favourable purchase terms.</p>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-number">2</div>
+                    <h3>Due Diligence</h3>
+                    <p class="text-sm">Ensuring the land has a clear legal title, verifying ownership history, checking
+                        for
+                        encumbrances, zoning regulations, and all other legal and technical verifications before
+                        acquisition.</p>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-number">3</div>
+                    <h3>Feasibility and Planning</h3>
+                    <p class="text-sm">Conducting market research and aligning the project with zoning and regulatory
+                        requirements.</p>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-number">4</div>
+                    <h3>Legal Approvals and Compliance</h3>
+                    <p class="text-sm">Securing land use permits, environmental clearances, and managing legal
+                        documentation.</p>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-number">5</div>
+                    <h3>Funding and Financial Management</h3>
+                    <p class="text-sm">Arranging high initial capital and maintaining cash flow during development.</p>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-number">6</div>
+                    <h3>Infrastructure Development</h3>
+                    <p class="text-sm">Planning and implementing roads, utilities, and other essential infrastructure.
+                    </p>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-number">7</div>
+                    <h3>Construction Management</h3>
+                    <p class="text-sm">Overseeing contractors, ensuring quality, and managing timelines effectively.</p>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-number">8</div>
+                    <h3>Material Procurement and Cost Control</h3>
+                    <p class="text-sm">Sourcing materials, controlling costs, and addressing unexpected overruns.</p>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-number">9</div>
+                    <h3>Marketing and Sales</h3>
+                    <p class="text-sm">Creating effective strategies to attract buyers and managing pre-sales processes.
+                    </p>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-number">10</div>
+                    <h3>Regulatory Updates and Monitoring</h3>
+                    <p class="text-sm">Adapting to changing policies and ensuring ongoing compliance.</p>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-number">11</div>
+                    <h3>Project Handover</h3>
+                    <p class="text-sm">Delivering completed units on time and addressing customer concerns.</p>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-number">12</div>
+                    <h3>Risk Management</h3>
+                    <p class="text-sm">Mitigating risks related to market fluctuations, natural disasters, and political
+                        changes.</p>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-number">13</div>
+                    <h3>Technical Expertise</h3>
+                    <p class="text-sm">Requiring in-depth knowledge of design, construction, and project execution.</p>
+                </div>
+
+                <div class="challenge-card">
+                    <div class="challenge-number">14</div>
+                    <h3>Time Commitment</h3>
+                    <p class="text-sm">Managing lengthy processes from land acquisition to project completion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-[#032427] text-white relative bg-cover bg-center">
+        <!-- Newsletter Signup -->
+        <div class="border-b border-white/30 px-6" data-aos="fade-up">
+            <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <h2 class="text-xl font-semibold text-center md:text-left">
+                    Signup our newsletter to get update information,<br />
+                    news, insight or promotions.
+                </h2>
+                <form class="flex w-full md:w-auto">
+                    <input type="email" placeholder="Your Email"
+                        class="px-6 py-2 rounded-l-md w-full md:w-60 bg-white text-black focus:outline-none" />
+                    <button type="submit"
+                        class="bg-gradient-to-r from-[#00f6ff] to-sky-600/75 px-12 py-2 rounded-r-md text-white font-semibold duration-300 hover:from-sky-600/75 hover:to-[#00f6ff]">
+                        SIGN UP
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer Content -->
+        <div class="max-w-7xl mx-auto px-12 py-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10 text-sm">
+            <!-- Brand Info -->
+            <div data-aos="fade-right">
+                <img src="/assets/images/logo.png" alt="Vestrade" class="h-10 mb-4">
+                <p class="text-white/80 mb-8">
+                    Dictumst natoque curae nullam quisque pretium sem cursus augue pede tempor quis nisi at curabitur si
+                    condimentum metus parturient posuere dapibus id leo.
+                </p>
+                <div class="flex gap-4 text-white text-lg">
+                    <a href="#"><i class="fab fa-facebook-f text-cyan-400"></i></a>
+                    <a href="#"><i class="fab fa-twitter text-cyan-400"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in text-cyan-400"></i></a>
+                    <a href="#"><i class="fab fa-instagram text-cyan-400"></i></a>
+                </div>
+            </div>
+
+            <!-- Product Links -->
+            <div data-aos="fade-up" data-aos-delay="100">
+                <h4 class="font-semibold text-lg text-white mb-4">Product</h4>
+                <ul class="space-y-2 text-white/80">
+                    <li class="border-b border-white/30 pb-2">
+                        <a href="#" class="hover:text-cyan-400 block">Stocks</a>
+                    </li>
+                    <li class="border-b border-white/30 pb-2">
+                        <a href="#" class="hover:text-cyan-400 block">Futures & Options</a>
+                    </li>
+                    <li class="border-b border-white/30 pb-2">
+                        <a href="#" class="hover:text-cyan-400 block">IPO</a>
+                    </li>
+                    <li class="border-b border-white/30 pb-2">
+                        <a href="#" class="hover:text-cyan-400 block">Mutual Funds</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-cyan-400 block">Credits</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Support Links -->
+            <div data-aos="fade-up" data-aos-delay="200">
+                <h4 class="font-semibold text-lg text-white mb-4">Support</h4>
+                <ul class="space-y-2 text-white/80">
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Contact Us</a>
+                    </li>
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Help Centre</a>
+                    </li>
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">FAQ</a></li>
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">My Account</a>
+                    </li>
+                    <li><a href="#" class="hover:text-cyan-400">Community</a></li>
+                </ul>
+            </div>
+
+            <!-- Company Info -->
+            <div data-aos="fade-up" data-aos-delay="300">
+                <h4 class="font-semibold text-lg text-white mb-4">Company</h4>
+                <ul class="space-y-2 text-white/80">
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">About</a></li>
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Services</a></li>
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Vision &
+                            Mision</a></li>
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Leadership</a>
+                    </li>
+                    <li><a href="#" class="hover:text-cyan-400">News & Article</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div data-aos="fade-left" data-aos-delay="400">
+                <h4 class="font-semibold text-lg text-white mb-4">Get in Touch</h4>
+                <ul class="space-y-4 text-white/80">
+                    <li class="flex gap-2 items-start">
+                        <i class="fas fa-map-marker-alt text-teal-400 mt-1"></i>
+                        Jalan Cempaka Wangi No 22<br />Jakarta - Indonesia
+                    </li>
+                    <li class="flex gap-2 items-center">
+                        <i class="fas fa-envelope text-teal-400"></i>
+                        support@yourdomain.tld
+                    </li>
+                    <li class="flex gap-2 items-center">
+                        <i class="fas fa-phone-alt text-teal-400"></i>
+                        (888) 4000 613
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-white/30 py-4 text-center text-sm text-white/70">
+            Copyright© 2024 Vestrade, All rights reserved.
+        </div>
+    </footer>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
