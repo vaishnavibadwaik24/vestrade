@@ -537,9 +537,10 @@ color: var(--accent-color);
 }
 
 .challenge-card h3 {
+  font-size: 15px;
+  font-weight: bold;
   display: inline-block;
   color: #2c3e50;
-  vertical-align: middle;
   margin-bottom: 15px;
 }
 
