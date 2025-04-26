@@ -398,7 +398,7 @@ color: var(--accent-color);
 .page-sub-heading{
   font-family: 'Outfit', sans-serif;
   font-size: 39px;
-  font-weight: b;
+  font-weight: bold;
   color: #0A0118;
 }
 
@@ -449,11 +449,14 @@ color: var(--accent-color);
   background-color: #e74c3c;
 }
 
-.source-text {
-  font-style: italic;
-  color: #7f8c8d;
+/* .source-text {
+  //font-style: italic;
+  font-family: 'Outfit', sans-serif;
+  font-size: 39px;
+  font-weight: b;
+  color: #0A0118;
   margin-top: 10px;
-}
+} */
 
 /* Real Estate Market Section */
 .market-overview-container {
