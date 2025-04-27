@@ -415,7 +415,7 @@ color: var(--accent-color);
 /* Real Estate Market Section Styles */
 .real-estate-market {
   padding: 80px 0;
-  background-color: #f9f9f9;
+  background-color: #F3F3F4;
   font-family: 'Arial', sans-serif;
 }
 
@@ -469,7 +469,7 @@ color: var(--accent-color);
 
 .market-image {
   flex: 4; /* Using your 4-column proportion */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
   border-radius: 8px;
   overflow: hidden;
 }
@@ -478,7 +478,7 @@ color: var(--accent-color);
   width: 100%; /* Keep at 100% to fill its container */
   height: auto;
   display: block;
-  transition: transform 0.3s ease;
+  /* transition: transform 0.3s ease; */
 }
 
 .market-overview {
@@ -486,7 +486,7 @@ color: var(--accent-color);
 }
 
 .real-estate-img:hover {
-  transform: scale(1.03);
+  /* transform: scale(1.03); */
 }
 
 .highlight-text {
@@ -513,6 +513,7 @@ color: var(--accent-color);
 }
 
 .challenge-card {
+  height: 195px;
   background-color: #fff;
   border-radius: 8px;
   padding: 25px;
@@ -721,4 +722,8 @@ list-disc li:before {
 
 .advantage-card:hover {
   border: 1px solid #1FF6E7;
+}
+
+.challenges-sec{
+  background: linear-gradient(rgba(13, 26, 45, 0.4)), url('/assets/images/client.png') no-repeat center center;
 }
