@@ -64,9 +64,9 @@
                         </svg>
                     </button>
                     <ul id="dropdown-menu" class="absolute left-0 mt-2 bg-white text-black shadow-lg rounded opacity-0 invisible transition-all duration-300 min-w-[150px] z-10">
-                        <li><a href="../faq.html" class="block px-4 py-2 hover:bg-gray-100">FAQ</a></li>
-                        <li><a href="./testimonials.html" class="block px-4 py-2 hover:bg-gray-100">Testimonials</a></li>
-                        <li><a href="./blogs.html" class="block px-4 py-2 hover:bg-gray-100">Blogs</a></li>
+                        <li><a href="../faq.html" class="block px-4 py-2 hover:bg-[#08f9e8] hover:text-white">FAQ</a></li>
+                        <li><a href="./testimonials.html" class="block px-4 py-2 hover:bg-[#08f9e8] hover:text-white">Testimonials</a></li>
+                        <li><a href="./blogs.html" class="block px-4 py-2 hover:bg-[#08f9e8] hover:text-white">Blogs</a></li>
                     </ul>
                 </li>
             </ul>
@@ -101,7 +101,7 @@
             dropdownTimeout = setTimeout(() => {
                 dropdownMenu.classList.remove('opacity-100', 'visible');
                 dropdownMenu.classList.add('opacity-0', 'invisible');
-            }, 700); // 2 seconds delay
+            }, 1000); // 2 seconds delay
         });
 
         // Keep dropdown open if mouse enters it
