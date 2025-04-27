@@ -976,6 +976,145 @@
         });
     </script>
 
+    <!-- Testimonial Section -->
+    <div class="bg-gray-100 py-12 px-6 md:px-16 lg:px-32">
+        <!-- Section Title -->
+        <div class="section-title text-black">
+            <h2 class="page-main-heading">Testimonial</h2>
+            <p class="page-sub-heading mt-4 pb-2">Client feedback & Reviews</p>
+        </div>
+
+        <!-- Swiper Slider -->
+        <div class="swiper pb-12">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <div
+                        class="testimonial-card text-center flex flex-col items-center p-8 bg-white rounded-2xl shadow-lg">
+                        <img src="assets/images/testimonial/placeholder.png" alt="client"
+                            class="rounded-full w-20 h-20 mb-4" />
+                        <p class="text-gray-600 text-base leading-relaxed mb-6">
+                            As a first-time real estate investor, I was always intimidated by the complexities. Trends
+                            REIFs made it incredibly easy and transparent. I didn’t have to worry about anything — just
+                            invested and watched my money grow!
+                        </p>
+                        <h4 class="font-bold italic text-black">Rohan</h4>
+                        <span class="text-gray-500 font-semibold italic">Pune, Maharashtra</span>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <div
+                        class="testimonial-card text-center flex flex-col items-center p-8 bg-white rounded-2xl shadow-lg">
+                        <img src="assets/images/testimonial/placeholder.png" alt="client"
+                            class="rounded-full w-20 h-20 mb-4" />
+                        <p class="text-gray-600 text-base leading-relaxed mb-6">
+                            I always wanted to invest in real estate development but lacked the time and knowledge.
+                            Trends REIFs gave me access to high-potential projects without any stress. The returns have
+                            been steady and impressive.
+                        </p>
+                        <h4 class="font-bold italic text-black">Meena Shah</h4>
+                        <span class="text-gray-500 font-semibold italic">Mumbai, Maharashtra</span>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <div
+                        class="testimonial-card text-center flex flex-col items-center p-8 bg-white rounded-2xl shadow-lg">
+                        <img src="assets/images/testimonial/placeholder.png" alt="client"
+                            class="rounded-full w-20 h-20 mb-4" />
+                        <p class="text-gray-600 text-base leading-relaxed mb-6">
+                            Trends REIFs is a game-changer! From due diligence to sales, they manage every step
+                            professionally. I’ve already reinvested my earnings into their next project.
+                        </p>
+                        <h4 class="font-bold italic text-black">Arvind Kapoor</h4>
+                        <span class="text-gray-500 font-semibold italic">Mumbai, Maharashtra</span>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                    <div
+                        class="testimonial-card text-center flex flex-col items-center p-8 bg-white rounded-2xl shadow-lg">
+                        <img src="assets/images/testimonial/placeholder.png" alt="client"
+                            class="rounded-full w-20 h-20 mb-4" />
+                        <p class="text-gray-600 text-base leading-relaxed mb-6">
+                            What I love about Trends REIFs is the transparency. I get regular updates, and their team is
+                            always approachable. It's like being part of a premium real estate venture without the usual
+                            hassles.
+                        </p>
+                        <h4 class="font-bold italic text-black">Priya Seth</h4>
+                        <span class="text-gray-500 font-semibold italic">Pune, Maharashtra</span>
+                    </div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="swiper-slide">
+                    <div
+                        class="testimonial-card text-center flex flex-col items-center p-8 bg-white rounded-2xl shadow-lg">
+                        <img src="assets/images/testimonial/placeholder.png" alt="client"
+                            class="rounded-full w-20 h-20 mb-4" />
+                        <p class="text-gray-600 text-base leading-relaxed mb-6">
+                            I’ve been investing for years, but this is the first time I felt truly passive income from
+                            real estate. Trends REIFs delivers what it promises — professional handling, solid ROI, and
+                            peace of mind.
+                        </p>
+                        <h4 class="font-bold italic text-black">Sameer Jain</h4>
+                        <span class="text-gray-500 font-semibold italic">Chh. Sambhajinagar, Maharashtra</span>
+                    </div>
+                </div>
+
+                <!-- Slide 6 -->
+                <div class="swiper-slide">
+                    <div
+                        class="testimonial-card text-center flex flex-col items-center p-8 bg-white rounded-2xl shadow-lg">
+                        <img src="assets/images/testimonial/placeholder.png" alt="client"
+                            class="rounded-full w-20 h-20 mb-4" />
+                        <p class="text-gray-600 text-base leading-relaxed mb-6">
+                            Being a doctor, I don’t have time to monitor investments. Trends REIFs is the perfect
+                            solution — I trust them completely and have recommended it to my colleagues too!
+                        </p>
+                        <h4 class="font-bold italic text-black">Dr. Kavita Deshmukh</h4>
+                        <span class="text-gray-500 font-semibold italic">Nagpur, Maharashtra</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <!-- Swiper Init -->
+    <script>
+        new Swiper('.swiper', {
+            loop: true,
+            slidesPerView: 3,
+            spaceBetween: 30,
+            autoplay: {
+                delay: 3000, // Auto-scroll every 3 seconds
+                disableOnInteraction: false, // Continue autoplay after user interaction
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+    </script>
+
     <!-- Footer Section -->
     <footer class="bg-[#032427] text-white relative bg-cover bg-center">
         <!-- Newsletter Signup -->
