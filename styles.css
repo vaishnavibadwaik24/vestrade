@@ -727,3 +727,7 @@ list-disc li:before {
 .challenges-sec{
   background: linear-gradient(rgba(13, 26, 45, 0.4)), url('/assets/images/client.png') no-repeat center center;
 }
+
+.adv-card:hover{
+  border: 2px solid #1FF6E7;
+}
