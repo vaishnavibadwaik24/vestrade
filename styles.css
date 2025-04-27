@@ -398,7 +398,7 @@ color: var(--accent-color);
 .page-sub-heading{
   font-family: 'Outfit', sans-serif;
   font-size: 39px;
-  font-weight: b;
+  font-weight: bold;
   color: #0A0118;
 }
 
@@ -415,7 +415,7 @@ color: var(--accent-color);
 /* Real Estate Market Section Styles */
 .real-estate-market {
   padding: 80px 0;
-  background-color: #f9f9f9;
+  background-color: #F3F3F4;
   font-family: 'Arial', sans-serif;
 }
 
@@ -449,11 +449,14 @@ color: var(--accent-color);
   background-color: #e74c3c;
 }
 
-.source-text {
-  font-style: italic;
-  color: #7f8c8d;
+/* .source-text {
+  //font-style: italic;
+  font-family: 'Outfit', sans-serif;
+  font-size: 39px;
+  font-weight: b;
+  color: #0A0118;
   margin-top: 10px;
-}
+} */
 
 /* Real Estate Market Section */
 .market-overview-container {
@@ -466,7 +469,7 @@ color: var(--accent-color);
 
 .market-image {
   flex: 4; /* Using your 4-column proportion */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
   border-radius: 8px;
   overflow: hidden;
 }
@@ -475,7 +478,7 @@ color: var(--accent-color);
   width: 100%; /* Keep at 100% to fill its container */
   height: auto;
   display: block;
-  transition: transform 0.3s ease;
+  /* transition: transform 0.3s ease; */
 }
 
 .market-overview {
@@ -483,7 +486,7 @@ color: var(--accent-color);
 }
 
 .real-estate-img:hover {
-  transform: scale(1.03);
+  /* transform: scale(1.03); */
 }
 
 .highlight-text {
@@ -510,6 +513,7 @@ color: var(--accent-color);
 }
 
 .challenge-card {
+  height: 195px;
   background-color: #fff;
   border-radius: 8px;
   padding: 25px;
@@ -537,9 +541,10 @@ color: var(--accent-color);
 }
 
 .challenge-card h3 {
+  font-size: 15px;
+  font-weight: bold;
   display: inline-block;
   color: #2c3e50;
-  vertical-align: middle;
   margin-bottom: 15px;
 }
 
@@ -616,4 +621,113 @@ color: var(--accent-color);
       padding: 12px 25px;
       font-size: 16px;
   }
+}
+
+/* Terms & Conditions and Privacy Policy */
+:root {
+  --primary-color: #7267d7;
+  --text-color: #333333;
+  --light-bg: #f9f9ff;
+  --border-color: #e0e0e0;
+}
+
+.terms-main {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+}
+
+.tncpp {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 15px;
+}
+/* h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 15px;
+} */
+
+.tnc{
+  font-size: 24px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+/* h2 {
+  font-size: 24px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+} */
+
+.term-section {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.term-section:last-child {
+  border-bottom: none;
+}
+
+.term-title {
+  font-weight: 400;
+  color: black;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.term-content {
+  margin-left: 5px;
+  color: #6B7280;
+}
+
+list-disc {
+  list-style-type: none;
+  padding-left: 0;
+}
+list-disc li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+list-disc li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #333;
+}
+
+.contact-info {
+  background-color: var(--light-bg);
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 30px;
+  color: #6B7280;
+}
+
+@media (max-width: 768px) {
+  .terms-container {
+      padding: 20px;
+  }
+}
+
+.advantage-card:hover {
+  border: 1px solid #1FF6E7;
+}
+
+.challenges-sec{
+  background: linear-gradient(rgba(13, 26, 45, 0.4)), url('/assets/images/client.png') no-repeat center center;
+}
+
+.adv-card:hover{
+  border: 2px solid #1FF6E7;
 }
