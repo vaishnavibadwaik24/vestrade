@@ -736,3 +736,7 @@ list-disc li:before {
   transform: translateY(-3px);
   /* background: linear-gradient(to right, #00d2ff, #3a7bd5); */
 }
+
+#dropdown-menu li a {
+    border-radius: 4px; /* Add rounded corners to the hover effect */
+}
