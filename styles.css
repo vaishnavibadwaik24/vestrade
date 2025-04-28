@@ -728,6 +728,11 @@ list-disc li:before {
   background: linear-gradient(rgba(13, 26, 45, 0.4)), url('/assets/images/client.png') no-repeat center center;
 }
 
+.adv-card{
+  border: #1FF6E7 1px solid;
+}
+
 .adv-card:hover{
-  border: 2px solid #1FF6E7;
+  transform: translateY(-3px);
+  /* background: linear-gradient(to right, #00d2ff, #3a7bd5); */
 }
