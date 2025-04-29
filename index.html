@@ -292,27 +292,30 @@
     </section>
 
     <!-- Real Estate Market Section -->
-    <section class="real-estate-market px-28">
+    <section class="real-estate-market px-4 sm:px-6 md:px-12 lg:px-20 xl:px-28 py-10 sm:py-16">
         <div class="container-real-estate">
             <div class="section-header">
                 <p class="text-sm font-bold text-[#7267D7] uppercase">Real Estate Market In India</p>
             </div>
-            <div class="market-overview-container">
-                <div class="market-image grid:col-4">
-                    <img src="assets/images/real-estate.png" alt="Indian Real Estate Market" class="real-estate-img">
+            <div class="flex flex-col md:flex-row gap-6 md:gap-10 items-center">
+                <!-- Market Image (Left on desktop, top on mobile) -->
+                <div class="w-full md:w-1/3 lg:w-2/4">
+                    <img src="assets/images/real-estate.png" alt="Indian Real Estate Market"
+                        class="w-full h-auto max-w-sm mx-auto md:mx-0 rounded-lg shadow-md">
                 </div>
-                <div class="market-overview grid:col-8">
-                    <p class="highlight-text border-cyan-400 text-[#6B7280] py-10">Real estate sector in India is
-                        expected to reach US$ 1 trillion in market size by 2030,
-                        up from US$ 200 billion in 2021 and contribute 13% to the country's GDP by 2025. Retail,
-                        hospitality, and commercial real
-                        estate are also growing significantly, providing the much-needed infrastructure for India's
-                        growing needs.
-                        <!-- <p class="page-sub-heading">By IBEF</p> -->
-                        <br>
-                        <span class="text-sm italic flex justify-end pr-10">- By IBEF</span>
 
-                    </p>
+                <!-- Market Overview Text (Right on desktop, bottom on mobile) -->
+                <div class="w-full md:w-2/3 lg:w-3/4">
+                    <div class="border-l-4 border-cyan-400 pl-4 sm:pl-6 py-4 sm:py-6">
+                        <p class="text-[#6B7280] text-sm sm:text-base">
+                            Real estate sector in India is expected to reach US$ 1 trillion in market size by 2030,
+                            up from US$ 200 billion in 2021 and contribute 13% to the country's GDP by 2025. Retail,
+                            hospitality, and commercial real estate are also growing significantly, providing the
+                            much-needed
+                            infrastructure for India's growing needs.
+                        </p>
+                        <span class="text-xs sm:text-sm italic block text-[#6B7280] text-right mt-4">- By IBEF</span>
+                    </div>
                 </div>
             </div>
         </div>
