@@ -188,24 +188,27 @@
     <!-- End Navigation Bar -->
 
     <!-- About Section -->
-    <section class="bg-white px-28 sm:px-4 md:px-8 lg:px-28" id="#intro">
-        <div class="row justify-center text-center pt-8">
-            <h2 class="text-sm font-bold text-[#7267D7] uppercase text-center mt-2">
+    <section class="bg-white px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-28 mx-auto max-w-7xl" id="intro">
+        <!-- Section Title -->
+        <div class="text-center pt-8 sm:pt-10 md:pt-12">
+            <h2 class="text-sm sm:text-base font-bold text-[#7267D7] uppercase">
                 Introduction
             </h2>
         </div>
-        <div class="flex flex-col lg:flex-row items-center justify-between px-6 py-20 pt-8 bg-white">
-            <!-- -- Left Column (Image) -- -->
-            <div class="relative lg:w-1/2 mb-10 lg:mb-0" data-aos="fade-left">
-                <!-- -- Main Image -- -->
+
+        <!-- Flex Container -->
+        <div class="flex flex-col lg:flex-row items-center justify-between py-6 sm:py-8 md:py-12 lg:py-16">
+
+            <!-- Left Column (Image) - Stacks on top on mobile -->
+            <div class="w-full lg:w-1/2 mb-8 lg:mb-0 px-4" data-aos="fade-left">
                 <img src="assets/images/invest.jpg" alt="Bitcoin Cart"
-                    class="rounded-lg shadow-xl w-full max-w-xl mx-auto lg:mx-0" />
+                    class="rounded-lg shadow-xl w-full max-w-sm sm:max-w-md md:max-w-lg mx-auto lg:mx-0" />
             </div>
 
-            <!-- -- Right Column (Content) -- -->
-            <div class="lg:w-1/2 ml-0 lg:ml-10 text-center lg:text-left" data-aos="fade-right">
-                <p class="text-[#6B7280] px-5 text-justify">
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <!-- Right Column (Content) -->
+            <div class="w-full lg:w-1/2 lg:pl-10 px-4 text-center lg:text-left" data-aos="fade-right">
+                <p class="text-[#6B7280] text-sm sm:text-base md:text-lg text-justify sm:text-justify">
+                    <span class="inline-block sm:ml-6"></span>
                     Over the past several years, the Real Estate Industry has generated
                     steady cash flow and great returns above other investment options.
                     The most common practice in the Real Estate Investment Industry is
@@ -217,7 +220,7 @@
                     gem of the industry. This is where the most substantial profits and
                     transformative opportunities exist, making it the pinnacle of real
                     estate investment.<br />
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span class="inline-block sm:ml-6"></span>
                     However, developing or investing in real estate projects is far more
                     complex and challenging for individual investors. It requires
                     substantial capital, legal verifications, government permissions,
@@ -225,7 +228,7 @@
                     time commitment. Due to these barriers, only a select group of
                     individuals or institutions can afford to invest in or gain profit
                     from real estate development.<br />
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span class="inline-block sm:ml-6"></span>
                     To bridge the gap and make these high-potential opportunities
                     accessible to everyone, we are launching an innovative platform
                     called TRENDS REIFs. It empowers investors—regardless of their
@@ -238,17 +241,22 @@
     </section>
 
     <!-- Advantages section -->
-    <section class="real-estate-market px-28 py-4" id="challenges">
-        <div class="container-real-estate">
-            <div class="section-header challenges-header">
-                <p class="text-sm font-bold text-[#7267D7] uppercase">Challenges in Developing a Real Estate Project</p>
+    <section class="real-estate-market px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-28 py-8 sm:py-12 mx-auto max-w-7xl"
+        id="challenges">
+        <div class="container-real-estate mx-auto">
+            <!-- Section Header -->
+            <div class="section-header challenges-header text-center mb-8 sm:mb-12">
+                <p class="text-sm sm:text-base font-bold text-[#7267D7] uppercase">Challenges in Developing a Real
+                    Estate Project</p>
             </div>
 
-            <div class="challenges-container">
+            <div
+                class="challenges-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4 sm:gap-6">
                 <div class="challenge-card advantage-card">
                     <div class="challenge-number content-center">1</div>
                     <h3>Land Identification and Acquisition</h3>
-                    <p class="text-sm">Finding high growth potential land, evaluating its suitability for development,
+                    <p class="text-sm">Finding high growth potential land, evaluating its suitability for
+                        development,
                         and
                         negotiating
                         favourable purchase terms.</p>
@@ -344,248 +352,186 @@
     </section>
 
     <!-- Challenges Section -->
-    <section class="bg-white py-4" id="advantages">
-        <div style="max-width: 1400px; margin: 0 auto; padding: 40px 20px;">
-            <div style="text-align: center; margin-bottom: 35px;">
-                <h3 class="family-oss"
-                    style="color: #7957d5; font-size: 14px; font-weight: 600; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;">
+    <section class="bg-white py-8 md:py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8 md:mb-12">
+                <h3 class="text-sm font-bold text-[#7267D7] uppercase mb-4">
                     ADVANTAGES
                 </h3>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; justify-items: center;">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 <!-- Access to Large Projects Card -->
-                <div class="adv-card"
-                    style="background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); overflow: hidden; padding: 15px;">
-
-                    <!-- <div style="padding: 24px; background: #f7f7f9; border-radius: 8px; margin-bottom: 20px;"> -->
-                    <div class="p-4 bg-[#f7f7f9] rounded-lg mb-5">>
+                <div class="adv-card bg-white rounded-lg shadow-md overflow-hidden p-3 md:p-4">
+                    <div class="p-4 md:p-6 bg-[#f7f7f9] rounded-lg mb-4">
                         <div
-                            style="width: 70px; height: 70px; background: #09c0d1; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+                            class="w-14 h-14 md:w-16 md:h-16 bg-[#09c0d1] rounded-full flex items-center justify-center mb-5">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                                style="width: 35px; height: 35px; fill: white;">
+                                class="w-7 h-7 md:w-8 md:h-8 fill-white">
                                 <path
                                     d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zm-141.651-35.33c4.937-32.999-20.191-50.739-54.55-62.573l11.146-44.702-27.213-6.781-10.851 43.524c-7.154-1.783-14.502-3.464-21.803-5.13l10.929-43.81-27.198-6.781-11.153 44.686c-5.922-1.349-11.735-2.682-17.377-4.084l.031-.14-37.53-9.37-7.239 29.062s20.191 4.627 19.765 4.913c11.022 2.751 13.014 10.044 12.68 15.825l-12.696 50.925c.76.194 1.744.473 2.829.907-.907-.225-1.876-.473-2.876-.713l-17.796 71.338c-1.349 3.348-4.767 8.37-12.471 6.464.271.395-19.78-4.937-19.78-4.937l-13.51 31.147 35.414 8.827c6.588 1.651 13.045 3.379 19.4 5.006l-11.262 45.213 27.182 6.781 11.153-44.733a1038.209 1038.209 0 0 0 21.687 5.627l-11.115 44.523 27.213 6.781 11.262-45.128c46.404 8.781 81.299 5.239 95.986-36.727 11.836-33.79-.589-53.281-25.004-65.991 17.78-4.098 31.174-15.792 34.747-39.949zm-62.177 87.179c-8.41 33.79-65.308 15.523-83.755 10.943l14.944-59.899c18.446 4.603 77.6 13.717 68.811 48.956zm8.417-87.667c-7.673 30.736-55.031 15.12-70.393 11.292l13.548-54.327c15.363 3.828 64.836 10.973 56.845 43.035z" />
                             </svg>
                         </div>
-                        <h3 style="margin-bottom: 15px;" class="text-black size-tfive">Access to Large Projects
-                        </h3>
-                        <p style="color: #6B7280; margin: 0;" class="text-sm">Enables investment in large-scale real
-                            estate
-                            projects
-                            that may be otherwise unaffordable for individual investors.</p>
+                        <h3 class="text-lg md:text-xl font-medium text-black mb-3">Access to Large Projects</h3>
+                        <p class="text-sm text-gray-500">Enables investment in large-scale real estate projects that may
+                            be otherwise unaffordable for individual investors.</p>
                     </div>
-                    <!-- <div
-                        style="position: absolute; bottom: 0; right: 0; width: 80px; height: 80px; background: linear-gradient(135deg, transparent 50%, #607bb9 50%); border-top-left-radius: 100%;">
-                    </div> -->
                 </div>
 
                 <!-- Professional Management Card -->
-                <div class="adv-card"
-                    style="background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); overflow: hidden; padding: 15px;">
-
-                    <div style="padding: 20px; background: #f7f7f9; border-radius: 8px; margin-bottom: 20px;">
+                <div class="adv-card bg-white rounded-lg shadow-md overflow-hidden p-3 md:p-4">
+                    <div class="p-4 md:p-6 bg-[#f7f7f9] rounded-lg mb-4">
                         <div
-                            style="width: 70px; height: 70px; background: #09c0d1; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+                            class="w-14 h-14 md:w-16 md:h-16 bg-[#09c0d1] rounded-full flex items-center justify-center mb-5">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
-                                style="width: 35px; height: 35px; fill: white;">
+                                class="w-7 h-7 md:w-8 md:h-8 fill-white">
                                 <path
                                     d="M272 278.5V112c0-8.8-7.2-16-16-16s-16 7.2-16 16v166.5c-19.6 7.9-32 27-32 48.5 0 28.7 23.3 52 52 52s52-23.3 52-52c0-21.5-12.4-40.6-32-48.5zM48 96h160v32H48c-8.8 0-16 7.2-16 16v288c0 8.8 7.2 16 16 16h384c8.8 0 16-7.2 16-16V144c0-8.8-7.2-16-16-16H272V96h160c26.5 0 48-21.5 48-48s-21.5-48-48-48H112C85.5 0 64 21.5 64 48s21.5 48 48 48zm336 272H96V192h288v176z" />
                             </svg>
                         </div>
-                        <h3 style="margin-bottom: 15px;" class="text-black size-tfive">Professional Management</h3>
-                        <p style="color: #6c757d; font-size: 14px; margin: 0;">Experienced fund managers handle property
-                            selection, development, and operations.</p>
+                        <h3 class="text-lg md:text-xl font-medium text-black mb-3">Professional Management</h3>
+                        <p class="text-sm text-gray-500">Experienced fund managers handle property selection,
+                            development, and operations.</p>
                     </div>
-                    <!-- <div
-                        style="position: absolute; bottom: 0; right: 0; width: 80px; height: 80px; background: linear-gradient(135deg, transparent 50%, #607bb9 50%); border-top-left-radius: 100%;">
-                    </div> -->
                 </div>
 
                 <!-- Diversification Card -->
-                <div class="adv-card"
-                    style="background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); overflow: hidden; padding: 15px;">
-
-                    <div style="padding: 20px; background: #f7f7f9; border-radius: 8px; margin-bottom: 20px;">
+                <div class="adv-card bg-white rounded-lg shadow-md overflow-hidden p-3 md:p-4">
+                    <div class="p-4 md:p-6 bg-[#f7f7f9] rounded-lg mb-4">
                         <div
-                            style="width: 70px; height: 70px; background: #09c0d1; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+                            class="w-14 h-14 md:w-16 md:h-16 bg-[#09c0d1] rounded-full flex items-center justify-center mb-5">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
-                                style="width: 35px; height: 35px; fill: white;">
+                                class="w-7 h-7 md:w-8 md:h-8 fill-white">
                                 <path
                                     d="M336 0H48C21.49 0 0 21.49 0 48v416c0 26.51 21.49 48 48 48h288c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zm0 464H48V48h288v416zM144 112h96c8.84 0 16-7.16 16-16s-7.16-16-16-16h-96c-8.84 0-16 7.16-16 16s7.17 16 16 16zm48 176c35.35 0 64-28.65 64-64s-28.65-64-64-64-64 28.65-64 64 28.65 64 64 64zm-89.6 128h179.2c12.4 0 22.4-8.6 22.4-19.2v-19.2c0-31.8-30.1-57.6-67.2-57.6h-70.4c-37.1 0-67.2 25.8-67.2 57.6v19.2c0 10.6 10 19.2 22.4 19.2z" />
                             </svg>
                         </div>
-                        <h3 style="margin-bottom: 15px;" class="text-black size-tfive">Diversification</h3>
-                        <p style="color: #6c757d; font-size: 14px; margin: 0;">Spread investments across multiple
-                            projects, reducing risk exposure.</p>
+                        <h3 class="text-lg md:text-xl font-medium text-black mb-3">Diversification</h3>
+                        <p class="text-sm text-gray-500">Spread investments across multiple projects, reducing risk
+                            exposure.</p>
                     </div>
-                    <!-- <div
-                        style="position: absolute; bottom: 0; right: 0; width: 80px; height: 80px; background: linear-gradient(135deg, transparent 50%, #607bb9 50%); border-top-left-radius: 100%;">
-                    </div> -->
                 </div>
 
                 <!-- High ROI Potential Card -->
-                <div class="adv-card"
-                    style="background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); overflow: hidden; padding: 15px;">
-
-                    <div style="padding: 20px; background: #f7f7f9; border-radius: 8px; margin-bottom: 20px;">
+                <div class="adv-card bg-white rounded-lg shadow-md overflow-hidden p-3 md:p-4">
+                    <div class="p-4 md:p-6 bg-[#f7f7f9] rounded-lg mb-4">
                         <div
-                            style="width: 70px; height: 70px; background: #09c0d1; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+                            class="w-14 h-14 md:w-16 md:h-16 bg-[#09c0d1] rounded-full flex items-center justify-center mb-5">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
-                                style="width: 35px; height: 35px; fill: white;">
+                                class="w-7 h-7 md:w-8 md:h-8 fill-white">
                                 <path
                                     d="M336 0H48C21.49 0 0 21.49 0 48v416c0 26.51 21.49 48 48 48h288c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zm0 464H48V48h288v416zM144 112h96c8.84 0 16-7.16 16-16s-7.16-16-16-16h-96c-8.84 0-16 7.16-16 16s7.17 16 16 16zm48 176c35.35 0 64-28.65 64-64s-28.65-64-64-64-64 28.65-64 64 28.65 64 64 64zm-89.6 128h179.2c12.4 0 22.4-8.6 22.4-19.2v-19.2c0-31.8-30.1-57.6-67.2-57.6h-70.4c-37.1 0-67.2 25.8-67.2 57.6v19.2c0 10.6 10 19.2 22.4 19.2z" />
                             </svg>
                         </div>
-                        <h3 style="margin-bottom: 15px;" class="text-black size-tfive">High ROI Potential</h3>
-                        <p style="color: #6c757d; font-size: 14px; margin: 0;">Offers the opportunity to earn
-                            substantial returns from well-managed real estate developments.</p>
+                        <h3 class="text-lg md:text-xl font-medium text-black mb-3">High ROI Potential</h3>
+                        <p class="text-sm text-gray-500">Investments offer high return potential through appreciation
+                            and income generation.</p>
                     </div>
-                    <!-- <div
-                        style="position: absolute; bottom: 0; right: 0; width: 80px; height: 80px; background: linear-gradient(135deg, transparent 50%, #607bb9 50%); border-top-left-radius: 100%;">
-                    </div> -->
                 </div>
 
                 <!-- Hassle-Free Investment Card -->
-                <div class="adv-card"
-                    style="background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); overflow: hidden; padding: 15px;">
-
-                    <div style="padding: 20px; background: #f7f7f9; border-radius: 8px; margin-bottom: 20px;">
+                <div class="adv-card bg-white rounded-lg shadow-md overflow-hidden p-3 md:p-4">
+                    <div class="p-4 md:p-6 bg-[#f7f7f9] rounded-lg mb-4">
                         <div
-                            style="width: 70px; height: 70px; background: #09c0d1; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+                            class="w-14 h-14 md:w-16 md:h-16 bg-[#09c0d1] rounded-full flex items-center justify-center mb-5">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
-                                style="width: 35px; height: 35px; fill: white;">
+                                class="w-7 h-7 md:w-8 md:h-8 fill-white">
                                 <path
                                     d="M336 0H48C21.49 0 0 21.49 0 48v416c0 26.51 21.49 48 48 48h288c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zm0 464H48V48h288v416zM144 112h96c8.84 0 16-7.16 16-16s-7.16-16-16-16h-96c-8.84 0-16 7.16-16 16s7.17 16 16 16zm48 176c35.35 0 64-28.65 64-64s-28.65-64-64-64-64 28.65-64 64 28.65 64 64 64zm-89.6 128h179.2c12.4 0 22.4-8.6 22.4-19.2v-19.2c0-31.8-30.1-57.6-67.2-57.6h-70.4c-37.1 0-67.2 25.8-67.2 57.6v19.2c0 10.6 10 19.2 22.4 19.2z" />
                             </svg>
                         </div>
-                        <h3 style="margin-bottom: 15px;" class="text-black size-tfive">Hassle-Free Investment</h3>
-                        <p style="color: #6c757d; font-size: 14px; margin: 0;">No need to deal with legal, operational,
-                            or management complexities; everything is handled by the fund.</p>
+                        <h3 class="text-lg md:text-xl font-medium text-black mb-3">Hassle-Free Investment</h3>
+                        <p class="text-sm text-gray-500">No need to deal with legal, operational, or management
+                            complexities; everything is handled by the fund.</p>
                     </div>
-                    <!-- <div
-                        style="position: absolute; bottom: 0; right: 0; width: 80px; height: 80px; background: linear-gradient(135deg, transparent 50%, #607bb9 50%); border-top-left-radius: 100%;">
-                    </div> -->
                 </div>
 
                 <!-- No Risk Card -->
-                <div class="adv-card"
-                    style="background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); overflow: hidden; padding: 15px;">
-
-                    <div style="padding: 20px; background: #f7f7f9; border-radius: 8px; margin-bottom: 20px;">
+                <div class="adv-card bg-white rounded-lg shadow-md overflow-hidden p-3 md:p-4">
+                    <div class="p-4 md:p-6 bg-[#f7f7f9] rounded-lg mb-4">
                         <div
-                            style="width: 70px; height: 70px; background: #09c0d1; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+                            class="w-14 h-14 md:w-16 md:h-16 bg-[#09c0d1] rounded-full flex items-center justify-center mb-5">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
-                                style="width: 35px; height: 35px; fill: white;">
+                                class="w-7 h-7 md:w-8 md:h-8 fill-white">
                                 <path
                                     d="M336 0H48C21.49 0 0 21.49 0 48v416c0 26.51 21.49 48 48 48h288c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zm0 464H48V48h288v416zM144 112h96c8.84 0 16-7.16 16-16s-7.16-16-16-16h-96c-8.84 0-16 7.16-16 16s7.17 16 16 16zm48 176c35.35 0 64-28.65 64-64s-28.65-64-64-64-64 28.65-64 64 28.65 64 64 64zm-89.6 128h179.2c12.4 0 22.4-8.6 22.4-19.2v-19.2c0-31.8-30.1-57.6-67.2-57.6h-70.4c-37.1 0-67.2 25.8-67.2 57.6v19.2c0 10.6 10 19.2 22.4 19.2z" />
                             </svg>
                         </div>
-                        <h3 style="margin-bottom: 15px;" class="text-black size-tfive">No Risk</h3>
-                        <p style="color: #6c757d; font-size: 14px; margin: 0;">Thorough due diligence and strict
-                            compliance protocols ensure your investment is secure.</p>
+                        <h3 class="text-lg md:text-xl font-medium text-black mb-3">No Risk</h3>
+                        <p class="text-sm text-gray-500">Thorough due diligence and strict compliance protocols ensure
+                            your investment is secure.</p>
                     </div>
-                    <!-- <div
-                        style="position: absolute; bottom: 0; right: 0; width: 80px; height: 80px; background: linear-gradient(135deg, transparent 50%, #607bb9 50%); border-top-left-radius: 100%;">
-                    </div> -->
                 </div>
 
                 <!-- Liquidity Card -->
-                <div class="adv-card"
-                    style="background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); overflow: hidden; padding: 15px;">
-
-                    <!-- <div style="padding: 20px; background: #f7f7f9; border-radius: 8px; margin-bottom: 20px;"> -->
-                    <div class="p-4 bg-[#f7f7f9] rounded-lg mb-5">
+                <div class="adv-card bg-white rounded-lg shadow-md overflow-hidden p-3 md:p-4">
+                    <div class="p-4 md:p-6 bg-[#f7f7f9] rounded-lg mb-4">
                         <div
-                            style="width: 70px; height: 70px; background: #09c0d1; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+                            class="w-14 h-14 md:w-16 md:h-16 bg-[#09c0d1] rounded-full flex items-center justify-center mb-5">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
-                                style="width: 35px; height: 35px; fill: white;">
+                                class="w-7 h-7 md:w-8 md:h-8 fill-white">
                                 <path
                                     d="M336 0H48C21.49 0 0 21.49 0 48v416c0 26.51 21.49 48 48 48h288c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zm0 464H48V48h288v416zM144 112h96c8.84 0 16-7.16 16-16s-7.16-16-16-16h-96c-8.84 0-16 7.16-16 16s7.17 16 16 16zm48 176c35.35 0 64-28.65 64-64s-28.65-64-64-64-64 28.65-64 64 28.65 64 64 64zm-89.6 128h179.2c12.4 0 22.4-8.6 22.4-19.2v-19.2c0-31.8-30.1-57.6-67.2-57.6h-70.4c-37.1 0-67.2 25.8-67.2 57.6v19.2c0 10.6 10 19.2 22.4 19.2z" />
                             </svg>
                         </div>
-                        <h3 style="margin-bottom: 15px;" class="text-black size-tfive">Liquidity</h3>
-                        <p style="color: #6c757d; font-size: 14px; margin: 0;">REIFs offer flexible exit options, making
-                            it easier to liquidate investments compared to direct property ownership.</p>
+                        <h3 class="text-lg md:text-xl font-medium text-black mb-3">Liquidity</h3>
+                        <p class="text-sm text-gray-500">REIFs offer flexible exit options, making it easier to
+                            liquidate investments compared to direct property ownership.</p>
                     </div>
-                    <!-- <div
-                        style="position: absolute; bottom: 0; right: 0; width: 80px; height: 80px; background: linear-gradient(135deg, transparent 50%, #607bb9 50%); border-top-left-radius: 100%;">
-                    </div> -->
                 </div>
 
                 <!-- Scalability Card -->
-                <div class="adv-card"
-                    style="background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); overflow: hidden; padding: 15px;">
-
-                    <div style="padding: 20px; background: #f7f7f9; border-radius: 8px; margin-bottom: 20px;">
+                <div class="adv-card bg-white rounded-lg shadow-md overflow-hidden p-3 md:p-4">
+                    <div class="p-4 md:p-6 bg-[#f7f7f9] rounded-lg mb-4">
                         <div
-                            style="width: 70px; height: 70px; background: #09c0d1; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+                            class="w-14 h-14 md:w-16 md:h-16 bg-[#09c0d1] rounded-full flex items-center justify-center mb-5">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
-                                style="width: 35px; height: 35px; fill: white;">
+                                class="w-7 h-7 md:w-8 md:h-8 fill-white">
                                 <path
                                     d="M336 0H48C21.49 0 0 21.49 0 48v416c0 26.51 21.49 48 48 48h288c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zm0 464H48V48h288v416zM144 112h96c8.84 0 16-7.16 16-16s-7.16-16-16-16h-96c-8.84 0-16 7.16-16 16s7.17 16 16 16zm48 176c35.35 0 64-28.65 64-64s-28.65-64-64-64-64 28.65-64 64 28.65 64 64 64zm-89.6 128h179.2c12.4 0 22.4-8.6 22.4-19.2v-19.2c0-31.8-30.1-57.6-67.2-57.6h-70.4c-37.1 0-67.2 25.8-67.2 57.6v19.2c0 10.6 10 19.2 22.4 19.2z" />
                             </svg>
                         </div>
-                        <h3 style="margin-bottom: 15px;" class="text-black size-tfive">Scalability</h3>
-                        <p style="color: #6c757d; font-size: 14px; margin: 0;">Allows investments at different levels,
-                            making it accessible to both small and large investors.</p>
+                        <h3 class="text-lg md:text-xl font-medium text-black mb-3">Scalability</h3>
+                        <p class="text-sm text-gray-500">Allows investments at different levels, making it accessible to
+                            both small and large investors.</p>
                     </div>
-                    <!-- <div
-                        style="position: absolute; bottom: 0; right: 0; width: 80px; height: 80px; background: linear-gradient(135deg, transparent 50%, #607bb9 50%); border-top-left-radius: 100%;">
-                    </div> -->
                 </div>
 
                 <!-- Tax Benefits Card -->
-                <div class="adv-card"
-                    style="background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); overflow: hidden; padding: 15px;">
-
-                    <div style="padding: 20px; background: #f7f7f9; border-radius: 8px; margin-bottom: 20px;">
+                <div class="adv-card bg-white rounded-lg shadow-md overflow-hidden p-3 md:p-4">
+                    <div class="p-4 md:p-6 bg-[#f7f7f9] rounded-lg mb-4">
                         <div
-                            style="width: 70px; height: 70px; background: #09c0d1; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+                            class="w-14 h-14 md:w-16 md:h-16 bg-[#09c0d1] rounded-full flex items-center justify-center mb-5">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
-                                style="width: 35px; height: 35px; fill: white;">
+                                class="w-7 h-7 md:w-8 md:h-8 fill-white">
                                 <path
                                     d="M336 0H48C21.49 0 0 21.49 0 48v416c0 26.51 21.49 48 48 48h288c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zm0 464H48V48h288v416zM144 112h96c8.84 0 16-7.16 16-16s-7.16-16-16-16h-96c-8.84 0-16 7.16-16 16s7.17 16 16 16zm48 176c35.35 0 64-28.65 64-64s-28.65-64-64-64-64 28.65-64 64 28.65 64 64 64zm-89.6 128h179.2c12.4 0 22.4-8.6 22.4-19.2v-19.2c0-31.8-30.1-57.6-67.2-57.6h-70.4c-37.1 0-67.2 25.8-67.2 57.6v19.2c0 10.6 10 19.2 22.4 19.2z" />
                             </svg>
                         </div>
-                        <h3 style="margin-bottom: 15px;" class="text-black size-tfive">Tax Benefits</h3>
-                        <p style="color: #6c757d; font-size: 14px; margin: 0;">REIFs allow investors to enjoy tax
-                            advantages, depending on the fund’s structure and applicable regulations.</p>
+                        <h3 class="text-lg md:text-xl font-medium text-black mb-3">Tax Benefits</h3>
+                        <p class="text-sm text-gray-500">REIFs allow investors to enjoy tax advantages, depending on the
+                            fund's structure and applicable regulations.</p>
                     </div>
-                    <!-- <div
-                        style="position: absolute; bottom: 0; right: 0; width: 80px; height: 80px; background: linear-gradient(135deg, transparent 50%, #607bb9 50%); border-top-left-radius: 100%;">
-                    </div> -->
                 </div>
 
                 <!-- Transparency Card -->
-                <div class="adv-card"
-                    style="background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); overflow: hidden; padding: 15px;">
-
-                    <div style="padding: 20px; background: #f7f7f9; border-radius: 8px; margin-bottom: 20px;">
+                <div class="adv-card bg-white rounded-lg shadow-md overflow-hidden p-3 md:p-4">
+                    <div class="p-4 md:p-6 bg-[#f7f7f9] rounded-lg mb-4">
                         <div
-                            style="width: 70px; height: 70px; background: #09c0d1; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+                            class="w-14 h-14 md:w-16 md:h-16 bg-[#09c0d1] rounded-full flex items-center justify-center mb-5">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
-                                style="width: 35px; height: 35px; fill: white;">
+                                class="w-7 h-7 md:w-8 md:h-8 fill-white">
                                 <path
                                     d="M336 0H48C21.49 0 0 21.49 0 48v416c0 26.51 21.49 48 48 48h288c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zm0 464H48V48h288v416zM144 112h96c8.84 0 16-7.16 16-16s-7.16-16-16-16h-96c-8.84 0-16 7.16-16 16s7.17 16 16 16zm48 176c35.35 0 64-28.65 64-64s-28.65-64-64-64-64 28.65-64 64 28.65 64 64 64zm-89.6 128h179.2c12.4 0 22.4-8.6 22.4-19.2v-19.2c0-31.8-30.1-57.6-67.2-57.6h-70.4c-37.1 0-67.2 25.8-67.2 57.6v19.2c0 10.6 10 19.2 22.4 19.2z" />
                             </svg>
                         </div>
-                        <h3 style="margin-bottom: 15px;" class="text-black size-tfive">Transparency</h3>
-                        <p style="color: #6c757d; font-size: 14px; margin: 0;">Regular updates and reports ensure
-                            complete visibility into project progress and fund performance.</p>
+                        <h3 class="text-lg md:text-xl font-medium text-black mb-3">Transparency</h3>
+                        <p class="text-sm text-gray-500">Regular updates and reports ensure complete visibility into
+                            project progress and fund performance.</p>
                     </div>
-                    <!-- <div
-                        style="position: absolute; bottom: 0; right: 0; width: 80px; height: 80px; background: linear-gradient(135deg, transparent 50%, #607bb9 50%); border-top-left-radius: 100%;">
-                    </div> -->
                 </div>
             </div>
         </div>
-        <!-- <div class="trends-reifs-promo p-2 flex justify-center">
-            <a href="#" style="font-size: 13px;"
-                class="family-oss px-9 py-3 rounded bg-gradient-to-r from-[#08F9E8] to-[#6962AD] text-white duration-300 hover:bg-gradient-to-r hover:from-[#6962AD] hover:to-[#08F9E8]">
-                VIEW MORE
-            </a>
-        </div> -->
     </section>
 
     <style>
