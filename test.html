@@ -2,229 +2,223 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vestrade</title>
-
-    <!-- Tailwind CSS CDN -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vestrade - Trading Platform</title>
+    <!-- Include Tailwind CSS from CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-    <!-- AOS CSS -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <!-- Configure Tailwind with custom colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-blue': '#0e1a22',
+                        'teal': '#19d3c5',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Optional: Add custom styles if needed */
+        .chart-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+                background-size: cover;
+            height: 70vh; /* Decreased height - adjust this value as needed */
+            max-height: 600px; 
+        }
+    </style>
 </head>
 
-<body class="bg-[#0f021f]">
+<body>
+    <!-- Main container with dark background -->
+    <div class="relative min-h-screen bg-dark-blue overflow-hidden">
+        <!-- Trading chart background overlay -->
+        <div class="absolute inset-0 opacity-20 bg-cover bg-center chart-bg"></div>
 
-    <!-- Navigation Bar -->
-    <nav class="text-white px-6 md:px-16 lg:px-32 py-6 flex items-center justify-between border-b border-gray-700">
-        <!-- Logo -->
-        <div class="flex items-center space-x-2">
-            <img src="assets/images/logo.png" alt="Logo" class="w-32 md:w-40 h-8 md:h-10" />
-        </div>
+        <!-- Content container -->
+        <div class="relative z-10">
+            <!-- Navigation Bar -->
+            <nav
+                class="text-white px-6 md:px-16 lg:px-32 py-6 flex items-center justify-between border-b border-gray-700">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <a href="index.html"><img src="/assets/images/logo.png" alt="Vestrade" class="h-10"></a>
+                </div>
 
-        <!-- Hamburger Menu for Mobile -->
-        <div class="md:hidden">
-            <button id="menu-toggle" class="text-white focus:outline-none">
-                <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
-                    viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-                <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2"
-                    viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
-        </div>
-
-        <!-- Navigation Links + Button -->
-        <div id="menu" class="hidden md:flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6">
-            <!-- Navigation Links -->
-            <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 items-center font-semibold">
-                <li><a href="#" class="hover:text-cyan-400">Home</a></li>
-                <li><a href="#" class="hover:text-cyan-400">About</a></li>
-                <!-- Service Dropdown -->
-                <li class="relative group">
-                    <button class="flex items-center gap-x-2 hover:text-cyan-400">
-                        Services
-                        <!-- <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor"
-                            stroke-width="3" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg> -->
-                    </button>
-                    <ul
-                        class="absolute left-0 mt-2 bg-white text-black shadow-lg rounded hidden group-hover:block min-w-[150px] z-10">
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Contact</a></li>
-                        <!-- <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Pricing</a></li> -->
-                    </ul>
-                </li>
-
-                <!-- <li><a href="#" class="hover:text-cyan-400">Product</a></li> -->
-                <li><a href="#" class="hover:text-cyan-400">Contact</a></li>
-
-                <!-- Pages Dropdown -->
-                <!-- <li class="relative group">
-                    <button class="flex items-center gap-x-2 hover:text-cyan-400">
-                        Pages
-                        <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor"
-                            stroke-width="3" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                <!-- Hamburger Menu for Mobile -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-white focus:outline-none">
+                        <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
+                </div>
+
+                <!-- Navigation Links + Button (Desktop) -->
+                <div id="menu"
+                    class="hidden md:flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6">
+                    <!-- Navigation Links -->
                     <ul
-                        class="absolute left-0 mt-2 bg-white text-black shadow-lg rounded hidden group-hover:block min-w-[150px] z-10">
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Team</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">FAQ</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Blog</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Single Blog</a></li>
-                        <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">404 Page</a></li>
+                        class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 items-center font-semibold">
+                        <li><a href="index.html" class="hover:text-cyan-400">Home</a></li>
+                        <li><a href="about.html" class="hover:text-cyan-400">About</a></li>
+                        <li><a href="projects.html" class="hover:text-cyan-400">Projects</a></li>
+                        <li><a href="contact.html" class="hover:text-cyan-400">Contact</a></li>
+                        <!-- More Dropdown -->
+                        <li class="relative group" id="dropdown-parent">
+                            <button id="dropdown-button" class="flex items-center gap-x-2 hover:text-cyan-400">
+                                More
+                                <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor"
+                                    stroke-width="3" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <ul id="dropdown-menu"
+                                class="absolute left-0 mt-2 bg-white text-black shadow-lg rounded opacity-0 invisible transition-all duration-300 min-w-[150px] z-10">
+                                <li><a href="./faqs.html"
+                                        class="block px-4 py-2 hover:bg-[#08f9e8] hover:text-white">FAQ</a>
+                                </li>
+                                <li><a href="./testimonials.html"
+                                        class="block px-4 py-2 hover:bg-[#08f9e8] hover:text-white">Testimonials</a>
+                                </li>
+                                <li><a href="./blogs.html"
+                                        class="block px-4 py-2 hover:bg-[#08f9e8] hover:text-white">Blogs</a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
-                </li> -->
-            </ul>
-
-            <!-- Get Started Button -->
-            <!-- <div class="group">
-                <button style="font-size: 13px; font-family: 'Outfit', sans-serif;"
-                    class="px-6 py-2 rounded bg-gradient-to-r from-[#00f6ff] to-sky-500/75 text-white transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-sky-500/75 group-hover:to-[#00f6ff]">
-                    GET STARTED
-                </button>
-            </div> -->
-        </div>
-    </nav>
-
-    <script>
-        // Toggle mobile menu and icons
-        document.getElementById('menu-toggle').addEventListener('click', function () {
-            const menu = document.getElementById('menu');
-            const hamburgerIcon = document.getElementById('hamburger-icon');
-            const closeIcon = document.getElementById('close-icon');
-
-            menu.classList.toggle('hidden');
-            hamburgerIcon.classList.toggle('hidden');
-            closeIcon.classList.toggle('hidden');
-        });
-
-        // Redirect to the home page when the close icon is clicked
-        document.getElementById('close-icon').addEventListener('click', function () {
-            window.location.href = '/'; // Replace '/' with your home page URL if different
-        });
-    </script>
-    <!-- End Navigation Bar -->
-
-    <!-- Advantages Section -->
-    <section class="real-estate-market px-28">
-        <div class="container-real-estate">
-            <div class="section-header challenges-header">
-                <p class="text-sm font-bold text-[#7267D7] uppercase">Challenges in Developing a Real Estate Project</p>
-            </div>
-
-            <div class="challenges-container">
-                <div class="challenge-card">
-                    <div class="challenge-number">1</div>
-                    <h3>Land Identification and Acquisition</h3>
-                    <p class="text-sm">Finding high growth potential land, evaluating its suitability for development,
-                        and
-                        negotiating
-                        favourable purchase terms.</p>
                 </div>
+            </nav>
 
-                <div class="challenge-card">
-                    <div class="challenge-number">2</div>
-                    <h3>Due Diligence</h3>
-                    <p class="text-sm">Ensuring the land has a clear legal title, verifying ownership history, checking
-                        for
-                        encumbrances, zoning regulations, and all other legal and technical verifications before
-                        acquisition.</p>
+            <!-- Mobile Navigation Overlay -->
+            <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-white z-50 hidden flex flex-col">
+                <div class="flex justify-between items-center px-4 py-3 border-b border-gray-200">
+                    <a href="index.html"><img src="/assets/images/logo.png" alt="Vestrade" class="h-10"></a>
+                    <button id="mobile-close" class="text-black">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
                 </div>
-
-                <div class="challenge-card">
-                    <div class="challenge-number">3</div>
-                    <h3>Feasibility and Planning</h3>
-                    <p class="text-sm">Conducting market research and aligning the project with zoning and regulatory
-                        requirements.</p>
-                </div>
-
-                <div class="challenge-card">
-                    <div class="challenge-number">4</div>
-                    <h3>Legal Approvals and Compliance</h3>
-                    <p class="text-sm">Securing land use permits, environmental clearances, and managing legal
-                        documentation.</p>
-                </div>
-
-                <div class="challenge-card">
-                    <div class="challenge-number">5</div>
-                    <h3>Funding and Financial Management</h3>
-                    <p class="text-sm">Arranging high initial capital and maintaining cash flow during development.</p>
-                </div>
-
-                <div class="challenge-card">
-                    <div class="challenge-number">6</div>
-                    <h3>Infrastructure Development</h3>
-                    <p class="text-sm">Planning and implementing roads, utilities, and other essential infrastructure.
-                    </p>
-                </div>
-
-                <div class="challenge-card">
-                    <div class="challenge-number">7</div>
-                    <h3>Construction Management</h3>
-                    <p class="text-sm">Overseeing contractors, ensuring quality, and managing timelines effectively.</p>
-                </div>
-
-                <div class="challenge-card">
-                    <div class="challenge-number">8</div>
-                    <h3>Material Procurement and Cost Control</h3>
-                    <p class="text-sm">Sourcing materials, controlling costs, and addressing unexpected overruns.</p>
-                </div>
-
-                <div class="challenge-card">
-                    <div class="challenge-number">9</div>
-                    <h3>Marketing and Sales</h3>
-                    <p class="text-sm">Creating effective strategies to attract buyers and managing pre-sales processes.
-                    </p>
-                </div>
-
-                <div class="challenge-card">
-                    <div class="challenge-number">10</div>
-                    <h3>Regulatory Updates and Monitoring</h3>
-                    <p class="text-sm">Adapting to changing policies and ensuring ongoing compliance.</p>
-                </div>
-
-                <div class="challenge-card">
-                    <div class="challenge-number">11</div>
-                    <h3>Project Handover</h3>
-                    <p class="text-sm">Delivering completed units on time and addressing customer concerns.</p>
-                </div>
-
-                <div class="challenge-card">
-                    <div class="challenge-number">12</div>
-                    <h3>Risk Management</h3>
-                    <p class="text-sm">Mitigating risks related to market fluctuations, natural disasters, and political
-                        changes.</p>
-                </div>
-
-                <div class="challenge-card">
-                    <div class="challenge-number">13</div>
-                    <h3>Technical Expertise</h3>
-                    <p class="text-sm">Requiring in-depth knowledge of design, construction, and project execution.</p>
-                </div>
-
-                <div class="challenge-card">
-                    <div class="challenge-number">14</div>
-                    <h3>Time Commitment</h3>
-                    <p class="text-sm">Managing lengthy processes from land acquisition to project completion.</p>
+                <div class="flex flex-col p-4">
+                    <a href="index.html"
+                        class="nav-link text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">Homepage</a>
+                    <a href="about.html"
+                        class="nav-link text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">About
+                        Us</a>
+                    <a href="projects.html"
+                        class="nav-link text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">Projects</a>
+                    <a href="contact.html"
+                        class="nav-link text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">Contact</a>
+                    <div class="relative">
+                        <button id="mobile-more-toggle"
+                            class="flex items-center justify-between w-full text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">
+                            More
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="more-dropdown" class="hidden pl-4 border-b border-gray-200">
+                            <a href="./faqs.html"
+                                class="block text-black py-3 hover:bg-cyan-500 hover:text-white transition-colors duration-200">FAQ</a>
+                            <a href="./testimonials.html"
+                                class="block text-black py-3 hover:bg-cyan-500 hover:text-white transition-colors duration-200">Testimonials</a>
+                            <a href="./blogs.html"
+                                class="block text-black py-3 hover:bg-cyan-500 hover:text-white transition-colors duration-200">Blogs</a>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <script>
+                // For highlighting the active link in the navigation bar
+                document.addEventListener('DOMContentLoaded', function () {
+                    const links = document.querySelectorAll('.nav-link');
+                    const currentPage = window.location.pathname.split("/").pop(); // get current page name
+
+                    links.forEach(link => {
+                        if (link.getAttribute('href') === currentPage) {
+                            link.classList.add('bg-cyan-500', 'text-white', 'font-bold'); // active styling
+                        } else {
+                            link.classList.remove('bg-cyan-500', 'text-white');
+                        }
+                    });
+                });
+            </script>
+
+            <script>
+                // Toggle mobile menu with the new overlay
+                document.getElementById('menu-toggle').addEventListener('click', function () {
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    mobileMenu.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+                });
+
+                // Close mobile menu
+                document.getElementById('mobile-close').addEventListener('click', function () {
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                    document.body.style.overflow = ''; // Restore scrolling
+                });
+
+                // Toggle "More" dropdown in mobile menu
+                document.getElementById('mobile-more-toggle').addEventListener('click', function () {
+                    const dropdown = document.getElementById('more-dropdown');
+                    dropdown.classList.toggle('hidden');
+
+                    // Toggle arrow direction
+                    const arrow = this.querySelector('svg');
+                    arrow.classList.toggle('rotate-180');
+                });
+
+                // Dropdown functionality with delay for desktop
+                const dropdownParent = document.getElementById('dropdown-parent');
+                const dropdownButton = document.getElementById('dropdown-button');
+                const dropdownMenu = document.getElementById('dropdown-menu');
+                let dropdownTimeout;
+
+                dropdownParent.addEventListener('mouseenter', () => {
+                    clearTimeout(dropdownTimeout);
+                    dropdownMenu.classList.remove('opacity-0', 'invisible');
+                    dropdownMenu.classList.add('opacity-100', 'visible');
+                });
+
+                dropdownParent.addEventListener('mouseleave', () => {
+                    dropdownTimeout = setTimeout(() => {
+                        dropdownMenu.classList.remove('opacity-100', 'visible');
+                        dropdownMenu.classList.add('opacity-0', 'invisible');
+                    }, 1000); // 1 second delay
+                });
+
+                // Keep dropdown open if mouse enters it
+                dropdownMenu.addEventListener('mouseenter', () => {
+                    clearTimeout(dropdownTimeout);
+                    dropdownMenu.classList.remove('opacity-0', 'invisible');
+                    dropdownMenu.classList.add('opacity-100', 'visible');
+                });
+
+                dropdownMenu.addEventListener('mouseleave', () => {
+                    dropdownTimeout = setTimeout(() => {
+                        dropdownMenu.classList.remove('opacity-100', 'visible');
+                        dropdownMenu.classList.add('opacity-0', 'invisible');
+                    }, 2000); // 2 seconds delay
+                });
+            </script>
+            <!-- End Navigation Bar -->
+
+            <!-- About Us Section -->
+            <section class="px-6 md:px-12 py-16 md:py-24 max-w-7xl mx-auto">
+                <h1 class="text-4xl md:text-5xl font-semibold text-white mb-8">About Us</h1>
+                <p class="text-xl md:text-2xl text-white/90 max-w-xl leading-relaxed">
+                    Join our community to share experiences, gain valuable insights, and build a network for successful
+                    investing.
+                </p>
+            </section>
         </div>
-    </section>
+    </div>
 
     <!-- Footer Section -->
     <footer class="bg-[#032427] text-white relative bg-cover bg-center">
@@ -344,7 +338,6 @@
     <script>
         AOS.init();
     </script>
-
 </body>
 
 </html>

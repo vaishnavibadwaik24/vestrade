@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Real Estate Investment Fund</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 40px auto;
+            gap: 70px;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            /* box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15); */
+        }
+
+        .contact-form {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+            width: 460px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .info-section {
+            width: 640px;
+        }
+
+        .contact-form h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: black;
+            font-weight: 700;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .contact-form p {
+            color: #6B7280;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .form-group {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: rgba(255, 255, 255, 0.05);
+            color: black;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: #08f9e8;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(8, 249, 232, 0.2);
+        }
+
+        .form-control::placeholder {
+            color: #778393;
+        }
+
+        label {
+            color: black;
+            margin-bottom: 8px;
+            display: block;
+            font-weight: 500;
+        }
+
+        textarea.form-control {
+            height: 80px;
+            resize: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* box-shadow: 0 4px 20px rgba(12, 214, 201, 0.3); */
+        }
+
+        .info-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: black;
+            font-weight: 700;
+            line-height: 1.2;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .info-section p {
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .info-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            /* box-shadow: rgba(80, 79, 79, 0.1); */
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            /* Light gray border */
+            /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+        }
+
+        .info-card:hover {
+            border-color: #08f9e8;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(8, 249, 232, 0.2);
+        }
+
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #09c0d1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            /* box-shadow: 0 8px 20px rgba(12, 214, 201, 0.3); */
+        }
+
+        .icon-circle i {
+            color: white;
+            font-size: 24px;
+        }
+
+        .card-content h3 {
+            color: black;
+            margin-bottom: 10px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .card-content p {
+            color: #6B7280;
+            margin-bottom: 5px;
+            line-height: 1.5;
+            font-size: 15px;
+        }
+
+        .social-media {
+            margin-top: 40px;
+        }
+
+        .social-media h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: black;
+            font-weight: 500;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #09c0d1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 22px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* box-shadow: 0 4px 15px rgba(12, 214, 201, 0.3); */
+        }
+
+        .social-icon:hover {
+            background: #7763b4;
+            /* box-shadow: 0 8px 25px rgba(12, 214, 201, 0.5); */
+        }
+
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                margin: 20px;
+            }
+
+            .contact-form,
+            .info-section {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .form-group {
+                flex-direction: column;
+            }
+
+            .info-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form h1,
+            .info-section h2 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white min-h-screen">
+
+    <!-- Navigation Bar -->
+    <nav
+        class="bg-[#0f021f] text-white px-6 md:px-16 lg:px-32 py-6 flex items-center justify-between border-b border-gray-700">
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+            <a href="index.html"><img src="/assets/images/logo.png" alt="Vestrade" class="h-10"></a>
+        </div>
+
+        <!-- Hamburger Menu for Mobile -->
+        <div class="md:hidden">
+            <button id="menu-toggle" class="text-white focus:outline-none">
+                <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Navigation Links + Button (Desktop) -->
+        <div id="menu" class="hidden md:flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6">
+            <!-- Navigation Links -->
+            <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 items-center font-semibold">
+                <li><a href="index.html" class="hover:text-cyan-400">Home</a></li>
+                <li><a href="about.html" class="hover:text-cyan-400">About</a></li>
+                <li><a href="projects.html" class="hover:text-cyan-400">Projects</a></li>
+                <li><a href="contact.html" class="hover:text-cyan-400">Contact</a></li>
+                <!-- More Dropdown -->
+                <li class="relative group" id="dropdown-parent">
+                    <button id="dropdown-button" class="flex items-center gap-x-2 hover:text-cyan-400">
+                        More
+                        <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor"
+                            stroke-width="3" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <ul id="dropdown-menu"
+                        class="absolute left-0 mt-2 bg-white text-black shadow-lg rounded opacity-0 invisible transition-all duration-300 min-w-[150px] z-10">
+                        <li><a href="./faqs.html" class="block px-4 py-2 hover:bg-[#08f9e8] hover:text-white">FAQ</a>
+                        </li>
+                        <li><a href="./testimonials.html"
+                                class="block px-4 py-2 hover:bg-[#08f9e8] hover:text-white">Testimonials</a></li>
+                        <li><a href="./blogs.html" class="block px-4 py-2 hover:bg-[#08f9e8] hover:text-white">Blogs</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Overlay -->
+    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-white z-50 hidden flex flex-col">
+        <div class="flex justify-between items-center px-4 py-3 border-b border-gray-200">
+            <a href="index.html"><img src="/assets/images/logo.png" alt="Vestrade" class="h-10"></a>
+            <button id="mobile-close" class="text-black">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <div class="flex flex-col p-4">
+            <a href="index.html"
+                class="nav-link text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">Homepage</a>
+            <a href="about.html"
+                class="nav-link text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">About
+                Us</a>
+            <a href="projects.html"
+                class="nav-link text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">Projects</a>
+            <a href="contact.html"
+                class="nav-link text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">Contact</a>
+            <div class="relative">
+                <button id="mobile-more-toggle"
+                    class="flex items-center justify-between w-full text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">
+                    More
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div id="more-dropdown" class="hidden pl-4 border-b border-gray-200">
+                    <a href="./faqs.html"
+                        class="block text-black py-3 hover:bg-cyan-500 hover:text-white transition-colors duration-200">FAQ</a>
+                    <a href="./testimonials.html"
+                        class="block text-black py-3 hover:bg-cyan-500 hover:text-white transition-colors duration-200">Testimonials</a>
+                    <a href="./blogs.html"
+                        class="block text-black py-3 hover:bg-cyan-500 hover:text-white transition-colors duration-200">Blogs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // For highlighting the active link in the navigation bar
+        document.addEventListener('DOMContentLoaded', function () {
+            const links = document.querySelectorAll('.nav-link');
+            const currentPage = window.location.pathname.split("/").pop(); // get current page name
+
+            links.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('bg-cyan-500', 'text-white', 'font-bold'); // active styling
+                } else {
+                    link.classList.remove('bg-cyan-500', 'text-white');
+                }
+            });
+        });
+    </script>
+
+    <script>
+        // Toggle mobile menu with the new overlay
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        });
+
+        // Close mobile menu
+        document.getElementById('mobile-close').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.add('hidden');
+            document.body.style.overflow = ''; // Restore scrolling
+        });
+
+        // Toggle "More" dropdown in mobile menu
+        document.getElementById('mobile-more-toggle').addEventListener('click', function () {
+            const dropdown = document.getElementById('more-dropdown');
+            dropdown.classList.toggle('hidden');
+
+            // Toggle arrow direction
+            const arrow = this.querySelector('svg');
+            arrow.classList.toggle('rotate-180');
+        });
+
+        // Dropdown functionality with delay for desktop
+        const dropdownParent = document.getElementById('dropdown-parent');
+        const dropdownButton = document.getElementById('dropdown-button');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+        let dropdownTimeout;
+
+        dropdownParent.addEventListener('mouseenter', () => {
+            clearTimeout(dropdownTimeout);
+            dropdownMenu.classList.remove('opacity-0', 'invisible');
+            dropdownMenu.classList.add('opacity-100', 'visible');
+        });
+
+        dropdownParent.addEventListener('mouseleave', () => {
+            dropdownTimeout = setTimeout(() => {
+                dropdownMenu.classList.remove('opacity-100', 'visible');
+                dropdownMenu.classList.add('opacity-0', 'invisible');
+            }, 1000); // 1 second delay
+        });
+
+        // Keep dropdown open if mouse enters it
+        dropdownMenu.addEventListener('mouseenter', () => {
+            clearTimeout(dropdownTimeout);
+            dropdownMenu.classList.remove('opacity-0', 'invisible');
+            dropdownMenu.classList.add('opacity-100', 'visible');
+        });
+
+        dropdownMenu.addEventListener('mouseleave', () => {
+            dropdownTimeout = setTimeout(() => {
+                dropdownMenu.classList.remove('opacity-100', 'visible');
+                dropdownMenu.classList.add('opacity-0', 'invisible');
+            }, 2000); // 2 seconds delay
+        });
+    </script>
+    <!-- End Navigation Bar -->
+
+    <!-- Contact Section with animated gradient border -->
+    <div class="section max-w-7xl mx-auto px-4 py-16">
+        <div class="contact-form py-16" data-aos="fade-right">
+            <h1>Send us a message</h1>
+            <!-- <p>We're eager to hear from you. Fill out the form below, and our team will get back to you as soon
+                    as possible.</p> -->
+
+            <div class="form-group">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control bg-gray-100 py-2" id="name" placeholder="Name">
+                </div>
+                <div>
+                    <label for="company">Company</label>
+                    <input type="text" class="form-control bg-gray-100 py-2" id="company" placeholder="Company">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div>
+                    <label for="phone">Phone</label>
+                    <input type="tel" class="form-control bg-gray-100 py-2" id="phone" placeholder="Phone">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control bg-gray-100 py-2" id="email" placeholder="Email">
+                </div>
+            </div>
+
+            <div>
+                <label for="subject">Subject</label>
+                <input type="text" class="form-control bg-gray-100 py-2" id="subject" placeholder="Subject">
+            </div>
+
+            <div style="margin-top: 20px;">
+                <label for="message">Message</label>
+                <textarea class="form-control bg-gray-100 py-2" id="message" placeholder="Message"></textarea>
+            </div>
+
+            <button type="submit"
+                class="submit-btn bg-gradient-to-r from-[#08F9E8] to-[#6962AD] hover:bg-gradient-to-r hover:from-[#6962AD] hover:to-[#08F9E8]">
+                <i class="far fa-paper-plane"></i> SEND MESSAGE
+            </button>
+        </div>
+
+        <div class="info-section pt-8" data-aos="fade-left">
+            <p class="family-oss text-sm font-bold text-[#7267D7] uppercase" style="margin-bottom: 15px;">
+                GET IN TOUCH</p>
+            <h2>Have Anything To Ask? Let's Talk</h2>
+            <p style="color: #6b7280;">We're always ready to answer your questions and provide the guidance you need.
+                Feel
+                free
+                to
+                reach
+                out through any of the channels below.</p>
+
+            <div class="info-cards">
+                <div class="info-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-circle">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Address</h3>
+                        <p>Jl. Cempaka Wangi No 22</p>
+                        <p>Jakarta - Indonesia</p>
+                    </div>
+                </div>
+
+                <div class="info-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-circle">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Email Support</h3>
+                        <p>hello@yourdomain.tld</p>
+                        <p>support@yourdomain.tld</p>
+                    </div>
+                </div>
+
+                <div class="info-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon-circle">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Phone</h3>
+                        <p>Phone: +6221 2002 2012</p>
+                        <p>Fax: +6221 2002 2013</p>
+                    </div>
+                </div>
+
+                <div class="info-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="icon-circle">
+                        <i class="far fa-clock"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Office Hours</h3>
+                        <p>Mon-Fri: 09am-07pm</p>
+                        <p>Sat-Sun: Closed</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="social-media">
+                <h3>Follow our social media</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Map Section -->
+    <div class="max-w-7x1 mx-auto px-4" data-aos="fade-up">
+        <div class="aspect-[16/6] w-full bg-gray-800 overflow-hidden">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242117.7090637025!2d73.69814927513373!3d18.524870615022554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1745843230513!5m2!1sen!2sin"
+                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                class="w-full h-full"></iframe>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-[#032427] text-white relative bg-cover bg-center">
+        <!-- Newsletter Signup -->
+        <div class="border-b border-white/30 px-6" data-aos="fade-up">
+            <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <h2 class="text-xl font-semibold text-center md:text-left">
+                    Signup our newsletter to get update information,<br />
+                    news, insight or promotions.
+                </h2>
+                <form class="flex w-full md:w-auto">
+                    <input type="email" placeholder="Your Email"
+                        class="px-6 py-2 rounded-l-md w-full md:w-60 bg-white text-black focus:outline-none" />
+                    <button type="submit"
+                        class="bg-gradient-to-r from-[#00f6ff] to-sky-600/75 px-12 py-2 rounded-r-md text-white font-semibold duration-300 hover:from-sky-600/75 hover:to-[#00f6ff]">
+                        SIGN UP
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer Content -->
+        <div class="max-w-7xl mx-auto px-12 py-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10 text-sm">
+            <!-- Brand Info -->
+            <div data-aos="fade-right">
+                <img src="/assets/images/logo.png" alt="Vestrade" class="h-10 mb-4">
+                <p class="text-white/80 mb-8">
+                    Dictumst natoque curae nullam quisque pretium sem cursus augue pede tempor quis nisi at curabitur si
+                    condimentum metus parturient posuere dapibus id leo.
+                </p>
+                <div class="flex gap-4 text-white text-lg">
+                    <a href="#"><i class="fab fa-facebook-f text-cyan-400"></i></a>
+                    <a href="#"><i class="fab fa-twitter text-cyan-400"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in text-cyan-400"></i></a>
+                    <a href="#"><i class="fab fa-instagram text-cyan-400"></i></a>
+                </div>
+            </div>
+
+            <!-- Product Links -->
+            <div data-aos="fade-up" data-aos-delay="100">
+                <h4 class="font-semibold text-lg text-white mb-4">Product</h4>
+                <ul class="space-y-2 text-white/80">
+                    <li class="border-b border-white/30 pb-2">
+                        <a href="#" class="hover:text-cyan-400 block transition-colors duration-300">Stocks</a>
+                    </li>
+                    <li class="border-b border-white/30 pb-2">
+                        <a href="#" class="hover:text-cyan-400 block transition-colors duration-300">Futures &
+                            Options</a>
+                    </li>
+                    <li class="border-b border-white/30 pb-2">
+                        <a href="#" class="hover:text-cyan-400 block transition-colors duration-300">IPO</a>
+                    </li>
+                    <li class="border-b border-white/30 pb-2">
+                        <a href="#" class="hover:text-cyan-400 block transition-colors duration-300">Mutual Funds</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-cyan-400 block transition-colors duration-300">Credits</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Support Links -->
+            <div data-aos="fade-up" data-aos-delay="200">
+                <h4 class="font-semibold text-lg text-white mb-4">Support</h4>
+                <ul class="space-y-2 text-white/80">
+                    <li class="pb-2 border-b border-white/30"><a href="#"
+                            class="hover:text-cyan-400 transition-colors duration-300">Contact Us</a>
+                    </li>
+                    <li class="pb-2 border-b border-white/30"><a href="#"
+                            class="hover:text-cyan-400 transition-colors duration-300">Help Centre</a>
+                    </li>
+                    <li class="pb-2 border-b border-white/30"><a href="#"
+                            class="hover:text-cyan-400 transition-colors duration-300">FAQ</a></li>
+                    <li class="pb-2 border-b border-white/30"><a href="#"
+                            class="hover:text-cyan-400 transition-colors duration-300">My Account</a>
+                    </li>
+                    <li><a href="#" class="hover:text-cyan-400 transition-colors duration-300">Community</a></li>
+                </ul>
+            </div>
+
+            <!-- Company Info -->
+            <div data-aos="fade-up" data-aos-delay="300">
+                <h4 class="font-semibold text-lg text-white mb-4">Company</h4>
+                <ul class="space-y-2 text-white/80">
+                    <li class="pb-2 border-b border-white/30"><a href="#"
+                            class="hover:text-cyan-400 transition-colors duration-300">About</a></li>
+                    <li class="pb-2 border-b border-white/30"><a href="#"
+                            class="hover:text-cyan-400 transition-colors duration-300">Services</a></li>
+                    <li class="pb-2 border-b border-white/30"><a href="#"
+                            class="hover:text-cyan-400 transition-colors duration-300">Vision &
+                            Mision</a></li>
+                    <li class="pb-2 border-b border-white/30"><a href="#"
+                            class="hover:text-cyan-400 transition-colors duration-300">Leadership</a>
+                    </li>
+                    <li><a href="#" class="hover:text-cyan-400 transition-colors duration-300">News & Article</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div data-aos="fade-left" data-aos-delay="400">
+                <h4 class="font-semibold text-lg text-white mb-4">Get in Touch</h4>
+                <ul class="space-y-4 text-white/80">
+                    <li class="flex gap-2 items-start">
+                        <i class="fas fa-map-marker-alt text-teal-400 mt-1"></i>
+                        Jalan Cempaka Wangi No 22<br />Jakarta - Indonesia
+                    </li>
+                    <li class="flex gap-2 items-center">
+                        <i class="fas fa-envelope text-teal-400"></i>
+                        support@yourdomain.tld
+                    </li>
+                    <li class="flex gap-2 items-center">
+                        <i class="fas fa-phone-alt text-teal-400"></i>
+                        (888) 4000 613
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-white/30 py-4 text-center text-sm text-white/70">
+            Copyright© 2024 Vestrade, All rights reserved.
+        </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
+
+</body>
+
+</html>

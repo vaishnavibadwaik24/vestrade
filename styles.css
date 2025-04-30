@@ -392,7 +392,7 @@ color: var(--accent-color);
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-weight: bold;
-  color: #6962AD;
+  color: #7267D7;
 }
 
 .page-sub-heading{
@@ -728,6 +728,15 @@ list-disc li:before {
   background: linear-gradient(rgba(13, 26, 45, 0.4)), url('/assets/images/client.png') no-repeat center center;
 }
 
+.adv-card{
+  border: #1FF6E7 1px solid;
+}
+
 .adv-card:hover{
-  border: 2px solid #1FF6E7;
+  transform: translateY(-3px);
+  /* background: linear-gradient(to right, #00d2ff, #3a7bd5); */
+}
+
+#dropdown-menu li a {
+    border-radius: 4px; /* Add rounded corners to the hover effect */
 }

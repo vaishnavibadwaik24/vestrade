@@ -29,7 +29,7 @@
     <nav class="text-white px-6 md:px-16 lg:px-32 py-6 flex items-center justify-between border-b border-gray-700">
         <!-- Logo -->
         <div class="flex items-center space-x-2">
-            <img src="assets/images/logo.png" alt="Logo" class="w-32 md:w-40 h-8 md:h-10" />
+            <a href="index.html"><img src="/assets/images/logo.png" alt="Vestrade" class="h-10"></a>
         </div>
 
         <!-- Hamburger Menu for Mobile -->
@@ -39,22 +39,18 @@
                     viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
-                <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2"
-                    viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
             </button>
         </div>
 
-        <!-- Navigation Links + Button -->
+        <!-- Navigation Links + Button (Desktop) -->
         <div id="menu" class="hidden md:flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6">
             <!-- Navigation Links -->
             <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 items-center font-semibold">
-                <li><a href="#" class="hover:text-cyan-400">Home</a></li>
-                <li><a href="#" class="hover:text-cyan-400">About</a></li>
-                <li><a href="#" class="hover:text-cyan-400">Projects</a></li>
-                <li><a href="#" class="hover:text-cyan-400">Contact</a></li>
-                <!-- Service Dropdown -->
+                <li><a href="index.html" class="hover:text-cyan-400">Home</a></li>
+                <li><a href="about.html" class="hover:text-cyan-400">About</a></li>
+                <li><a href="projects.html" class="hover:text-cyan-400">Projects</a></li>
+                <li><a href="contact.html" class="hover:text-cyan-400">Contact</a></li>
+                <!-- More Dropdown -->
                 <li class="relative group" id="dropdown-parent">
                     <button id="dropdown-button" class="flex items-center gap-x-2 hover:text-cyan-400">
                         More
@@ -63,29 +59,101 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
-                    <ul id="dropdown-menu" class="absolute left-0 mt-2 bg-white text-black shadow-lg rounded opacity-0 invisible transition-all duration-300 min-w-[150px] z-10">
-                        <li><a href="../faq.html" class="block px-4 py-2 hover:bg-[#08f9e8] hover:text-white">FAQ</a></li>
-                        <li><a href="./testimonials.html" class="block px-4 py-2 hover:bg-[#08f9e8] hover:text-white">Testimonials</a></li>
-                        <li><a href="./blogs.html" class="block px-4 py-2 hover:bg-[#08f9e8] hover:text-white">Blogs</a></li>
+                    <ul id="dropdown-menu"
+                        class="absolute left-0 mt-2 bg-white text-black shadow-lg rounded opacity-0 invisible transition-all duration-300 min-w-[150px] z-10">
+                        <li><a href="./faqs.html" class="block px-4 py-2 hover:bg-[#08f9e8] hover:text-white">FAQ</a>
+                        </li>
+                        <li><a href="./testimonials.html"
+                                class="block px-4 py-2 hover:bg-[#08f9e8] hover:text-white">Testimonials</a></li>
+                        <li><a href="./blogs.html" class="block px-4 py-2 hover:bg-[#08f9e8] hover:text-white">Blogs</a>
+                        </li>
                     </ul>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <script>
-        // Toggle mobile menu and icons
-        document.getElementById('menu-toggle').addEventListener('click', function () {
-            const menu = document.getElementById('menu');
-            const hamburgerIcon = document.getElementById('hamburger-icon');
-            const closeIcon = document.getElementById('close-icon');
+    <!-- Mobile Navigation Overlay -->
+    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-white z-50 hidden flex flex-col">
+        <div class="flex justify-between items-center px-4 py-3 border-b border-gray-200">
+            <a href="index.html"><img src="/assets/images/logo.png" alt="Vestrade" class="h-10"></a>
+            <button id="mobile-close" class="text-black">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <div class="flex flex-col p-4">
+            <a href="index.html"
+                class="nav-link text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">Homepage</a>
+            <a href="about.html"
+                class="nav-link text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">About
+                Us</a>
+            <a href="projects.html"
+                class="nav-link text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">Projects</a>
+            <a href="contact.html"
+                class="nav-link text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">Contact</a>
+            <div class="relative">
+                <button id="mobile-more-toggle"
+                    class="flex items-center justify-between w-full text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">
+                    More
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div id="more-dropdown" class="hidden pl-4 border-b border-gray-200">
+                    <a href="./faqs.html"
+                        class="block text-black py-3 hover:bg-cyan-500 hover:text-white transition-colors duration-200">FAQ</a>
+                    <a href="./testimonials.html"
+                        class="block text-black py-3 hover:bg-cyan-500 hover:text-white transition-colors duration-200">Testimonials</a>
+                    <a href="./blogs.html"
+                        class="block text-black py-3 hover:bg-cyan-500 hover:text-white transition-colors duration-200">Blogs</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-            menu.classList.toggle('hidden');
-            hamburgerIcon.classList.toggle('hidden');
-            closeIcon.classList.toggle('hidden');
+    <script>
+        // For highlighting the active link in the navigation bar
+        document.addEventListener('DOMContentLoaded', function () {
+            const links = document.querySelectorAll('.nav-link');
+            const currentPage = window.location.pathname.split("/").pop(); // get current page name
+
+            links.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('bg-cyan-500', 'text-white', 'font-bold'); // active styling
+                } else {
+                    link.classList.remove('bg-cyan-500', 'text-white');
+                }
+            });
+        });
+    </script>
+
+    <script>
+        // Toggle mobile menu with the new overlay
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
         });
 
-        // Dropdown functionality with delay
+        // Close mobile menu
+        document.getElementById('mobile-close').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.add('hidden');
+            document.body.style.overflow = ''; // Restore scrolling
+        });
+
+        // Toggle "More" dropdown in mobile menu
+        document.getElementById('mobile-more-toggle').addEventListener('click', function () {
+            const dropdown = document.getElementById('more-dropdown');
+            dropdown.classList.toggle('hidden');
+
+            // Toggle arrow direction
+            const arrow = this.querySelector('svg');
+            arrow.classList.toggle('rotate-180');
+        });
+
+        // Dropdown functionality with delay for desktop
         const dropdownParent = document.getElementById('dropdown-parent');
         const dropdownButton = document.getElementById('dropdown-button');
         const dropdownMenu = document.getElementById('dropdown-menu');
@@ -101,7 +169,7 @@
             dropdownTimeout = setTimeout(() => {
                 dropdownMenu.classList.remove('opacity-100', 'visible');
                 dropdownMenu.classList.add('opacity-0', 'invisible');
-            }, 1000); // 2 seconds delay
+            }, 1000); // 1 second delay
         });
 
         // Keep dropdown open if mouse enters it
@@ -117,16 +185,12 @@
                 dropdownMenu.classList.add('opacity-0', 'invisible');
             }, 2000); // 2 seconds delay
         });
-
-        // Redirect to the home page when the close icon is clicked
-        document.getElementById('close-icon').addEventListener('click', function () {
-            window.location.href = '/'; // Replace '/' with your home page URL if different
-        });
     </script>
     <!-- End Navigation Bar -->
 
     <!-- Hero Section -->
-    <section class="banner bg-[#0f021f] text-white py-20 px-6 md:px-8 overflow-hidden min-h-screen flex items-center justify-center">
+    <section
+        class="banner bg-[#0f021f] text-white py-20 px-6 md:px-8 overflow-hidden min-h-screen flex items-center justify-center">
         <div class="text-center">
             <h1 class="text-4xl md:text-6xl font-bold leading-tight">
                 Making Your Worldwide <br />
@@ -149,11 +213,11 @@
     <!-- end Hero Section -->
 
     <!-- About Section -->
-    <section class="bg-white py-16 px-28 sm:px-4 md:px-8 lg:px-28">
-        <div class="relative z-10 -mt-40    ">
-            <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <section class="bg-white py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-28">
+        <div class="relative z-10 -mt-20 sm:-mt-32 md:-mt-40 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                 <!-- Card 1 -->
-                <div class="bg-white rounded-xl shadow-md text-center p-8 mb-2" data-aos="fade-up">
+                <div class="bg-white rounded-xl shadow-md text-center h-[230px] p-3 mb-2" data-aos="fade-up">
                     <div class="mx-auto mb-4 rounded-full w-20 h-20 flex items-center justify-center">
                         <img src="assets/images/about-3.png" alt="Icon 1" class="w-20 h-20" />
                     </div>
@@ -163,7 +227,7 @@
                 </div>
 
                 <!-- Card 2 (Highlighted) -->
-                <div class="bg-gradient-to-b from-[#08F9E8] to-[#6962AD] text-white rounded-xl shadow-md text-center p-8 mb-2"
+                <div class="bg-gradient-to-b from-[#08F9E8] to-[#6962AD] text-white rounded-xl shadow-md text-center h-[230px] p-3 mb-2"
                     data-aos="fade-up">
                     <div class="mx-auto mb-4 rounded-full w-20 h-20 flex items-center justify-center">
                         <img src="assets/images/about-2.png" alt="Icon 2" class="w-20 h-20" />
@@ -174,17 +238,17 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-white rounded-xl shadow-md text-center p-8 mb-2" data-aos="fade-up">
+                <div class="bg-white rounded-xl shadow-md text-center h-[230px] p-3 mb-2" data-aos="fade-up">
                     <div class="mx-auto mb-4 rounded-full w-20 h-20 flex items-center justify-center">
                         <img src="assets/images/about-1.png" alt="Icon 3" class="w-20 h-20" />
                     </div>
-                    <h3 class="text-xl font-semibold text-black mb-2">Curated Investment Options</h3>
+                    <h3 class="text-xl font-semibold text-black mb-2">Curated Investment Option</h3>
                     <p class="text-gray-500 text-sm">Choose from a diverse range of thoroughly vetted real estate
                         projects tailored to different budgets and goals.</p>
                 </div>
 
                 <!-- Card 4 -->
-                <div class="bg-white rounded-xl shadow-md text-center p-8 mb-2" data-aos="fade-up">
+                <div class="bg-white rounded-xl shadow-md text-center h-[230px] p-3 mb-2" data-aos="fade-up">
                     <div class="mx-auto mb-4 rounded-full w-20 h-20 flex items-center justify-center">
                         <img src="assets/images/about-4.png" alt="Icon 4" class="w-20 h-20" />
                     </div>
@@ -195,7 +259,8 @@
             </div>
         </div>
 
-        <div class="flex flex-col lg:flex-row items-center justify-between px-6 py-20 pt-48 bg-white">
+        <div
+            class="flex flex-col lg:flex-row items-center justify-between px-4 sm:px-6 py-10 sm:py-16 lg:py-20 mt-12 sm:mt-20 lg:mt-24 bg-white">
             <!-- -- Left Column -- -->
             <div class="lg:w-1/2 mb-10 lg:mb-0 text-center lg:text-left -mt-20" data-aos="fade-right">
                 <p class="text-sm font-bold text-[#7267D7] uppercase mb-6">Introduction</p>
@@ -219,7 +284,7 @@
                 </div>
             </div>
             <!-- -- Right Column -- -->
-            <div class="relative lg:w-1/2 ml-0 lg:ml-10" data-aos="fade-left">
+            <div class="relative lg:w-1/2 mt-6 lg:mt-0 ml-0 lg:ml-10" data-aos="fade-left">
                 <img src="assets/images/invest.jpg" alt="Bitcoin Cart"
                     class="rounded-lg shadow-xl w-full max-w-xl mx-auto lg:mx-0">
             </div>
@@ -227,24 +292,30 @@
     </section>
 
     <!-- Real Estate Market Section -->
-    <section class="real-estate-market px-28">
+    <section class="real-estate-market px-4 sm:px-6 md:px-12 lg:px-20 xl:px-28 py-10 sm:py-16">
         <div class="container-real-estate">
             <div class="section-header">
                 <p class="text-sm font-bold text-[#7267D7] uppercase">Real Estate Market In India</p>
             </div>
-            <div class="market-overview-container">
-                <div class="market-image grid:col-4">
-                    <img src="assets/images/real-estate.png" alt="Indian Real Estate Market" class="real-estate-img">
+            <div class="flex flex-col md:flex-row gap-6 md:gap-10 items-center">
+                <!-- Market Image (Left on desktop, top on mobile) -->
+                <div class="w-full md:w-1/3 lg:w-2/4">
+                    <img src="assets/images/real-estate.png" alt="Indian Real Estate Market"
+                        class="w-full h-auto max-w-sm mx-auto md:mx-0 rounded-lg shadow-md">
                 </div>
-                <div class="market-overview grid:col-8">
-                    <p class="highlight-text border-cyan-400 text-[#6B7280] py-10">Real estate sector in India is expected to reach US$ 1 trillion in market size by 2030,
-                        up from US$ 200 billion in 2021 and contribute 13% to the country's GDP by 2025. Retail, hospitality, and commercial real
-                        estate are also growing significantly, providing the much-needed infrastructure for India's growing needs.
-                        <!-- <p class="page-sub-heading">By IBEF</p> -->
-                        <br>
-                        <span class="text-sm italic flex justify-end pr-10">- By IBEF</span>
 
-                    </p>
+                <!-- Market Overview Text (Right on desktop, bottom on mobile) -->
+                <div class="w-full md:w-2/3 lg:w-3/4">
+                    <div class="border-l-4 border-cyan-400 pl-4 sm:pl-6 py-4 sm:py-6">
+                        <p class="text-[#6B7280] text-sm sm:text-base">
+                            Real estate sector in India is expected to reach US$ 1 trillion in market size by 2030,
+                            up from US$ 200 billion in 2021 and contribute 13% to the country's GDP by 2025. Retail,
+                            hospitality, and commercial real estate are also growing significantly, providing the
+                            much-needed
+                            infrastructure for India's growing needs.
+                        </p>
+                        <span class="text-xs sm:text-sm italic block text-[#6B7280] text-right mt-4">- By IBEF</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -270,20 +341,23 @@
                     <div class="challenge-number content-center">2</div>
                     <h3>Due Diligence</h3>
                     <p class="text-sm">Ensuring the land has a clear legal title, verifying ownership history, checking
-                        for encumbrances, zoning regulations, and all other legal and technical verifications before acquisition.
+                        for encumbrances, zoning regulations, and all other legal and technical verifications before
+                        acquisition.
                     </p>
                 </div>
 
                 <div class="challenge-card advantage-card">
                     <div class="challenge-number content-center">3</div>
                     <h3>Feasibility and Planning</h3>
-                    <p class="text-sm">Conducting market research and aligning the project with zoning and regulatory requirements.</p>
+                    <p class="text-sm">Conducting market research and aligning the project with zoning and regulatory
+                        requirements.</p>
                 </div>
 
                 <div class="challenge-card advantage-card">
                     <div class="challenge-number content-center">4</div>
                     <h3>Legal Approvals and Compliance</h3>
-                    <p class="text-sm">Securing land use permits, environmental clearances, and managing legal documentation.</p>
+                    <p class="text-sm">Securing land use permits, environmental clearances, and managing legal
+                        documentation.</p>
                 </div>
 
                 <div class="challenge-card advantage-card">
@@ -295,12 +369,13 @@
                 <div class="challenge-card advantage-card">
                     <div class="challenge-number content-center">6</div>
                     <h3>Infrastructure Development</h3>
-                    <p class="text-sm">Planning and implementing roads, utilities, and other essential infrastructure.</p>
+                    <p class="text-sm">Planning and implementing roads, utilities, and other essential infrastructure.
+                    </p>
                 </div>
             </div>
 
             <div class="trends-reifs-promo p-2 flex justify-center">
-                <a href="./about.html#advantages" style="font-size: 13px;"
+                <a href="./about.html#challenges" style="font-size: 13px;"
                     class="family-oss px-9 py-3 rounded bg-gradient-to-r from-[#08F9E8] to-[#6962AD] text-white duration-300 hover:bg-gradient-to-r hover:from-[#6962AD] hover:to-[#08F9E8]">
                     VIEW MORE
                 </a>
@@ -337,22 +412,23 @@
     </div>
 
     <!-- REIFs Info Section -->
-    <section class="bg-gray-100 flex flex-col lg:flex-row items-center justify-between px-32 py-32">
+    <section
+        class="bg-gray-100 flex flex-col lg:flex-row items-center justify-between px-4 sm:px-6 md:px-8 lg:px-16 xl:px-32 py-12 sm:py-16 md:py-20 lg:py-32">
         <!-- Left Column -->
-        <div class="lg:w-1/2 mb-10 lg:mb-0 pr-[4rem] ps-2" data-aos="fade-right">
-            <p class="text-sm font-bold text-[#7267D7] uppercase mb-6 family-oss">What is REIFs</p>
+        <div class="w-full lg:w-1/2 mb-10 lg:mb-0 lg:pr-8 xl:pr-16" data-aos="fade-right">
+            <p class="text-sm font-bold text-[#7267D7] uppercase mb-4 sm:mb-6 family-oss">What is REIFs</p>
             <p class="text-[#6B7280] px-5 text-justify pb-6">
-                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Trends REIFs (Trends Real Estate Investment
+                <span class="inline-block sm:pl-6"></span>Trends REIFs (Trends Real Estate Investment
                 Funds) is a professional Real Estate Investment Platform launched by The Trends Realty, enabling retail
                 investors to participate in large-scale real estate projects and earn high returns on investment. It
                 simplifies real estate development investments, making them accessible to everyone without the usual
                 complexities.
             </p>
 
-            <p class="text-sm font-bold text-[#7267D7] uppercase mb-6 family-oss">Who we are?
+            <p class="text-sm font-bold text-[#7267D7] uppercase mb-4 sm:mb-6 family-oss">Who we are?
             </p>
             <p class="text-[#6B7280] px-5 text-justify">
-                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>We have been working in Real Estate
+                <span class="inline-block sm:pl-6"></span>We have been working in Real Estate
                 Industry for more than a decade. We have a team of experts who shares a significant experience in real
                 estate industry with well-known and reputed real estate firms.
                 Previously, our services were limited to a selected group of high-net-worth individuals (HNIs) who
@@ -365,9 +441,10 @@
         </div>
 
         <!-- Right Column -->
-        <div class="relative lg:w-1/2" data-aos="fade-left">
+        <div class="relative w-full lg:w-1/2" data-aos="fade-left">
             <!-- Main Image -->
-            <img src="assets/images/services.png" alt="Service" class="rounded-lg shadow-xl w-full max-w-xl mx-auto lg:mx-0">
+            <img src="assets/images/services.png" alt="Service"
+                class="rounded-lg shadow-xl w-full max-w-md sm:max-w-lg mx-auto lg:mx-0">
         </div>
     </section>
 
@@ -381,12 +458,13 @@
                 </h3>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; justify-items: center;">
+            <div style="justify-items: center;" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Access to Large Projects Card -->
                 <div class="adv-card"
                     style="background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); overflow: hidden; padding: 15px;">
 
-                    <div style="padding: 24px; background: #f7f7f9; border-radius: 8px; margin-bottom: 20px;">
+                    <!-- <div style="padding: 24px; background: #f7f7f9; border-radius: 8px; margin-bottom: 20px;"> -->
+                    <div class="p-4 bg-[#f7f7f9] rounded-lg mb-5">
                         <div
                             style="width: 70px; height: 70px; background: #09c0d1; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
@@ -519,7 +597,7 @@
             </div>
         </div>
         <div class="trends-reifs-promo p-2 flex justify-center">
-            <a href="#" style="font-size: 13px;"
+            <a href="./about.html#advantages" style="font-size: 13px;"
                 class="family-oss px-9 py-3 rounded bg-gradient-to-r from-[#08F9E8] to-[#6962AD] text-white duration-300 hover:bg-gradient-to-r hover:from-[#6962AD] hover:to-[#08F9E8]">
                 VIEW MORE
             </a>
@@ -535,7 +613,7 @@
                     style="color: #7957d5; font-size: 14px; font-weight: 600; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;">
                     Benefits of Large scale Projects</p>
             </div>
-    
+
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 pb-7">
                 <!-- Left Column - Top and Bottom Cards -->
                 <div class="space-y-2">
@@ -546,7 +624,8 @@
                                 <img src="assets/images/f1.png" alt="Icon 1" class="w-12 h-12" />
                             </div> -->
                             <div>
-                                <h3 style="font-size: 20px; font-weight: bold;" class="family-oss text-gray-800 mb-2">Cost Advantages of
+                                <h3 style="font-size: 20px; font-weight: bold;" class="family-oss text-gray-800 mb-2">
+                                    Cost Advantages of
                                     Larger Land Parcels</h3>
                                 <p class="text-[#6B7280]">Buying large parcels of land often comes at a lower price per
                                     unit compared to smaller plots, ensuring an additional profit margin for developers.
@@ -554,7 +633,7 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <!-- Card 2 (Bottom Left) -->
                     <div class="bg-gray-100 py-6 px-6 rounded-lg h-[50%]">
                         <div class="flex items-start">
@@ -562,24 +641,27 @@
                                 <img src="assets/images/f2.png" alt="Icon 2" class="w-12 h-12" />
                             </div> -->
                             <div>
-                                <h3 style="font-size: 20px; font-weight: bold;" class="family-oss text-gray-800 mb-2">Market Dynamics:
+                                <h3 style="font-size: 20px; font-weight: bold;" class="family-oss text-gray-800 mb-2">
+                                    Market Dynamics:
                                     Small vs. Large Land Parcels</h3>
                                 <p class="text-[#6B7280]">Small land parcels often face high demand and competition
-                                    among buyers, driving up their prices. In contrast, large land parcels have fewer buyers,
+                                    among buyers, driving up their prices. In contrast, large land parcels have fewer
+                                    buyers,
                                     offering developers better negotiation opportunities and lower per-unit costs.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Middle Column - Vertical Content (Placeholder) -->
                 <div class="flex flex-col justify-center items-center">
-                    <div class="bg-gray-100 rounded-lg w-full h-full flex flex-col justify-center items-center overflow-hidden">
+                    <div
+                        class="bg-gray-100 rounded-lg w-full h-full flex flex-col justify-center items-center overflow-hidden">
                         <!-- Image added here, adjusted to fit the div -->
                         <img src="assets/images/vertical.png" alt="Image" class="w-full h-full object-cover">
                     </div>
                 </div>
-    
+
                 <!-- Right Column - Top and Bottom Cards -->
                 <div class="space-y-2">
                     <!-- Card 3 (Top Right) -->
@@ -589,7 +671,8 @@
                                 <img src="assets/images/f3.png" alt="Icon 3" class="w-12 h-12" />
                             </div> -->
                             <div>
-                                <h3 style="font-size: 20px; font-weight: bold;" class="family-oss text-gray-800 mb-2">Optimizing
+                                <h3 style="font-size: 20px; font-weight: bold;" class="family-oss text-gray-800 mb-2">
+                                    Optimizing
                                     Development Costs in Large Projects</h3>
                                 <p class="text-[#6B7280]">Expenses like sample units, site offices, marketing, and staff
                                     salaries remain constant across both small and large projects, but in larger
@@ -597,7 +680,7 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <!-- Card 4 (Bottom Right) -->
                     <div class="bg-gray-100 px-6 py-6 rounded-lg h-[50%]">
                         <div class="flex items-start">
@@ -605,7 +688,8 @@
                                 <img src="assets/images/f4.png" alt="Icon 4" class="w-12 h-12" />
                             </div> -->
                             <div>
-                                <h3 style="font-size: 20px; font-weight: bold;" class="family-oss text-gray-800 mb-2">Enhanced
+                                <h3 style="font-size: 20px; font-weight: bold;" class="family-oss text-gray-800 mb-2">
+                                    Enhanced
                                     Infrastructure and Project Value</h3>
                                 <p class="text-[#6B7280]">Developers can plan and execute infrastructure projects like
                                     roads, utilities, and green spaces while incorporating multiple amenities, lowering
