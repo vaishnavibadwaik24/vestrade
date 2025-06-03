@@ -20,7 +20,7 @@ body {
   position: relative;
   height: 80vh;
   width: 100%;
-  background: linear-gradient(rgba(13, 26, 45, 0.4)), url('/assets/images/client.png') no-repeat center center;
+  background: linear-gradient(rgba(13, 26, 45, 0.4)), url('/assets/images/hero-banner.jpg') no-repeat center center;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -720,9 +720,9 @@ list-disc li:before {
   }
 }
 
-.advantage-card:hover {
+/* .advantage-card:hover {
   border: 1px solid #1FF6E7;
-}
+} */
 
 .challenges-sec{
   background: linear-gradient(rgba(13, 26, 45, 0.4)), url('/assets/images/client.png') no-repeat center center;
@@ -732,10 +732,9 @@ list-disc li:before {
   border: #1FF6E7 1px solid;
 }
 
-.adv-card:hover{
+/* .adv-card:hover{
   transform: translateY(-3px);
-  /* background: linear-gradient(to right, #00d2ff, #3a7bd5); */
-}
+} */
 
 #dropdown-menu li a {
     border-radius: 4px; /* Add rounded corners to the hover effect */

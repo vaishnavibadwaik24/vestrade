@@ -190,8 +190,13 @@
 
     <!-- Hero Section -->
     <section
-        class="banner bg-[#0f021f] text-white py-20 px-6 md:px-8 overflow-hidden min-h-screen flex items-center justify-center">
-        <div class="text-center">
+        class="banner bg-[#0f021f] text-white py-20 px-6 md:px-8 overflow-hidden min-h-screen flex items-center justify-center relative">
+        <!-- Background image with opacity -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-10"
+            style="background-image: url('/assets/images/hero-banner.jpg');"></div>
+
+        <!-- Content with full opacity -->
+        <div class="text-center text-white relative z-10">
             <h1 class="text-4xl md:text-6xl font-bold leading-tight">
                 Making Your Worldwide <br />
                 Trading Easy
@@ -204,7 +209,7 @@
             </p>
             <div class="mt-8">
                 <a href="./about.html#intro" style="font-size: 13px;"
-                    class="family-oss px-8 py-4 rounded bg-gradient-to-r from-[#00f6ff] to-sky-500/75 text-white duration-300 hover:bg-gradient-to-r hover:from-sky-500/75 hover:to-[#00f6ff]">
+                    class="family-oss py-3 px-7 rounded bg-gradient-to-r from-[#08F9E8] to-[#6962AD] text-white duration-200 hover:bg-gradient-to-r hover:from-[#6962AD] hover:to-[#08F9E8]">
                     KNOW MORE
                 </a>
             </div>
@@ -215,215 +220,282 @@
     <!-- About Section -->
     <section class="bg-white py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-28">
         <div class="relative z-10 -mt-20 sm:-mt-32 md:-mt-40 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-4">
                 <!-- Card 1 -->
-                <div class="bg-white rounded-xl shadow-md text-center h-[230px] p-3 mb-2" data-aos="fade-up">
+                <div class="bg-white rounded-xl shadow-md text-center h-[228px] p-4 mb-2" data-aos="fade-up">
                     <div class="mx-auto mb-4 rounded-full w-20 h-20 flex items-center justify-center">
-                        <img src="assets/images/about-3.png" alt="Icon 1" class="w-20 h-20" />
+                        <img src="assets/images/about-3.png" alt="Icon 1" class="w-15 h-15" />
                     </div>
                     <h3 class="text-xl font-semibold text-black mb-2">Proven Track Record</h3>
-                    <p class="text-gray-500 text-sm">Backed by years of successful real estate development and trusted
-                        by high-net-worth investors.</p>
+                    <p class="text-gray-500 text-sm">Years of success in real estate, trusted by HNWIs.</p>
                 </div>
 
                 <!-- Card 2 (Highlighted) -->
-                <div class="bg-gradient-to-b from-[#08F9E8] to-[#6962AD] text-white rounded-xl shadow-md text-center h-[230px] p-3 mb-2"
+                <div class="bg-gradient-to-b from-[#08F9E8] to-[#6962AD] text-white rounded-xl shadow-md text-center h-[228px] p-4 mb-2"
                     data-aos="fade-up">
                     <div class="mx-auto mb-4 rounded-full w-20 h-20 flex items-center justify-center">
-                        <img src="assets/images/about-2.png" alt="Icon 2" class="w-20 h-20" />
+                        <img src="assets/images/about-2.png" alt="Icon 2" class="w-15 h-15" />
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Expert-Led Management</h3>
-                    <p class="text-sm">Handled by a professional team with deep industry knowledge, ensuring smart and
-                        secure investments.</p>
+                    <p class="text-sm">Expert team ensures smart, secure investments.</p>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="bg-white rounded-xl shadow-md text-center h-[230px] p-3 mb-2" data-aos="fade-up">
+                <div class="bg-white rounded-xl shadow-md text-center h-[228px] p-4 mb-2" data-aos="fade-up">
                     <div class="mx-auto mb-4 rounded-full w-20 h-20 flex items-center justify-center">
-                        <img src="assets/images/about-1.png" alt="Icon 3" class="w-20 h-20" />
+                        <img src="assets/images/about-1.png" alt="Icon 3" class="w-15 h-15" />
                     </div>
                     <h3 class="text-xl font-semibold text-black mb-2">Curated Investment Option</h3>
-                    <p class="text-gray-500 text-sm">Choose from a diverse range of thoroughly vetted real estate
-                        projects tailored to different budgets and goals.</p>
+                    <p class="text-gray-500 text-sm">Vetted real estate options for all budgets.</p>
                 </div>
 
                 <!-- Card 4 -->
-                <div class="bg-white rounded-xl shadow-md text-center h-[230px] p-3 mb-2" data-aos="fade-up">
+                <div class="bg-white rounded-xl shadow-md text-center h-[228px] p-4 mb-2" data-aos="fade-up">
                     <div class="mx-auto mb-4 rounded-full w-20 h-20 flex items-center justify-center">
-                        <img src="assets/images/about-4.png" alt="Icon 4" class="w-20 h-20" />
+                        <img src="assets/images/about-4.png" alt="Icon 4" class="w-15 h-15" />
                     </div>
                     <h3 class="text-xl font-semibold text-black mb-2">Stress-Free Investing</h3>
-                    <p class="text-gray-500 text-sm">We manage everything end-to-end—so you can invest with confidence
-                        and focus on returns.</p>
+                    <p class="text-gray-500 text-sm">End-to-end management for confident returns.</p>
                 </div>
             </div>
         </div>
 
         <div
-            class="flex flex-col lg:flex-row items-center justify-between px-4 sm:px-6 py-10 sm:py-16 lg:py-20 mt-12 sm:mt-20 lg:mt-24 bg-white">
-            <!-- -- Left Column -- -->
-            <div class="lg:w-1/2 mb-10 lg:mb-0 text-center lg:text-left -mt-20" data-aos="fade-right">
+            class="flex flex-col lg:flex-row items-center justify-between px-4 sm:px-6 py-10 sm:py-16 lg:py-20 mt-12 sm:mt-20 lg:mt-24 bg-white gap-10 lg:gap-16">
+            <!-- Left Column (Text) -->
+            <div class="lg:w-1/2 text-center lg:text-left" data-aos="fade-right">
                 <p class="text-sm font-bold text-[#7267D7] uppercase mb-6">Introduction</p>
+                <h2 class="text-black font-bold text-3xl mb-6">We are the magic behind the company’s best days.</h2>
                 <p class="text-[#6B7280] text-justify">
                     Over the past several years, the Real Estate Industry has generated steady cash flow and great
-                    returns above other investment options. The true wealth-building potential of real estate lies in
-                    developing real estate projects—a domain widely regarded as the real gem of the industry.
-                </p>
-                <p class="text-[#6B7280] text-justify mb-6">
-                    However, developing or investing in real estate projects is far more complex and challenging for
-                    individual investors. It requires substantial capital, legal verifications, government permissions,
-                    and significant time commitment.
+                    returns above other investment options.
+                    <!-- The true wealth-building potential of real estate lies in
+                    developing real estate projects. -->
                 </p>
                 <div class="mt-8 flex flex-wrap gap-4 items-center justify-start">
                     <div class="group">
                         <a href="./about.html#intro" style="font-size: 13px;"
-                            class="family-oss py-4 px-7 rounded bg-gradient-to-r from-[#08F9E8] to-[#6962AD] text-white duration-200 group-hover:bg-gradient-to-r group-hover:from-[#6962AD] group-hover:to-[#08F9E8]">
+                            class="family-oss py-3 px-7 rounded bg-gradient-to-r from-[#08F9E8] to-[#6962AD] text-white duration-200 group-hover:bg-gradient-to-r group-hover:from-[#6962AD] group-hover:to-[#08F9E8]">
                             READ MORE
                         </a>
                     </div>
                 </div>
             </div>
-            <!-- -- Right Column -- -->
-            <div class="relative lg:w-1/2 mt-6 lg:mt-0 ml-0 lg:ml-10" data-aos="fade-left">
+
+            <!-- Right Column (Image) -->
+            <div class="lg:w-2/3" data-aos="fade-left">
                 <img src="assets/images/invest.jpg" alt="Bitcoin Cart"
                     class="rounded-lg shadow-xl w-full max-w-xl mx-auto lg:mx-0">
             </div>
         </div>
+
     </section>
 
     <!-- Real Estate Market Section -->
     <section class="real-estate-market px-4 sm:px-6 md:px-12 lg:px-20 xl:px-28 py-10 sm:py-16">
-        <div class="container-real-estate">
-            <div class="section-header">
-                <p class="text-sm font-bold text-[#7267D7] uppercase">Real Estate Market In India</p>
-            </div>
-            <div class="flex flex-col md:flex-row gap-6 md:gap-10 items-center">
-                <!-- Market Image (Left on desktop, top on mobile) -->
-                <div class="w-full md:w-1/3 lg:w-2/4">
-                    <img src="assets/images/real-estate.png" alt="Indian Real Estate Market"
-                        class="w-full h-auto max-w-sm mx-auto md:mx-0 rounded-lg shadow-md">
-                </div>
+        <div
+            style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 24px; align-items: start;">
 
-                <!-- Market Overview Text (Right on desktop, bottom on mobile) -->
-                <div class="w-full md:w-2/3 lg:w-3/4">
-                    <div class="border-l-4 border-cyan-400 pl-4 sm:pl-6 py-4 sm:py-6">
-                        <p class="text-[#6B7280] text-sm sm:text-base">
-                            Real estate sector in India is expected to reach US$ 1 trillion in market size by 2030,
-                            up from US$ 200 billion in 2021 and contribute 13% to the country's GDP by 2025. Retail,
-                            hospitality, and commercial real estate are also growing significantly, providing the
-                            much-needed
-                            infrastructure for India's growing needs.
-                        </p>
-                        <span class="text-xs sm:text-sm italic block text-[#6B7280] text-right mt-4">- By IBEF</span>
+            <!-- Left Panel - Market Stats -->
+            <div data-aos="fade-right"
+                style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); border: 1px solid rgba(0,0,0,0.06);">
+                <div style="display: flex; align-items: center; margin-bottom: 24px;">
+                    <div
+                        style="width: 48px; height: 48px; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 16px;">
+                        <span style="color: white; font-size: 24px; font-weight: bold;">🏢</span>
+                    </div>
+                    <div>
+                        <h3 style="margin: 0; font-size: 18px; font-weight: 600; color: #1f2937; line-height: 1.2;">Real
+                            Estate</h3>
+                        <p style="margin: 4px 0 0 0; font-size: 14px; color: #6b7280;">Market Overview</p>
                     </div>
                 </div>
+
+                <div style="font-size: 36px; font-weight: 700; color: #1f2937; margin-bottom: 8px;">$1T</div>
+                <div style="font-size: 14px; color: #6b7280; margin-bottom: 24px;">Projected by 2030</div>
+
+                <div style="margin-bottom: 20px;">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <span style="font-size: 14px; color: #6b7280;">Rank:</span>
+                        <span style="font-size: 16px; font-weight: 600; color: #1f2937;">#1 Growth Sector</span>
+                    </div>
+
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <span style="font-size: 14px; color: #6b7280;">GDP Contribution:</span>
+                        <span style="font-size: 16px; font-weight: 600; color: #10b981;">↗ 13%</span>
+                    </div>
+
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <span style="font-size: 14px; color: #6b7280;">Market Cap:</span>
+                        <span style="font-size: 16px; font-weight: 600; color: #1f2937;">$200B Current</span>
+                    </div>
+                </div>
+
+                <div style="background: #f8fafc; border-radius: 12px; padding: 20px; margin-bottom: 24px;">
+                    <h4 style="margin: 0 0 12px 0; font-size: 16px; font-weight: 600; color: #1f2937;">Growth Drivers
+                    </h4>
+                    <p style="margin: 0; font-size: 14px; color: #6b7280; line-height: 1.6;">Retail, hospitality, and
+                        commercial segments driving infrastructure expansion across India's growing urban markets.</p>
+                </div>
+
+                <div style="text-align: right; font-style: italic; color: #6b7280; font-size: 12px; margin-top: 20px;">-
+                    By IBEF</div>
+
+                <!-- <button style="width: 100%; background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); color: white; border: none; border-radius: 12px; padding: 14px 24px; font-size: 14px; font-weight: 600; cursor: pointer; transition: transform 0.2s ease; box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);">
+                VIEW DETAILS →
+            </button> -->
+            </div>
+
+            <!-- Center Panel - Chart -->
+            <div data-aos="fade-up"
+                style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%); border-radius: 20px; padding: 40px; color: white; position: relative; overflow: hidden;">
+                <div
+                    style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%); border-radius: 50%;">
+                </div>
+                <div
+                    style="position: absolute; bottom: -30px; left: -30px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(16, 185, 129, 0.2) 0%, transparent 70%); border-radius: 50%;">
+                </div>
+
+                <h2
+                    style="margin: 0 0 32px 0; font-size: 28px; font-weight: 700; text-align: center; position: relative; z-index: 2;">
+                    Real Estate Market Growth</h2>
+
+                <div
+                    style="display: flex; align-items: end; justify-content: space-around; height: 320px; margin-bottom: 32px; position: relative; z-index: 2;">
+                    <!-- Y-axis labels -->
+                    <div
+                        style="position: absolute; left: -30px; top: 0; bottom: 40px; display: flex; flex-direction: column-reverse; justify-content: space-between; font-size: 12px; color: rgba(255,255,255,0.6);">
+                        <span>0</span>
+                        <span>250B</span>
+                        <span>500B</span>
+                        <span>750B</span>
+                        <span>1T</span>
+                    </div>
+
+                    <!-- Bars -->
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <div
+                            style="width: 60px; height: 60px; background: linear-gradient(180deg, #3b82f6 0%, #1e40af 100%); border-radius: 8px 8px 0 0; margin-bottom: 12px; position: relative; transition: transform 0.3s ease; cursor: pointer;">
+                            <div
+                                style="position: absolute; top: -30px; left: 50%; transform: translateX(-50%); background: rgba(255,255,255,0.9); color: #1f2937; padding: 4px 8px; border-radius: 6px; font-size: 12px; font-weight: 600;">
+                                150B</div>
+                        </div>
+                        <span style="font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.8);">2017</span>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <div
+                            style="width: 60px; height: 80px; background: linear-gradient(180deg, #06b6d4 0%, #0891b2 100%); border-radius: 8px 8px 0 0; margin-bottom: 12px; position: relative; transition: transform 0.3s ease; cursor: pointer;">
+                            <div
+                                style="position: absolute; top: -30px; left: 50%; transform: translateX(-50%); background: rgba(255,255,255,0.9); color: #1f2937; padding: 4px 8px; border-radius: 6px; font-size: 12px; font-weight: 600;">
+                                200B</div>
+                        </div>
+                        <span style="font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.8);">2020</span>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <div
+                            style="width: 60px; height: 200px; background: linear-gradient(180deg, #10b981 0%, #059669 100%); border-radius: 8px 8px 0 0; margin-bottom: 12px; position: relative; transition: transform 0.3s ease; cursor: pointer;">
+                            <div
+                                style="position: absolute; top: -30px; left: 50%; transform: translateX(-50%); background: rgba(255,255,255,0.9); color: #1f2937; padding: 4px 8px; border-radius: 6px; font-size: 12px; font-weight: 600;">
+                                650B</div>
+                        </div>
+                        <span style="font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.8);">2025</span>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <div
+                            style="width: 60px; height: 280px; background: linear-gradient(180deg, #8b5cf6 0%, #7c3aed 100%); border-radius: 8px 8px 0 0; margin-bottom: 12px; position: relative; transition: transform 0.3s ease; cursor: pointer;">
+                            <div
+                                style="position: absolute; top: -30px; left: 50%; transform: translateX(-50%); background: rgba(255,255,255,0.9); color: #1f2937; padding: 4px 8px; border-radius: 6px; font-size: 12px; font-weight: 600;">
+                                1T</div>
+                        </div>
+                        <span style="font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.8);">2030</span>
+                    </div>
+                </div>
+
+                <div
+                    style="background: rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); position: relative; z-index: 2;">
+                    <h3 style="margin: 0 0 12px 0; font-size: 18px; font-weight: 600; color: white;">Market Security &
+                        Growth</h3>
+                    <p style="margin: 0 0 16px 0; font-size: 14px; color: rgba(255,255,255,0.8); line-height: 1.5;">
+                        Advanced analytics and market protection systems ensure sustainable growth trajectory for
+                        India's real estate sector.</p>
+                    <!-- <button style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); color: white; border: none; border-radius: 8px; padding: 12px 20px; font-size: 14px; font-weight: 600; cursor: pointer;">
+                    LEARN MORE
+                </button> -->
+                </div>
+            </div>
+
+            <!-- Right Panel - User Experience -->
+            <div data-aos="fade-left"
+                style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); border: 1px solid rgba(0,0,0,0.06); margin-bottom: 24px;">
+                <!-- <h3 style="margin: 0 0 20px 0; font-size: 20px; font-weight: 600; color: #1f2937;">Market Insights</h3> -->
+
+                <div
+                    style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); border-radius: 12px; padding: 20px; margin-bottom: 24px; position: relative; overflow: hidden;">
+                    <!-- <div style="position: absolute; top: 10px; right: 10px; width: 60px; height: 60px; background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                    <span style="color: white; font-size: 24px;">▶</span>
+                </div> -->
+                    <div
+                        style="width: 80px; height: 50px; background: #1f2937; border-radius: 8px; margin-bottom: 12px; position: relative;">
+                        <div
+                            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 30px; background: linear-gradient(45deg, #10b981, #3b82f6, #8b5cf6); opacity: 0.8;">
+                        </div>
+                    </div>
+                    <p style="margin: 0; font-size: 14px; color: #6b7280; line-height: 1.5;">Access real-time market
+                        data and start analyzing India's financial growth sectors</p>
+                </div>
+
+                <h4 style="margin: 0 0 16px 0; font-size: 18px; font-weight: 600; color: #1f2937;">Market Analysis</h4>
+                <p style="margin: 0 0 24px 0; font-size: 14px; color: #6b7280; line-height: 1.6;">Real estate sector in
+                    India is expected to reach US$ 1 trillion in market size by 2030, contributing significantly to the
+                    country's economic infrastructure and urban development.</p>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px;">
+                    <div style="background: #f8fafc; border-radius: 12px; padding: 16px; text-align: center;">
+                        <div style="font-size: 24px; font-weight: 700; color: #3b82f6; margin-bottom: 4px;">5x</div>
+                        <div style="font-size: 12px; color: #6b7280;">Growth Multiple</div>
+                    </div>
+                    <div style="background: #f8fafc; border-radius: 12px; padding: 16px; text-align: center;">
+                        <div style="font-size: 24px; font-weight: 700; color: #10b981; margin-bottom: 4px;">13%</div>
+                        <div style="font-size: 12px; color: #6b7280;">GDP Share</div>
+                    </div>
+                </div>
+
+                <!-- <div style="text-align: right; font-style: italic; color: #6b7280; font-size: 12px; margin-top: 20px;">- By IBEF</div> -->
             </div>
         </div>
     </section>
-
-    <!-- Challenges Section with white bg -->
-    <section class="challenges-sec bg-white py-16 px-4 sm:px-6 md:px-8 lg:px-32">
-        <div class="container-real-estate">
-            <div class="section-header challenges-header">
-                <p class="text-sm font-bold text-[#ffffff] uppercase">Challenges in Developing a Real Estate Project</p>
-            </div>
-
-            <div class="challenges-container">
-                <div class="challenge-card advantage-card">
-                    <div class="challenge-number content-center">1</div>
-                    <h3>Land Identification and Acquisition</h3>
-                    <p class="text-sm">Finding high growth potential land, evaluating its suitability for development,
-                        and negotiating favourable purchase terms.
-                    </p>
-                </div>
-
-                <div class="challenge-card advantage-card">
-                    <div class="challenge-number content-center">2</div>
-                    <h3>Due Diligence</h3>
-                    <p class="text-sm">Ensuring the land has a clear legal title, verifying ownership history, checking
-                        for encumbrances, zoning regulations, and all other legal and technical verifications before
-                        acquisition.
-                    </p>
-                </div>
-
-                <div class="challenge-card advantage-card">
-                    <div class="challenge-number content-center">3</div>
-                    <h3>Feasibility and Planning</h3>
-                    <p class="text-sm">Conducting market research and aligning the project with zoning and regulatory
-                        requirements.</p>
-                </div>
-
-                <div class="challenge-card advantage-card">
-                    <div class="challenge-number content-center">4</div>
-                    <h3>Legal Approvals and Compliance</h3>
-                    <p class="text-sm">Securing land use permits, environmental clearances, and managing legal
-                        documentation.</p>
-                </div>
-
-                <div class="challenge-card advantage-card">
-                    <div class="challenge-number content-center">5</div>
-                    <h3>Funding and Financial Management</h3>
-                    <p class="text-sm">Arranging high initial capital and maintaining cash flow during development.</p>
-                </div>
-
-                <div class="challenge-card advantage-card">
-                    <div class="challenge-number content-center">6</div>
-                    <h3>Infrastructure Development</h3>
-                    <p class="text-sm">Planning and implementing roads, utilities, and other essential infrastructure.
-                    </p>
-                </div>
-            </div>
-
-            <div class="trends-reifs-promo p-2 flex justify-center">
-                <a href="./about.html#challenges" style="font-size: 13px;"
-                    class="family-oss px-9 py-3 rounded bg-gradient-to-r from-[#08F9E8] to-[#6962AD] text-white duration-300 hover:bg-gradient-to-r hover:from-[#6962AD] hover:to-[#08F9E8]">
-                    VIEW MORE
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <div class="bg-gradient-to-r from-sky-600/75 to-[#00f6ff] py-6">
-        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-white text-center">
-            <!-- Stat 1 -->
-            <div class="px-2 sm:px-4 md:px-6 mb-4 md:mb-0">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">6M+</h2>
-                <p class="mt-2 text-base sm:text-lg md:text-xl">Happy Clients</p>
-            </div>
-
-            <!-- Stat 2 -->
-            <div class="px-2 sm:px-4 md:px-6 mb-4 md:mb-0 border-l border-white/30">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">24K+</h2>
-                <p class="mt-2 text-base sm:text-lg md:text-xl">Projects Done</p>
-            </div>
-
-            <!-- Stat 3 -->
-            <div class="px-2 sm:px-4 md:px-6 border-t md:border-t-0 md:border-l border-white/30 pt-4 md:pt-0">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">711+</h2>
-                <p class="mt-2 text-base sm:text-lg md:text-xl">Expert Team</p>
-            </div>
-
-            <!-- Stat 4 -->
-            <div class="px-2 sm:px-4 md:px-6 border-t md:border-t-0 border-l border-white/30 pt-4 md:pt-0">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">25+</h2>
-                <p class="mt-2 text-base sm:text-lg md:text-xl">Years of Experience</p>
-            </div>
-        </div>
-    </div>
 
     <!-- REIFs Info Section -->
     <section
-        class="bg-gray-100 flex flex-col lg:flex-row items-center justify-between px-4 sm:px-6 md:px-8 lg:px-16 xl:px-32 py-12 sm:py-16 md:py-20 lg:py-32">
-        <!-- Left Column -->
-        <div class="w-full lg:w-1/2 mb-10 lg:mb-0 lg:pr-8 xl:pr-16" data-aos="fade-right">
-            <p class="text-sm font-bold text-[#7267D7] uppercase mb-4 sm:mb-6 family-oss">What is REIFs</p>
-            <p class="text-[#6B7280] px-5 text-justify pb-6">
-                <span class="inline-block sm:pl-6"></span>Trends REIFs (Trends Real Estate Investment
+        class="relative h-screen w-full bg-[url('/assets/images/bitcoin.png')] bg-center bg-cover bg-no-repeat flex items-center justify-center">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/60 z-0"></div>
+
+        <!-- Promo Box -->
+        <div class="relative z-10 border border-white/10 rounded-xl p-10 w-11/12 max-w-xl text-center bg-white/5">
+            <h1 class="text-4xl font-bold text-white mb-4">
+                What is REIFs
+            </h1>
+            <p class="text-white text-base leading-relaxed max-w-2xl mx-auto mb-8">
+                Trends REIFs (Trends Real Estate Investment
                 Funds) is a professional Real Estate Investment Platform launched by The Trends Realty, enabling retail
                 investors to participate in large-scale real estate projects and earn high returns on investment. It
                 simplifies real estate development investments, making them accessible to everyone without the usual
                 complexities.
             </p>
+        </div>
+    </section>
+
+    <section
+        class="bg-white flex flex-col lg:flex-row items-center justify-between px-4 sm:px-6 md:px-8 lg:px-16 xl:px-32 py-12 sm:py-16 md:py-20 lg:py-32">
+        <!-- Left Column -->
+        <div class="w-full lg:w-1/2 mb-10 lg:mb-0 lg:pr-8 xl:pr-16" data-aos="fade-right">
 
             <p class="text-sm font-bold text-[#7267D7] uppercase mb-4 sm:mb-6 family-oss">Who we are?
             </p>
@@ -448,14 +520,154 @@
         </div>
     </section>
 
+    <!-- Challenges Section with white bg -->
+    <section class="px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-28 py-8 sm:py-12 mx-auto bg-gray-100">
+        <div class="max-w-6xl mx-auto">
+            <!-- Section Heading -->
+            <div class="text-center mb-12">
+                <p class="text-sm font-bold text-[#7267D7] uppercase mb-4">
+                    Challenges in Developing a Real Estate Project
+                </p>
+                <h2 class="text-black font-bold text-3xl">
+                    Overcoming Key Obstacles in the Real Estate Industry
+                </h2>
+            </div>
+
+            <!-- Challenges Grid -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Left Column -->
+                <div class="space-y-6">
+                    <!-- Challenge 1 -->
+                    <div class="flex items-start gap-4">
+                        <img src="assets/images/f1.png" alt="Icon 1" class="w-14 h-14" />
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-1">
+                                Land Identification and Acquisition
+                            </h3>
+                            <p class="text-gray-600 text-sm">
+                                Finding high growth potential land, evaluating its suitability for development, and
+                                negotiating favourable purchase terms.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Challenge 2 -->
+                    <div class="flex items-start gap-4">
+                        <img src="assets/images/f2.png" alt="Icon 2" class="w-14 h-14" />
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-1">
+                                Feasibility and Planning
+                            </h3>
+                            <p class="text-gray-600 text-sm">
+                                Conducting market research and aligning the project with zoning and regulatory
+                                requirements.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Challenge 3 -->
+                    <div class="flex items-start gap-4">
+                        <img src="assets/images/f3.png" alt="Icon 3" class="w-14 h-14" />
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-1">
+                                Funding and Financial Management
+                            </h3>
+                            <p class="text-gray-600 text-sm">
+                                Arranging high initial capital and maintaining cash flow during development.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="space-y-6">
+                    <!-- Challenge 4 -->
+                    <div class="flex items-start gap-4">
+                        <img src="assets/images/f4.png" alt="Icon 4" class="w-14 h-14" />
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-1">
+                                Legal Approvals and Compliance
+                            </h3>
+                            <p class="text-gray-600 text-sm">
+                                Securing land use permits, environmental clearances, and managing legal documentation.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Challenge 5 -->
+                    <div class="flex items-start gap-4">
+                        <img src="assets/images/f5.png" alt="Icon 5" class="w-14 h-14" />
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-1">
+                                Due Diligence
+                            </h3>
+                            <p class="text-gray-600 text-sm">
+                                Ensuring the land has a clear legal title, verifying ownership history, checking for
+                                encumbrances, zoning regulations, and all other legal and technical verifications before
+                                acquisition.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Challenge 6 -->
+                    <div class="flex items-start gap-4">
+                        <img src="assets/images/f7.png" alt="Icon 6" class="w-14 h-14" />
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-1">
+                                Infrastructure Development
+                            </h3>
+                            <p class="text-gray-600 text-sm">
+                                Planning and implementing roads, utilities, and other essential infrastructure.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="mt-14 text-center">
+                <a href="./about.html#challenges" style="font-size: 13px;"
+                    class="family-oss px-7 py-3 rounded bg-gradient-to-r from-[#08F9E8] to-[#6962AD] text-white duration-300 hover:bg-gradient-to-r hover:from-[#6962AD] hover:to-[#08F9E8]">
+                    VIEW MORE
+                </a>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Clients Progress -->
+    <!-- <div class="bg-gradient-to-r from-sky-600/75 to-[#00f6ff] py-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-white text-center">
+
+            <div class="px-2 sm:px-4 md:px-6 mb-4 md:mb-0">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">6M+</h2>
+                <p class="mt-2 text-base sm:text-lg md:text-xl">Happy Clients</p>
+            </div>
+
+            <div class="px-2 sm:px-4 md:px-6 mb-4 md:mb-0 border-l border-white/30">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">24K+</h2>
+                <p class="mt-2 text-base sm:text-lg md:text-xl">Projects Done</p>
+            </div>
+
+            <div class="px-2 sm:px-4 md:px-6 border-t md:border-t-0 md:border-l border-white/30 pt-4 md:pt-0">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">711+</h2>
+                <p class="mt-2 text-base sm:text-lg md:text-xl">Expert Team</p>
+            </div>
+
+            <div class="px-2 sm:px-4 md:px-6 border-t md:border-t-0 border-l border-white/30 pt-4 md:pt-0">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">25+</h2>
+                <p class="mt-2 text-base sm:text-lg md:text-xl">Years of Experience</p>
+            </div>
+        </div>
+    </div> -->
+
     <!-- Advantages Section -->
-    <section class="bg-gray-50 py-16">
+    <section class="bg-white py-16">
         <div style="max-width: 1400px; margin: 0 auto; padding: 40px 20px;">
             <div style="text-align: center; margin-bottom: 60px;">
-                <h3 class="family-oss"
-                    style="color: #7957d5; font-size: 14px; font-weight: 600; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;">
+                <p class="text-sm font-bold text-[#7267D7] uppercase mb-6">
                     ADVANTAGES
-                </h3>
+                </p>
             </div>
 
             <div style="justify-items: center;" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-2">
@@ -598,108 +810,88 @@
         </div>
         <div class="trends-reifs-promo p-2 flex justify-center">
             <a href="./about.html#advantages" style="font-size: 13px;"
-                class="family-oss px-9 py-3 rounded bg-gradient-to-r from-[#08F9E8] to-[#6962AD] text-white duration-300 hover:bg-gradient-to-r hover:from-[#6962AD] hover:to-[#08F9E8]">
+                class="family-oss px-7 py-3 rounded bg-gradient-to-r from-[#08F9E8] to-[#6962AD] text-white duration-300 hover:bg-gradient-to-r hover:from-[#6962AD] hover:to-[#08F9E8]">
                 VIEW MORE
             </a>
         </div>
     </section>
 
-    <!-- Progress Section -->
-    <section class="py-16 px-4 bg-white">
-        <div class="max-w-6xl mx-auto">
-            <!-- Consistent Section Header -->
-            <div class="mb-8 flex justify-center">
-                <p class="family-oss"
-                    style="color: #7957d5; font-size: 14px; font-weight: 600; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;">
-                    Benefits of Large scale Projects</p>
+    <!-- Benefits Section -->
+    <section class="px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-28 py-8 sm:py-12 mx-auto bg-gray-100">
+        <div class="container mx-auto px-6 py-16">
+            <!-- Hero Section -->
+            <div class="text-center mb-16">
+                <p class="text-sm font-bold text-[#7267D7] uppercase mb-6">
+                    Benefits of Large Scale Projects
+                </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 pb-7">
-                <!-- Left Column - Top and Bottom Cards -->
-                <div class="space-y-2">
-                    <!-- Card 1 (Top Left) -->
-                    <div class="bg-gray-100 p-6 rounded-lg h-[50%]">
-                        <div class="flex items-start">
-                            <!-- <div class="w-16 h-16 flex items-center justify-center mr-4">
-                                <img src="assets/images/f1.png" alt="Icon 1" class="w-12 h-12" />
-                            </div> -->
-                            <div>
-                                <h3 style="font-size: 20px; font-weight: bold;" class="family-oss text-gray-800 mb-2">
-                                    Cost Advantages of
-                                    Larger Land Parcels</h3>
-                                <p class="text-[#6B7280]">Buying large parcels of land often comes at a lower price per
-                                    unit compared to smaller plots, ensuring an additional profit margin for developers.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 2 (Bottom Left) -->
-                    <div class="bg-gray-100 py-6 px-6 rounded-lg h-[50%]">
-                        <div class="flex items-start">
-                            <!-- <div class="w-16 h-16 flex items-center justify-center mr-4">
-                                <img src="assets/images/f2.png" alt="Icon 2" class="w-12 h-12" />
-                            </div> -->
-                            <div>
-                                <h3 style="font-size: 20px; font-weight: bold;" class="family-oss text-gray-800 mb-2">
-                                    Market Dynamics:
-                                    Small vs. Large Land Parcels</h3>
-                                <p class="text-[#6B7280]">Small land parcels often face high demand and competition
-                                    among buyers, driving up their prices. In contrast, large land parcels have fewer
-                                    buyers,
-                                    offering developers better negotiation opportunities and lower per-unit costs.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Middle Column - Vertical Content (Placeholder) -->
-                <div class="flex flex-col justify-center items-center">
+            <!-- Benefits Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <!-- Card 1 -->
+                <div
+                    class="bg-gradient-to-b from-[#08F9E8] to-[#6962AD] rounded-3xl p-8 border border-white/20 hover:bg-gray/15 group">
                     <div
-                        class="bg-gray-100 rounded-lg w-full h-full flex flex-col justify-center items-center overflow-hidden">
-                        <!-- Image added here, adjusted to fit the div -->
-                        <img src="assets/images/vertical.png" alt="Image" class="w-full h-full object-cover">
+                        class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        💰
                     </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">
+                        Cost Advantages of Larger Land Parcels
+                    </h3>
+                    <p class="text-white leading-relaxed">
+                        Buying large parcels of land often comes at a lower price per unit compared to smaller plots,
+                        ensuring an additional profit margin for developers.
+                    </p>
                 </div>
 
-                <!-- Right Column - Top and Bottom Cards -->
-                <div class="space-y-2">
-                    <!-- Card 3 (Top Right) -->
-                    <div class="bg-gray-100 px-6 py-6 rounded-lg h-[50%]">
-                        <div class="flex items-start">
-                            <!-- <div class="w-16 h-16 flex items-center justify-center mr-4">
-                                <img src="assets/images/f3.png" alt="Icon 3" class="w-12 h-12" />
-                            </div> -->
-                            <div>
-                                <h3 style="font-size: 20px; font-weight: bold;" class="family-oss text-gray-800 mb-2">
-                                    Optimizing
-                                    Development Costs in Large Projects</h3>
-                                <p class="text-[#6B7280]">Expenses like sample units, site offices, marketing, and staff
-                                    salaries remain constant across both small and large projects, but in larger
-                                    projects, these costs are spread over more units, reducing the per-unit cost.</p>
-                            </div>
-                        </div>
+                <!-- Card 2 -->
+                <div class="bg-gray-50 rounded-3xl p-8 border border-white/20 hover:bg-gray/15 group">
+                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300"
+                        style="background-color: #09c0d1;">
+                        📈
                     </div>
+                    <h3 class="text-2xl font-bold text-black mb-4">
+                        Market Dynamics: Small vs. Large Land Parcels
+                    </h3>
+                    <p class="text-gray-500 leading-relaxed">
+                        Small land parcels often face high demand and competition among buyers, driving up their prices.
+                        In contrast, large land parcels have fewer buyers, offering developers better negotiation
+                        opportunities and lower per-unit costs.
+                    </p>
+                </div>
 
-                    <!-- Card 4 (Bottom Right) -->
-                    <div class="bg-gray-100 px-6 py-6 rounded-lg h-[50%]">
-                        <div class="flex items-start">
-                            <!-- <div class="w-16 h-16 flex items-center justify-center mr-4">
-                                <img src="assets/images/f4.png" alt="Icon 4" class="w-12 h-12" />
-                            </div> -->
-                            <div>
-                                <h3 style="font-size: 20px; font-weight: bold;" class="family-oss text-gray-800 mb-2">
-                                    Enhanced
-                                    Infrastructure and Project Value</h3>
-                                <p class="text-[#6B7280]">Developers can plan and execute infrastructure projects like
-                                    roads, utilities, and green spaces while incorporating multiple amenities, lowering
-                                    development costs and increasing project value.</p>
-                            </div>
-                        </div>
+                <!-- Card 3 -->
+                <div class="bg-gray-50 rounded-3xl p-8 border border-white/20 hover:bg-gray/15 group">
+                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300"
+                        style="background-color: #09c0d1;">
+                        ⚡
                     </div>
+                    <h3 class="text-2xl font-bold text-black mb-4">
+                        Optimizing Development Costs in Large Projects
+                    </h3>
+                    <p class="text-gray-500 leading-relaxed">
+                        Expenses like sample units, site offices, marketing, and staff salaries remain constant across
+                        both small and large projects, but in larger projects, these costs are spread over more units,
+                        reducing the per-unit cost.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="bg-gradient-to-b from-[#08F9E8] to-[#6962AD] rounded-3xl p-8 border border-white/20 hover:bg-gray/15 group">
+                    <div
+                        class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        🏗️
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">
+                        Enhanced Infrastructure and Project Value
+                    </h3>
+                    <p class="text-white leading-relaxed">
+                        Developers can plan and execute infrastructure projects like roads, utilities, and green spaces
+                        while incorporating multiple amenities, lowering development costs and increasing project value.
+                    </p>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- Progress Section -->
@@ -794,277 +986,289 @@
     </section> -->
 
     <!-- how it works section -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-4xl mx-auto px-4">
-            <!-- Section Header -->
+    <section class="py-10 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <!-- Title -->
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl mb-4"
-                    style="color: #7957d5; font-size: 14px; font-weight: 600; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;">
-                    How It Works</h2>
-                <!-- <p class="max-w-2xl mx-auto text-gray-600">Our proven 10-step process ensures maximum value and returns -->
+                <p class="text-sm font-bold text-[#7267D7] uppercase mb-6">
+                    HOW IT WORKS
                 </p>
             </div>
 
-            <!-- Vertical Timeline -->
-            <div class="relative">
-                <!-- Vertical Line -->
-                <div class="absolute left-8 md:left-1/2 top-0 h-full w-0.5 bg-cyan-500 transform -translate-x-1/2">
-                </div>
+            <!-- Slider Container -->
+            <div class="relative overflow-hidden">
+                <div class="flex transition-transform duration-500 ease-in-out" id="sliderWrapper">
+                    <!-- Slide 1 -->
+                    <div class="min-w-full">
+                        <div class="flex flex-col md:flex-row gap-8 justify-center">
 
-                <!-- Timeline Steps -->
-                <div class="space-y-12">
-                    <!-- Step 1 -->
-                    <div class="relative" data-aos="fade-up">
-                        <div class="flex flex-col md:flex-row items-center">
-                            <!-- Circle on Timeline -->
-                            <div
-                                class="absolute left-8 md:left-1/2 w-8 h-8 bg-cyan-500 rounded-full transform -translate-x-1/2 z-10 flex items-center justify-center text-white font-bold">
-                                1</div>
-
-                            <!-- Left Content (Desktop) / Top Content (Mobile) -->
-                            <div class="md:w-1/2 md:pr-16 mb-4 md:mb-0 md:text-right pl-16 md:pl-0">
-                                <h3 class="family-oss text-xl font-bold text-gray-800 mb-2">Property Search</h3>
-                                <p class="text-[#6B7280]">We identify and select the best properties with high-growth
-                                    potential.</p>
-                            </div>
-
-                            <!-- Empty space for desktop right side -->
-                            <div class="hidden md:block md:w-1/2"></div>
-                        </div>
-                    </div>
-
-                    <!-- Step 2 -->
-                    <div class="relative" data-aos="fade-up">
-                        <div class="flex flex-col md:flex-row items-center">
-                            <!-- Circle on Timeline -->
-                            <div
-                                class="absolute left-8 md:left-1/2 w-8 h-8 bg-cyan-500 rounded-full transform -translate-x-1/2 z-10 flex items-center justify-center text-white font-bold">
-                                2</div>
-
-                            <!-- Empty space for desktop left side -->
-                            <div class="hidden md:block md:w-1/2"></div>
-
-                            <!-- Right Content (Desktop) / Top Content (Mobile) -->
-                            <div class="md:w-1/2 md:pl-16 pl-16 md:text-left">
-                                <h3 class="family-oss text-xl font-bold text-gray-800 mb-2">Property Screening</h3>
-                                <p class="text-[#6B7280]">Selected properties undergo rigorous screening and due
-                                    diligence.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 3 -->
-                    <div class="relative" data-aos="fade-up">
-                        <div class="flex flex-col md:flex-row items-center">
-                            <!-- Circle on Timeline -->
-                            <div
-                                class="absolute left-8 md:left-1/2 w-8 h-8 bg-cyan-500 rounded-full transform -translate-x-1/2 z-10 flex items-center justify-center text-white font-bold">
-                                3</div>
-
-                            <!-- Left Content (Desktop) / Top Content (Mobile) -->
-                            <div class="md:w-1/2 md:pr-16 mb-4 md:mb-0 md:text-right pl-16 md:pl-0">
-                                <h3 class="family-oss text-xl font-bold text-gray-800 mb-2">Property Purchase</h3>
-                                <p class="text-[#6B7280]">The property is acquired after all evaluations are complete.
+                            <div class="bg-white rounded-lg p-8 text-center shadow-sm max-w-sm mx-auto">
+                                <div style="background-color: #09c0d1;"
+                                    class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="11" cy="11" r="8" />
+                                        <path d="m21 21-4.35-4.35" />
+                                        <path d="M10 8l2 2 4-4" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4">Property Search</h3>
+                                <p class="text-gray-600 mb-6 leading-relaxed">
+                                    We identify and select the best properties with high-growth potential.
                                 </p>
                             </div>
 
-                            <!-- Empty space for desktop right side -->
-                            <div class="hidden md:block md:w-1/2"></div>
+                            <div class="bg-white rounded-lg p-8 text-center shadow-sm max-w-sm mx-auto">
+                                <div style="background-color: #09c0d1;"
+                                    class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                                        <path d="m9 12 2 2 4-4" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4">Property Screening</h3>
+                                <p class="text-gray-600 mb-6 leading-relaxed">
+                                    Selected properties undergo rigorous screening and due diligence.
+                                </p>
+                            </div>
+
+                            <div class="bg-white rounded-lg p-8 text-center shadow-sm max-w-sm mx-auto">
+                                <div style="background-color: #09c0d1;"
+                                    class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                                        <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                                        <path d="M5 17h-2v-4m7-4h10" />
+                                        <path d="M8 12l-2 0" />
+                                        <path d="M13 6l3 0" />
+                                        <path d="M16 6l.01 0" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4">Property Purchase</h3>
+                                <p class="text-gray-600 mb-6 leading-relaxed">
+                                    The property is acquired after all evaluations are complete.
+                                </p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Step 4 -->
-                    <div class="relative" data-aos="fade-up">
-                        <div class="flex flex-col md:flex-row items-center">
-                            <!-- Circle on Timeline -->
-                            <div
-                                class="absolute left-8 md:left-1/2 w-8 h-8 bg-cyan-500 rounded-full transform -translate-x-1/2 z-10 flex items-center justify-center text-white font-bold">
-                                4</div>
+                    <!-- Slide 2 -->
+                    <div class="min-w-full">
+                        <div class="flex flex-col md:flex-row gap-8 justify-center">
 
-                            <!-- Empty space for desktop left side -->
-                            <div class="hidden md:block md:w-1/2"></div>
+                            <div class="bg-white rounded-lg p-8 text-center shadow-sm max-w-sm mx-auto">
+                                <div style="background-color: #09c0d1;"
+                                    class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                        <polyline points="14,2 14,8 20,8" />
+                                        <line x1="16" y1="13" x2="8" y2="13" />
+                                        <line x1="16" y1="17" x2="8" y2="17" />
+                                        <polyline points="10,9 9,9 8,9" />
+                                        <path d="m9 15 2 2 4-4" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4">Permissions from Authorities</h3>
+                                <p class="text-gray-600 mb-6 leading-relaxed">
+                                    Necessary approvals and clearances are obtained from relevant authorities.
+                                </p>
+                            </div>
 
-                            <!-- Right Content (Desktop) / Top Content (Mobile) -->
-                            <div class="md:w-1/2 md:pl-16 pl-16 md:text-left">
-                                <h3 class="family-oss text-xl font-bold text-gray-800 mb-2">Permissions from Authorities
+                            <div class="bg-white rounded-lg p-8 text-center shadow-sm max-w-sm mx-auto">
+                                <div style="background-color: #09c0d1;"
+                                    class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                        <path d="m2 17 10 5 10-5" />
+                                        <path d="m2 12 10 5 10-5" />
+                                        <circle cx="12" cy="12" r="2" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4">REIF Forms SPV</h3>
+                                <p class="text-gray-600 mb-6 leading-relaxed">
+                                    TRENDS REIFs forms a Special Purpose Vehicle (SPV) to manage the project.
+                                </p>
+                            </div>
+
+                            <div class="bg-white rounded-lg p-8 text-center shadow-sm max-w-sm mx-auto">
+                                <div style="background-color: #09c0d1;"
+                                    class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="12" y1="1" x2="12" y2="23" />
+                                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                                        <polyline points="17,5 14,2 17,2 17,5" />
+                                        <polyline points="7,19 10,22 7,22 7,19" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4">Investor Investment in SPV</h3>
+                                <p class="text-gray-600 mb-6 leading-relaxed">
+                                    The SPV invites investors to fund the project.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="min-w-full">
+                        <div class="flex flex-col md:flex-row gap-8 justify-center">
+
+                            <div class="bg-white rounded-lg p-8 text-center shadow-sm max-w-sm mx-auto">
+                                <div style="background-color: #09c0d1;"
+                                    class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                                        <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
+                                        <path d="m9 14 2 2 4-4" />
+                                        <path d="M12 17h4" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4">Tie-up with Renowned Builder/Developer
                                 </h3>
-                                <p class="text-[#6B7280]">Necessary approvals and clearances are obtained from relevant
-                                    authorities.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 5 -->
-                    <div class="relative" data-aos="fade-up">
-                        <div class="flex flex-col md:flex-row items-center">
-                            <!-- Circle on Timeline -->
-                            <div
-                                class="absolute left-8 md:left-1/2 w-8 h-8 bg-cyan-500 rounded-full transform -translate-x-1/2 z-10 flex items-center justify-center text-white font-bold">
-                                5</div>
-
-                            <!-- Left Content (Desktop) / Top Content (Mobile) -->
-                            <div class="md:w-1/2 md:pr-16 mb-4 md:mb-0 md:text-right pl-16 md:pl-0">
-                                <h3 class="text-xl font-bold text-gray-800 mb-2">REIF Forms SPV</h3>
-                                <p class="text-gray-600">TRENDS REIFs forms a Special Purpose Vehicle (SPV) to manage
-                                    the project.</p>
-                            </div>
-
-                            <!-- Empty space for desktop right side -->
-                            <div class="hidden md:block md:w-1/2"></div>
-                        </div>
-                    </div>
-
-                    <!-- Step 6 -->
-                    <div class="relative" data-aos="fade-up">
-                        <div class="flex flex-col md:flex-row items-center">
-                            <!-- Circle on Timeline -->
-                            <div
-                                class="absolute left-8 md:left-1/2 w-8 h-8 bg-cyan-500 rounded-full transform -translate-x-1/2 z-10 flex items-center justify-center text-white font-bold">
-                                6</div>
-
-                            <!-- Empty space for desktop left side -->
-                            <div class="hidden md:block md:w-1/2"></div>
-
-                            <!-- Right Content (Desktop) / Top Content (Mobile) -->
-                            <div class="md:w-1/2 md:pl-16 pl-16 md:text-left">
-                                <h3 class="text-xl font-bold text-gray-800 mb-2">Investor Investment in SPV</h3>
-                                <p class="text-gray-600">The SPV invites investors to fund the project.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 7 -->
-                    <div class="relative" data-aos="fade-up">
-                        <div class="flex flex-col md:flex-row items-center">
-                            <!-- Circle on Timeline -->
-                            <div
-                                class="absolute left-8 md:left-1/2 w-8 h-8 bg-cyan-500 rounded-full transform -translate-x-1/2 z-10 flex items-center justify-center text-white font-bold">
-                                7</div>
-
-                            <!-- Left Content (Desktop) / Top Content (Mobile) -->
-                            <div class="md:w-1/2 md:pr-16 mb-4 md:mb-0 md:text-right pl-16 md:pl-0">
-                                <h3 class="text-xl font-bold text-gray-800 mb-2">Tie-up with Renowned Builder</h3>
-                                <p class="text-gray-600">We partner with top-tier developers for quality construction.
+                                <p class="text-gray-600 mb-6 leading-relaxed">
+                                    We partner with top-tier developers for quality construction.
                                 </p>
                             </div>
 
-                            <!-- Empty space for desktop right side -->
-                            <div class="hidden md:block md:w-1/2"></div>
-                        </div>
-                    </div>
+                            <div class="bg-white rounded-lg p-8 text-center shadow-sm max-w-sm mx-auto">
+                                <div style="background-color: #09c0d1;"
+                                    class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="m3 21 18 0" />
+                                        <path d="m5 21 0-16" />
+                                        <path d="m19 21 0-16" />
+                                        <path d="m9 21 0-16" />
+                                        <path d="m13 21 0-16" />
+                                        <path d="m5 5 14 0" />
+                                        <path d="m5 9 14 0" />
+                                        <path d="m5 13 14 0" />
+                                        <path d="m5 17 14 0" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4">Construction</h3>
+                                <p class="text-gray-600 mb-6 leading-relaxed">
+                                    The project construction begins promptly after all formalities are completed.
+                                </p>
+                            </div>
 
-                    <!-- Step 8 -->
-                    <div class="relative" data-aos="fade-up">
-                        <div class="flex flex-col md:flex-row items-center">
-                            <!-- Circle on Timeline -->
-                            <div
-                                class="absolute left-8 md:left-1/2 w-8 h-8 bg-cyan-500 rounded-full transform -translate-x-1/2 z-10 flex items-center justify-center text-white font-bold">
-                                8</div>
-
-                            <!-- Empty space for desktop left side -->
-                            <div class="hidden md:block md:w-1/2"></div>
-
-                            <!-- Right Content (Desktop) / Top Content (Mobile) -->
-                            <div class="md:w-1/2 md:pl-16 pl-16 md:text-left">
-                                <h3 class="text-xl font-bold text-gray-800 mb-2">Construction</h3>
-                                <p class="text-gray-600">The project construction begins promptly after all formalities
-                                    are completed.</p>
+                            <div class="bg-white rounded-lg p-8 text-center shadow-sm max-w-sm mx-auto">
+                                <div style="background-color: #09c0d1;"
+                                    class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z" />
+                                        <path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9" />
+                                        <path d="M12 3v6" />
+                                        <path d="m8 14 4 4 4-4" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4">Sales</h3>
+                                <p class="text-gray-600 mb-6 leading-relaxed">
+                                    Once the project construction is completed and approved by RERA, sales will be
+                                    initiated.
+                                </p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Step 9 -->
-                    <div class="relative" data-aos="fade-up">
-                        <div class="flex flex-col md:flex-row items-center">
-                            <!-- Circle on Timeline -->
-                            <div
-                                class="absolute left-8 md:left-1/2 w-8 h-8 bg-cyan-500 rounded-full transform -translate-x-1/2 z-10 flex items-center justify-center text-white font-bold">
-                                9</div>
+                    <!-- Slide 4 -->
+                    <div class="min-w-full">
+                        <div class="flex flex-col md:flex-row gap-8 justify-center">
 
-                            <!-- Left Content (Desktop) / Top Content (Mobile) -->
-                            <div class="md:w-1/2 md:pr-16 mb-4 md:mb-0 md:text-right pl-16 md:pl-0">
-                                <h3 class="text-xl font-bold text-gray-800 mb-2">Sales</h3>
-                                <p class="text-gray-600">Once the project construction is completed and approved by
-                                    RERA, sales will be initiated.</p>
-                            </div>
-
-                            <!-- Empty space for desktop right side -->
-                            <div class="hidden md:block md:w-1/2"></div>
-                        </div>
-                    </div>
-
-                    <!-- Step 10 -->
-                    <div class="relative" data-aos="fade-up">
-                        <div class="flex flex-col md:flex-row items-center">
-                            <!-- Circle on Timeline -->
-                            <div
-                                class="absolute left-8 md:left-1/2 w-8 h-8 bg-cyan-500 rounded-full transform -translate-x-1/2 z-10 flex items-center justify-center text-white font-bold">
-                                10</div>
-
-                            <!-- Empty space for desktop left side -->
-                            <div class="hidden md:block md:w-1/2"></div>
-
-                            <!-- Right Content (Desktop) / Top Content (Mobile) -->
-                            <div class="md:w-1/2 md:pl-16 pl-16 md:text-left">
-                                <h3 class="text-xl font-bold text-gray-800 mb-2">Returns Generation</h3>
-                                <p class="text-gray-600">Investors receive the best possible returns on their
-                                    investment.</p>
+                            <div class="bg-white rounded-lg p-8 text-center shadow-sm max-w-sm mx-auto">
+                                <div style="background-color: #09c0d1;"
+                                    class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="22,12 18,12 15,21 9,3 6,12 2,12" />
+                                        <circle cx="12" cy="6" r="2" />
+                                        <path d="M16 16h6" />
+                                        <path d="M19 13v6" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4">Return Generation</h3>
+                                <p class="text-gray-600 mb-6 leading-relaxed">
+                                    Investors receive the best possible returns on their investment.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Call to Action -->
-            <!-- <div class="mt-16 text-center">
-                <a href="#"
-                    class="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-3 px-8 rounded-lg transition-colors">
-                    Begin Your Investment Journey
-                </a>
-            </div> -->
+            <!-- Navigation Buttons -->
+            <div class="flex justify-center gap-4 mt-8">
+                <button id="prevBtn" class="family-oss py-2 px-7 rounded bg-gradient-to-r from-[#08F9E8] to-[#6962AD] text-white
+                    duration-200 hover:bg-gradient-to-r hover:from-[#6962AD] hover:to-[#08F9E8]">
+                    Previous
+                </button>
+                <button id="nextBtn"
+                    class="family-oss py-2 px-7 rounded bg-gradient-to-r from-[#08F9E8] to-[#6962AD] text-white duration-200 hover:bg-gradient-to-r hover:from-[#6962AD] hover:to-[#08F9E8]">
+                    Next
+                </button>
+            </div>
         </div>
     </section>
 
-    <style>
-        @keyframes progress {
-            from {
-                width: 0;
-            }
-
-            to {
-                width: var(--final-width);
-            }
-        }
-
-        .animate-progress {
-            animation: progress 1.5s ease-out forwards;
-            width: var(--final-width);
-        }
-    </style>
-
     <script>
-        // Animate progress bars when they come into view
-        document.addEventListener('DOMContentLoaded', function () {
-            const progressBars = document.querySelectorAll('.animate-progress');
+        let currentSlide = 0;
+        const totalSlides = 4; // Fixed: Changed from 2 to 4
+        const sliderWrapper = document.getElementById('sliderWrapper');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dots = document.querySelectorAll('.dot');
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const width = entry.style.getPropertyValue('--final-width');
-                        entry.style.width = width;
-                    }
-                });
-            }, { threshold: 0.5 });
+        function updateSlider() {
+            const translateX = -currentSlide * 100;
+            sliderWrapper.style.transform = `translateX(${translateX}%)`;
 
-            progressBars.forEach(bar => observer.observe(bar));
-        });
+            // Update button states
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide === totalSlides - 1;
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                updateSlider();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlider();
+            }
+        }
+
+        function goToSlide(slideIndex) {
+            if (slideIndex >= 0 && slideIndex < totalSlides) {
+                currentSlide = slideIndex;
+                updateSlider();
+            }
+        }
+
+        // Event listeners
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        // Initialize
+        updateSlider();
+
     </script>
 
     <!-- Testimonial Section -->
     <div class="bg-gray-100 py-12 px-6 md:px-16 lg:px-32">
         <!-- Section Title -->
         <div class="section-title text-black">
-            <h2 class="page-main-heading">Testimonial</h2>
+            <p class="text-sm font-bold text-[#7267D7] uppercase mb-6">TESTIMONIALS</P>
             <p class="page-sub-heading mt-4 pb-2">Client feedback & Reviews</p>
         </div>
 
@@ -1083,7 +1287,7 @@
                             invested and watched my money grow!
                         </p>
                         <h4 class="font-bold italic text-black">Rohan</h4>
-                        <span class="text-gray-500 font-semibold italic">Pune, Maharashtra</span>
+                        <span class="text-cyan-500 font-semibold italic">Pune, Maharashtra</span>
                     </div>
                 </div>
 
@@ -1099,7 +1303,7 @@
                             been steady and impressive.
                         </p>
                         <h4 class="font-bold italic text-black">Meena Shah</h4>
-                        <span class="text-gray-500 font-semibold italic">Mumbai, Maharashtra</span>
+                        <span class="text-cyan-500 font-semibold italic">Mumbai, Maharashtra</span>
                     </div>
                 </div>
 
@@ -1114,7 +1318,7 @@
                             professionally. I’ve already reinvested my earnings into their next project.
                         </p>
                         <h4 class="font-bold italic text-black">Arvind Kapoor</h4>
-                        <span class="text-gray-500 font-semibold italic">Mumbai, Maharashtra</span>
+                        <span class="text-cyan-500 font-semibold italic">Mumbai, Maharashtra</span>
                     </div>
                 </div>
 
@@ -1130,7 +1334,7 @@
                             hassles.
                         </p>
                         <h4 class="font-bold italic text-black">Priya Seth</h4>
-                        <span class="text-gray-500 font-semibold italic">Pune, Maharashtra</span>
+                        <span class="text-cyan-500 font-semibold italic">Pune, Maharashtra</span>
                     </div>
                 </div>
 
@@ -1146,7 +1350,7 @@
                             peace of mind.
                         </p>
                         <h4 class="font-bold italic text-black">Sameer Jain</h4>
-                        <span class="text-gray-500 font-semibold italic">Chh. Sambhajinagar, Maharashtra</span>
+                        <span class="text-cyan-500 font-semibold italic">Chh. Sambhajinagar, Maharashtra</span>
                     </div>
                 </div>
 
@@ -1161,7 +1365,7 @@
                             solution — I trust them completely and have recommended it to my colleagues too!
                         </p>
                         <h4 class="font-bold italic text-black">Dr. Kavita Deshmukh</h4>
-                        <span class="text-gray-500 font-semibold italic">Nagpur, Maharashtra</span>
+                        <span class="text-cyan-500 font-semibold italic">Nagpur, Maharashtra</span>
                     </div>
                 </div>
             </div>
@@ -1177,10 +1381,6 @@
             loop: true,
             slidesPerView: 3,
             spaceBetween: 30,
-            autoplay: {
-                delay: 3000, // Auto-scroll every 3 seconds
-                disableOnInteraction: false, // Continue autoplay after user interaction
-            },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
