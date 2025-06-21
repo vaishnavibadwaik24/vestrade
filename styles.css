@@ -390,16 +390,19 @@ color: var(--accent-color);
 
 .page-main-heading{
   font-family: 'Inter', sans-serif;
-  font-size: 16px;
+  font-size: 30px;
   font-weight: bold;
   color: #7267D7;
+  text-transform: uppercase;
+  margin-bottom: 12px;
 }
 
 .page-sub-heading{
   font-family: 'Outfit', sans-serif;
-  font-size: 39px;
+  font-size: 25px;
   font-weight: bold;
   color: #0A0118;
+  margin-bottom: 12px;
 }
 
 .swiper-pagination-bullets {
