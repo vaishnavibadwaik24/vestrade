@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects - Real Estate Investment Fund</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <style>
+        /* Add custom styles if needed */
+        .chart-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+                url('assets/images/banner2.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* height: 80vh; */
+            /* Decreased height - adjust this value as needed */
+            max-height: 460px;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <!-- Navigation Bar -->
+    <!-- Main container with dark background -->
+    <div class="relative min-h-screen overflow-hidden">
+        <!-- Trading chart background overlay -->
+        <div class="absolute inset-0 opacity-90 bg-cover bg-center chart-bg"></div>
+
+        <!-- Content container -->
+        <div class="relative z-10">
+            <!-- Navigation Bar -->
+            <nav
+                class="text-white px-6 md:px-16 lg:px-32 py-5 flex items-center justify-between border-b border-gray-700">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <a href="index.html"><img src="/assets/images/logo.png" alt="Vestrade" class="h-10"></a>
+                </div>
+
+                <!-- Hamburger Menu for Mobile -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-white focus:outline-none">
+                        <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Navigation Links + Button (Desktop) -->
+                <div id="menu"
+                    class="hidden md:flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6">
+                    <!-- Navigation Links -->
+                    <ul
+                        class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 items-center font-semibold">
+                        <li><a href="index.html" class="hover:text-cyan-400">Home</a></li>
+                        <li><a href="about.html" class="hover:text-cyan-400">About</a></li>
+                        <li><a href="projects.html" class="hover:text-cyan-400">Projects</a></li>
+                        <li><a href="contact.html" class="hover:text-cyan-400">Contact</a></li>
+                        <!-- More Dropdown -->
+                        <li class="relative group" id="dropdown-parent">
+                            <button id="dropdown-button" class="flex items-center gap-x-2 hover:text-cyan-400">
+                                More
+                                <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor"
+                                    stroke-width="3" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <ul id="dropdown-menu"
+                                class="absolute left-0 mt-2 bg-white text-black shadow-lg rounded opacity-0 invisible transition-all duration-300 min-w-[150px] z-10">
+                                <li><a href="./faqs.html"
+                                        class="block px-4 py-2 hover:bg-[#08f9e8] hover:text-white">FAQ</a>
+                                </li>
+                                <li><a href="./testimonials.html"
+                                        class="block px-4 py-2 hover:bg-[#08f9e8] hover:text-white">Testimonials</a>
+                                </li>
+                                <li><a href="./blogs.html"
+                                        class="block px-4 py-2 hover:bg-[#08f9e8] hover:text-white">Blogs</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Mobile Navigation Overlay -->
+            <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-white z-50 hidden flex flex-col">
+                <div class="flex justify-between items-center px-4 py-3 border-b border-gray-200">
+                    <a href="index.html"><img src="/assets/images/logo.png" alt="Vestrade" class="h-10"></a>
+                    <button id="mobile-close" class="text-black">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-col p-4">
+                    <a href="index.html"
+                        class="nav-link text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">Homepage</a>
+                    <a href="about.html"
+                        class="nav-link text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">About
+                        Us</a>
+                    <a href="projects.html"
+                        class="nav-link text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">Projects</a>
+                    <a href="contact.html"
+                        class="nav-link text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">Contact</a>
+                    <div class="relative">
+                        <button id="mobile-more-toggle"
+                            class="flex items-center justify-between w-full text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">
+                            More
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="more-dropdown" class="hidden pl-4 border-b border-gray-200">
+                            <a href="./faqs.html"
+                                class="block text-black py-3 hover:bg-cyan-500 hover:text-white transition-colors duration-200">FAQ</a>
+                            <a href="./testimonials.html"
+                                class="block text-black py-3 hover:bg-cyan-500 hover:text-white transition-colors duration-200">Testimonials</a>
+                            <a href="./blogs.html"
+                                class="block text-black py-3 hover:bg-cyan-500 hover:text-white transition-colors duration-200">Blogs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                // For highlighting the active link in the navigation bar
+                document.addEventListener('DOMContentLoaded', function () {
+                    const links = document.querySelectorAll('.nav-link');
+                    const currentPage = window.location.pathname.split("/").pop(); // get current page name
+
+                    links.forEach(link => {
+                        if (link.getAttribute('href') === currentPage) {
+                            link.classList.add('bg-cyan-500', 'text-white', 'font-bold'); // active styling
+                        } else {
+                            link.classList.remove('bg-cyan-500', 'text-white');
+                        }
+                    });
+                });
+            </script>
+
+            <script>
+                // Toggle mobile menu with the new overlay
+                document.getElementById('menu-toggle').addEventListener('click', function () {
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    mobileMenu.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+                });
+
+                // Close mobile menu
+                document.getElementById('mobile-close').addEventListener('click', function () {
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                    document.body.style.overflow = ''; // Restore scrolling
+                });
+
+                // Toggle "More" dropdown in mobile menu
+                document.getElementById('mobile-more-toggle').addEventListener('click', function () {
+                    const dropdown = document.getElementById('more-dropdown');
+                    dropdown.classList.toggle('hidden');
+
+                    // Toggle arrow direction
+                    const arrow = this.querySelector('svg');
+                    arrow.classList.toggle('rotate-180');
+                });
+
+                // Dropdown functionality with delay for desktop
+                const dropdownParent = document.getElementById('dropdown-parent');
+                const dropdownButton = document.getElementById('dropdown-button');
+                const dropdownMenu = document.getElementById('dropdown-menu');
+                let dropdownTimeout;
+
+                dropdownParent.addEventListener('mouseenter', () => {
+                    clearTimeout(dropdownTimeout);
+                    dropdownMenu.classList.remove('opacity-0', 'invisible');
+                    dropdownMenu.classList.add('opacity-100', 'visible');
+                });
+
+                dropdownParent.addEventListener('mouseleave', () => {
+                    dropdownTimeout = setTimeout(() => {
+                        dropdownMenu.classList.remove('opacity-100', 'visible');
+                        dropdownMenu.classList.add('opacity-0', 'invisible');
+                    }, 1000); // 1 second delay
+                });
+
+                // Keep dropdown open if mouse enters it
+                dropdownMenu.addEventListener('mouseenter', () => {
+                    clearTimeout(dropdownTimeout);
+                    dropdownMenu.classList.remove('opacity-0', 'invisible');
+                    dropdownMenu.classList.add('opacity-100', 'visible');
+                });
+
+                dropdownMenu.addEventListener('mouseleave', () => {
+                    dropdownTimeout = setTimeout(() => {
+                        dropdownMenu.classList.remove('opacity-100', 'visible');
+                        dropdownMenu.classList.add('opacity-0', 'invisible');
+                    }, 2000); // 2 seconds delay
+                });
+            </script>
+            <!-- End Navigation Bar -->
+
+            <!-- bg-transparent About Us Section -->
+            <section class="px-6 md:px-12 py-16 md:py-24 max-w-7xl mx-auto">
+                <h1 class="text-4xl md:text-5xl font-semibold text-white mb-8" data-aos="fade-right">Projects</h1>
+                <p class="text-xl md:text-2xl text-white/90 max-w-xl leading-relaxed">
+                    Latest projects and developments in the real estate sector, showcasing our commitment to quality and
+                    innovation.
+                </p>
+            </section>
+        </div>
+    </div>
+
+    <!-- Project Section -->
+    <div class="max-w-6xl mx-auto pb-12">
+        <h2 class="page-main-heading text-center mb-8">Our Projects</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Card 1 - PropShare Platina -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden relative">
+                <!-- Property Image -->
+                <div class="relative h-48 overflow-hidden">
+                    <img src="assets/images/project1.webp" alt="PropShare Platina" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/20"></div>
+                </div>
+
+                <!-- Card Content -->
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-1">PropShare Platina (PSPLATINA)</h3>
+                    <p class="text-gray-600 text-sm mb-6">Outer Ring Road, Bangalore</p>
+
+                    <!-- Stats Grid -->
+                    <div class="grid grid-cols-2 gap-6 mb-6">
+                        <!-- Type -->
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500">Type</p>
+                                <p class="font-semibold text-gray-800">Office</p>
+                            </div>
+                        </div>
+
+                        <!-- IPO Date -->
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500">IPO Date</p>
+                                <p class="font-semibold text-gray-800">2–4 Dec '24</p>
+                            </div>
+                        </div>
+
+                        <!-- Projected Yield -->
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500">Projected Yield*</p>
+                                <p class="font-semibold text-gray-800">9.0%</p>
+                            </div>
+                        </div>
+
+                        <!-- Min Lot Size -->
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500">Min Lot Size</p>
+                                <p class="font-semibold text-gray-800">₹10,00,000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- View More Button -->
+                    <div class="mt-8 justify-center flex">
+                        <a href="./about.html#intro" style="font-size: 13px;"
+                            class="family-oss py-3 px-7 rounded bg-gradient-to-r from-[#08F9E8] to-[#6962AD] text-white duration-200 hover:bg-gradient-to-r hover:from-[#6962AD] hover:to-[#08F9E8]">
+                            KNOW MORE
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 - Coming Soon -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden relative">
+                <!-- Property Image -->
+                <div class="relative h-48 overflow-hidden">
+                    <img src="assets/images/project2.webp" alt="PropShare Platina" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/20"></div>
+                </div>
+
+                <!-- Card Content -->
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-1">PropShare Platina (PSPLATINA)</h3>
+                    <p class="text-gray-600 text-sm mb-6">Outer Ring Road, Bangalore</p>
+
+                    <!-- Stats Grid -->
+                    <div class="grid grid-cols-2 gap-6 mb-6">
+                        <!-- Type -->
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500">Type</p>
+                                <p class="font-semibold text-gray-800">Office</p>
+                            </div>
+                        </div>
+
+                        <!-- IPO Date -->
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500">IPO Date</p>
+                                <p class="font-semibold text-gray-800">2–4 Dec '24</p>
+                            </div>
+                        </div>
+
+                        <!-- Projected Yield -->
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500">Projected Yield*</p>
+                                <p class="font-semibold text-gray-800">9.0%</p>
+                            </div>
+                        </div>
+
+                        <!-- Min Lot Size -->
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500">Min Lot Size</p>
+                                <p class="font-semibold text-gray-800">₹10,00,000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- View More Button -->
+                    <div class="mt-8 flex justify-center">
+                        <a href="#" style="font-size: 13px;"
+                            class="family-oss py-3 px-7 rounded bg-gradient-to-r from-[#08F9E8] to-[#6962AD] text-white duration-200 hover:bg-gradient-to-r hover:from-[#6962AD] hover:to-[#08F9E8]">
+                            KNOW MORE
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-[#032427] text-white relative bg-cover bg-center">
+        <!-- Newsletter Signup -->
+        <div class="border-b border-white/30 px-6" data-aos="fade-up">
+            <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <h2 class="text-xl font-semibold text-center md:text-left">
+                    Signup our newsletter to get update information,<br />
+                    news, insight or promotions.
+                </h2>
+                <form class="flex w-full md:w-auto">
+                    <input type="email" placeholder="Your Email"
+                        class="px-6 py-2 rounded-l-md w-full md:w-60 bg-white text-black focus:outline-none" />
+                    <button type="submit"
+                        class="bg-gradient-to-r from-[#00f6ff] to-sky-600/75 px-12 py-2 rounded-r-md text-white font-semibold duration-300 hover:from-sky-600/75 hover:to-[#00f6ff]">
+                        SIGN UP
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer Content -->
+        <div class="max-w-7xl mx-auto px-12 py-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10 text-sm">
+            <!-- Brand Info -->
+            <div data-aos="fade-right">
+                <img src="/assets/images/logo.png" alt="Vestrade" class="h-10 mb-4">
+                <p class="text-white/80 mb-8">
+                    Dictumst natoque curae nullam quisque pretium sem cursus augue pede tempor quis nisi at curabitur si
+                    condimentum metus parturient posuere dapibus id leo.
+                </p>
+                <div class="flex gap-4 text-white text-lg">
+                    <a href="#"><i class="fab fa-facebook-f text-cyan-400"></i></a>
+                    <a href="#"><i class="fab fa-twitter text-cyan-400"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in text-cyan-400"></i></a>
+                    <a href="#"><i class="fab fa-instagram text-cyan-400"></i></a>
+                </div>
+            </div>
+
+            <!-- Product Links -->
+            <div data-aos="fade-up" data-aos-delay="100">
+                <h4 class="font-semibold text-lg text-white mb-4">Product</h4>
+                <ul class="space-y-2 text-white/80">
+                    <li class="border-b border-white/30 pb-2">
+                        <a href="#" class="hover:text-cyan-400 block">Stocks</a>
+                    </li>
+                    <li class="border-b border-white/30 pb-2">
+                        <a href="#" class="hover:text-cyan-400 block">Futures & Options</a>
+                    </li>
+                    <li class="border-b border-white/30 pb-2">
+                        <a href="#" class="hover:text-cyan-400 block">IPO</a>
+                    </li>
+                    <li class="border-b border-white/30 pb-2">
+                        <a href="#" class="hover:text-cyan-400 block">Mutual Funds</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-cyan-400 block">Credits</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Support Links -->
+            <div data-aos="fade-up" data-aos-delay="200">
+                <h4 class="font-semibold text-lg text-white mb-4">Support</h4>
+                <ul class="space-y-2 text-white/80">
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Contact Us</a>
+                    </li>
+                    <!-- <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Help Centre</a>
+                    </li> -->
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">FAQ</a></li>
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">My Account</a>
+                    </li>
+                    <li><a href="#" class="hover:text-cyan-400">Community</a></li>
+                </ul>
+            </div>
+
+            <!-- Company Info -->
+            <div data-aos="fade-up" data-aos-delay="300">
+                <h4 class="font-semibold text-lg text-white mb-4">Company</h4>
+                <ul class="space-y-2 text-white/80">
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">About</a></li>
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Services</a></li>
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Vision &
+                            Mision</a></li>
+                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Leadership</a>
+                    </li>
+                    <li><a href="#" class="hover:text-cyan-400">News & Article</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div data-aos="fade-left" data-aos-delay="400">
+                <h4 class="font-semibold text-lg text-white mb-4">Get in Touch</h4>
+                <ul class="space-y-4 text-white/80">
+                    <li class="flex gap-2 items-start">
+                        <i class="fas fa-map-marker-alt text-teal-400 mt-1"></i>
+                        Jalan Cempaka Wangi No 22<br />Jakarta - Indonesia
+                    </li>
+                    <li class="flex gap-2 items-center">
+                        <i class="fas fa-envelope text-teal-400"></i>
+                        support@yourdomain.tld
+                    </li>
+                    <li class="flex gap-2 items-center">
+                        <i class="fas fa-phone-alt text-teal-400"></i>
+                        (888) 4000 613
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-white/30 py-4 text-center text-sm text-white/70">
+            Copyright© 2024 Vestrade, All rights reserved.
+        </div>
+    </footer>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
