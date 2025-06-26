@@ -26,14 +26,10 @@
 <body class="bg-[#0f021f]">
 
     <!-- Navigation Bar -->
-    <nav class="text-white px-6 md:px-16 lg:px-32 py-6 flex items-center justify-between border-b border-gray-700">
+    <nav class="text-white px-6 md:px-16 lg:px-32 py-6 flex items-center justify-between border-b border-gray-700 bg-transparent absolute top-0 left-0 w-full z-20">
         <!-- Logo -->
         <div class="flex items-center space-x-2">
-            <a href="index.html">
-                <p
-                    class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#A8FDFB] to-[#6962AD]">
-                    TRENDS REIF</p>
-            </a>
+            <a href="index.html"><img src="/assets/images/reif-logo.png" alt="Vestrade" class="h-10"></a>
         </div>
 
         <!-- Hamburger Menu for Mobile -->
@@ -80,7 +76,7 @@
     <!-- Mobile Navigation Overlay -->
     <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-white z-50 hidden flex flex-col">
         <div class="flex justify-between items-center px-4 py-3 border-b border-gray-200">
-            <a href="index.html"><img src="/assets/images/logo.png" alt="Vestrade" class="h-10"></a>
+            <a href="index.html"><img src="/assets/images/reif-logo.png" alt="Vestrade" class="h-10"></a>
             <button id="mobile-close" class="text-black">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -309,179 +305,143 @@
     <!-- Real Estate Market Section -->
     <section class="real-estate-market px-4 sm:px-6 md:px-12 lg:px-20 xl:px-28 py-10 sm:py-16">
         <div
-            style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 24px; align-items: start;">
+            class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 items-start">
 
             <!-- Left Panel - Market Stats -->
             <div data-aos="fade-right"
-                style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); border: 1px solid rgba(0,0,0,0.06);">
-                <div style="display: flex; align-items: center; margin-bottom: 24px;">
+                class="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-black/5 flex flex-col">
+                <div class="flex items-center mb-6">
                     <div
-                        style="width: 48px; height: 48px; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 16px;">
-                        <span style="color: white; font-size: 24px; font-weight: bold;">🏢</span>
+                        class="w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-700 rounded-xl flex items-center justify-center mr-4">
+                        <span class="text-white text-2xl font-bold">🏢</span>
                     </div>
                     <div>
-                        <h3 style="margin: 0; font-size: 18px; font-weight: 600; color: #1f2937; line-height: 1.2;">Real
-                            Estate</h3>
-                        <p style="margin: 4px 0 0 0; font-size: 14px; color: #6b7280;">Market Overview</p>
+                        <h3 class="m-0 text-lg font-semibold text-gray-800 leading-tight">Real Estate</h3>
+                        <p class="m-0 mt-1 text-sm text-gray-400">Market Overview</p>
                     </div>
                 </div>
-
-                <div style="font-size: 36px; font-weight: 700; color: #1f2937; margin-bottom: 8px;">$1T</div>
-                <div style="font-size: 14px; color: #6b7280; margin-bottom: 24px;">Projected by 2030</div>
-
-                <div style="margin-bottom: 20px;">
-                    <div
-                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                        <span style="font-size: 14px; color: #6b7280;">Rank:</span>
-                        <span style="font-size: 16px; font-weight: 600; color: #1f2937;">#1 Growth Sector</span>
+                <div class="text-4xl font-bold text-gray-800 mb-2">$1T</div>
+                <div class="text-sm text-gray-400 mb-6">Projected by 2030</div>
+                <div class="mb-5 space-y-2">
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-400">Rank:</span>
+                        <span class="text-base font-semibold text-gray-800">#1 Growth Sector</span>
                     </div>
-
-                    <div
-                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                        <span style="font-size: 14px; color: #6b7280;">GDP Contribution:</span>
-                        <span style="font-size: 16px; font-weight: 600; color: #10b981;">↗ 13%</span>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-400">GDP Contribution:</span>
+                        <span class="text-base font-semibold text-emerald-500">↗ 13%</span>
                     </div>
-
-                    <div
-                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                        <span style="font-size: 14px; color: #6b7280;">Market Cap:</span>
-                        <span style="font-size: 16px; font-weight: 600; color: #1f2937;">$200B Current</span>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-400">Market Cap:</span>
+                        <span class="text-base font-semibold text-gray-800">$200B Current</span>
                     </div>
                 </div>
-
-                <div style="background: #f8fafc; border-radius: 12px; padding: 20px; margin-bottom: 24px;">
-                    <h4 style="margin: 0 0 12px 0; font-size: 16px; font-weight: 600; color: #1f2937;">Growth Drivers
-                    </h4>
-                    <p style="margin: 0; font-size: 14px; color: #6b7280; line-height: 1.6;">Retail, hospitality, and
-                        commercial segments driving infrastructure expansion across India's growing urban markets.</p>
+                <div class="bg-gray-50 rounded-xl p-5 mb-6">
+                    <h4 class="m-0 mb-3 text-base font-semibold text-gray-800">Growth Drivers</h4>
+                    <p class="m-0 text-sm text-gray-400 leading-relaxed">
+                        Retail, hospitality, and commercial segments driving infrastructure expansion across India's growing urban markets.
+                    </p>
                 </div>
-
-                <div style="text-align: right; font-style: italic; color: #6b7280; font-size: 12px; margin-top: 20px;">-
-                    By IBEF</div>
-
-                <!-- <button style="width: 100%; background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); color: white; border: none; border-radius: 12px; padding: 14px 24px; font-size: 14px; font-weight: 600; cursor: pointer; transition: transform 0.2s ease; box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);">
-                VIEW DETAILS →
-            </button> -->
+                <div class="text-right italic text-gray-400 text-xs mt-auto">- By IBEF</div>
             </div>
 
             <!-- Center Panel - Chart -->
             <div data-aos="fade-up"
-                style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%); border-radius: 20px; padding: 40px; color: white; position: relative; overflow: hidden;">
+                class="relative bg-gradient-to-br from-slate-800 to-slate-700 rounded-3xl p-6 sm:p-8 md:p-8 lg:p-10 text-white overflow-hidden flex flex-col">
                 <div
-                    style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%); border-radius: 50%;">
-                </div>
+                    class="absolute top-[-40px] right-[-40px] w-40 h-40 bg-blue-500/30 rounded-full pointer-events-none"></div>
                 <div
-                    style="position: absolute; bottom: -30px; left: -30px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(16, 185, 129, 0.2) 0%, transparent 70%); border-radius: 50%;">
-                </div>
-
-                <h2
-                    style="margin: 0 0 32px 0; font-size: 28px; font-weight: 700; text-align: center; position: relative; z-index: 2;">
-                    Real Estate Market Growth</h2>
-
-                <div
-                    style="display: flex; align-items: end; justify-content: space-around; height: 320px; margin-bottom: 32px; position: relative; z-index: 2;">
+                    class="absolute bottom-[-20px] left-[-20px] w-32 h-32 bg-emerald-400/20 rounded-full pointer-events-none"></div>
+                <h2 class="text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8 relative z-10">Real Estate Market Growth</h2>
+                <div class="flex items-end justify-around h-40 sm:h-48 md:h-56 lg:h-64 mb-6 sm:mb-8 relative z-10">
                     <!-- Y-axis labels -->
                     <div
-                        style="position: absolute; left: -30px; top: 0; bottom: 40px; display: flex; flex-direction: column-reverse; justify-content: space-between; font-size: 12px; color: rgba(255,255,255,0.6);">
+                        class="absolute left-[-28px] top-0 bottom-10 flex flex-col-reverse justify-between text-xs text-white/60 h-full">
                         <span>0</span>
                         <span>250B</span>
                         <span>500B</span>
                         <span>750B</span>
                         <span>1T</span>
                     </div>
-
                     <!-- Bars -->
-                    <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div class="flex flex-col items-center">
                         <div
-                            style="width: 60px; height: 60px; background: linear-gradient(180deg, #3b82f6 0%, #1e40af 100%); border-radius: 8px 8px 0 0; margin-bottom: 12px; position: relative; transition: transform 0.3s ease; cursor: pointer;">
+                            class="w-10 sm:w-12 md:w-12 h-6 sm:h-8 md:h-10 bg-gradient-to-b from-blue-400 to-blue-900 rounded-t-lg mb-2 sm:mb-3 relative transition-transform duration-300 cursor-pointer">
                             <div
-                                style="position: absolute; top: -30px; left: 50%; transform: translateX(-50%); background: rgba(255,255,255,0.9); color: #1f2937; padding: 4px 8px; border-radius: 6px; font-size: 12px; font-weight: 600;">
-                                150B</div>
+                                class="absolute -top-7 left-1/2 -translate-x-1/2 bg-white/90 text-gray-800 px-2 py-1 rounded text-xs font-semibold">
+                                150B
+                            </div>
                         </div>
-                        <span style="font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.8);">2017</span>
+                        <span class="text-xs sm:text-sm font-medium text-white/80">2017</span>
                     </div>
-
-                    <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div class="flex flex-col items-center">
                         <div
-                            style="width: 60px; height: 80px; background: linear-gradient(180deg, #06b6d4 0%, #0891b2 100%); border-radius: 8px 8px 0 0; margin-bottom: 12px; position: relative; transition: transform 0.3s ease; cursor: pointer;">
+                            class="w-10 sm:w-12 md:w-12 h-10 sm:h-12 md:h-16 bg-gradient-to-b from-cyan-400 to-cyan-800 rounded-t-lg mb-2 sm:mb-3 relative transition-transform duration-300 cursor-pointer">
                             <div
-                                style="position: absolute; top: -30px; left: 50%; transform: translateX(-50%); background: rgba(255,255,255,0.9); color: #1f2937; padding: 4px 8px; border-radius: 6px; font-size: 12px; font-weight: 600;">
-                                200B</div>
+                                class="absolute -top-7 left-1/2 -translate-x-1/2 bg-white/90 text-gray-800 px-2 py-1 rounded text-xs font-semibold">
+                                200B
+                            </div>
                         </div>
-                        <span style="font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.8);">2020</span>
+                        <span class="text-xs sm:text-sm font-medium text-white/80">2020</span>
                     </div>
-
-                    <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div class="flex flex-col items-center">
                         <div
-                            style="width: 60px; height: 200px; background: linear-gradient(180deg, #10b981 0%, #059669 100%); border-radius: 8px 8px 0 0; margin-bottom: 12px; position: relative; transition: transform 0.3s ease; cursor: pointer;">
+                            class="w-10 sm:w-12 md:w-12 h-28 sm:h-22 md:h-26 bg-gradient-to-b from-emerald-400 to-emerald-700 rounded-t-lg mb-2 sm:mb-3 relative transition-transform duration-300 cursor-pointer">
                             <div
-                                style="position: absolute; top: -30px; left: 50%; transform: translateX(-50%); background: rgba(255,255,255,0.9); color: #1f2937; padding: 4px 8px; border-radius: 6px; font-size: 12px; font-weight: 600;">
-                                650B</div>
+                                class="absolute -top-7 left-1/2 -translate-x-1/2 bg-white/90 text-gray-800 px-2 py-1 rounded text-xs font-semibold">
+                                650B
+                            </div>
                         </div>
-                        <span style="font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.8);">2025</span>
+                        <span class="text-xs sm:text-sm font-medium text-white/80">2025</span>
                     </div>
-
-                    <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div class="flex flex-col items-center">
                         <div
-                            style="width: 60px; height: 280px; background: linear-gradient(180deg, #8b5cf6 0%, #7c3aed 100%); border-radius: 8px 8px 0 0; margin-bottom: 12px; position: relative; transition: transform 0.3s ease; cursor: pointer;">
+                            class="w-10 sm:w-12 md:w-12 h-26 sm:h-36 md:h-38 bg-gradient-to-b from-purple-400 to-purple-700 rounded-t-lg mb-2 sm:mb-3 relative transition-transform duration-300 cursor-pointer">
                             <div
-                                style="position: absolute; top: -30px; left: 50%; transform: translateX(-50%); background: rgba(255,255,255,0.9); color: #1f2937; padding: 4px 8px; border-radius: 6px; font-size: 12px; font-weight: 600;">
-                                1T</div>
+                                class="absolute -top-7 left-1/2 -translate-x-1/2 bg-white/90 text-gray-800 px-2 py-1 rounded text-xs font-semibold">
+                                1T
+                            </div>
                         </div>
-                        <span style="font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.8);">2030</span>
+                        <span class="text-xs sm:text-sm font-medium text-white/80">2030</span>
                     </div>
                 </div>
-
                 <div
-                    style="background: rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); position: relative; z-index: 2;">
-                    <h3 style="margin: 0 0 12px 0; font-size: 18px; font-weight: 600; color: white;">Market Security &
-                        Growth</h3>
-                    <p style="margin: 0 0 16px 0; font-size: 14px; color: rgba(255,255,255,0.8); line-height: 1.5;">
-                        Advanced analytics and market protection systems ensure sustainable growth trajectory for
-                        India's real estate sector.</p>
-                    <!-- <button style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); color: white; border: none; border-radius: 8px; padding: 12px 20px; font-size: 14px; font-weight: 600; cursor: pointer;">
-                    LEARN MORE
-                </button> -->
+                    class="bg-white/10 rounded-xl px-5 py-2 backdrop-blur border border-white/20 relative z-10">
+                    <h3 class="m-0 mb-3 text-base font-semibold text-white">Market Security & Growth</h3>
+                    <p class="m-0 text-sm text-white/80 leading-relaxed">
+                        Advanced analytics and market protection systems ensure sustainable growth trajectory for India's real estate sector.
+                    </p>
                 </div>
             </div>
 
             <!-- Right Panel - User Experience -->
             <div data-aos="fade-left"
-                style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); border: 1px solid rgba(0,0,0,0.06); margin-bottom: 24px;">
-                <!-- <h3 style="margin: 0 0 20px 0; font-size: 20px; font-weight: 600; color: #1f2937;">Market Insights</h3> -->
-
+                class="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-black/5 flex flex-col mb-0">
                 <div
-                    style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); border-radius: 12px; padding: 20px; margin-bottom: 24px; position: relative; overflow: hidden;">
-                    <!-- <div style="position: absolute; top: 10px; right: 10px; width: 60px; height: 60px; background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                    <span style="color: white; font-size: 24px;">▶</span>
-                </div> -->
+                    class="bg-gradient-to-br from-gray-50 to-gray-200 rounded-xl p-5 mb-6 relative overflow-hidden">
                     <div
-                        style="width: 80px; height: 50px; background: #1f2937; border-radius: 8px; margin-bottom: 12px; position: relative;">
+                        class="w-20 h-12 bg-gray-900 rounded-lg mb-3 relative flex items-center justify-center">
                         <div
-                            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 30px; background: linear-gradient(45deg, #10b981, #3b82f6, #8b5cf6); opacity: 0.8;">
-                        </div>
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-6 bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-400 opacity-80 rounded"></div>
                     </div>
-                    <p style="margin: 0; font-size: 14px; color: #6b7280; line-height: 1.5;">Access real-time market
-                        data and start analyzing India's financial growth sectors</p>
+                    <p class="m-0 text-sm text-gray-400 leading-relaxed">
+                        Access real-time market data and start analyzing India's financial growth sectors
+                    </p>
                 </div>
-
-                <h4 style="margin: 0 0 16px 0; font-size: 18px; font-weight: 600; color: #1f2937;">Market Analysis</h4>
-                <p style="margin: 0 0 24px 0; font-size: 14px; color: #6b7280; line-height: 1.6;">Real estate sector in
-                    India is expected to reach US$ 1 trillion in market size by 2030, contributing significantly to the
-                    country's economic infrastructure and urban development.</p>
-
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px;">
-                    <div style="background: #f8fafc; border-radius: 12px; padding: 16px; text-align: center;">
-                        <div style="font-size: 24px; font-weight: 700; color: #3b82f6; margin-bottom: 4px;">5x</div>
-                        <div style="font-size: 12px; color: #6b7280;">Growth Multiple</div>
+                <h4 class="m-0 mb-4 text-lg font-semibold text-gray-800">Market Analysis</h4>
+                <p class="m-0 mb-6 text-sm text-gray-400 leading-relaxed">
+                    Real estate sector in India is expected to reach US$ 1 trillion in market size by 2030, contributing significantly to the country's economic infrastructure and urban development.
+                </p>
+                <div class="grid grid-cols-2 gap-4 mb-4">
+                    <div class="bg-gray-50 rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-blue-500 mb-1">5x</div>
+                        <div class="text-xs text-gray-400">Growth Multiple</div>
                     </div>
-                    <div style="background: #f8fafc; border-radius: 12px; padding: 16px; text-align: center;">
-                        <div style="font-size: 24px; font-weight: 700; color: #10b981; margin-bottom: 4px;">13%</div>
-                        <div style="font-size: 12px; color: #6b7280;">GDP Share</div>
+                    <div class="bg-gray-50 rounded-xl p-4 text-center">
+                        <div class="text-2xl font-bold text-emerald-500 mb-1">13%</div>
+                        <div class="text-xs text-gray-400">GDP Share</div>
                     </div>
                 </div>
-
-                <!-- <div style="text-align: right; font-style: italic; color: #6b7280; font-size: 12px; margin-top: 20px;">- By IBEF</div> -->
             </div>
         </div>
     </section>
@@ -858,8 +818,7 @@
                 <!-- Card 1 -->
                 <div class="bg-gradient-to-b from-[#08F9E8] to-[#6962AD] rounded-3xl p-8 border border-white/20 hover:bg-gray/15 group"
                     data-aos="fade-right">
-                    <div
-                        class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
                         💰
                     </div>
                     <h3 class="page-sub-heading text-white mb-4">
@@ -908,8 +867,7 @@
                 <!-- Card 4 -->
                 <div class="bg-gradient-to-b from-[#08F9E8] to-[#6962AD] rounded-3xl p-8 border border-white/20 hover:bg-gray/15 group"
                     data-aos="fade-left">
-                    <div
-                        class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
                         🏗️
                     </div>
                     <h3 class="page-sub-heading text-white mb-4">
