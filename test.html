@@ -61,7 +61,7 @@
     </style>
 </head>
 
-<body class="bg-gray-50 relative min-h-screen">
+<body class="bg-white relative min-h-screen">
     <!-- Background pattern -->
     <div class="absolute inset-0 bg-pattern"></div>
 
@@ -75,34 +75,46 @@
         <!-- Process Flow Container -->
         <div class="relative">
             <!-- Top Row -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
                 <!-- Step 1: Property Search -->
                 <div class="flex flex-col items-center text-center">
                     <div
                         class="step-circle-cyan w-20 h-20 rounded-full flex items-center justify-center mb-4 shadow-lg relative">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
-                        </svg>
+                        <img src="assets/images/work1.png" alt="">
                         <!-- Horizontal arrow to next step -->
                         <div class="absolute left-full top-1/2 transform -translate-y-1/2 ml-4 hidden md:block">
-  <div class="dashed-arrow-horizontal"></div>
-</div>
+                            <div class="dashed-arrow-horizontal"></div>
+                        </div>
                     </div>
                     <h3 class="text-sm font-semibold text-gray-900 mb-2">Property Search</h3>
                     <p class="text-xs text-gray-600 leading-relaxed">We identify and select the best properties with
                         high-growth potential.</p>
                 </div>
 
-                <!-- Step 2: Property Purchase -->
+                <!-- Step 2: Property Screening -->
                 <div class="flex flex-col items-center text-center">
                     <div
                         class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 shadow-lg relative">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-                        </svg>
+                        <img src="assets/images/work2.png" alt="">
                         <!-- Horizontal arrow to next step -->
-                        <div class="absolute left-full top-1/2 transform -translate-y-1/2 ml-4">
+                        <div class="absolute left-full top-1/2 transform -translate-y-1/2 ml-4 hidden md:block">
+
+                            <div class="dashed-arrow-horizontal"></div>
+                        </div>
+                    </div>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-2">Property Screening</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">Selected properties undergo rigorous screening and
+                        due diligence.</p>
+                </div>
+
+                <!-- Step 3: Property Purchase -->
+                <div class="flex flex-col items-center text-center">
+                    <div
+                        class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 shadow-lg relative">
+                        <img src="assets/images/work3.png" alt="">
+                        <!-- Horizontal arrow to next step -->
+                       <div class="absolute left-full top-1/2 transform -translate-y-1/2 ml-4 hidden md:block">
+
                             <div class="dashed-arrow-horizontal"></div>
                         </div>
                     </div>
@@ -111,109 +123,47 @@
                         complete.</p>
                 </div>
 
-                <!-- Step 3: REIF Forms SPV -->
+                <!-- Step 4: Permissions from Authorities -->
                 <div class="flex flex-col items-center text-center">
                     <div
                         class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 shadow-lg relative">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M16 4c0-1.11.89-2 2-2s2 .89 2 2c0 1.11-.89 2-2 2s-2-.89-2-2zM4 18v-4h3v4h2v-7.5c0-1.1.9-2 2-2h2c1.1 0 2 .9 2 2v3.5h3v4h2v-6l-2.05-7.32c-.34-1.13-1.41-1.92-2.61-1.92H8.66c-1.2 0-2.27.79-2.61 1.92L4 12v6z" />
-                        </svg>
+                        <img src="assets/images/work4.png" alt="">
                         <!-- Horizontal arrow to next step -->
-                        <div class="absolute left-full top-1/2 transform -translate-y-1/2 ml-4">
+                       <div class="absolute left-full top-1/2 transform -translate-y-1/2 ml-4 hidden md:block">
+
                             <div class="dashed-arrow-horizontal"></div>
+                        </div>
+                    </div>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-2">Permissions from Authorities</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">Necessary approvals and clearances are obtained
+                        from relevant authorities.</p>
+                </div>
+
+                <!-- Step 5: REIF Forms SPV -->
+                <div class="flex flex-col items-center text-center">
+                    <div
+                        class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 shadow-lg relative">
+                        <img src="assets/images/work5.png" alt="">
+                        <!-- Vertical arrow down to connect to bottom row (only on md and up) -->
+                        <div class="absolute top-full left-1/2 transform -translate-x-1/2 mt-4 hidden md:block">
+                            <div class="dashed-arrow-vertical"></div>
                         </div>
                     </div>
                     <h3 class="text-sm font-semibold text-gray-900 mb-2">REIF Forms SPV</h3>
-                    <p class="text-xs text-gray-600 leading-relaxed">TRENDS REIF forms a Special Purpose Vehicle (SPV)
+                    <p class="text-xs text-gray-600 leading-relaxed">TRENDS REIFs forms a Special Purpose Vehicle (SPV)
                         to manage the project.</p>
-                </div>
-
-                <!-- Step 4: Tie-up with Renowned Builder/Developer -->
-                <div class="flex flex-col items-center text-center">
-                    <div
-                        class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 shadow-lg relative">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                        </svg>
-                        <!-- Horizontal arrow to next step -->
-                        <div class="absolute left-full top-1/2 transform -translate-y-1/2 ml-4">
-                            <div class="dashed-arrow-horizontal"></div>
-                        </div>
-                    </div>
-                    <h3 class="text-sm font-semibold text-gray-900 mb-2">Tie-up with Renowned Builder/Developer</h3>
-                    <p class="text-xs text-gray-600 leading-relaxed">We partner with top-tier developers for quality
-                        construction.</p>
-                </div>
-
-                <!-- Step 5: Sales -->
-                <div class="flex flex-col items-center text-center">
-                    <div
-                        class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 shadow-lg relative">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z" />
-                        </svg>
-                        <!-- Vertical arrow down to connect to bottom row -->
-                        <div class="absolute top-full left-1/2 transform -translate-x-1/2 mt-4 block md:hidden">
-  <div class="dashed-arrow-vertical"></div>
-</div>
-                    </div>
-                    <h3 class="text-sm font-semibold text-gray-900 mb-2">Sales</h3>
-                    <p class="text-xs text-gray-600 leading-relaxed">Once the project construction is completed and
-                        approved by RERA, sales will be initiated.</p>
                 </div>
             </div>
 
             <!-- Bottom Row (Reverse Order) -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8" style="direction: rtl;">
-                <!-- Step 10: Generate Returns -->
+                <!-- Step 6: Investor Investment in SPV -->
                 <div class="flex flex-col items-center text-center" style="direction: ltr;">
                     <div
                         class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 shadow-lg relative">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z" />
-                        </svg>
+                        <img src="assets/images/work6.png" alt="">
                         <!-- Horizontal arrow to next step (pointing left in RTL) -->
-                        <div class="absolute right-full top-1/2 transform -translate-y-1/2 mr-4"
-                            style="direction: rtl;">
-                            <div class="dashed-arrow-horizontal" style="transform: scaleX(-1);"></div>
-                        </div>
-                    </div>
-                    <h3 class="text-sm font-semibold text-gray-900 mb-2">Generate Returns</h3>
-                    <p class="text-xs text-gray-600 leading-relaxed">Investors receive the best possible returns on
-                        their investment.</p>
-                </div>
-
-                <!-- Step 9: Construction -->
-                <div class="flex flex-col items-center text-center" style="direction: ltr;">
-                    <div
-                        class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 shadow-lg relative">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm5 15h-2v-6H9v6H7v-6.81l5-4.5 5 4.5V18z" />
-                        </svg>
-                        <!-- Horizontal arrow to next step (pointing left in RTL) -->
-                        <div class="absolute right-full top-1/2 transform -translate-y-1/2 mr-4"
-                            style="direction: rtl;">
-                            <div class="dashed-arrow-horizontal" style="transform: scaleX(-1);"></div>
-                        </div>
-                    </div>
-                    <h3 class="text-sm font-semibold text-gray-900 mb-2">Construction</h3>
-                    <p class="text-xs text-gray-600 leading-relaxed">The project construction begins promptly after all
-                        formalities are completed.</p>
-                </div>
-
-                <!-- Step 8: Investor Investment in SPV -->
-                <div class="flex flex-col items-center text-center" style="direction: ltr;">
-                    <div
-                        class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 shadow-lg relative">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                        </svg>
-                        <!-- Horizontal arrow to next step (pointing left in RTL) -->
-                        <div class="absolute right-full top-1/2 transform -translate-y-1/2 mr-4"
+                        <div class="absolute right-full top-1/2 transform -translate-y-1/2 mr-4 hidden md:block"
                             style="direction: rtl;">
                             <div class="dashed-arrow-horizontal" style="transform: scaleX(-1);"></div>
                         </div>
@@ -222,37 +172,62 @@
                     <p class="text-xs text-gray-600 leading-relaxed">The SPV invites investors to fund the project.</p>
                 </div>
 
-                <!-- Step 7: Permissions from Authorities -->
+                <!-- Step 7: Tie-up with Renowned Builder/Developer -->
                 <div class="flex flex-col items-center text-center" style="direction: ltr;">
                     <div
                         class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 shadow-lg relative">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
-                        </svg>
+                        <img src="assets/images/work7.png" alt="">
                         <!-- Horizontal arrow to next step (pointing left in RTL) -->
-                        <div class="absolute right-full top-1/2 transform -translate-y-1/2 mr-4"
+                        <div class="absolute right-full top-1/2 transform -translate-y-1/2 mr-4 hidden md:block"
                             style="direction: rtl;">
                             <div class="dashed-arrow-horizontal" style="transform: scaleX(-1);"></div>
                         </div>
                     </div>
-                    <h3 class="text-sm font-semibold text-gray-900 mb-2">Permissions from Authorities</h3>
-                    <p class="text-xs text-gray-600 leading-relaxed">All necessary approvals and permits are obtained
-                        from relevant authorities.</p>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-2">Tie-up with Renowned Builder/Developer</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">We partner with top-tier developers for quality
+                        construction.</p>
                 </div>
 
-                <!-- Step 6: Property Screening -->
+                <!-- Step 8: Investor Investment in SPV -->
+                <div class="flex flex-col items-center text-center" style="direction: ltr;">
+                    <div
+                        class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 shadow-lg relative">
+                        <img src="assets/images/work8.png" alt="">
+                        <!-- Horizontal arrow to next step (pointing left in RTL) -->
+                        <div class="absolute right-full top-1/2 transform -translate-y-1/2 mr-4 hidden md:block"
+                            style="direction: rtl;">
+                            <div class="dashed-arrow-horizontal" style="transform: scaleX(-1);"></div>
+                        </div>
+                    </div>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-2">Investor Investment in SPV</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">The SPV invites investors to fund the project.</p>
+                </div>
+
+                <!-- Step 9: Sales -->
+                <div class="flex flex-col items-center text-center" style="direction: ltr;">
+                    <div
+                        class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 shadow-lg relative">
+                        <img src="assets/images/work9.png" alt="">
+                        <!-- Horizontal arrow to next step (pointing left in RTL) -->
+                        <div class="absolute right-full top-1/2 transform -translate-y-1/2 mr-4 hidden md:block"
+                            style="direction: rtl;">
+                            <div class="dashed-arrow-horizontal" style="transform: scaleX(-1);"></div>
+                        </div>
+                    </div>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-2">Sales</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">Once the project construction is completed and
+                        approved by RERA, sales will be initiated.</p>
+                </div>
+
+                <!-- Step 10: Returns Generation -->
                 <div class="flex flex-col items-center text-center" style="direction: ltr;">
                     <div
                         class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 shadow-lg">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M9 11H7v6h2v-6zm4 0h-2v6h2v-6zm4 0h-2v6h2v-6zm2.5-9H19v2h-1.5v17h-11V4H5V2h1.5C7.33 2 8 2.67 8 3.5S7.33 5 6.5 5zm-3 0h-11v17h11V2z" />
-                        </svg>
+                        <img src="assets/images/work10.png" alt="">
                     </div>
-                    <h3 class="text-sm font-semibold text-gray-900 mb-2">Property Screening</h3>
-                    <p class="text-xs text-gray-600 leading-relaxed">Selected properties undergo rigorous screening and
-                        due diligence.</p>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-2">Returns Generation</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">Investors receive the best possible returns on
+                        their investment.</p>
                 </div>
             </div>
         </div>
