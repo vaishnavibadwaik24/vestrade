@@ -21,6 +21,29 @@
 
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <style>
+        #typing-text {
+            display: inline;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 2px;
+            background-color: white;
+            margin-left: 2px;
+            animation: blink 1s step-start infinite;
+            vertical-align: bottom;
+            height: 1.2em;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+
 </head>
 
 <body class="bg-[#0f021f]">
@@ -198,9 +221,8 @@
 
         <!-- Content with full opacity -->
         <div class="text-center text-white relative z-10">
-            <h1 class="text-4xl md:text-6xl font-bold leading-tight">
-                Making Your Worldwide <br />
-                Trading Easy
+            <h1 class="text-3xl md:text-5xl font-bold leading-tight text-white">
+                <span id="typing-text"></span><span class="cursor"></span>
             </h1>
             <p class="mt-6 text-base text-white max-w-xl mx-auto">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
@@ -216,6 +238,42 @@
             </div>
         </div>
     </section>
+
+    <script>
+        const text = "Accessible Seamless & Transparent";
+        const element = document.getElementById("typing-text");
+
+        let index = 0;
+        let isDeleting = false;
+
+        function typeLoop() {
+            if (!isDeleting) {
+                // Typing
+                element.textContent = text.substring(0, index + 1);
+                index++;
+
+                if (index === text.length) {
+                    isDeleting = true;
+                    setTimeout(typeLoop, 1500); // pause before deleting
+                } else {
+                    setTimeout(typeLoop, 150); // typing speed
+                }
+            } else {
+                // Deleting
+                element.textContent = text.substring(0, index - 1);
+                index--;
+
+                if (index === 0) {
+                    isDeleting = false;
+                    setTimeout(typeLoop, 500); // pause before typing again
+                } else {
+                    setTimeout(typeLoop, 100); // deleting speed
+                }
+            }
+        }
+
+        typeLoop();
+    </script>
     <!-- end Hero Section -->
 
     <!-- About Section -->
