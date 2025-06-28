@@ -15,175 +15,211 @@
 
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <style>
+        /* Add custom styles if needed */
+        .chart-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+                url('assets/images/banner2.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* height: 80vh; */
+            /* Decreased height - adjust this value as needed */
+            max-height: 480px;
+        }
+    </style>
 </head>
 
 <body class="bg-[#0f021f]">
     <!-- Navigation Bar -->
-    <nav class="text-white px-6 md:px-16 lg:px-32 py-6 flex items-center justify-between border-b border-gray-700">
-        <!-- Logo -->
-        <div class="flex items-center space-x-2">
-            <a href="index.html"><img src="/assets/images/logo.png" alt="Vestrade" class="h-10"></a>
-        </div>
+    <div class="relative" style="min-height: calc(100vh - 215px); overflow:hidden;">
+        <!-- Trading chart background overlay -->
+        <div class="absolute inset-0 opacity-100 bg-cover bg-center chart-bg"></div>
 
-        <!-- Hamburger Menu for Mobile -->
-        <div class="md:hidden">
-            <button id="menu-toggle" class="text-white focus:outline-none">
-                <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
-                    viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-        </div>
+        <!-- Content container -->
+        <div class="relative z-10">
+            <!-- Navigation Bar -->
+            <nav
+                class="text-white px-6 md:px-16 lg:px-32 py-5 flex items-center justify-between border-b border-gray-700">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <a href="index.html"><img src="/assets/images/reif-logo.png" alt="Vestrade" class="h-10"></a>
+                </div>
 
-        <!-- Navigation Links + Button (Desktop) -->
-        <div id="menu" class="hidden md:flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6">
-            <!-- Navigation Links -->
-            <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 items-center font-semibold">
-                <li><a href="index.html" class="hover:text-cyan-400">Home</a></li>
-                <li><a href="about.html" class="hover:text-cyan-400">About</a></li>
-                <li><a href="projects.html" class="hover:text-cyan-400">Projects</a></li>
-                <li><a href="contact.html" class="hover:text-cyan-400">Contact</a></li>
-                <!-- More Dropdown -->
-                <li class="relative group" id="dropdown-parent">
-                    <button id="dropdown-button" class="flex items-center gap-x-2 hover:text-cyan-400">
-                        More
-                        <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor"
-                            stroke-width="3" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                <!-- Hamburger Menu for Mobile -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-white focus:outline-none">
+                        <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
-                    <ul id="dropdown-menu"
-                        class="absolute left-0 mt-2 bg-white text-black shadow-lg rounded opacity-0 invisible transition-all duration-300 min-w-[150px] z-10">
-                        <li><a href="./faqs.html" class="block px-4 py-2 hover:bg-[#08f9e8] hover:text-white">FAQ</a>
-                        </li>
-                        <li><a href="./testimonials.html"
-                                class="block px-4 py-2 hover:bg-[#08f9e8] hover:text-white">Testimonials</a></li>
-                        <li><a href="./blogs.html" class="block px-4 py-2 hover:bg-[#08f9e8] hover:text-white">Blogs</a>
+                </div>
+
+                <!-- Navigation Links + Button (Desktop) -->
+                <div id="menu"
+                    class="hidden md:flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6">
+                    <!-- Navigation Links -->
+                    <ul
+                        class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 items-center font-semibold">
+                        <li><a href="index.html" class="hover:text-cyan-400">Home</a></li>
+                        <li><a href="about.html" class="hover:text-cyan-400">About</a></li>
+                        <li><a href="projects.html" class="hover:text-cyan-400">Projects</a></li>
+                        <li><a href="contact.html" class="hover:text-cyan-400">Contact</a></li>
+                        <!-- More Dropdown -->
+                        <li class="relative group" id="dropdown-parent">
+                            <button id="dropdown-button" class="flex items-center gap-x-2 hover:text-cyan-400">
+                                More
+                                <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor"
+                                    stroke-width="3" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <ul id="dropdown-menu"
+                                class="absolute left-0 mt-2 bg-white text-black shadow-lg rounded opacity-0 invisible transition-all duration-300 min-w-[150px] z-10">
+                                <li><a href="./faqs.html"
+                                        class="block px-4 py-2 hover:bg-[#08f9e8] hover:text-white">FAQ</a>
+                                </li>
+                                <li><a href="./testimonials.html"
+                                        class="block px-4 py-2 hover:bg-[#08f9e8] hover:text-white">Testimonials</a>
+                                </li>
+                                <li><a href="./blogs.html"
+                                        class="block px-4 py-2 hover:bg-[#08f9e8] hover:text-white">Blogs</a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
-                </li>
-            </ul>
-        </div>
-    </nav>
+                </div>
+            </nav>
 
-    <!-- Mobile Navigation Overlay -->
-    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-white z-50 hidden flex flex-col">
-        <div class="flex justify-between items-center px-4 py-3 border-b border-gray-200">
-            <a href="index.html"><img src="/assets/images/logo.png" alt="Vestrade" class="h-10"></a>
-            <button id="mobile-close" class="text-black">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
-        </div>
-        <div class="flex flex-col p-4">
-            <a href="index.html"
-                class="nav-link text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">Homepage</a>
-            <a href="about.html"
-                class="nav-link text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">About
-                Us</a>
-            <a href="projects.html"
-                class="nav-link text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">Projects</a>
-            <a href="contact.html"
-                class="nav-link text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">Contact</a>
-            <div class="relative">
-                <button id="mobile-more-toggle"
-                    class="flex items-center justify-between w-full text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">
-                    More
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </button>
-                <div id="more-dropdown" class="hidden pl-4 border-b border-gray-200">
-                    <a href="./faqs.html"
-                        class="block text-black py-3 hover:bg-cyan-500 hover:text-white transition-colors duration-200">FAQ</a>
-                    <a href="./testimonials.html"
-                        class="block text-black py-3 hover:bg-cyan-500 hover:text-white transition-colors duration-200">Testimonials</a>
-                    <a href="./blogs.html"
-                        class="block text-black py-3 hover:bg-cyan-500 hover:text-white transition-colors duration-200">Blogs</a>
+            <!-- Mobile Navigation Overlay -->
+            <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-white z-50 hidden flex flex-col">
+                <div class="flex justify-between items-center px-4 py-3 border-b border-gray-200">
+                    <a href="index.html"><img src="/assets/images/logo.png" alt="Vestrade" class="h-10"></a>
+                    <button id="mobile-close" class="text-black">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-col p-4">
+                    <a href="index.html"
+                        class="nav-link text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">Homepage</a>
+                    <a href="about.html"
+                        class="nav-link text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">About
+                        Us</a>
+                    <a href="projects.html"
+                        class="nav-link text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">Projects</a>
+                    <a href="contact.html"
+                        class="nav-link text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">Contact</a>
+                    <div class="relative">
+                        <button id="mobile-more-toggle"
+                            class="flex items-center justify-between w-full text-black py-4 border-b border-gray-200 text-lg hover:bg-cyan-500 hover:text-white transition-colors duration-200">
+                            More
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="more-dropdown" class="hidden pl-4 border-b border-gray-200">
+                            <a href="./faqs.html"
+                                class="block text-black py-3 hover:bg-cyan-500 hover:text-white transition-colors duration-200">FAQ</a>
+                            <a href="./testimonials.html"
+                                class="block text-black py-3 hover:bg-cyan-500 hover:text-white transition-colors duration-200">Testimonials</a>
+                            <a href="./blogs.html"
+                                class="block text-black py-3 hover:bg-cyan-500 hover:text-white transition-colors duration-200">Blogs</a>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <script>
+                // For highlighting the active link in the navigation bar
+                document.addEventListener('DOMContentLoaded', function () {
+                    const links = document.querySelectorAll('.nav-link');
+                    const currentPage = window.location.pathname.split("/").pop(); // get current page name
+
+                    links.forEach(link => {
+                        if (link.getAttribute('href') === currentPage) {
+                            link.classList.add('bg-cyan-500', 'text-white', 'font-bold'); // active styling
+                        } else {
+                            link.classList.remove('bg-cyan-500', 'text-white');
+                        }
+                    });
+                });
+            </script>
+
+            <script>
+                // Toggle mobile menu with the new overlay
+                document.getElementById('menu-toggle').addEventListener('click', function () {
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    mobileMenu.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+                });
+
+                // Close mobile menu
+                document.getElementById('mobile-close').addEventListener('click', function () {
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                    document.body.style.overflow = ''; // Restore scrolling
+                });
+
+                // Toggle "More" dropdown in mobile menu
+                document.getElementById('mobile-more-toggle').addEventListener('click', function () {
+                    const dropdown = document.getElementById('more-dropdown');
+                    dropdown.classList.toggle('hidden');
+
+                    // Toggle arrow direction
+                    const arrow = this.querySelector('svg');
+                    arrow.classList.toggle('rotate-180');
+                });
+
+                // Dropdown functionality with delay for desktop
+                const dropdownParent = document.getElementById('dropdown-parent');
+                const dropdownButton = document.getElementById('dropdown-button');
+                const dropdownMenu = document.getElementById('dropdown-menu');
+                let dropdownTimeout;
+
+                dropdownParent.addEventListener('mouseenter', () => {
+                    clearTimeout(dropdownTimeout);
+                    dropdownMenu.classList.remove('opacity-0', 'invisible');
+                    dropdownMenu.classList.add('opacity-100', 'visible');
+                });
+
+                dropdownParent.addEventListener('mouseleave', () => {
+                    dropdownTimeout = setTimeout(() => {
+                        dropdownMenu.classList.remove('opacity-100', 'visible');
+                        dropdownMenu.classList.add('opacity-0', 'invisible');
+                    }, 1000); // 1 second delay
+                });
+
+                // Keep dropdown open if mouse enters it
+                dropdownMenu.addEventListener('mouseenter', () => {
+                    clearTimeout(dropdownTimeout);
+                    dropdownMenu.classList.remove('opacity-0', 'invisible');
+                    dropdownMenu.classList.add('opacity-100', 'visible');
+                });
+
+                dropdownMenu.addEventListener('mouseleave', () => {
+                    dropdownTimeout = setTimeout(() => {
+                        dropdownMenu.classList.remove('opacity-100', 'visible');
+                        dropdownMenu.classList.add('opacity-0', 'invisible');
+                    }, 2000); // 2 seconds delay
+                });
+            </script>
+            <!-- End Navigation Bar -->
+
+            <!-- bg-transparent About Us Section -->
+            <section class="px-6 md:px-12 py-16 md:py-24 max-w-7xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-semibold text-white mb-8" data-aos="fade-right">Terms & Conditions
+                </h1>
+                <p class="text-lg md:text-xl text-white/90 leading-relaxed">
+                    Home / Terms & Conditions
+                </p>
+            </section>
         </div>
     </div>
 
-    <script>
-        // For highlighting the active link in the navigation bar
-        document.addEventListener('DOMContentLoaded', function () {
-            const links = document.querySelectorAll('.nav-link');
-            const currentPage = window.location.pathname.split("/").pop(); // get current page name
-
-            links.forEach(link => {
-                if (link.getAttribute('href') === currentPage) {
-                    link.classList.add('bg-cyan-500', 'text-white', 'font-bold'); // active styling
-                } else {
-                    link.classList.remove('bg-cyan-500', 'text-white');
-                }
-            });
-        });
-    </script>
-
-    <script>
-        // Toggle mobile menu with the new overlay
-        document.getElementById('menu-toggle').addEventListener('click', function () {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
-        });
-
-        // Close mobile menu
-        document.getElementById('mobile-close').addEventListener('click', function () {
-            document.getElementById('mobile-menu').classList.add('hidden');
-            document.body.style.overflow = ''; // Restore scrolling
-        });
-
-        // Toggle "More" dropdown in mobile menu
-        document.getElementById('mobile-more-toggle').addEventListener('click', function () {
-            const dropdown = document.getElementById('more-dropdown');
-            dropdown.classList.toggle('hidden');
-
-            // Toggle arrow direction
-            const arrow = this.querySelector('svg');
-            arrow.classList.toggle('rotate-180');
-        });
-
-        // Dropdown functionality with delay for desktop
-        const dropdownParent = document.getElementById('dropdown-parent');
-        const dropdownButton = document.getElementById('dropdown-button');
-        const dropdownMenu = document.getElementById('dropdown-menu');
-        let dropdownTimeout;
-
-        dropdownParent.addEventListener('mouseenter', () => {
-            clearTimeout(dropdownTimeout);
-            dropdownMenu.classList.remove('opacity-0', 'invisible');
-            dropdownMenu.classList.add('opacity-100', 'visible');
-        });
-
-        dropdownParent.addEventListener('mouseleave', () => {
-            dropdownTimeout = setTimeout(() => {
-                dropdownMenu.classList.remove('opacity-100', 'visible');
-                dropdownMenu.classList.add('opacity-0', 'invisible');
-            }, 1000); // 1 second delay
-        });
-
-        // Keep dropdown open if mouse enters it
-        dropdownMenu.addEventListener('mouseenter', () => {
-            clearTimeout(dropdownTimeout);
-            dropdownMenu.classList.remove('opacity-0', 'invisible');
-            dropdownMenu.classList.add('opacity-100', 'visible');
-        });
-
-        dropdownMenu.addEventListener('mouseleave', () => {
-            dropdownTimeout = setTimeout(() => {
-                dropdownMenu.classList.remove('opacity-100', 'visible');
-                dropdownMenu.classList.add('opacity-0', 'invisible');
-            }, 2000); // 2 seconds delay
-        });
-    </script>
-    <!-- End Navigation Bar -->
-
     <!-- Terms & Condition Section -->
-    <div class="terms-main px-4 sm:px-6 md:px-12 lg:px-24 py-10 max-w-screen-xl mx-auto">
-        <h1 class="tncpp">Terms & Conditions</h1>
+    <div class="terms-main px-4 sm:px-6 md:px-12 lg:px-24 py-10 max-w-full mx-auto">
 
         <p class="term-content py-5">
             <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Welcome
@@ -316,7 +352,7 @@
         <!-- Newsletter Signup -->
         <div class="border-b border-white/30 px-6" data-aos="fade-up">
             <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center gap-6">
-                <h2 class="tnc text-xl font-semibold text-center md:text-left">
+                <h2 class="text-xl font-semibold text-center md:text-left">
                     Signup our newsletter to get update information,<br />
                     news, insight or promotions.
                 </h2>
@@ -374,14 +410,17 @@
             <div data-aos="fade-up" data-aos-delay="200">
                 <h4 class="font-semibold text-lg text-white mb-4">Support</h4>
                 <ul class="space-y-2 text-white/80">
-                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Contact Us</a>
+                    <li class="pb-2 border-b border-white/30"><a href="/contact.html"
+                            class="hover:text-cyan-400">Contact Us</a>
                     </li>
                     <!-- <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Help Centre</a>
                     </li> -->
-                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">FAQ</a></li>
-                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">My Account</a>
+                    <li class="pb-2 border-b border-white/30"><a href="/faqs.html" class="hover:text-cyan-400">FAQ</a>
                     </li>
-                    <li><a href="#" class="hover:text-cyan-400">Community</a></li>
+                    <li class="pb-2 border-b border-white/30"><a href="/privacy-policy.html"
+                            class="hover:text-cyan-400">Privacy Policy</a>
+                    </li>
+                    <li><a href="/terms-condition.html" class="hover:text-cyan-400">Terms & Conditions</a></li>
                 </ul>
             </div>
 
@@ -389,13 +428,17 @@
             <div data-aos="fade-up" data-aos-delay="300">
                 <h4 class="font-semibold text-lg text-white mb-4">Company</h4>
                 <ul class="space-y-2 text-white/80">
-                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">About</a></li>
-                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Services</a></li>
-                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Vision &
-                            Mision</a></li>
-                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Leadership</a>
+                    <li class="pb-2 border-b border-white/30"><a href="/about.html"
+                            class="hover:text-cyan-400">About</a></li>
+                    <li class="pb-2 border-b border-white/30"><a href="/projects.html"
+                            class="hover:text-cyan-400">Services</a>
                     </li>
-                    <li><a href="#" class="hover:text-cyan-400">News & Article</a></li>
+                    <li class="pb-2 border-b border-white/30"><a href="/blogs.html"
+                            class="hover:text-cyan-400">Blogs</a>
+                    </li>
+                    <!-- <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Leadership</a>
+                    </li> -->
+                    <li><a href="/testimonials.html" class="hover:text-cyan-400">Testimonials</a></li>
                 </ul>
             </div>
 
@@ -405,15 +448,17 @@
                 <ul class="space-y-4 text-white/80">
                     <li class="flex gap-2 items-start">
                         <i class="fas fa-map-marker-alt text-teal-400 mt-1"></i>
-                        Jalan Cempaka Wangi No 22<br />Jakarta - Indonesia
+                        4th Floor, Vishwa Arcade,<br />Navale Bridge, 4111041
                     </li>
                     <li class="flex gap-2 items-center">
                         <i class="fas fa-envelope text-teal-400"></i>
-                        support@yourdomain.tld
+                        www.trendsreif.com
+                        <br>
+                        contact@trendsreif.com
                     </li>
                     <li class="flex gap-2 items-center">
-                        <i class="fas fa-phone-alt text-teal-400"></i>
-                        (888) 4000 613
+                        <i class="fas fa-phone text-teal-400"></i>
+                        +91 7427900900
                     </li>
                 </ul>
             </div>
