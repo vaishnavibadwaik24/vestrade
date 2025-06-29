@@ -43,6 +43,59 @@
             }
         }
     </style>
+    <style>
+        .step-circle-cyan {
+            background: linear-gradient(135deg, #22D3EE 0%, #0891B2 100%);
+        }
+
+        .step-circle-blue {
+            background: linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%);
+        }
+
+        .bg-pattern {
+            background-image: radial-gradient(circle, #22D3EE 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.15;
+        }
+
+        .dashed-arrow-horizontal {
+            border-top: 2px dashed #94A3B8;
+            position: relative;
+            width: 100px;
+            height: 0;
+        }
+
+        .dashed-arrow-horizontal::after {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: -4px;
+            width: 0;
+            height: 0;
+            border-left: 8px solid #94A3B8;
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+        }
+
+        .dashed-arrow-vertical {
+            border-left: 2px dashed #94A3B8;
+            position: relative;
+            width: 0;
+            height: 60px;
+        }
+
+        .dashed-arrow-vertical::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: -4px;
+            width: 0;
+            height: 0;
+            border-top: 8px solid #94A3B8;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+        }
+    </style>
 
 </head>
 
@@ -225,10 +278,10 @@
                 <span id="typing-text"></span><span class="cursor"></span>
             </h1>
             <p class="mt-6 text-base text-white max-w-xl mx-auto">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
+                Discover smarter ways to invest, build, and grow in the real estate space.
             </p>
             <p class="text-base text-white max-w-xl mx-auto">
-                luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                Smart solutions for modern investors.
             </p>
             <div class="mt-8">
                 <a href="./about.html#intro" style="font-size: 13px;"
@@ -240,6 +293,41 @@
     </section>
 
     <script>
+        const words = ["Accessible", "Seamless", "& Transparent"];
+        const element = document.getElementById("typing-text");
+
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeLoop() {
+            const currentWord = words[wordIndex];
+            if (!isDeleting) {
+                element.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+                if (charIndex === currentWord.length) {
+                    isDeleting = true;
+                    setTimeout(typeLoop, 1200); // pause before deleting
+                } else {
+                    setTimeout(typeLoop, 120); // typing speed
+                }
+            } else {
+                element.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+                if (charIndex === 0) {
+                    isDeleting = false;
+                    wordIndex = (wordIndex + 1) % words.length;
+                    setTimeout(typeLoop, 400); // pause before typing next word
+                } else {
+                    setTimeout(typeLoop, 80); // deleting speed
+                }
+            }
+        }
+
+        typeLoop();
+    </script>
+
+    <!-- <script>
         const text = "Accessible Seamless & Transparent";
         const element = document.getElementById("typing-text");
 
@@ -273,7 +361,7 @@
         }
 
         typeLoop();
-    </script>
+    </script> -->
     <!-- end Hero Section -->
 
     <!-- About Section -->
@@ -330,7 +418,7 @@
         </div>
 
         <div
-            class="flex flex-col lg:flex-row items-center justify-between px-4 sm:px-6 py-10 sm:py-16 lg:py-20 mt-12 sm:mt-20 lg:mt-24 bg-white gap-10 lg:gap-16">
+            class="flex flex-col lg:flex-row items-center justify-between px-4 sm:px-6 py-4 sm:py-8 lg:py-6 mt-12 sm:mt-20 lg:mt-24 bg-white gap-10 lg:gap-16">
             <!-- Left Column (Text) -->
             <div class="lg:w-1/2 text-center lg:text-left" data-aos="fade-right">
                 <p class="page-main-heading">Introduction</p>
@@ -354,7 +442,7 @@
 
             <!-- Right Column (Image) -->
             <div class="lg:w-2/3" data-aos="fade-left">
-                <img src="assets/images/introduction.webp" alt="Introduction Image"
+                <img src="assets/images/introduction.png" alt="Introduction Image"
                     class="rounded-lg w-full max-w-xl mx-auto lg:mx-0">
             </div>
         </div>
@@ -535,7 +623,7 @@
     </section>
 
     <section
-        class="bg-white flex flex-col lg:flex-row items-center justify-between px-4 sm:px-6 md:px-8 lg:px-16 xl:px-32 py-12 sm:py-16 md:py-20 lg:py-32">
+        class="bg-white flex flex-col lg:flex-row items-center justify-between px-4 sm:px-6 md:px-8 lg:px-16 xl:px-32 py-8 sm:py-10 md:py-10 lg:py-16">
         <!-- Left Column -->
         <div class="w-full lg:w-1/2 mb-10 lg:mb-0 lg:pr-8 xl:pr-16" data-aos="fade-right">
 
@@ -565,7 +653,7 @@
         <!-- Right Column -->
         <div class="relative w-full lg:w-1/2" data-aos="fade-left">
             <!-- Main Image -->
-            <img src="assets/images/who-we-are.webp" alt="Who we are?"
+            <img src="assets/images/who-we-are.png" alt="Who we are?"
                 class="rounded-lg w-full max-w-md sm:max-w-lg mx-auto lg:mx-0">
         </div>
     </section>
@@ -1023,283 +1111,210 @@
     </section> -->
 
     <!-- how it works section -->
-    <section class="py-10 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <!-- Title -->
+    <section class="bg-white relative min-h-screen">
+        <div class="absolute inset-0 bg-pattern"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-8 py-14">
+            <!-- Header -->
             <div class="text-center mb-16">
-                <p class="page-main-heading">
-                    HOW IT WORKS
-                </p>
+                <h2 class="page-main-heading">How It Works?</h2>
             </div>
 
-            <!-- Slider Container -->
-            <div class="relative overflow-hidden">
-                <div class="flex transition-transform duration-500 ease-in-out" id="sliderWrapper">
-                    <!-- Slide 1 -->
-                    <div class="min-w-full">
-                        <div class="flex flex-col md:flex-row gap-8 justify-center">
-
-                            <div class="bg-white rounded-lg p-8 text-center shadow-sm max-w-sm mx-auto">
-                                <div style="background-color: #09c0d1;"
-                                    class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="11" cy="11" r="8" />
-                                        <path d="m21 21-4.35-4.35" />
-                                        <path d="M10 8l2 2 4-4" />
-                                    </svg>
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-4">Property Search</h3>
-                                <p class="text-gray-600 mb-6 leading-relaxed">
-                                    We identify and select the best properties with high-growth potential.
-                                </p>
+            <!-- Process Flow Container -->
+            <div class="relative">
+                <!-- Top Row -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+                    <!-- Step 1: Property Search -->
+                    <div class="flex flex-col items-center text-center">
+                        <div
+                            class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 relative">
+                            <img src="assets/images/work1.png" alt="">
+                            <!-- Horizontal arrow for desktop -->
+                            <div class="absolute left-full top-1/2 transform -translate-y-1/2 ml-4 hidden lg:block">
+                                <div class="dashed-arrow-horizontal"></div>
                             </div>
-
-                            <div class="bg-white rounded-lg p-8 text-center shadow-sm max-w-sm mx-auto">
-                                <div style="background-color: #09c0d1;"
-                                    class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
-                                        <path d="m9 12 2 2 4-4" />
-                                    </svg>
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-4">Property Screening</h3>
-                                <p class="text-gray-600 mb-6 leading-relaxed">
-                                    Selected properties undergo rigorous screening and due diligence.
-                                </p>
-                            </div>
-
-                            <div class="bg-white rounded-lg p-8 text-center shadow-sm max-w-sm mx-auto">
-                                <div style="background-color: #09c0d1;"
-                                    class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                                        <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                                        <path d="M5 17h-2v-4m7-4h10" />
-                                        <path d="M8 12l-2 0" />
-                                        <path d="M13 6l3 0" />
-                                        <path d="M16 6l.01 0" />
-                                    </svg>
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-4">Property Purchase</h3>
-                                <p class="text-gray-600 mb-6 leading-relaxed">
-                                    The property is acquired after all evaluations are complete.
-                                </p>
-                            </div>
+                        </div>
+                        <h3 class="text-sm font-semibold text-gray-900 mb-2">Property Search</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed">We identify and select the best properties with
+                            high-growth potential.</p>
+                        <!-- Vertical arrow for mobile (after text) -->
+                        <div class="mt-4 block lg:hidden">
+                            <div class="dashed-arrow-vertical"></div>
                         </div>
                     </div>
 
-                    <!-- Slide 2 -->
-                    <div class="min-w-full">
-                        <div class="flex flex-col md:flex-row gap-8 justify-center">
-
-                            <div class="bg-white rounded-lg p-8 text-center shadow-sm max-w-sm mx-auto">
-                                <div style="background-color: #09c0d1;"
-                                    class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                                        <polyline points="14,2 14,8 20,8" />
-                                        <line x1="16" y1="13" x2="8" y2="13" />
-                                        <line x1="16" y1="17" x2="8" y2="17" />
-                                        <polyline points="10,9 9,9 8,9" />
-                                        <path d="m9 15 2 2 4-4" />
-                                    </svg>
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-4">Permissions from Authorities</h3>
-                                <p class="text-gray-600 mb-6 leading-relaxed">
-                                    Necessary approvals and clearances are obtained from relevant authorities.
-                                </p>
+                    <!-- Step 2: Property Screening -->
+                    <div class="flex flex-col items-center text-center">
+                        <div
+                            class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 relative">
+                            <img src="assets/images/work2.png" alt="">
+                            <!-- Horizontal arrow for desktop -->
+                            <div class="absolute left-full top-1/2 transform -translate-y-1/2 ml-4 hidden lg:block">
+                                <div class="dashed-arrow-horizontal"></div>
                             </div>
-
-                            <div class="bg-white rounded-lg p-8 text-center shadow-sm max-w-sm mx-auto">
-                                <div style="background-color: #09c0d1;"
-                                    class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                                        <path d="m2 17 10 5 10-5" />
-                                        <path d="m2 12 10 5 10-5" />
-                                        <circle cx="12" cy="12" r="2" />
-                                    </svg>
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-4">REIF Forms SPV</h3>
-                                <p class="text-gray-600 mb-6 leading-relaxed">
-                                    TRENDS REIF forms a Special Purpose Vehicle (SPV) to manage the project.
-                                </p>
-                            </div>
-
-                            <div class="bg-white rounded-lg p-8 text-center shadow-sm max-w-sm mx-auto">
-                                <div style="background-color: #09c0d1;"
-                                    class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <line x1="12" y1="1" x2="12" y2="23" />
-                                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                                        <polyline points="17,5 14,2 17,2 17,5" />
-                                        <polyline points="7,19 10,22 7,22 7,19" />
-                                    </svg>
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-4">Investor Investment in SPV</h3>
-                                <p class="text-gray-600 mb-6 leading-relaxed">
-                                    The SPV invites investors to fund the project.
-                                </p>
-                            </div>
+                        </div>
+                        <h3 class="text-sm font-semibold text-gray-900 mb-2">Property Screening</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed">Selected properties undergo rigorous screening
+                            and
+                            due diligence.</p>
+                        <!-- Vertical arrow for mobile (after text) -->
+                        <div class="mt-4 block lg:hidden">
+                            <div class="dashed-arrow-vertical"></div>
                         </div>
                     </div>
 
-                    <!-- Slide 3 -->
-                    <div class="min-w-full">
-                        <div class="flex flex-col md:flex-row gap-8 justify-center">
-
-                            <div class="bg-white rounded-lg p-8 text-center shadow-sm max-w-sm mx-auto">
-                                <div style="background-color: #09c0d1;"
-                                    class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path
-                                            d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
-                                        <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
-                                        <path d="m9 14 2 2 4-4" />
-                                        <path d="M12 17h4" />
-                                    </svg>
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-4">Tie-up with Renowned Builder/Developer
-                                </h3>
-                                <p class="text-gray-600 mb-6 leading-relaxed">
-                                    We partner with top-tier developers for quality construction.
-                                </p>
+                    <!-- Step 3: Property Purchase -->
+                    <div class="flex flex-col items-center text-center">
+                        <div
+                            class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 relative">
+                            <img src="assets/images/work3.png" alt="">
+                            <!-- Horizontal arrow for desktop -->
+                            <div class="absolute left-full top-1/2 transform -translate-y-1/2 ml-4 hidden lg:block">
+                                <div class="dashed-arrow-horizontal"></div>
                             </div>
-
-                            <div class="bg-white rounded-lg p-8 text-center shadow-sm max-w-sm mx-auto">
-                                <div style="background-color: #09c0d1;"
-                                    class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="m3 21 18 0" />
-                                        <path d="m5 21 0-16" />
-                                        <path d="m19 21 0-16" />
-                                        <path d="m9 21 0-16" />
-                                        <path d="m13 21 0-16" />
-                                        <path d="m5 5 14 0" />
-                                        <path d="m5 9 14 0" />
-                                        <path d="m5 13 14 0" />
-                                        <path d="m5 17 14 0" />
-                                    </svg>
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-4">Construction</h3>
-                                <p class="text-gray-600 mb-6 leading-relaxed">
-                                    The project construction begins promptly after all formalities are completed.
-                                </p>
-                            </div>
-
-                            <div class="bg-white rounded-lg p-8 text-center shadow-sm max-w-sm mx-auto">
-                                <div style="background-color: #09c0d1;"
-                                    class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z" />
-                                        <path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9" />
-                                        <path d="M12 3v6" />
-                                        <path d="m8 14 4 4 4-4" />
-                                    </svg>
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-4">Sales</h3>
-                                <p class="text-gray-600 mb-6 leading-relaxed">
-                                    Once the project construction is completed and approved by RERA, sales will be
-                                    initiated.
-                                </p>
-                            </div>
+                        </div>
+                        <h3 class="text-sm font-semibold text-gray-900 mb-2">Property Purchase</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed">The property is acquired after all evaluations
+                            are
+                            complete.</p>
+                        <!-- Vertical arrow for mobile (after text) -->
+                        <div class="mt-4 block lg:hidden">
+                            <div class="dashed-arrow-vertical"></div>
                         </div>
                     </div>
 
-                    <!-- Slide 4 -->
-                    <div class="min-w-full">
-                        <div class="flex flex-col md:flex-row gap-8 justify-center">
-
-                            <div class="bg-white rounded-lg p-8 text-center shadow-sm max-w-sm mx-auto">
-                                <div style="background-color: #09c0d1;"
-                                    class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <polyline points="22,12 18,12 15,21 9,3 6,12 2,12" />
-                                        <circle cx="12" cy="6" r="2" />
-                                        <path d="M16 16h6" />
-                                        <path d="M19 13v6" />
-                                    </svg>
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-4">Return Generation</h3>
-                                <p class="text-gray-600 mb-6 leading-relaxed">
-                                    Investors receive the best possible returns on their investment.
-                                </p>
+                    <!-- Step 4: Permissions from Authorities -->
+                    <div class="flex flex-col items-center text-center">
+                        <div
+                            class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 relative">
+                            <img src="assets/images/work4.png" alt="">
+                            <!-- Horizontal arrow for desktop -->
+                            <div class="absolute left-full top-1/2 transform -translate-y-1/2 ml-4 hidden lg:block">
+                                <div class="dashed-arrow-horizontal"></div>
                             </div>
+                        </div>
+                        <h3 class="text-sm font-semibold text-gray-900 mb-2">Permissions from Authorities</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed">Necessary approvals and clearances are obtained
+                            from relevant authorities.</p>
+                        <!-- Vertical arrow for mobile (after text) -->
+                        <div class="mt-4 block lg:hidden">
+                            <div class="dashed-arrow-vertical"></div>
+                        </div>
+                    </div>
+
+                    <!-- Step 5: REIF Forms SPV -->
+                    <div class="flex flex-col items-center text-center">
+                        <div
+                            class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 relative">
+                            <img src="assets/images/work5.png" alt="">
+                        </div>
+                        <h3 class="text-sm font-semibold text-gray-900 mb-2">REIF Forms SPV</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed">TRENDS REIFs forms a Special Purpose Vehicle
+                            (SPV)
+                            to manage the project.</p>
+                        <!-- Only vertical arrow down to connect to bottom row (always visible) -->
+                        <div class="mt-4">
+                            <div class="dashed-arrow-vertical"></div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Navigation Buttons -->
-            <div class="flex justify-center gap-4 mt-8">
-                <button id="prevBtn" class="family-oss py-2 px-7 rounded bg-gradient-to-r from-[#08F9E8] to-[#6962AD] text-white
-                    duration-200 hover:bg-gradient-to-r hover:from-[#6962AD] hover:to-[#08F9E8]">
-                    Previous
-                </button>
-                <button id="nextBtn"
-                    class="family-oss py-2 px-7 rounded bg-gradient-to-r from-[#08F9E8] to-[#6962AD] text-white duration-200 hover:bg-gradient-to-r hover:from-[#6962AD] hover:to-[#08F9E8]">
-                    Next
-                </button>
+                <!-- Bottom Row (Reverse Order) -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8" style="direction: rtl;">
+                    <!-- Step 6: Investor Investment in SPV -->
+                    <div class="flex flex-col items-center text-center" style="direction: ltr;">
+                        <div
+                            class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 relative">
+                            <img src="assets/images/work6.png" alt="">
+                            <!-- Horizontal arrow for desktop (pointing left in RTL) -->
+                            <div class="absolute right-full top-1/2 transform -translate-y-1/2 mr-4 hidden lg:block"
+                                style="direction: rtl;">
+                                <div class="dashed-arrow-horizontal" style="transform: scaleX(-1);"></div>
+                            </div>
+                        </div>
+                        <h3 class="text-sm font-semibold text-gray-900 mb-2">Investor Investment in SPV</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed">The SPV invites investors to fund the project.
+                        </p>
+                        <!-- Vertical arrow for mobile (after text) -->
+                        <div class="mt-4 block lg:hidden">
+                            <div class="dashed-arrow-vertical"></div>
+                        </div>
+                    </div>
+
+                    <!-- Step 7: Tie-up with Renowned Builder/Developer -->
+                    <div class="flex flex-col items-center text-center" style="direction: ltr;">
+                        <div
+                            class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 relative">
+                            <img src="assets/images/work7.png" alt="">
+                            <!-- Horizontal arrow for desktop (pointing left in RTL) -->
+                            <div class="absolute right-full top-1/2 transform -translate-y-1/2 mr-4 hidden lg:block"
+                                style="direction: rtl;">
+                                <div class="dashed-arrow-horizontal" style="transform: scaleX(-1);"></div>
+                            </div>
+                        </div>
+                        <h3 class="text-sm font-semibold text-gray-900 mb-2">Tie-up with Renowned Builder/Developer</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed">We partner with top-tier developers for quality
+                            construction.</p>
+                        <!-- Vertical arrow for mobile (after text) -->
+                        <div class="mt-4 block lg:hidden">
+                            <div class="dashed-arrow-vertical"></div>
+                        </div>
+                    </div>
+
+                    <!-- Step 8: Investor Investment in SPV -->
+                    <div class="flex flex-col items-center text-center" style="direction: ltr;">
+                        <div
+                            class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 relative">
+                            <img src="assets/images/work8.png" alt="">
+                            <!-- Horizontal arrow for desktop (pointing left in RTL) -->
+                            <div class="absolute right-full top-1/2 transform -translate-y-1/2 mr-4 hidden lg:block"
+                                style="direction: rtl;">
+                                <div class="dashed-arrow-horizontal" style="transform: scaleX(-1);"></div>
+                            </div>
+                        </div>
+                        <h3 class="text-sm font-semibold text-gray-900 mb-2">Investor Investment in SPV</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed">The SPV invites investors to fund the project.
+                        </p>
+                        <!-- Vertical arrow for mobile (after text) -->
+                        <div class="mt-4 block lg:hidden">
+                            <div class="dashed-arrow-vertical"></div>
+                        </div>
+                    </div>
+
+                    <!-- Step 9: Sales -->
+                    <div class="flex flex-col items-center text-center" style="direction: ltr;">
+                        <div
+                            class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 relative">
+                            <img src="assets/images/work9.png" alt="">
+                            <!-- Horizontal arrow for desktop (pointing left in RTL) -->
+                            <div class="absolute right-full top-1/2 transform -translate-y-1/2 mr-4 hidden lg:block"
+                                style="direction: rtl;">
+                                <div class="dashed-arrow-horizontal" style="transform: scaleX(-1);"></div>
+                            </div>
+                        </div>
+                        <h3 class="text-sm font-semibold text-gray-900 mb-2">Sales</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed">Once the project construction is completed and
+                            approved by RERA, sales will be initiated.</p>
+                        <!-- Vertical arrow for mobile (after text) -->
+                        <div class="mt-4 block lg:hidden">
+                            <div class="dashed-arrow-vertical"></div>
+                        </div>
+                    </div>
+
+                    <!-- Step 10: Returns Generation -->
+                    <div class="flex flex-col items-center text-center" style="direction: ltr;">
+                        <div
+                            class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 shadow-lg">
+                            <img src="assets/images/work10.png" alt="">
+                        </div>
+                        <h3 class="text-sm font-semibold text-gray-900 mb-2">Returns Generation</h3>
+                        <p class="text-xs text-gray-600 leading-relaxed">Investors receive the best possible returns on
+                            their investment.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
-    <script>
-        let currentSlide = 0;
-        const totalSlides = 4; // Fixed: Changed from 2 to 4
-        const sliderWrapper = document.getElementById('sliderWrapper');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        const dots = document.querySelectorAll('.dot');
-
-        function updateSlider() {
-            const translateX = -currentSlide * 100;
-            sliderWrapper.style.transform = `translateX(${translateX}%)`;
-
-            // Update button states
-            prevBtn.disabled = currentSlide === 0;
-            nextBtn.disabled = currentSlide === totalSlides - 1;
-        }
-
-        function nextSlide() {
-            if (currentSlide < totalSlides - 1) {
-                currentSlide++;
-                updateSlider();
-            }
-        }
-
-        function prevSlide() {
-            if (currentSlide > 0) {
-                currentSlide--;
-                updateSlider();
-            }
-        }
-
-        function goToSlide(slideIndex) {
-            if (slideIndex >= 0 && slideIndex < totalSlides) {
-                currentSlide = slideIndex;
-                updateSlider();
-            }
-        }
-
-        // Event listeners
-        nextBtn.addEventListener('click', nextSlide);
-        prevBtn.addEventListener('click', prevSlide);
-
-        // Initialize
-        updateSlider();
-
-    </script>
 
     <!-- Testimonial Section -->
     <div class="bg-gray-100 py-12 px-6 md:px-16 lg:px-32">
@@ -1316,7 +1331,7 @@
                 <div class="swiper-slide">
                     <div
                         class="testimonial-card text-center flex flex-col items-center p-8 bg-white rounded-2xl shadow-lg">
-                        <img src="assets/images/testimonial/placeholder.png" alt="client"
+                        <img src="assets/images/testimonial/Rohan.jpg" alt="client"
                             class="rounded-full w-20 h-20 mb-4" />
                         <p class="text-gray-600 text-base leading-relaxed mb-6">
                             As a first-time real estate investor, I was always intimidated by the complexities. Trends
@@ -1332,7 +1347,7 @@
                 <div class="swiper-slide">
                     <div
                         class="testimonial-card text-center flex flex-col items-center p-8 bg-white rounded-2xl shadow-lg">
-                        <img src="assets/images/testimonial/placeholder.png" alt="client"
+                        <img src="assets/images/testimonial/Meena.png" alt="client"
                             class="rounded-full w-20 h-20 mb-4" />
                         <p class="text-gray-600 text-base leading-relaxed mb-6">
                             I always wanted to invest in real estate development but lacked the time and knowledge.
@@ -1348,7 +1363,7 @@
                 <div class="swiper-slide">
                     <div
                         class="testimonial-card text-center flex flex-col items-center p-8 bg-white rounded-2xl shadow-lg">
-                        <img src="assets/images/testimonial/placeholder.png" alt="client"
+                        <img src="assets/images/testimonial/Arvind-Kapoor.jpg" alt="client"
                             class="rounded-full w-20 h-20 mb-4" />
                         <p class="text-gray-600 text-base leading-relaxed mb-6">
                             Trends REIF is a game-changer! From due diligence to sales, they manage every step
@@ -1363,7 +1378,7 @@
                 <div class="swiper-slide">
                     <div
                         class="testimonial-card text-center flex flex-col items-center p-8 bg-white rounded-2xl shadow-lg">
-                        <img src="assets/images/testimonial/placeholder.png" alt="client"
+                        <img src="assets/images/testimonial/Priya.png" alt="client"
                             class="rounded-full w-20 h-20 mb-4" />
                         <p class="text-gray-600 text-base leading-relaxed mb-6">
                             What I love about Trends REIF is the transparency. I get regular updates, and their team is
@@ -1379,7 +1394,7 @@
                 <div class="swiper-slide">
                     <div
                         class="testimonial-card text-center flex flex-col items-center p-8 bg-white rounded-2xl shadow-lg">
-                        <img src="assets/images/testimonial/placeholder.png" alt="client"
+                        <img src="assets/images/testimonial/Sameer-Jain.jpg" alt="client"
                             class="rounded-full w-20 h-20 mb-4" />
                         <p class="text-gray-600 text-base leading-relaxed mb-6">
                             I’ve been investing for years, but this is the first time I felt truly passive income from
@@ -1395,7 +1410,7 @@
                 <div class="swiper-slide">
                     <div
                         class="testimonial-card text-center flex flex-col items-center p-8 bg-white rounded-2xl shadow-lg">
-                        <img src="assets/images/testimonial/placeholder.png" alt="client"
+                        <img src="assets/images/testimonial/Kavita.png" alt="client"
                             class="rounded-full w-20 h-20 mb-4" />
                         <p class="text-gray-600 text-base leading-relaxed mb-6">
                             Being a doctor, I don’t have time to monitor investments. Trends REIF is the perfect
@@ -1490,10 +1505,11 @@
         <div class="max-w-7xl mx-auto px-12 py-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10 text-sm">
             <!-- Brand Info -->
             <div data-aos="fade-right">
-                <img src="/assets/images/logo.png" alt="Vestrade" class="h-10 mb-4">
+                <a href="index.html"><img src="/assets/images/reif-logo.png" alt="TrendsReif" class="h-10 mb-4"></a>
                 <p class="text-white/80 mb-8">
-                    Dictumst natoque curae nullam quisque pretium sem cursus augue pede tempor quis nisi at curabitur si
-                    condimentum metus parturient posuere dapibus id leo.
+                    At Trends REIF, we simplify real estate investing by offering carefully curated high-growth
+                    opportunities. Backed by research, due diligence, and strategic partnerships, we help investors
+                    grow their wealth with confidence.
                 </p>
                 <div class="flex gap-4 text-white text-lg">
                     <a href="#"><i class="fab fa-facebook-f text-cyan-400"></i></a>
