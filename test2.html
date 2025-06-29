@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works Section</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .step-circle-cyan {
+            background: linear-gradient(135deg, #22D3EE 0%, #0891B2 100%);
+        }
+
+        .step-circle-blue {
+            background: linear-gradient(135deg, #3B82F6 0%, #1E40AF 100%);
+        }
+
+        .bg-pattern {
+            background-image: radial-gradient(circle, #22D3EE 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.15;
+        }
+
+        .dashed-arrow-horizontal {
+            border-top: 2px dashed #94A3B8;
+            position: relative;
+            width: 100px;
+            height: 0;
+        }
+
+        .dashed-arrow-horizontal::after {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: -4px;
+            width: 0;
+            height: 0;
+            border-left: 8px solid #94A3B8;
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+        }
+
+        .dashed-arrow-vertical {
+            border-left: 2px dashed #94A3B8;
+            position: relative;
+            width: 0;
+            height: 60px;
+        }
+
+        .dashed-arrow-vertical::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: -4px;
+            width: 0;
+            height: 0;
+            border-top: 8px solid #94A3B8;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-white relative min-h-screen">
+    <!-- Background pattern -->
+    <div class="absolute inset-0 bg-pattern"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-8 py-16">
+        <!-- Header -->
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">How It Works?</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-600 mx-auto rounded-full"></div>
+        </div>
+
+        <!-- Process Flow Container -->
+        <div class="relative">
+            <!-- Top Row -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+                <!-- Step 1: Property Search -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 relative">
+                        <img src="assets/images/work1.png" alt="">
+                        <!-- Horizontal arrow for desktop -->
+                        <div class="absolute left-full top-1/2 transform -translate-y-1/2 ml-4 hidden lg:block">
+                            <div class="dashed-arrow-horizontal"></div>
+                        </div>
+                    </div>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-2">Property Search</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">We identify and select the best properties with
+                        high-growth potential.</p>
+                    <!-- Vertical arrow for mobile (after text) -->
+                    <div class="mt-4 block lg:hidden">
+                        <div class="dashed-arrow-vertical"></div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Property Screening -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 relative">
+                        <img src="assets/images/work2.png" alt="">
+                        <!-- Horizontal arrow for desktop -->
+                        <div class="absolute left-full top-1/2 transform -translate-y-1/2 ml-4 hidden lg:block">
+                            <div class="dashed-arrow-horizontal"></div>
+                        </div>
+                    </div>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-2">Property Screening</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">Selected properties undergo rigorous screening and
+                        due diligence.</p>
+                    <!-- Vertical arrow for mobile (after text) -->
+                    <div class="mt-4 block lg:hidden">
+                        <div class="dashed-arrow-vertical"></div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Property Purchase -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 relative">
+                        <img src="assets/images/work3.png" alt="">
+                        <!-- Horizontal arrow for desktop -->
+                        <div class="absolute left-full top-1/2 transform -translate-y-1/2 ml-4 hidden lg:block">
+                            <div class="dashed-arrow-horizontal"></div>
+                        </div>
+                    </div>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-2">Property Purchase</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">The property is acquired after all evaluations are
+                        complete.</p>
+                    <!-- Vertical arrow for mobile (after text) -->
+                    <div class="mt-4 block lg:hidden">
+                        <div class="dashed-arrow-vertical"></div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Permissions from Authorities -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 relative">
+                        <img src="assets/images/work4.png" alt="">
+                        <!-- Horizontal arrow for desktop -->
+                        <div class="absolute left-full top-1/2 transform -translate-y-1/2 ml-4 hidden lg:block">
+                            <div class="dashed-arrow-horizontal"></div>
+                        </div>
+                    </div>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-2">Permissions from Authorities</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">Necessary approvals and clearances are obtained
+                        from relevant authorities.</p>
+                    <!-- Vertical arrow for mobile (after text) -->
+                    <div class="mt-4 block lg:hidden">
+                        <div class="dashed-arrow-vertical"></div>
+                    </div>
+                </div>
+
+                <!-- Step 5: REIF Forms SPV -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 relative">
+                        <img src="assets/images/work5.png" alt="">
+                    </div>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-2">REIF Forms SPV</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">TRENDS REIFs forms a Special Purpose Vehicle (SPV)
+                        to manage the project.</p>
+                    <!-- Only vertical arrow down to connect to bottom row (always visible) -->
+                    <div class="mt-4">
+                        <div class="dashed-arrow-vertical"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Row (Reverse Order) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8" style="direction: rtl;">
+                <!-- Step 6: Investor Investment in SPV -->
+                <div class="flex flex-col items-center text-center" style="direction: ltr;">
+                    <div class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 relative">
+                        <img src="assets/images/work6.png" alt="">
+                        <!-- Horizontal arrow for desktop (pointing left in RTL) -->
+                        <div class="absolute right-full top-1/2 transform -translate-y-1/2 mr-4 hidden lg:block" style="direction: rtl;">
+                            <div class="dashed-arrow-horizontal" style="transform: scaleX(-1);"></div>
+                        </div>
+                    </div>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-2">Investor Investment in SPV</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">The SPV invites investors to fund the project.</p>
+                    <!-- Vertical arrow for mobile (after text) -->
+                    <div class="mt-4 block lg:hidden">
+                        <div class="dashed-arrow-vertical"></div>
+                    </div>
+                </div>
+
+                <!-- Step 7: Tie-up with Renowned Builder/Developer -->
+                <div class="flex flex-col items-center text-center" style="direction: ltr;">
+                    <div class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 relative">
+                        <img src="assets/images/work7.png" alt="">
+                        <!-- Horizontal arrow for desktop (pointing left in RTL) -->
+                        <div class="absolute right-full top-1/2 transform -translate-y-1/2 mr-4 hidden lg:block" style="direction: rtl;">
+                            <div class="dashed-arrow-horizontal" style="transform: scaleX(-1);"></div>
+                        </div>
+                    </div>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-2">Tie-up with Renowned Builder/Developer</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">We partner with top-tier developers for quality
+                        construction.</p>
+                    <!-- Vertical arrow for mobile (after text) -->
+                    <div class="mt-4 block lg:hidden">
+                        <div class="dashed-arrow-vertical"></div>
+                    </div>
+                </div>
+
+                <!-- Step 8: Investor Investment in SPV -->
+                <div class="flex flex-col items-center text-center" style="direction: ltr;">
+                    <div class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 relative">
+                        <img src="assets/images/work8.png" alt="">
+                        <!-- Horizontal arrow for desktop (pointing left in RTL) -->
+                        <div class="absolute right-full top-1/2 transform -translate-y-1/2 mr-4 hidden lg:block" style="direction: rtl;">
+                            <div class="dashed-arrow-horizontal" style="transform: scaleX(-1);"></div>
+                        </div>
+                    </div>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-2">Investor Investment in SPV</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">The SPV invites investors to fund the project.</p>
+                    <!-- Vertical arrow for mobile (after text) -->
+                    <div class="mt-4 block lg:hidden">
+                        <div class="dashed-arrow-vertical"></div>
+                    </div>
+                </div>
+
+                <!-- Step 9: Sales -->
+                <div class="flex flex-col items-center text-center" style="direction: ltr;">
+                    <div class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 relative">
+                        <img src="assets/images/work9.png" alt="">
+                        <!-- Horizontal arrow for desktop (pointing left in RTL) -->
+                        <div class="absolute right-full top-1/2 transform -translate-y-1/2 mr-4 hidden lg:block" style="direction: rtl;">
+                            <div class="dashed-arrow-horizontal" style="transform: scaleX(-1);"></div>
+                        </div>
+                    </div>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-2">Sales</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">Once the project construction is completed and
+                        approved by RERA, sales will be initiated.</p>
+                    <!-- Vertical arrow for mobile (after text) -->
+                    <div class="mt-4 block lg:hidden">
+                        <div class="dashed-arrow-vertical"></div>
+                    </div>
+                </div>
+
+                <!-- Step 10: Returns Generation -->
+                <div class="flex flex-col items-center text-center" style="direction: ltr;">
+                    <div class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 shadow-lg">
+                        <img src="assets/images/work10.png" alt="">
+                    </div>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-2">Returns Generation</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">Investors receive the best possible returns on
+                        their investment.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
