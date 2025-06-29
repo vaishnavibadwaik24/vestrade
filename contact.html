@@ -8,6 +8,7 @@
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -265,7 +266,7 @@
             }
         }
     </style>
-    <style>
+    <!-- <style>
         /* Add custom styles if needed */
         .chart-bg {
             background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
@@ -276,15 +277,15 @@
             /* Decreased height - adjust this value as needed */
             max-height: 450px;
         }
-    </style>
+    </style> -->
 </head>
 
 <body class="bg-white">
     <!-- Navigation Bar -->
     <!-- Main container with dark background -->
-    <div class="relative" style="min-height: calc(100vh - 215px); overflow:hidden;">
+    <div class="relative h-screen overflow-hidden">
         <!-- Trading chart background overlay -->
-        <div class="absolute inset-0 opacity-100 bg-cover bg-center chart-bg"></div>
+        <div class="absolute inset-0 opacity-100 bg-cover bg-center chart-bg h-screen w-screen"></div>
 
         <!-- Content container -->
         <div class="relative z-10">
