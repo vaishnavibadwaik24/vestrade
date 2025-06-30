@@ -742,3 +742,13 @@ list-disc li:before {
 #dropdown-menu li a {
     border-radius: 4px; /* Add rounded corners to the hover effect */
 }
+
+.chart-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+        url('assets/images/banner2.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+}

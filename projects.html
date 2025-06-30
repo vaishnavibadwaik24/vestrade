@@ -16,7 +16,7 @@
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
-    <style>
+    <!-- <style>
         /* Add custom styles if needed */
         .chart-bg {
             background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
@@ -27,15 +27,15 @@
             /* Decreased height - adjust this value as needed */
             max-height: 460px;
         }
-    </style>
+    </style> -->
 </head>
 
 <body class="bg-white">
     <!-- Navigation Bar -->
     <!-- Main container with dark background -->
-    <div class="relative" style="min-height: calc(100vh - 215px); overflow:hidden;">
+    <div class="relative h-screen overflow-hidden">
         <!-- Trading chart background overlay -->
-        <div class="absolute inset-0 opacity-90 bg-cover bg-center chart-bg"></div>
+        <div class="absolute inset-0 opacity-100 bg-cover bg-center chart-bg h-screen w-screen"></div>
 
         <!-- Content container -->
         <div class="relative z-10">
@@ -208,22 +208,24 @@
             </script>
             <!-- End Navigation Bar -->
 
-            <!-- bg-transparent About Us Section -->
-            <section class="px-6 md:px-12 py-16 md:py-24 max-w-7xl mx-auto">
-                <h1 class="text-4xl md:text-5xl font-semibold text-white mb-8" data-aos="fade-right">Projects</h1>
-                <p class="text-xl md:text-2xl text-white/90 max-w-xl leading-relaxed">
-                    Latest projects and developments in the real estate sector, showcasing our commitment to quality and
-                    innovation.
-                </p>
+            <!-- bg-transparent Projects Section -->
+            <section
+                class="px-6 md:px-12 max-w-7xl mx-auto flex flex-col items-center justify-center text-center h-screen">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-semibold text-white mb-8" data-aos="fade-right">Projects</h1>
+                    <p class="text-lg md:text-xl text-white/90 leading-relaxed">
+                        <a href="index.html">Home</a> / Projects
+                    </p>
+                </div>
             </section>
         </div>
     </div>
 
     <!-- Project Section -->
-    <div class="max-w-6xl mx-auto pb-12">
-        <h2 class="page-main-heading text-center mb-8">Our Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Card 1 - PropShare Platina -->
+    <div class="max-w-6xl mx-auto pb-12 pt-12 px-4 sm:px-6 lg:px-8">
+        <h2 class="page-main-heading text-center sm:text-3xl text-2xl mb-8">Our Projects</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 px-4 md:px-0">
+            <!-- Card 1 -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden relative">
                 <!-- Property Image -->
                 <div class="relative h-60 overflow-hidden">
@@ -305,7 +307,8 @@
 
                     <!-- View More Button -->
                     <div class="mt-8 justify-center flex">
-                        <a href="https://www.propertyshare.in/property/propshare-platina" target="_blank" style="font-size: 13px;"
+                        <a href="https://www.propertyshare.in/property/propshare-platina" target="_blank"
+                            style="font-size: 13px;"
                             class="family-oss py-3 px-7 rounded bg-gradient-to-r from-[#08F9E8] to-[#6962AD] text-white duration-200 hover:bg-gradient-to-r hover:from-[#6962AD] hover:to-[#08F9E8]">
                             KNOW MORE
                         </a>
@@ -313,7 +316,7 @@
                 </div>
             </div>
 
-            <!-- Card 2 - Coming Soon -->
+            <!-- Card 2 -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden relative">
                 <!-- Property Image -->
                 <div class="relative h-60 overflow-hidden">
@@ -395,7 +398,8 @@
 
                     <!-- View More Button -->
                     <div class="mt-8 flex justify-center">
-                        <a href="https://www.propertyshare.in/property/propshare-platina" target="_blank" style="font-size: 13px;"
+                        <a href="https://www.propertyshare.in/property/propshare-platina" target="_blank"
+                            style="font-size: 13px;"
                             class="family-oss py-3 px-7 rounded bg-gradient-to-r from-[#08F9E8] to-[#6962AD] text-white duration-200 hover:bg-gradient-to-r hover:from-[#6962AD] hover:to-[#08F9E8]">
                             KNOW MORE
                         </a>
@@ -403,6 +407,122 @@
                 </div>
             </div>
 
+            <!-- Card 3 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden relative">
+                <!-- Property Image -->
+                <div class="relative h-60 overflow-hidden">
+                    <img src="assets/images/project1.webp" alt="PropShare Platina" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/20"></div>
+                </div>
+
+                <!-- Card Content -->
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-1">PropShare Platina (PSPLATINA)</h3>
+                    <p class="text-gray-600 text-sm mb-6">Outer Ring Road, Bangalore</p>
+
+                    <!-- Stats Grid -->
+                    <div class="grid grid-cols-2 gap-6 mb-6">
+                        <!-- Type -->
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500">Type</p>
+                                <p class="font-semibold text-gray-800">Office</p>
+                            </div>
+                        </div>
+
+                        <!-- IPO Date -->
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500">IPO Date</p>
+                                <p class="font-semibold text-gray-800">2–4 Dec '24</p>
+                            </div>
+                        </div>
+
+                        <!-- Projected Yield -->
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500">Projected Yield*</p>
+                                <p class="font-semibold text-gray-800">9.0%</p>
+                            </div>
+                        </div>
+
+                        <!-- Min Lot Size -->
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500">Min Lot Size</p>
+                                <p class="font-semibold text-gray-800">₹10,00,000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- View More Button -->
+                    <div class="mt-8 justify-center flex">
+                        <a href="https://www.propertyshare.in/property/propshare-platina" target="_blank"
+                            style="font-size: 13px;"
+                            class="family-oss py-3 px-7 rounded bg-gradient-to-r from-[#08F9E8] to-[#6962AD] text-white duration-200 hover:bg-gradient-to-r hover:from-[#6962AD] hover:to-[#08F9E8]">
+                            KNOW MORE
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 - Coming Soon -->
+            <div class="w-full max-w-xl mx-auto gradient-bg rounded-xl shadow-lg overflow-hidden relative text-white">
+                <!-- Overlay Gradient (customize as needed) -->
+                <div class="absolute inset-0 bg-gradient-to-br from-[#0ea5e9] to-[#0f766e] opacity-90"></div>
+
+                <!-- Background Pattern -->
+                <div class="absolute inset-0 opacity-10 z-0">
+                    <div class="h-full w-full bg-[url('data:image/svg+xml,%3Csvg width=\\\" 60\\\" height=\\\"60\\\"
+                        viewBox=\\\"0 0 60 60\\\" xmlns=\\\"http://www.w3.org/2000/svg\\\"%3E%3Cg fill=\\\"none\\\"
+                        fill-rule=\\\"evenodd\\\"%3E%3Cg fill=\\\"%23ffffff\\\" fill-opacity=\\\"0.1\\\"%3E%3Ccircle
+                        cx=\\\"30\\\" cy=\\\"30\\\" r=\\\"4\\\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] bg-repeat"></div>
+                </div>
+
+                <!-- Content -->
+                <div
+                    class="relative z-10 h-full flex flex-col justify-center items-center text-center p-8 min-h-[400px]">
+                    <div class="mb-8">
+                        <h3 class="text-3xl font-bold mb-4">Coming soon...</h3>
+                        <p class="text-lg opacity-90 max-w-sm">
+                            Exciting new property investment opportunities are on the way. Stay tuned for updates!
+                        </p>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
 
@@ -430,10 +550,11 @@
         <div class="max-w-7xl mx-auto px-12 py-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10 text-sm">
             <!-- Brand Info -->
             <div data-aos="fade-right">
-                <img src="/assets/images/logo.png" alt="Vestrade" class="h-10 mb-4">
+                <a href="index.html"><img src="/assets/images/reif-logo.png" alt="Trends Reif" class="h-10 mb-4"></a>
                 <p class="text-white/80 mb-8">
-                    Dictumst natoque curae nullam quisque pretium sem cursus augue pede tempor quis nisi at curabitur si
-                    condimentum metus parturient posuere dapibus id leo.
+                    At Trends REIF, we simplify real estate investing by offering carefully curated high-growth
+                    opportunities. Backed by research, due diligence, and strategic partnerships, we help investors
+                    grow their wealth with confidence.
                 </p>
                 <div class="flex gap-4 text-white text-lg">
                     <a href="#"><i class="fab fa-facebook-f text-cyan-400"></i></a>
@@ -469,14 +590,17 @@
             <div data-aos="fade-up" data-aos-delay="200">
                 <h4 class="font-semibold text-lg text-white mb-4">Support</h4>
                 <ul class="space-y-2 text-white/80">
-                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Contact Us</a>
+                    <li class="pb-2 border-b border-white/30"><a href="/contact.html"
+                            class="hover:text-cyan-400">Contact Us</a>
                     </li>
                     <!-- <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Help Centre</a>
                     </li> -->
-                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">FAQ</a></li>
-                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">My Account</a>
+                    <li class="pb-2 border-b border-white/30"><a href="/faqs.html" class="hover:text-cyan-400">FAQ</a>
                     </li>
-                    <li><a href="#" class="hover:text-cyan-400">Community</a></li>
+                    <li class="pb-2 border-b border-white/30"><a href="/privacy-policy.html"
+                            class="hover:text-cyan-400">Privacy Policy</a>
+                    </li>
+                    <li><a href="/terms-condition.html" class="hover:text-cyan-400">Terms & Conditions</a></li>
                 </ul>
             </div>
 
@@ -484,13 +608,17 @@
             <div data-aos="fade-up" data-aos-delay="300">
                 <h4 class="font-semibold text-lg text-white mb-4">Company</h4>
                 <ul class="space-y-2 text-white/80">
-                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">About</a></li>
-                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Services</a></li>
-                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Vision &
-                            Mision</a></li>
-                    <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Leadership</a>
+                    <li class="pb-2 border-b border-white/30"><a href="/about.html"
+                            class="hover:text-cyan-400">About</a></li>
+                    <li class="pb-2 border-b border-white/30"><a href="/projects.html"
+                            class="hover:text-cyan-400">Services</a>
                     </li>
-                    <li><a href="#" class="hover:text-cyan-400">News & Article</a></li>
+                    <li class="pb-2 border-b border-white/30"><a href="/blogs.html"
+                            class="hover:text-cyan-400">Blogs</a>
+                    </li>
+                    <!-- <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Leadership</a>
+                    </li> -->
+                    <li><a href="/testimonials.html" class="hover:text-cyan-400">Testimonials</a></li>
                 </ul>
             </div>
 
@@ -500,15 +628,17 @@
                 <ul class="space-y-4 text-white/80">
                     <li class="flex gap-2 items-start">
                         <i class="fas fa-map-marker-alt text-teal-400 mt-1"></i>
-                        Jalan Cempaka Wangi No 22<br />Jakarta - Indonesia
+                        4th Floor, Vishwa Arcade,<br />Navale Bridge, 411041
                     </li>
                     <li class="flex gap-2 items-center">
                         <i class="fas fa-envelope text-teal-400"></i>
-                        support@yourdomain.tld
+                        <!-- www.trendsreif.com
+                        <br> -->
+                        <a href="mailto:contact@trendsreif.com">contact@trendsreif.com</a>
                     </li>
                     <li class="flex gap-2 items-center">
-                        <i class="fas fa-phone-alt text-teal-400"></i>
-                        (888) 4000 613
+                        <i class="fas fa-phone text-teal-400"></i>
+                        <a href="tel:+91 7427900900">+91 7427900900</a>
                     </li>
                 </ul>
             </div>
@@ -516,7 +646,7 @@
 
         <!-- Copyright -->
         <div class="border-t border-white/30 py-4 text-center text-sm text-white/70">
-            Copyright© 2024 Vestrade, All rights reserved.
+            Copyright© 2025 Trends Reif, All rights reserved.
         </div>
     </footer>
     <!-- AOS JS -->

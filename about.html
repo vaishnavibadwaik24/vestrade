@@ -22,26 +22,26 @@
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
-    <style>
+    <!-- <style>
         /* Add custom styles if needed */
         .chart-bg {
             background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
                 url('assets/images/banner2.webp');
             background-size: cover;
             background-repeat: no-repeat;
-            /* height: 80vh; */
-            /* Decreased height - adjust this value as needed */
-            max-height: 480px;
+            background-position: center;
+            width: 100vw;
+            height: 100vh;
         }
-    </style>
+    </style> -->
 </head>
 
-<body class="bg-white">
+<body class="bg-[#0f021f]">
     <!-- Navigation Bar -->
     <!-- Main container with dark background -->
-    <div class="relative" style="min-height: calc(100vh - 215px); overflow:hidden;">
+    <div class="relative h-screen overflow-hidden">
         <!-- Trading chart background overlay -->
-        <div class="absolute inset-0 opacity-90 bg-cover bg-center chart-bg"></div>
+        <div class="absolute inset-0 opacity-100 bg-cover bg-center chart-bg h-screen w-screen"></div>
 
         <!-- Content container -->
         <div class="relative z-10">
@@ -215,18 +215,19 @@
             <!-- End Navigation Bar -->
 
             <!-- bg-transparent About Us Section -->
-            <section class="px-6 md:px-12 py-16 md:py-24 max-w-7xl mx-auto">
-                <h1 class="text-4xl md:text-5xl font-semibold text-white mb-8" data-aos="fade-right">About Us</h1>
-                <p class="text-xl md:text-2xl text-white/90 max-w-xl leading-relaxed">
-                    Join our community to share experiences, gain valuable insights, and build a network for successful
-                    investing.
-                </p>
+            <section class="px-6 md:px-12 max-w-7xl mx-auto flex flex-col items-center justify-center text-center h-screen">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-semibold text-white mb-8" data-aos="fade-right">About Us</h1>
+                    <p class="text-lg md:text-xl text-white/90 leading-relaxed">
+                        <a href="index.html">Home</a> / About
+                    </p>
+                </div>
             </section>
         </div>
     </div>
 
     <!-- About Section -->
-    <section class="bg-white px-4 pt-6 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-28 mx-auto" id="intro">
+    <section class="bg-white px-4 py-10 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-28 mx-auto" id="intro">
         <!-- Section Title -->
         <div class="text-center">
             <h2 class="page-main-heading">
@@ -239,13 +240,13 @@
 
             <!-- Left Column (Image) - Stacks on top on mobile -->
             <div class="w-full lg:w-1/2 mb-8 lg:mb-0 px-4" data-aos="fade-right">
-                <img src="assets/images/introduction.webp" alt="Introduction"
-                    class="rounded-lg shadow-xl w-full max-w-sm sm:max-w-md md:max-w-lg mx-auto lg:mx-0" />
+                <img src="assets/images/introduction.png" alt="Introduction"
+                    class="rounded-lg w-full max-w-sm sm:max-w-md md:max-w-lg mx-auto lg:mx-0" />
             </div>
 
             <!-- Right Column (Content) -->
             <div class="w-full lg:w-1/2 lg:pl-10 px-4 text-center lg:text-left" data-aos="fade-left">
-                <p class="text-[#6B7280] text-sm sm:text-base md:text-lg text-justify sm:text-justify">
+                <p class="text-gray-600 text-sm sm:text-base md:text-lg text-justify sm:text-justify">
                     <span class="inline-block sm:ml-6"></span>
                     Over the past several years, the Real Estate Industry has generated
                     steady cash flow and great returns above other investment options.
@@ -423,120 +424,120 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 p-2">
                 <!-- Access to Large Projects Card -->
-                <div class="adv-card bg-white rounded-lg shadow-md overflow-hidden p-3 md:p-4" data-aos="fade-up">
-                    <div class="p-4 md:p-6 bg-[#f7f7f9] rounded-lg mb-4">
+                <div class="adv-card" data-aos="fade-up"
+                    style="background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); overflow: hidden; padding: 15px;">
+
+                    <!-- <div style="padding: 24px; background: #f7f7f9; border-radius: 8px; margin-bottom: 20px;"> -->
+                    <div class="p-4 bg-[#f7f7f9] rounded-lg mb-5">
                         <div
-                            class="w-14 h-14 md:w-16 md:h-16 bg-[#09c0d1] rounded-full flex items-center justify-center mb-5">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                                class="w-7 h-7 md:w-8 md:h-8 fill-white">
+                            style="width: 70px; height: 70px; background: #09c0d1; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                                style="width: 35px; height: 35px; fill: white;">
                                 <path
-                                    d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zm-141.651-35.33c4.937-32.999-20.191-50.739-54.55-62.573l11.146-44.702-27.213-6.781-10.851 43.524c-7.154-1.783-14.502-3.464-21.803-5.13l10.929-43.81-27.198-6.781-11.153 44.686c-5.922-1.349-11.735-2.682-17.377-4.084l.031-.14-37.53-9.37-7.239 29.062s20.191 4.627 19.765 4.913c11.022 2.751 13.014 10.044 12.68 15.825l-12.696 50.925c.76.194 1.744.473 2.829.907-.907-.225-1.876-.473-2.876-.713l-17.796 71.338c-1.349 3.348-4.767 8.37-12.471 6.464.271.395-19.78-4.937-19.78-4.937l-13.51 31.147 35.414 8.827c6.588 1.651 13.045 3.379 19.4 5.006l-11.262 45.213 27.182 6.781 11.153-44.733a1038.209 1038.209 0 0 0 21.687 5.627l-11.115 44.523 27.213 6.781 11.262-45.128c46.404 8.781 81.299 5.239 95.986-36.727 11.836-33.79-.589-53.281-25.004-65.991 17.78-4.098 31.174-15.792 34.747-39.949zm-62.177 87.179c-8.41 33.79-65.308 15.523-83.755 10.943l14.944-59.899c18.446 4.603 77.6 13.717 68.811 48.956zm8.417-87.667c-7.673 30.736-55.031 15.12-70.393 11.292l13.548-54.327c15.363 3.828 64.836 10.973 56.845 43.035z" />
+                                    d="M128 148v36c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-36c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12zm0 96v36c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-36c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12zm0 96v36c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-36c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12zM372 84v376h24c13.3 0 24 10.7 24 24v4c0 13.3-10.7 24-24 24H28c-13.3 0-24-10.7-24-24v-4c0-13.3 10.7-24 24-24h24V84c0-25.6 20.8-46.4 46.4-46.4h48.8C175.2 37.6 196 58.4 196 84v376h56V148c0-25.6 20.8-46.4 46.4-46.4h48.8c25.6 0 46.4 20.8 46.4 46.4z" />
                             </svg>
                         </div>
-                        <h3 class="text-lg md:text-xl font-medium text-black mb-3">Access to Large Projects</h3>
-                        <p class="text-sm text-gray-500">Enables investment in large-scale real estate projects that may
-                            be otherwise unaffordable for individual investors.</p>
+                        <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-3">Access to Large Projects</h3>
+                        <p class="text-sm text-gray-600">Enables investment in large-scale real estate projects that may
+                            be otherwise
+                            unaffordable for individual investors.</p>
                     </div>
+
+                    <!-- <div
+                        style="position: absolute; bottom: 0; right: 0; width: 80px; height: 80px; background: linear-gradient(135deg, transparent 50%, #607bb9 50%); border-top-left-radius: 100%;">
+                    </div> -->
                 </div>
 
                 <!-- Professional Management Card -->
-                <div class="adv-card bg-white rounded-lg shadow-md overflow-hidden p-3 md:p-4" data-aos="fade-up">
+                <div class="adv-card" data-aos="fade-up"
+                    style="background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); overflow: hidden; padding: 15px;">
+
+                    <div style="padding: 20px; background: #f7f7f9; border-radius: 8px; margin-bottom: 20px;">
+                        <div
+                            style="width: 70px; height: 70px; background: #09c0d1; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                style="width: 35px; height: 35px; fill: white;">
+                                <path
+                                    d="M464 128H336V96c0-17.7-14.3-32-32-32H208c-17.7 0-32 14.3-32 32v32H48C21.5 128 0 149.5 0 176v48h512v-48c0-26.5-21.5-48-48-48zM208 96h96v32h-96V96zM0 400c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V256H0v144z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-3">Professional Management</h3>
+                        <p class="text-sm text-gray-600">Experienced fund managers handle property selection,
+                            development, and operations.</p>
+                    </div>
+                </div>
+
+                <!-- Diversification Card -->
+                <div class="adv-card" data-aos="fade-up"
+                    style="background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); overflow: hidden; padding: 15px;">
+
+                    <div style="padding: 20px; background: #f7f7f9; border-radius: 8px; margin-bottom: 20px;">
+                        <div
+                            style="width: 70px; height: 70px; background: #09c0d1; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                style="width: 35px; height: 35px; fill: white;">
+                                <path
+                                    d="M256 32C132.3 32 32 132.3 32 256c0 105.4 68.3 194.7 162.7 225.4 6.5 2.1 13.3-2.5 13.3-9.4v-94.1c0-4.1-2.5-7.9-6.3-9.5-35.6-15-60.7-50.5-60.7-91.4 0-55.2 44.8-100 100-100s100 44.8 100 100c0 40.9-25.1 76.4-60.7 91.4-3.8 1.6-6.3 5.4-6.3 9.5v94.1c0 6.9 6.8 11.5 13.3 9.4C411.7 450.7 480 361.4 480 256 480 132.3 379.7 32 256 32z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-3">Diversification</h3>
+                        <p class="text-sm text-gray-600">Spread investments across multiple projects, reducing risk
+                            exposure.</p>
+                    </div>
+                </div>
+
+                <!-- High ROI Potential Card -->
+                <div class="adv-card" data-aos="fade-up"
+                    style="background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); overflow: hidden; padding: 15px;">
+
+                    <div style="padding: 20px; background: #f7f7f9; border-radius: 8px; margin-bottom: 20px;">
+                        <div
+                            style="width: 70px; height: 70px; background: #09c0d1; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                style="width: 35px; height: 35px; fill: white;">
+                                <path
+                                    d="M32 32C32 14.3 46.3 0 64 0s32 14.3 32 32v336h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H96v48c0 17.7-14.3 32-32 32s-32-14.3-32-32V32zm432 64H352c-8.8 0-16 7.2-16 16s7.2 16 16 16h44.7L272 252.7l-80-80L70.6 294.1c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0L208 202.6l80 80L457.4 113.4V160c0 8.8 7.2 16 16 16s16-7.2 16-16V96c0-17.7-14.3-32-32-32z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-3">High ROI Potential</h3>
+                        <p class="text-sm text-gray-600">Investments offer high return potential through appreciation
+                            and income generation.</p>
+                    </div>
+                </div>
+
+                <!-- Hassle-Free Investment Card -->
+                <div class="adv-card" data-aos="fade-up"
+                    style="background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); overflow: hidden; padding: 15px;">
+
+                    <div style="padding: 20px; background: #f7f7f9; border-radius: 8px; margin-bottom: 20px;">
+                        <div
+                            style="width: 70px; height: 70px; background: #09c0d1; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                                style="width: 35px; height: 35px; fill: white;">
+                                <path
+                                    d="M466.5 83.7 263.4 1.1c-5.1-2-10.7-2-15.8 0L45.5 83.7C17.9 94.5 0 121.5 0 151.1c0 154.3 90.2 289.8 229.5 359.4 4.7 2.3 9.9 3.5 15 3.5s10.3-1.2 15-3.5C421.8 440.9 512 305.4 512 151.1c0-29.6-17.9-56.6-45.5-67.4zM372.7 180.3 244.3 336.3c-3.2 3.8-7.8 6.1-12.7 6.4H231c-4.8 0-9.4-2.1-12.7-5.8l-84.3-96.2c-5.9-6.7-5.2-16.9 1.5-22.8s16.9-5.2 22.8 1.5l71.1 81.1 116.1-140.5c5.8-7 16.1-7.9 23.1-2.1s7.9 16.1 2.1 23.1z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-3">Hassle-Free Investment</h3>
+                        <p class="text-sm text-gray-600">No need to deal with legal, operational, or management
+                            complexities; everything is handled by the fund.</p>
+                    </div>
+                </div>
+
+                <!-- Liquidity Card -->
+                <div data-aos="fade-up" class="adv-card bg-white rounded-lg shadow-md overflow-hidden p-3 md:p-4">
                     <div class="p-4 md:p-6 bg-[#f7f7f9] rounded-lg mb-4">
                         <div
                             class="w-14 h-14 md:w-16 md:h-16 bg-[#09c0d1] rounded-full flex items-center justify-center mb-5">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
                                 class="w-7 h-7 md:w-8 md:h-8 fill-white">
                                 <path
-                                    d="M272 278.5V112c0-8.8-7.2-16-16-16s-16 7.2-16 16v166.5c-19.6 7.9-32 27-32 48.5 0 28.7 23.3 52 52 52s52-23.3 52-52c0-21.5-12.4-40.6-32-48.5zM48 96h160v32H48c-8.8 0-16 7.2-16 16v288c0 8.8 7.2 16 16 16h384c8.8 0 16-7.2 16-16V144c0-8.8-7.2-16-16-16H272V96h160c26.5 0 48-21.5 48-48s-21.5-48-48-48H112C85.5 0 64 21.5 64 48s21.5 48 48 48zm336 272H96V192h288v176z" />
+                                    d="M96 224h384v64H96v-64zm448-128H32C14.3 96 0 110.3 0 128v256c0 17.7 14.3 32 32 32h512c17.7 0 32-14.3 32-32V128c0-17.7-14.3-32-32-32zM432 352c0 17.7-14.3 32-32 32H176c-17.7 0-32-14.3-32-32v-48c0-17.7 14.3-32 32-32h224c17.7 0 32 14.3 32 32v48z" />
                             </svg>
                         </div>
-                        <h3 class="text-lg md:text-xl font-medium text-black mb-3">Professional Management</h3>
-                        <p class="text-sm text-gray-500">Experienced fund managers handle property selection,
-                            development, and operations.</p>
-                    </div>
-                </div>
-
-                <!-- Diversification Card -->
-                <div class="adv-card bg-white rounded-lg shadow-md overflow-hidden p-3 md:p-4" data-aos="fade-up">
-                    <div class="p-4 md:p-6 bg-[#f7f7f9] rounded-lg mb-4">
-                        <div
-                            class="w-14 h-14 md:w-16 md:h-16 bg-[#09c0d1] rounded-full flex items-center justify-center mb-5">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
-                                class="w-7 h-7 md:w-8 md:h-8 fill-white">
-                                <path
-                                    d="M336 0H48C21.49 0 0 21.49 0 48v416c0 26.51 21.49 48 48 48h288c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zm0 464H48V48h288v416zM144 112h96c8.84 0 16-7.16 16-16s-7.16-16-16-16h-96c-8.84 0-16 7.16-16 16s7.17 16 16 16zm48 176c35.35 0 64-28.65 64-64s-28.65-64-64-64-64 28.65-64 64 28.65 64 64 64zm-89.6 128h179.2c12.4 0 22.4-8.6 22.4-19.2v-19.2c0-31.8-30.1-57.6-67.2-57.6h-70.4c-37.1 0-67.2 25.8-67.2 57.6v19.2c0 10.6 10 19.2 22.4 19.2z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-lg md:text-xl font-medium text-black mb-3">Diversification</h3>
-                        <p class="text-sm text-gray-500">Spread investments across multiple projects, reducing risk
-                            exposure.</p>
-                    </div>
-                </div>
-
-                <!-- High ROI Potential Card -->
-                <div class="adv-card bg-white rounded-lg shadow-md overflow-hidden p-3 md:p-4" data-aos="fade-up">
-                    <div class="p-4 md:p-6 bg-[#f7f7f9] rounded-lg mb-4">
-                        <div
-                            class="w-14 h-14 md:w-16 md:h-16 bg-[#09c0d1] rounded-full flex items-center justify-center mb-5">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
-                                class="w-7 h-7 md:w-8 md:h-8 fill-white">
-                                <path
-                                    d="M336 0H48C21.49 0 0 21.49 0 48v416c0 26.51 21.49 48 48 48h288c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zm0 464H48V48h288v416zM144 112h96c8.84 0 16-7.16 16-16s-7.16-16-16-16h-96c-8.84 0-16 7.16-16 16s7.17 16 16 16zm48 176c35.35 0 64-28.65 64-64s-28.65-64-64-64-64 28.65-64 64 28.65 64 64 64zm-89.6 128h179.2c12.4 0 22.4-8.6 22.4-19.2v-19.2c0-31.8-30.1-57.6-67.2-57.6h-70.4c-37.1 0-67.2 25.8-67.2 57.6v19.2c0 10.6 10 19.2 22.4 19.2z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-lg md:text-xl font-medium text-black mb-3">High ROI Potential</h3>
-                        <p class="text-sm text-gray-500">Investments offer high return potential through appreciation
-                            and income generation.</p>
-                    </div>
-                </div>
-
-                <!-- Hassle-Free Investment Card -->
-                <div class="adv-card bg-white rounded-lg shadow-md overflow-hidden p-3 md:p-4" data-aos="fade-up">
-                    <div class="p-4 md:p-6 bg-[#f7f7f9] rounded-lg mb-4">
-                        <div
-                            class="w-14 h-14 md:w-16 md:h-16 bg-[#09c0d1] rounded-full flex items-center justify-center mb-5">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
-                                class="w-7 h-7 md:w-8 md:h-8 fill-white">
-                                <path
-                                    d="M336 0H48C21.49 0 0 21.49 0 48v416c0 26.51 21.49 48 48 48h288c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zm0 464H48V48h288v416zM144 112h96c8.84 0 16-7.16 16-16s-7.16-16-16-16h-96c-8.84 0-16 7.16-16 16s7.17 16 16 16zm48 176c35.35 0 64-28.65 64-64s-28.65-64-64-64-64 28.65-64 64 28.65 64 64 64zm-89.6 128h179.2c12.4 0 22.4-8.6 22.4-19.2v-19.2c0-31.8-30.1-57.6-67.2-57.6h-70.4c-37.1 0-67.2 25.8-67.2 57.6v19.2c0 10.6 10 19.2 22.4 19.2z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-lg md:text-xl font-medium text-black mb-3">Hassle-Free Investment</h3>
-                        <p class="text-sm text-gray-500">No need to deal with legal, operational, or management
-                            complexities; everything is handled by the fund.</p>
-                    </div>
-                </div>
-
-                <!-- No Risk Card -->
-                <div class="adv-card bg-white rounded-lg shadow-md overflow-hidden p-3 md:p-4" data-aos="fade-up">
-                    <div class="p-4 md:p-6 bg-[#f7f7f9] rounded-lg mb-4">
-                        <div
-                            class="w-14 h-14 md:w-16 md:h-16 bg-[#09c0d1] rounded-full flex items-center justify-center mb-5">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
-                                class="w-7 h-7 md:w-8 md:h-8 fill-white">
-                                <path
-                                    d="M336 0H48C21.49 0 0 21.49 0 48v416c0 26.51 21.49 48 48 48h288c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zm0 464H48V48h288v416zM144 112h96c8.84 0 16-7.16 16-16s-7.16-16-16-16h-96c-8.84 0-16 7.16-16 16s7.17 16 16 16zm48 176c35.35 0 64-28.65 64-64s-28.65-64-64-64-64 28.65-64 64 28.65 64 64 64zm-89.6 128h179.2c12.4 0 22.4-8.6 22.4-19.2v-19.2c0-31.8-30.1-57.6-67.2-57.6h-70.4c-37.1 0-67.2 25.8-67.2 57.6v19.2c0 10.6 10 19.2 22.4 19.2z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-lg md:text-xl font-medium text-black mb-3">No Risk</h3>
-                        <p class="text-sm text-gray-500">Thorough due diligence and strict compliance protocols ensure
-                            your investment is secure.</p>
-                    </div>
-                </div>
-
-                <!-- Liquidity Card -->
-                <div class="adv-card bg-white rounded-lg shadow-md overflow-hidden p-3 md:p-4" data-aos="fade-up">
-                    <div class="p-4 md:p-6 bg-[#f7f7f9] rounded-lg mb-4">
-                        <div
-                            class="w-14 h-14 md:w-16 md:h-16 bg-[#09c0d1] rounded-full flex items-center justify-center mb-5">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
-                                class="w-7 h-7 md:w-8 md:h-8 fill-white">
-                                <path
-                                    d="M336 0H48C21.49 0 0 21.49 0 48v416c0 26.51 21.49 48 48 48h288c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zm0 464H48V48h288v416zM144 112h96c8.84 0 16-7.16 16-16s-7.16-16-16-16h-96c-8.84 0-16 7.16-16 16s7.17 16 16 16zm48 176c35.35 0 64-28.65 64-64s-28.65-64-64-64-64 28.65-64 64 28.65 64 64 64zm-89.6 128h179.2c12.4 0 22.4-8.6 22.4-19.2v-19.2c0-31.8-30.1-57.6-67.2-57.6h-70.4c-37.1 0-67.2 25.8-67.2 57.6v19.2c0 10.6 10 19.2 22.4 19.2z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-lg md:text-xl font-medium text-black mb-3">Liquidity</h3>
-                        <p class="text-sm text-gray-500">REIF offer flexible exit options, making it easier to
+                        <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-3">Liquidity</h3>
+                        <p class="text-sm text-gray-600">REIF offer flexible exit options, making it easier to
                             liquidate investments compared to direct property ownership.</p>
                     </div>
                 </div>
@@ -546,14 +547,14 @@
                     <div class="p-4 md:p-6 bg-[#f7f7f9] rounded-lg mb-4">
                         <div
                             class="w-14 h-14 md:w-16 md:h-16 bg-[#09c0d1] rounded-full flex items-center justify-center mb-5">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
                                 class="w-7 h-7 md:w-8 md:h-8 fill-white">
                                 <path
-                                    d="M336 0H48C21.49 0 0 21.49 0 48v416c0 26.51 21.49 48 48 48h288c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zm0 464H48V48h288v416zM144 112h96c8.84 0 16-7.16 16-16s-7.16-16-16-16h-96c-8.84 0-16 7.16-16 16s7.17 16 16 16zm48 176c35.35 0 64-28.65 64-64s-28.65-64-64-64-64 28.65-64 64 28.65 64 64 64zm-89.6 128h179.2c12.4 0 22.4-8.6 22.4-19.2v-19.2c0-31.8-30.1-57.6-67.2-57.6h-70.4c-37.1 0-67.2 25.8-67.2 57.6v19.2c0 10.6 10 19.2 22.4 19.2z" />
+                                    d="M224 32c-17.7 0-32 14.3-32 32v288H64c-17.7 0-32 14.3-32 32s14.3 32 32 32h160c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32zm208 224c0-17.7-14.3-32-32-32H288v-32c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h112c17.7 0 32-14.3 32-32z" />
                             </svg>
                         </div>
-                        <h3 class="text-lg md:text-xl font-medium text-black mb-3">Scalability</h3>
-                        <p class="text-sm text-gray-500">Allows investments at different levels, making it accessible to
+                        <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-3">Scalability</h3>
+                        <p class="text-sm text-gray-600">Allows investments at different levels, making it accessible to
                             both small and large investors.</p>
                     </div>
                 </div>
@@ -563,14 +564,15 @@
                     <div class="p-4 md:p-6 bg-[#f7f7f9] rounded-lg mb-4">
                         <div
                             class="w-14 h-14 md:w-16 md:h-16 bg-[#09c0d1] rounded-full flex items-center justify-center mb-5">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
+                            <!-- Calculator Icon for Tax Benefits -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
                                 class="w-7 h-7 md:w-8 md:h-8 fill-white">
                                 <path
-                                    d="M336 0H48C21.49 0 0 21.49 0 48v416c0 26.51 21.49 48 48 48h288c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zm0 464H48V48h288v416zM144 112h96c8.84 0 16-7.16 16-16s-7.16-16-16-16h-96c-8.84 0-16 7.16-16 16s7.17 16 16 16zm48 176c35.35 0 64-28.65 64-64s-28.65-64-64-64-64 28.65-64 64 28.65 64 64 64zm-89.6 128h179.2c12.4 0 22.4-8.6 22.4-19.2v-19.2c0-31.8-30.1-57.6-67.2-57.6h-70.4c-37.1 0-67.2 25.8-67.2 57.6v19.2c0 10.6 10 19.2 22.4 19.2z" />
+                                    d="M400 0H48C21.49 0 0 21.49 0 48v416c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zM160 432c0 8.84-7.16 16-16 16H80c-8.84 0-16-7.16-16-16v-48c0-8.84 7.16-16 16-16h64c8.84 0 16 7.16 16 16v48zm0-128c0 8.84-7.16 16-16 16H80c-8.84 0-16-7.16-16-16v-48c0-8.84 7.16-16 16-16h64c8.84 0 16 7.16 16 16v48zm96 128c0 8.84-7.16 16-16 16h-64c-8.84 0-16-7.16-16-16v-48c0-8.84 7.16-16 16-16h64c8.84 0 16 7.16 16 16v48zm0-128c0 8.84-7.16 16-16 16h-64c-8.84 0-16-7.16-16-16v-48c0-8.84 7.16-16 16-16h64c8.84 0 16 7.16 16 16v48zm112 128c0 8.84-7.16 16-16 16h-64c-8.84 0-16-7.16-16-16v-48c0-8.84 7.16-16 16-16h64c8.84 0 16 7.16 16 16v48zm0-128c0 8.84-7.16 16-16 16h-64c-8.84 0-16-7.16-16-16v-48c0-8.84 7.16-16 16-16h64c8.84 0 16 7.16 16 16v48z" />
                             </svg>
                         </div>
-                        <h3 class="text-lg md:text-xl font-medium text-black mb-3">Tax Benefits</h3>
-                        <p class="text-sm text-gray-500">REIF allow investors to enjoy tax advantages, depending on the
+                        <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-3">Tax Benefits</h3>
+                        <p class="text-sm text-gray-600">REIF allow investors to enjoy tax advantages, depending on the
                             fund's structure and applicable regulations.</p>
                     </div>
                 </div>
@@ -580,17 +582,18 @@
                     <div class="p-4 md:p-6 bg-[#f7f7f9] rounded-lg mb-4">
                         <div
                             class="w-14 h-14 md:w-16 md:h-16 bg-[#09c0d1] rounded-full flex items-center justify-center mb-5">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
                                 class="w-7 h-7 md:w-8 md:h-8 fill-white">
                                 <path
-                                    d="M336 0H48C21.49 0 0 21.49 0 48v416c0 26.51 21.49 48 48 48h288c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zm0 464H48V48h288v416zM144 112h96c8.84 0 16-7.16 16-16s-7.16-16-16-16h-96c-8.84 0-16 7.16-16 16s7.17 16 16 16zm48 176c35.35 0 64-28.65 64-64s-28.65-64-64-64-64 28.65-64 64 28.65 64 64 64zm-89.6 128h179.2c12.4 0 22.4-8.6 22.4-19.2v-19.2c0-31.8-30.1-57.6-67.2-57.6h-70.4c-37.1 0-67.2 25.8-67.2 57.6v19.2c0 10.6 10 19.2 22.4 19.2z" />
+                                    d="M572.52 241.4C518.29 135.47 407.82 64 288 64S57.71 135.47 3.48 241.4a48.09 48.09 0 0 0 0 29.2C57.71 376.53 168.18 448 288 448s230.29-71.47 284.52-177.4a48.09 48.09 0 0 0 0-29.2zM288 400c-79.41 0-151.57-48.21-189.82-120C136.43 208.21 208.59 160 288 160s151.57 48.21 189.82 120C439.57 351.79 367.41 400 288 400zm0-208a88 88 0 1 0 88 88 88.1 88.1 0 0 0-88-88zm0 144a56 56 0 1 1 56-56 56.06 56.06 0 0 1-56 56z" />
                             </svg>
                         </div>
-                        <h3 class="text-lg md:text-xl font-medium text-black mb-3">Transparency</h3>
-                        <p class="text-sm text-gray-500">Regular updates and reports ensure complete visibility into
+                        <h3 class="text-lg md:text-xl font-bold text-gray-800 mb-3">Transparency</h3>
+                        <p class="text-sm text-gray-600">Regular updates and reports ensure complete visibility into
                             project progress and fund performance.</p>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -776,6 +779,33 @@
         </div>
     </section> -->
 
+    <!-- Clients Progress -->
+    <div class="bg-gradient-to-r from-sky-600/75 to-[#00f6ff] py-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-white text-center">
+
+            <div class="px-2 sm:px-4 md:px-6 mb-4 md:mb-0">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">2K+</h2>
+                <p class="mt-2 text-base sm:text-lg md:text-xl">Happy Clients</p>
+            </div>
+
+            <div class="px-2 sm:px-4 md:px-6 mb-4 md:mb-0 border-l border-white/30">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">30+</h2>
+                <p class="mt-2 text-base sm:text-lg md:text-xl">Projects Done</p>
+            </div>
+
+            <div class="px-2 sm:px-4 md:px-6 border-t md:border-t-0 md:border-l border-white/30 pt-4 md:pt-0">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">40+</h2>
+                <p class="mt-2 text-base sm:text-lg md:text-xl">Expert Team</p>
+            </div>
+
+            <div class="px-2 sm:px-4 md:px-6 border-t md:border-t-0 border-l border-white/30 pt-4 md:pt-0">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">15+</h2>
+                <p class="mt-2 text-base sm:text-lg md:text-xl">Years of Experience</p>
+            </div>
+
+        </div>
+    </div>
+
     <!-- Footer Section -->
     <footer class="bg-[#032427] text-white relative bg-cover bg-center">
         <!-- Newsletter Signup -->
@@ -797,14 +827,14 @@
         </div>
 
         <!-- Footer Content -->
-        <div class="max-w-7xl mx-auto px-12 py-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10 text-sm">
+       <div class="max-w-7xl mx-auto px-12 py-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10 text-sm">
             <!-- Brand Info -->
             <div data-aos="fade-right">
-                <img src="/assets/images/logo.png" alt="Vestrade" class="h-10 mb-4" />
+                <a href="index.html"><img src="/assets/images/reif-logo.png" alt="Trends Reif" class="h-10 mb-4"></a>
                 <p class="text-white/80 mb-8">
-                    Dictumst natoque curae nullam quisque pretium sem cursus augue pede
-                    tempor quis nisi at curabitur si condimentum metus parturient
-                    posuere dapibus id leo.
+                    At Trends REIF, we simplify real estate investing by offering carefully curated high-growth
+                    opportunities. Backed by research, due diligence, and strategic partnerships, we help investors
+                    grow their wealth with confidence.
                 </p>
                 <div class="flex gap-4 text-white text-lg">
                     <a href="#"><i class="fab fa-facebook-f text-cyan-400"></i></a>
@@ -840,19 +870,17 @@
             <div data-aos="fade-up" data-aos-delay="200">
                 <h4 class="font-semibold text-lg text-white mb-4">Support</h4>
                 <ul class="space-y-2 text-white/80">
-                    <li class="pb-2 border-b border-white/30">
-                        <a href="#" class="hover:text-cyan-400">Contact Us</a>
+                    <li class="pb-2 border-b border-white/30"><a href="/contact.html"
+                            class="hover:text-cyan-400">Contact Us</a>
                     </li>
-                    <!-- <li class="pb-2 border-b border-white/30">
-                        <a href="#" class="hover:text-cyan-400">Help Centre</a>
+                    <!-- <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Help Centre</a>
                     </li> -->
-                    <li class="pb-2 border-b border-white/30">
-                        <a href="#" class="hover:text-cyan-400">FAQ</a>
+                    <li class="pb-2 border-b border-white/30"><a href="/faqs.html" class="hover:text-cyan-400">FAQ</a>
                     </li>
-                    <li class="pb-2 border-b border-white/30">
-                        <a href="#" class="hover:text-cyan-400">My Account</a>
+                    <li class="pb-2 border-b border-white/30"><a href="/privacy-policy.html"
+                            class="hover:text-cyan-400">Privacy Policy</a>
                     </li>
-                    <li><a href="#" class="hover:text-cyan-400">Community</a></li>
+                    <li><a href="/terms-condition.html" class="hover:text-cyan-400">Terms & Conditions</a></li>
                 </ul>
             </div>
 
@@ -860,19 +888,17 @@
             <div data-aos="fade-up" data-aos-delay="300">
                 <h4 class="font-semibold text-lg text-white mb-4">Company</h4>
                 <ul class="space-y-2 text-white/80">
-                    <li class="pb-2 border-b border-white/30">
-                        <a href="#" class="hover:text-cyan-400">About</a>
+                    <li class="pb-2 border-b border-white/30"><a href="/about.html"
+                            class="hover:text-cyan-400">About</a></li>
+                    <li class="pb-2 border-b border-white/30"><a href="/projects.html"
+                            class="hover:text-cyan-400">Services</a>
                     </li>
-                    <li class="pb-2 border-b border-white/30">
-                        <a href="#" class="hover:text-cyan-400">Services</a>
+                    <li class="pb-2 border-b border-white/30"><a href="/blogs.html"
+                            class="hover:text-cyan-400">Blogs</a>
                     </li>
-                    <li class="pb-2 border-b border-white/30">
-                        <a href="#" class="hover:text-cyan-400">Vision & Mision</a>
-                    </li>
-                    <li class="pb-2 border-b border-white/30">
-                        <a href="#" class="hover:text-cyan-400">Leadership</a>
-                    </li>
-                    <li><a href="#" class="hover:text-cyan-400">News & Article</a></li>
+                    <!-- <li class="pb-2 border-b border-white/30"><a href="#" class="hover:text-cyan-400">Leadership</a>
+                    </li> -->
+                    <li><a href="/testimonials.html" class="hover:text-cyan-400">Testimonials</a></li>
                 </ul>
             </div>
 
@@ -882,15 +908,17 @@
                 <ul class="space-y-4 text-white/80">
                     <li class="flex gap-2 items-start">
                         <i class="fas fa-map-marker-alt text-teal-400 mt-1"></i>
-                        Jalan Cempaka Wangi No 22<br />Jakarta - Indonesia
+                        4th Floor, Vishwa Arcade,<br />Navale Bridge, 411041
                     </li>
                     <li class="flex gap-2 items-center">
                         <i class="fas fa-envelope text-teal-400"></i>
-                        support@yourdomain.tld
+                        <!-- www.trendsreif.com
+                        <br> -->
+                        <a href="mailto:contact@trendsreif.com">contact@trendsreif.com</a>
                     </li>
                     <li class="flex gap-2 items-center">
-                        <i class="fas fa-phone-alt text-teal-400"></i>
-                        (888) 4000 613
+                        <i class="fas fa-phone text-teal-400"></i>
+                        <a href="tel:+91 7427900900">+91 7427900900</a>
                     </li>
                 </ul>
             </div>
@@ -898,7 +926,7 @@
 
         <!-- Copyright -->
         <div class="border-t border-white/30 py-4 text-center text-sm text-white/70">
-            Copyright© 2024 Vestrade, All rights reserved.
+            Copyright© 2025 Trends Reif, All rights reserved.
         </div>
     </footer>
     <!-- AOS JS -->
