@@ -452,7 +452,7 @@
     <!-- Real Estate Market Section -->
     <section class="real-estate-market px-4 sm:px-6 md:px-12 lg:px-20 xl:px-28 py-10 sm:py-16">
         <div
-            class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 items-start">
+            class="max-w-[1400px] mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10 items-start">
 
             <!-- Left Panel - Market Stats -->
             <div data-aos="fade-right"
@@ -507,7 +507,7 @@
                 <div class="flex items-end justify-around h-40 sm:h-48 md:h-56 lg:h-64 mb-6 sm:mb-8 relative z-10">
                     <!-- Y-axis labels -->
                     <div
-                        class="absolute left-[-28px] top-0 bottom-10 flex flex-col-reverse justify-between text-xs text-white/60 h-full">
+                        class="absolute left-[-16px] sm:left-[-28px] top-0 bottom-10 flex flex-col-reverse justify-between text-xs text-white/60 h-full">
                         <span>0</span>
                         <span>250B</span>
                         <span>500B</span>
@@ -517,7 +517,7 @@
                     <!-- Bars -->
                     <div class="flex flex-col items-center">
                         <div
-                            class="w-10 sm:w-12 md:w-12 h-6 sm:h-8 md:h-10 bg-gradient-to-b from-blue-400 to-blue-900 rounded-t-lg mb-2 sm:mb-3 relative transition-transform duration-300 cursor-pointer">
+                            class="w-10 sm:w-12 h-2 md:h-2 lg:h-3 bg-gradient-to-b from-blue-400 to-blue-900 rounded-t-lg mb-2 sm:mb-3 relative transition-transform duration-300 cursor-pointer">
                             <div
                                 class="absolute -top-7 left-1/2 -translate-x-1/2 bg-white/90 text-gray-800 px-2 py-1 rounded text-xs font-semibold">
                                 150B
@@ -527,7 +527,7 @@
                     </div>
                     <div class="flex flex-col items-center">
                         <div
-                            class="w-10 sm:w-12 md:w-12 h-10 sm:h-12 md:h-16 bg-gradient-to-b from-cyan-400 to-cyan-800 rounded-t-lg mb-2 sm:mb-3 relative transition-transform duration-300 cursor-pointer">
+                            class="w-10 sm:w-12 h-4 md:h-4 lg:h-6 bg-gradient-to-b from-cyan-400 to-cyan-800 rounded-t-lg mb-2 sm:mb-3 relative transition-transform duration-300 cursor-pointer">
                             <div
                                 class="absolute -top-7 left-1/2 -translate-x-1/2 bg-white/90 text-gray-800 px-2 py-1 rounded text-xs font-semibold">
                                 200B
@@ -537,7 +537,7 @@
                     </div>
                     <div class="flex flex-col items-center">
                         <div
-                            class="w-10 sm:w-12 md:w-12 h-28 sm:h-22 md:h-26 bg-gradient-to-b from-emerald-400 to-emerald-700 rounded-t-lg mb-2 sm:mb-3 relative transition-transform duration-300 cursor-pointer">
+                            class="w-10 sm:w-12 h-16 md:h-28 lg:h-32 bg-gradient-to-b from-emerald-400 to-emerald-700 rounded-t-lg mb-2 sm:mb-3 relative transition-transform duration-300 cursor-pointer">
                             <div
                                 class="absolute -top-7 left-1/2 -translate-x-1/2 bg-white/90 text-gray-800 px-2 py-1 rounded text-xs font-semibold">
                                 650B
@@ -547,7 +547,7 @@
                     </div>
                     <div class="flex flex-col items-center">
                         <div
-                            class="w-10 sm:w-12 md:w-12 h-26 sm:h-36 md:h-38 bg-gradient-to-b from-purple-400 to-purple-700 rounded-t-lg mb-2 sm:mb-3 relative transition-transform duration-300 cursor-pointer">
+                            class="w-10 sm:w-12 h-36 md:h-48 lg:h-56 bg-gradient-to-b from-purple-400 to-purple-700 rounded-t-lg mb-2 sm:mb-3 relative transition-transform duration-300 cursor-pointer">
                             <div
                                 class="absolute -top-7 left-1/2 -translate-x-1/2 bg-white/90 text-gray-800 px-2 py-1 rounded text-xs font-semibold">
                                 1T
@@ -653,7 +653,7 @@
 
         <!-- Right Column -->
         <div class="relative w-full lg:w-1/2 flex justify-end items-center pr-6" data-aos="fade-left">
-        <!-- <div class="relative w-full lg:w-1/2 flex justify-center items-center pr-0 sm:pr-2 md:pr-2 lg:pr-4 xl:pr-8" data-aos="fade-left"> -->
+            <!-- <div class="relative w-full lg:w-1/2 flex justify-center items-center pr-0 sm:pr-2 md:pr-2 lg:pr-4 xl:pr-8" data-aos="fade-left"> -->
             <!-- Main Image -->
             <img src="assets/images/who-we-are.png" alt="Who we are?"
                 class="rounded-lg w-full max-w-md sm:max-w-lg mx-auto lg:mx-0">
@@ -1125,9 +1125,9 @@
             <!-- Process Flow Container -->
             <div class="relative">
                 <!-- Top Row -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-8 overflow-visible">
+                <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-5 gap-8 mb-8 overflow-visible">
                     <!-- Step 1: Property Search -->
-                    <div class="flex flex-col items-center text-center">
+                    <div class="flex flex-col items-center text-center" data-aos="fade-right" data-aos-delay="50">
                         <div
                             class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 relative">
                             <img src="assets/images/work1.png" alt="">
@@ -1146,7 +1146,7 @@
                     </div>
 
                     <!-- Step 2: Property Screening -->
-                    <div class="flex flex-col items-center text-center">
+                    <div class="flex flex-col items-center text-center" data-aos="fade-right" data-aos-delay="100">
                         <div
                             class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 relative">
                             <img src="assets/images/work2.png" alt="">
@@ -1166,7 +1166,7 @@
                     </div>
 
                     <!-- Step 3: Property Purchase -->
-                    <div class="flex flex-col items-center text-center">
+                    <div class="flex flex-col items-center text-center" data-aos="fade-right" data-aos-delay="150">
                         <div
                             class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 relative">
                             <img src="assets/images/work3.png" alt="">
@@ -1186,7 +1186,7 @@
                     </div>
 
                     <!-- Step 4: Permissions from Authorities -->
-                    <div class="flex flex-col items-center text-center">
+                    <div class="flex flex-col items-center text-center" data-aos="fade-right" data-aos-delay="250">
                         <div
                             class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 relative">
                             <img src="assets/images/work4.png" alt="">
@@ -1205,7 +1205,7 @@
                     </div>
 
                     <!-- Step 5: REIF Forms SPV -->
-                    <div class="flex flex-col items-center text-center">
+                    <div class="flex flex-col items-center text-center" data-aos="fade-right" data-aos-delay="300">
                         <div
                             class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 relative">
                             <img src="assets/images/work5.png" alt="">
@@ -1222,9 +1222,10 @@
                 </div>
 
                 <!-- Bottom Row (Reverse Order) -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8" style="direction: rtl;">
+                <div class="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-5 gap-8" style="direction: rtl;">
                     <!-- Step 6: Investor Investment in SPV -->
-                    <div class="flex flex-col items-center text-center" style="direction: ltr;">
+                    <div class="flex flex-col items-center text-center" data-aos="fade-left" data-aos-delay="350"
+                        style="direction: ltr;">
                         <div
                             class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 relative">
                             <img src="assets/images/work6.png" alt="">
@@ -1244,7 +1245,8 @@
                     </div>
 
                     <!-- Step 7: Tie-up with Renowned Builder/Developer -->
-                    <div class="flex flex-col items-center text-center" style="direction: ltr;">
+                    <div class="flex flex-col items-center text-center" data-aos="fade-left" data-aos-delay="400"
+                        style="direction: ltr;">
                         <div
                             class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 relative">
                             <img src="assets/images/work7.png" alt="">
@@ -1264,7 +1266,7 @@
                     </div>
 
                     <!-- Step 8: Investor Investment in SPV -->
-                    <div class="flex flex-col items-center text-center" style="direction: ltr;">
+                    <div class="flex flex-col items-center text-center" data-aos="fade-left" data-aos-delay="450" style="direction: ltr;">
                         <div
                             class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 relative">
                             <img src="assets/images/work8.png" alt="">
@@ -1284,7 +1286,7 @@
                     </div>
 
                     <!-- Step 9: Sales -->
-                    <div class="flex flex-col items-center text-center" style="direction: ltr;">
+                    <div class="flex flex-col items-center text-center" data-aos="fade-left" data-aos-delay="500" style="direction: ltr;">
                         <div
                             class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 relative">
                             <img src="assets/images/work9.png" alt="">
@@ -1304,7 +1306,7 @@
                     </div>
 
                     <!-- Step 10: Returns Generation -->
-                    <div class="flex flex-col items-center text-center" style="direction: ltr;">
+                    <div class="flex flex-col items-center text-center" data-aos="fade-left" data-aos-delay="650" style="direction: ltr;">
                         <div
                             class="step-circle-blue w-20 h-20 rounded-full flex items-center justify-center mb-4 shadow-lg">
                             <img src="assets/images/work10.png" alt="">
@@ -1507,7 +1509,7 @@
         <div class="max-w-7xl mx-auto px-12 py-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10 text-sm">
             <!-- Brand Info -->
             <div data-aos="fade-right">
-                <a href="index.html"><img src="/assets/images/reif-logo.png" alt="TrendsReif" class="h-10 mb-4"></a>
+                <a href="index.html"><img src="/assets/images/reif-logo.png" alt="Trends Reif" class="h-10 mb-4"></a>
                 <p class="text-white/80 mb-8">
                     At Trends REIF, we simplify real estate investing by offering carefully curated high-growth
                     opportunities. Backed by research, due diligence, and strategic partnerships, we help investors
@@ -1591,11 +1593,11 @@
                         <i class="fas fa-envelope text-teal-400"></i>
                         <!-- www.trendsreif.com
                         <br> -->
-                        contact@trendsreif.com
+                        <a href="mailto:contact@trendsreif.com">contact@trendsreif.com</a>
                     </li>
                     <li class="flex gap-2 items-center">
                         <i class="fas fa-phone text-teal-400"></i>
-                        +91 7427900900
+                        <a href="tel:+91 7427900900">+91 7427900900</a>
                     </li>
                 </ul>
             </div>
@@ -1603,7 +1605,7 @@
 
         <!-- Copyright -->
         <div class="border-t border-white/30 py-4 text-center text-sm text-white/70">
-            Copyright© 2024 Vestrade, All rights reserved.
+            Copyright© 2025 Trends Reif, All rights reserved.
         </div>
     </footer>
     <!-- AOS JS -->
