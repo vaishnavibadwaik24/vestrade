@@ -392,7 +392,7 @@ color: var(--accent-color);
   font-family: 'Inter', sans-serif;
   font-size: 30px;
   font-weight: bold;
-  color: #7267D7;
+  color: #675dc1;
   text-transform: uppercase;
   margin-bottom: 12px;
 }
@@ -690,7 +690,7 @@ color: var(--accent-color);
 
 .term-content {
   margin-left: 5px;
-  color: #6B7280;
+  color: #4B5563;
 }
 
 list-disc {
